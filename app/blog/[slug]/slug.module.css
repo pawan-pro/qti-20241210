@@ -1,0 +1,49 @@
+/* Individual Blog Post Page */
+.main {
+  padding: 3rem;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.article {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.8;
+}
+
+.article h1, .article h2, .article h3 {
+  color: #6495ED;
+}
+
+.article p {
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+.article a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.article a:hover {
+  text-decoration: underline;
+}
+
+.buttonContainer {
+  text-align: center; /* Center the back button */
+  margin-top: 2rem;
+}
+
+.backButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.backButton:hover {
+  background-color: #357ae8;
+}

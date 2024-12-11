@@ -1,0 +1,67 @@
+/* Individual Blog Post Page */
+.main {
+  padding: 4rem;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.article {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.8;
+}
+
+.article h1, .article h2, .article h3 {
+  color: #6495ED;
+}
+
+.article p {
+  font-size: 2rem;
+  color: #bbb;
+}
+
+.article a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.article a:hover {
+  text-decoration: underline;
+}
+
+.buttonContainer {
+  text-align: center; /* Center the back button */
+  margin-top: 2rem;
+}
+
+.backButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.backButton:hover {
+  background-color: #357ae8;
+}
+
+/* Ensure event card styles are defined */
+.event-card {
+  background-color: #f0f0f0;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.event-card h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.event-card p {
+  font-size: 1rem;
+  color: #666;
+}

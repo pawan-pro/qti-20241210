@@ -1,18 +1,21 @@
-import type { Config } from "tailwindcss";
-
-export default {
+// tailwind.config.js
+module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './app/**/*.{js,ts,jsx,tsx}', // Ensure all app content is included for tailwind scanning
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        sans: ['"Century Gothic"', 'sans-serif'],
       },
     },
   },
   plugins: [],
-} satisfies Config;
+}
+
+module.exports = {
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+  ],
+  plugins: [require('@tailwindcss/typography')],
+}

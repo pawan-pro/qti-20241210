@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .event-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .event-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #6495ED;
+            margin-bottom: 10px;
+        }
+        .event-date {
+            font-size: 16px;
+            color: #888;
+            margin-bottom: 15px;
+        }
+        .event-details {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 5px 10px;
+            margin-bottom: 15px;
+        }
+        .event-label {
+            font-weight: bold;
+            color: #aaa;
+        }
+        .event-value {
+            color: #e0e0e0;
+        }
+        .event-notes {
+            font-size: 14px;
+            color: #bbb;
+            margin-bottom: 15px;
+        }
+        .historical-impact {
+            font-size: 14px;
+            color: #6495ED;
+        }
+        .historical-impact a {
+            color: #fff;
+            text-decoration: none;
+            background-color: #4a90e2;
+            padding: 2px 5px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+            margin-right: 5px;
+        }
+        .historical-impact a:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calendar-grid">
+
+        <!-- Event 1 -->
+        <div class="event-card">
+            <div class="event-title">German CPI (MoM) (Oct)</div>
+            <div class="event-date">12-Nov-24 | Tue | 12:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">EUR</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.40%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.00%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The Consumer Price Index (CPI) measures the change in prices of goods and services from the consumer's perspective. As Germany has the largest output in the euro-zone, the ECB pays close attention to this figure for price stability.<br><br>
+                    A reading stronger than forecast is generally supportive (bullish) for the EUR, while a weaker reading is generally negative (bearish) for the EUR.<br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1POzgee23tZ4277-_-nZmqesAv5-9zGEL/view?usp=share_link">EURJPY</a> 
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-card">
+            <div class="event-title">Core CPI (MoM) (Oct)</div>
+            <div class="event-date">13-Nov-24 | Wed | 19:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.30%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.30%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Core CPI measures price changes in goods and services excluding food and energy. The Fed closely monitors this indicator for underlying price pressures.<br><br>
+                    A stronger-than-forecast reading is generally bullish for the USD, while a weaker reading is bearish.<br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1POzgee23tZ4277-_-nZmqesAv5-9zGEL/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-card">
+            <div class="event-title">CPI (YoY) (Oct)</div>
+            <div class="event-date">13-Nov-24 | Wed | 19:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">2.40%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">2.40%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Measures the change in the price of goods and services in a basket of consumer items. Monitored closely by the Fed for price stability.<br><br>
+                    A stronger reading is bullish for the USD; a weaker reading is bearish.<br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1POzgee23tZ4277-_-nZmqesAv5-9zGEL/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="event-card">
+            <div class="event-title">CPI (MoM) (Oct)</div>
+            <div class="event-date">13-Nov-24 | Wed | 19:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.20%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.20%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Reflects the change in prices within a basket of consumer items. Monitored by the Fed for economic stability.<br><br>
+                    A stronger reading is bullish for the USD; a weaker reading is bearish.<br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1POzgee23tZ4277-_-nZmqesAv5-9zGEL/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Additional Events -->
+
+        <!-- Event for Initial Jobless Claims -->
+        <div class="event-card">
+            <div class="event-title">Initial Jobless Claims</div>
+            <div class="event-date">14-Nov-24 | Thu | 19:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">222K</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">221K</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Measures the number of people filing for unemployment insurance for the first time. A higher reading is bearish for the USD; a lower reading is bullish.<br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1POzgee23tZ4277-_-nZmqesAv5-9zGEL/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event for Crude Oil Inventories -->
+        <div class="event-card">
+            <div class="event-title">Crude Oil Inventories</div>
+            <div class="event-date">14-Nov-24 | Thu | 21:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">2.149M</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The EIA reports weekly crude oil inventories, impacting inflation. Higher inventories suggest weaker demand and are bearish for crude prices, while lower inventories are bullish.<br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1POzgee23tZ4277-_-nZmqesAv5-9zGEL/view?usp=share_link">USOILRoll</a>
+                </span>
+            </div>
+        </div>
+
+
+        <!-- Event for PPI (MoM) (Oct) -->
+        <div class="event-card">
+            <div class="event-title">PPI (MoM) (Oct)</div>
+            <div class="event-date">14-Nov-24 | Thu | 19:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.20%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.00%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The Producer Price Index (PPI) measures changes in input prices for raw and finished goods, impacting consumer prices. A stronger reading supports the USD, while a weaker one is bearish.<br><br>
+                </span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1POzgee23tZ4277-_-nZmqesAv5-9zGEL/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event for GDP (QoQ) (Q3) P - Japan -->
+        <div class="event-card">
+            <div class="event-title">GDP (QoQ) (Q3) P</div>
+            <div class="event-date">15-Nov-24 | Fri | 5:20 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">JPY</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.20%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.70%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    GDP measures economic activity, indicating the overall health of the Japanese economy. A stronger reading is bullish for the JPY, while a weaker reading is bearish.<br><br>
+                </span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1POzgee23tZ4277-_-nZmqesAv5-9zGEL/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event for GDP (YoY) (Q3) P - UK -->
+        <div class="event-card">
+            <div class="event-title">GDP (YoY) (Q3) P</div>
+            <div class="event-date">15-Nov-24 | Fri | 12:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">GBP</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.10%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.70%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    This indicator reflects annual economic activity within the UK. A stronger reading is bullish for the GBP, while a weaker reading is bearish.<br><br>
+                </span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1POzgee23tZ4277-_-nZmqesAv5-9zGEL/view?usp=share_link">GBPJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event for GDP (MoM) (Sep) - UK -->
+        <div class="event-card">
+            <div class="event-title">GDP (MoM) (Sep)</div>
+            <div class="event-date">15-Nov-24 | Fri | 12:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">GBP</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.20%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.20%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    GDP MoM measures monthly economic activity, providing insights into the UK economy's health. A higher reading is bullish for the GBP, while a lower reading is bearish.<br><br>
+                </span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1POzgee23tZ4277-_-nZmqesAv5-9zGEL/view?usp=share_link">GBPJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event for GDP (QoQ) (Q3) P - UK -->
+        <div class="event-card">
+            <div class="event-title">GDP (QoQ) (Q3) P</div>
+            <div class="event-date">15-Nov-24 | Fri | 12:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">GBP</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.20%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.50%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Quarterly GDP data provides a broad indicator of UK economic health. A stronger-than-expected result is bullish for the GBP, while a weaker result is bearish.<br><br>
+                </span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1POzgee23tZ4277-_-nZmqesAv5-9zGEL/view?usp=share_link">GBPJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event for Core Retail Sales (MoM) (Oct) -->
+        <div class="event-card">
+            <div class="event-title">Core Retail Sales (MoM) (Oct)</div>
+            <div class="event-date">15-Nov-24 | Fri | 19:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.20%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.50%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Measures changes in retail sales excluding automobiles, reflecting consumer spending. A stronger reading is supportive of the USD; a weaker reading is bearish.<br><br>
+                </span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1POzgee23tZ4277-_-nZmqesAv5-9zGEL/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event for Retail Sales (MoM) (Oct) -->
+        <div class="event-card">
+            <div class="event-title">Retail Sales (MoM) (Oct)</div>
+            <div class="event-date">15-Nov-24 | Fri | 19:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.30%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.40%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Reflects monthly changes in the value of U.S. retail sales, a key consumer spending indicator. A stronger result is bullish for the USD; a weaker result is bearish.<br><br>
+                </span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1POzgee23tZ4277-_-nZmqesAv5-9zGEL/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event for Fed Interest Rate Decision -->
+        <div class="event-card">
+            <div class="event-title">Fed Interest Rate Decision</div>
+            <div class="event-date">18-Dec-24 | Thu | 23:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">5.50%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">5.50%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The Fed announces its target interest rate, impacting USD demand. A rate hike is generally bullish for the USD, while a rate cut is bearish.<br><br>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+
+    <p>Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 11th November 2024, 4 PM.</p>
+    <p>For historical data, please visit: <a href="https://quantwater.tech/resources" style="color: #4a90e2;">https://quantwater.tech/resources</a></p>
+</body>
+</html>

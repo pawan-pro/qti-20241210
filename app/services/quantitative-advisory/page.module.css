@@ -1,0 +1,96 @@
+/* Main container */
+.mainContainer {
+  min-height: 100vh;
+  background-color: rgb(0, 0, 0); /* Black background for contrast */
+  padding: 2rem 1rem;
+}
+
+/* Header section */
+.headerSection {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 2rem;
+  color: rgb(207, 181, 139); /* Golden tone */
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 4rem;
+}
+
+/* Services grid */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Service card */
+.serviceCard {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image container */
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #000;
+}
+
+/* Card content */
+.cardContent {
+  padding: 1.5rem;
+}
+
+.cardTitle {
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 1rem;
+  color: rgb(214, 214, 214);
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageContainer {
+    height: 160px;
+  }
+}

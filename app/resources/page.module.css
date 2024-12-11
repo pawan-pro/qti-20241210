@@ -1,0 +1,58 @@
+/* src/app/resources/page.module.css */
+.mainContainer {
+    padding: 4rem;
+    background-color: #000;
+  }
+  
+  .headerSection {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #fff;
+    padding: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: #ccc;
+  }
+  
+  .servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .serviceCard {
+    background-color: #262626;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .imageContainer {
+    position: relative;
+    height: 200px;
+  }
+  
+  .cardContent {
+    padding: 1rem;
+    background-color: #262626;
+  }
+  
+  .cardTitle {
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .cardDescription {
+    font-size: 1rem;
+    color: #ccc;
+    text-align: center;
+  }
