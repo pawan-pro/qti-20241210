@@ -47,7 +47,6 @@ export default function ServicesPage() {
             </div>
             <div className={styles.cardContent}>
               <h3 className={styles.cardTitle}>{service.title}</h3>
-              <p className={styles.cardDescription}>{service.description}</p>
             </div>
           </Link>
         ))}
