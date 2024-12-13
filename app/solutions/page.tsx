@@ -6,23 +6,23 @@ const services = [
   {
     id: 'quantitative-advisory',
     title: 'Quantitative Investment Advisory',
-    description: 'Access expert advice on quantitative investments.',
-    image: '/22.jpg',
-    link: '/services/quantitative-advisory',
+    //description: 'Access expert advice on quantitative investments.',
+    image: '/S153.jpg',
+    link: '/solutions/quantitative-advisory',
   },
   {
     id: 'global-portfolio',
     title: 'Global Multi-Asset Portfolio',
-    description: 'Diversify your investments across global markets.',
-    image: '/s2.jpg',
-    link: '/services/global-portfolio',
+    //description: 'Diversify your investments across global markets.',
+    image: '/s211.jpg',
+    link: '/solutions/global-portfolio',
   },
   {
     id: 'algorithmic-advisor',
     title: 'Algorithmic Investment Expert Advisor',
-    description: 'Leverage AI-powered algorithms for your investments.',
-    image: '/s3.jpg',
-    link: '/services/algorithmic-advisor',
+    //description: 'Leverage AI-powered algorithms for your investments.',
+    image: '/s341.jpg',
+    link: '/solutions/algorithmic-advisor',
   },
 ];
 
@@ -30,7 +30,7 @@ export default function ServicesPage() {
   return (
     <main className={styles.mainContainer}>
       <header className={styles.headerSection}>
-        <h1 className={styles.title}>Services</h1>
+        <h1 className={styles.title}>Solutions</h1>
         <h2 className={styles.subtitle}>Innovative Investment Solutions</h2>
       </header>
 

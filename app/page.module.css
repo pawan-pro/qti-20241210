@@ -1,44 +1,43 @@
-/* app/page.module.css */
+/* src/app/Home/page.module.css */
 .heroSection {
   position: relative;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;  /* Full viewport height */
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.heroImage {
-  object-fit: cover; /* Ensures the image covers the entire section */
-  z-index: -1; /* Place the image behind the text */
+  justify-content: left;  /* left content horizontally */
+  color: white;  /* Bright text for better readability */
 }
 
 .heroOverlay {
   position: relative;
-  z-index: 10; /* Ensure text is above the image */
-  text-align: center;
-  max-width: 100%; /* Center content and limit its width */
+  z-index: 10;  /* Ensure text is above the image */
+  text-align: left;  /* Left-align the text */
+  max-width: 100%;  /* Prevent text from stretching full width */
   padding: 2rem;
 }
 
 .heroTitle {
-  font-size: 3rem;
+  font-size: 4rem;  /* Large, impactful title */
   font-weight: bold;
+  margin-bottom: 1rem;
   line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Add depth to text */
 }
 
 .heroSubtitle {
-  font-size: 1.2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+  font-size: 1.5rem;
+  max-width: 1000px;
+  margin: 1 auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);  /* Subtle text shadow */
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .heroTitle {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .heroSubtitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }

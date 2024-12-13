@@ -1,0 +1,33 @@
+/* page.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000000; /* Pure black background */
+  color: #ffffff; /* White text for contrast */
+  font-family: 'Century Gothic', sans-serif; /* Updated font */
+  text-align: center;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.email {
+  font-size: 1.25rem;
+}
+
+.emailLink {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.emailLink:hover {
+  text-decoration: underline;
+}

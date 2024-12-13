@@ -7,22 +7,22 @@ const services = [
     id: 'quantitative-advisory',
     title: 'Quantitative Investment Advisory',
     description: 'Access expert advice on quantitative investments.',
-    image: '/s1.jpg',
-    link: '/services/quantitative-advisory',
+    image: '/s15.jpg',
+    link: '/solutions/quantitative-advisory',
   },
   {
     id: 'global-portfolio',
     title: 'Global Multi-Asset Portfolio',
     description: 'Diversify your investments across global markets.',
-    image: '/s2.jpg',
-    link: '/services/global-portfolio',
+    image: '/s21.jpg',
+    link: '/solutions/global-portfolio',
   },
   {
     id: 'algorithmic-advisor',
     title: 'Algorithmic Investment Expert Advisor',
     description: 'Leverage AI-powered algorithms for your investments.',
-    image: '/s3.jpg',
-    link: '/services/algorithmic-advisor',
+    image: '/s34.jpg',
+    link: '/solutions/algorithmic-advisor',
   },
 ];
 

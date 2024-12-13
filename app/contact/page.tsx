@@ -1,16 +1,16 @@
 // app/contact/page.tsx
+import styles from './page.module.css';
+
 export default function Contact() {
   return (
-    <div>
-      <h1>We would like to hear from you</h1>
-      <p>Please reach us at info@quantwater.tech</p>
-      <form>
-        <label htmlFor="name">Name</label>
-        <input type="text" id="name" />
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" />
-        <button type="submit">Submit</button>
-      </form>
+    <div className={styles.container}>
+      <h1 className={styles.heading}>We would like to hear from you</h1>
+      <p className={styles.email}>
+        Reach us at{' '}
+        <a href="mailto:info@quantwater.tech" className={styles.emailLink}>
+          info@quantwater.tech
+        </a>
+      </p>
     </div>
   );
 }
