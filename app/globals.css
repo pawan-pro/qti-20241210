@@ -8,8 +8,8 @@
 }
 
 body {
-  font-family: 'Century Gothic', Arial, sans-serif;
-  background-color: #000;
+  font-family: 'Century Gothic', Arial, sans-serif; /* Restore original font */
+  background-color: #000; /* Keep black background */
   color: #fff;
 }
 
@@ -19,40 +19,58 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #000; /* Black background */
+  background-color: #000;
   position: sticky;
   top: 0;
-  z-index: 1000; /* Ensure header stays on top */
+  z-index: 1000;
+  flex-wrap: nowrap; /* Prevent wrapping by default */
 }
 
 .firm-name {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff; /* White text for contrast */
+  color: #fff;
 }
 
 .nav-links {
   display: flex;
-  gap: 1.5rem; /* Add space between navigation links */
+  gap: 1.5rem; /* Space between links */
 }
 
 .nav-links a {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
-  color: #fff; /* White text for contrast */
+  color: #fff;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #007acc; /* Highlight color on hover */
+  color: #007acc;
 }
 
-/* Blog and Page Styles */
-main img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .firm-name {
+    font-size: 1.2rem; /* Slightly reduce size for smaller screens */
+  }
+
+  .nav-links {
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .firm-name {
+    font-size: 1rem; /* Further reduce size for phones */
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: row; /* Keep links horizontal on smaller screens */
+    gap: 0.5rem;
+    justify-content: center;
+  }
 }

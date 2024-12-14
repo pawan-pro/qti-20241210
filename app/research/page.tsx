@@ -18,7 +18,7 @@ const projects = [
   {
     id: 'historical-calendar',
     title: 'Historical Economic Calendar',
-    image: '/r21.jpg',
+    image: '/r31.jpg',
     link: '/resources/HEC.xlsx', // Downloadable file
   },
 ];

@@ -14,7 +14,7 @@ export default function Home() {
           zIndex: -1,
           objectFit: 'cover', // Ensures the image scales proportionally
           objectPosition: 'center', // Center the image
-          opacity: 0.6,
+          opacity: 0.7, // Soften the overlay
         }}
       />
       <div className={styles.heroOverlay}>

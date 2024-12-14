@@ -1,43 +1,59 @@
 /* src/app/Home/page.module.css */
 .heroSection {
   position: relative;
-  height: 100vh;  /* Full viewport height */
+  height: 100vh; /* Full viewport height */
   display: flex;
   align-items: center;
-  justify-content: left;  /* left content horizontally */
-  color: white;  /* Bright text for better readability */
+  justify-content: left;
+  color: white;
+  overflow: hidden; /* Prevent content overflow */
 }
 
 .heroOverlay {
   position: relative;
-  z-index: 10;  /* Ensure text is above the image */
-  text-align: left;  /* Left-align the text */
-  max-width: 100%;  /* Prevent text from stretching full width */
-  padding: 2rem;
+  z-index: 10;
+  text-align: left;
+  max-width: 100%; /* Ensure text fits properly */
+  padding: 1.5rem; /* Adjust padding for smaller screens */
+  background: none; /* Remove unintended grey overlay */
 }
 
 .heroTitle {
-  font-size: 4rem;  /* Large, impactful title */
+  font-size: 4rem; /* Large title */
   font-weight: bold;
   margin-bottom: 1rem;
   line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Add depth to text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .heroSubtitle {
   font-size: 1.5rem;
-  max-width: 1000px;
-  margin: 1 auto;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);  /* Subtle text shadow */
+  max-width: 100%;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .heroTitle {
-    font-size: 2.5rem;
+    font-size: 3rem; /* Slightly smaller title for tablets */
   }
 
   .heroSubtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* Scale subtitle */
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2rem; /* Smaller title for phones */
+    line-height: 1.1;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem; /* Scale subtitle down further */
+  }
+
+  .heroOverlay {
+    padding: 1rem; /* Reduce padding on very small screens */
   }
 }
