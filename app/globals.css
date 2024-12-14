@@ -1,58 +1,63 @@
 /* globals.css */
-
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Century Gothic', Arial, sans-serif;
-  background-color: #000;
-  color: #fff;
-}
-
-/* Header Styles */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #000; /* Black background */
+  padding: 1rem;
+  background-color: #000;
   position: sticky;
   top: 0;
-  z-index: 1000; /* Ensure header stays on top */
+  z-index: 1000;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .firm-name {
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Reduce size for mobile */
   font-weight: bold;
-  color: #fff; /* White text for contrast */
+  color: #fff;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .nav-links {
   display: flex;
-  gap: 1.5rem; /* Add space between navigation links */
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+  gap: 1rem;
+  justify-content: center;
 }
 
 .nav-links a {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.9rem; /* Reduce link size */
   font-weight: 500;
-  color: #fff; /* White text for contrast */
+  color: #fff;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #007acc; /* Highlight color on hover */
+  color: #007acc;
 }
 
-/* Blog and Page Styles */
-main img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .firm-name {
+    font-size: 1rem; /* Further reduce size for tablets */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack links vertically */
+    gap: 0.5rem; /* Reduce gap */
+  }
+}
+
+@media (max-width: 480px) {
+  .firm-name {
+    font-size: 0.9rem; /* Adjust firm name size for phones */
+    text-align: center; /* Center-align text */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center; /* Center links */
+    gap: 0.5rem;
+  }
 }

@@ -66,18 +66,16 @@
 /* Image section styling */
 .imageSection {
   position: relative;
+  display: flex; /* Ensure visibility */
+  align-items: center;
+  justify-content: center;
 }
 
-/* Image container styling */
+/* Use the next/image component instead of background-image */
 .imageContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url('/about.jpg'); /* Replace with your actual image path */
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 /* Responsive Design */

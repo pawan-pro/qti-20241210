@@ -1,18 +1,20 @@
 import Image from 'next/image';
-import styles from './page.module.css'; // Import styles from the CSS module
+import styles from './page.module.css';
 
 export default function Home() {
   return (
     <main className={styles.heroSection}>
       <Image
-        src="/11.jpg"  // Image path, make sure the image is placed in the public folder
+        src="/11.jpg"
         alt="Quantwater Tech Investments Background"
         fill
         priority
         className="object-cover"
         style={{
           zIndex: -1,
-          opacity: 0.6, // Soft overlay effect
+          objectFit: 'cover', // Ensures the image scales proportionally
+          objectPosition: 'center', // Center the image
+          opacity: 0.6,
         }}
       />
       <div className={styles.heroOverlay}>

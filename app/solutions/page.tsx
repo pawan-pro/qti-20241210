@@ -6,21 +6,18 @@ const services = [
   {
     id: 'quantitative-advisory',
     title: 'Quantitative Investment Advisory',
-    //description: 'Access expert advice on quantitative investments.',
-    image: '/S153.jpg',
+    image: '/s153.jpg',
     link: '/solutions/quantitative-advisory',
   },
   {
     id: 'global-portfolio',
     title: 'Global Multi-Asset Portfolio',
-    //description: 'Diversify your investments across global markets.',
     image: '/s211.jpg',
     link: '/solutions/global-portfolio',
   },
   {
     id: 'algorithmic-advisor',
     title: 'Algorithmic Investment Expert Advisor',
-    //description: 'Leverage AI-powered algorithms for your investments.',
     image: '/s341.jpg',
     link: '/solutions/algorithmic-advisor',
   },
@@ -42,6 +39,7 @@ export default function ServicesPage() {
                 src={service.image}
                 alt={service.title}
                 fill
+                priority={service.id === 'quantitative-advisory'} // Priority for the first service
                 style={{ objectFit: 'cover' }}
               />
             </div>

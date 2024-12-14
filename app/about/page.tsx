@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './page.module.css';
 
 export default function AboutPage() {
@@ -21,7 +22,15 @@ export default function AboutPage() {
         </div>
       </div>
       <div className={styles.imageSection}>
-        <div className={styles.imageContainer}></div>
+        <div className={styles.imageContainer}>
+          <Image
+            src="/about.jpg" // Ensure the image is in the public folder
+            alt="About Quantwater"
+            fill
+            priority
+            style={{ objectFit: 'cover' }} // Ensures it covers the div area
+          />
+        </div>
       </div>
     </main>
   );

@@ -1,43 +1,26 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './page.module.css'; // Assuming you're using the same styles file
+import styles from './page.module.css';
 
 const projects = [
   {
     id: 'dxy-forecast',
     title: 'Project: Forex - $ DXY Index - 10 Year Forecast',
-    //description: 'Download the 10-year outlook for DXY.',
     image: '/r114.jpg',
-    link: '/resources/DXY-10-Year-Outlook.pdf', // Link to a downloadable file
+    link: '/resources/DXY-10-Year-Outlook.pdf', // Downloadable file
   },
   {
     id: 'GCC REIT Market Overview',
     title: 'GCC REIT Market Overview',
-    //description: 'A Deep Dive into the Growth, Trends, and Key Players',
     image: '/r211.jpg',
-    link: '/resources/GCC REIT Market Overview.pdf', // Link to a downloadable file
+    link: '/resources/GCC REIT Market Overview.pdf', // Downloadable file
   },
   {
     id: 'historical-calendar',
     title: 'Historical Economic Calendar',
-    //description: 'Access the historical economic calendar data.',
     image: '/r21.jpg',
-    link: '/resources/HEC.xlsx', // Link to another downloadable file
+    link: '/resources/HEC.xlsx', // Downloadable file
   },
-  //{
-  //  id: 'expert-advisor-1',
-  //  title: 'Expert Advisor 1',
-  //  //description: 'Download Expert Advisor 1 from Google Drive.',
-  //  image: '/r3.jpg',
-  //  link: 'https://drive.google.com/file/d/xyz123/view?usp=sharing', // Google Drive link
-  //},
-  //{
-  //  id: 'expert-advisor-2',
-  //  title: 'Expert Advisor 2',
-  //  //description: 'Download Expert Advisor 2 from Google Drive.',
-  //  image: '/r4.jpg',
-  //  link: '/resources/20241209.html', // Another Google Drive link
-  //},
 ];
 
 export default function ResourcesPage() {
@@ -50,12 +33,18 @@ export default function ResourcesPage() {
 
       <section className={styles.servicesGrid}>
         {projects.map((project) => (
-          <Link href={project.link} key={project.id} className={styles.serviceCard}>
+          <Link
+            href={project.link}
+            key={project.id}
+            className={styles.serviceCard}
+            target={project.link.startsWith('http') ? '_blank' : '_self'} // Open external links in a new tab
+          >
             <div className={styles.imageContainer}>
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
+                priority={project.id === 'dxy-forecast'} // Priority loading for the first card
                 style={{ objectFit: 'cover' }}
               />
             </div>
