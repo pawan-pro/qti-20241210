@@ -2,6 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import styles from './slug.module.css';
+import './styles/global.css';
 
 export default async function BlogPostPage({
   params
