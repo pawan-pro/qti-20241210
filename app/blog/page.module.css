@@ -1,66 +1,85 @@
-/* Blog Page Layout */
-
-.main {
-  background-color: #121212;
-  color: #e0e0e0;
+/* src/app/blog/page.module.css */
+.mainContainer {
+  padding: 4rem;
+  background-color: #000;
 }
 
-
-.header {
+.headerSection {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .title {
-  font-size: 3rem;
-  font-family: 'Century Gothic', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  padding: 2rem;
 }
 
 .subtitle {
   font-size: 1.25rem;
-  color: #888;
+  color: #ccc;
 }
 
-.blogList {
-  padding: 3rem;
-  display: flex;
-  flex-direction: column; /* Stack blog posts vertically */
-  gap: 3rem; /* Add spacing between posts */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
 }
 
-.blogCard {
-  background-color: #1d1d1d;
+.serviceCard {
+  background-color: #262626;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 1.5rem;
-  transition: transform 0.2s ease-in-out;
   overflow: hidden;
-}
-
-.blogCard:hover {
-  transform: translateY(-5px);
-}
-
-.blogContent {
-  font-family: 'Century Gothic', sans-serif;
-  line-height: 1.6;
-  height: 42em; /* Approximate height for 27 lines */
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.readMore {
-  display: block;
-  text-align: center;
-  margin-top: 1rem;
-  background-color: #4a90e2;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.readMore:hover {
-  background-color: #357ae8;
+.serviceCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
 }
 
+.imageContainer {
+  position: relative;
+  height: 200px;
+}
+
+.cardContent {
+  padding: 1rem;
+  background-color: #262626;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.cardDescription {
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 2rem;
+  }
+
+  .imageContainer {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageContainer {
+    height: 120px;
+  }
+}

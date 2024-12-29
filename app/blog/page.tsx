@@ -1,50 +1,105 @@
-import fs from 'fs';
-import path from 'path';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './page.module.css';
 
-async function fetchBlogPosts() {
-  const blogDir = path.join(process.cwd(), 'public/blogs');
-  const fileNames = fs.readdirSync(blogDir);
+const projects = [
+  {
+    id: 'blog0',
+    title: 'Key Economic Events: Week Of 29th Dec 2024',
+    image: '/blogs/blog-cover/20241229.png',
+    link: '/blogs/20241229.html', // blog html file
+  },
+  {
+    id: 'blog1',
+    title: 'Key Economic Events: Week Of 22nd Dec 2024',
+    image: '/blogs/blog-cover/20241222.png',
+    link: '/blogs/20241222.html', // blog html file
+  },
+  {
+    id: 'blog2',
+    title: 'Key Events: For The Week Of 15th Dec 2024',
+    image: '/blogs/blog-cover/20241215.png',
+    link: '/blogs/20241215.html', // blog html file
+  },
+  {
+    id: 'blog3',
+    title: 'Key Economic Events: Week Of 8th December 2024',
+    image: '/blogs/blog-cover/20241208.png',
+    link: '/blogs/20241209.html', // blog html file
+  },
+  {
+    id: 'blog4',
+    title: 'Key Economic Events: Week Of 30th November 2024',
+    image: '/blogs/blog-cover/20241130.png',
+    link: '/blogs/20241202.html', // blog html file
+  },
+  {
+    id: 'blog5',
+    title: 'Key Economic Events: Week Of 12th November 2024',
+    image: '/blogs/blog-cover/20241112.png',
+    link: '/blogs/20241111.html', // blog html file
+  },
+  {
+    id: 'blog6',
+    title: 'Key Economic Events: Week Of 4th November 2024',
+    image: '/blogs/blog-cover/20241104.png',
+    link: '/blogs/20241104.html', // blog html file
+  },
+  {
+    id: 'blog7',
+    title: 'Key Economic Events: Week Of 27th October 2024',
+    image: '/blogs/blog-cover/20241027.png',
+    link: '/blogs/20241028.html', // blog html file
+  },
+  {
+    id: 'blog8',
+    title: 'Key Economic Events: Week Of 23rd October 2024',
+    image: '/blogs/blog-cover/20241023.png',
+    link: '/blogs/20241021.html', // blog html file
+  },
+  {
+    id: 'blog9',
+    title: 'Key Economic Events: Week Of 14th October 2024',
+    image: '/blogs/blog-cover/20241014.png',
+    link: '/blogs/20241014.html', // blog html file
+  },
+  {
+    id: 'blog10',
+    title: 'Key Economic Events: Week Of 9th October 2024',
+    image: '/blogs/blog-cover/20241009.png',
+    link: '/blogs/20241007.html', // blog html file
+  },
+];
 
-  // Filter out non-HTML files (like .DS_Store)
-  const posts = fileNames
-    .filter((fileName) => fileName.endsWith('.html')) // Only process HTML files
-    .map((fileName) => {
-      const filePath = path.join(blogDir, fileName);
-      const fileContents = fs.readFileSync(filePath, 'utf8');
-      return { fileName, content: fileContents };
-    });
-
-  // Sort posts by filename (assuming filenames are in 'YYYYMMDD.html' format)
-  posts.sort((a, b) => {
-    return b.fileName.localeCompare(a.fileName); // Sort in descending order (latest first)
-  });
-
-  return posts;
-}
-
-export default async function BlogPage() {
-  const posts = await fetchBlogPosts();
-
+export default function ResourcesPage() {
   return (
-    <main className={styles.main}>
-      <header className={styles.header}>
+    <main className={styles.mainContainer}>
+      <header className={styles.headerSection}>
         <h1 className={styles.title}>Blog</h1>
-        <p className={styles.subtitle}>Stay updated with our latest insights</p>
+        <h2 className={styles.subtitle}>Stay updated with our latest insights</h2>
       </header>
 
-      <section className={styles.blogList}>
-        {posts.map((post: { fileName: string; content: string }) => (
-          <div key={post.fileName} className={styles.blogCard}>
-            <div
-              className={styles.blogContent}
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
-            <Link href={`/blog/${post.fileName.replace('.html', '')}`} className={styles.readMore}>
-              Read More
-            </Link>
-          </div>
+      <section className={styles.servicesGrid}>
+        {projects.map((project) => (
+          <Link
+            href={project.link}
+            key={project.id}
+            className={styles.serviceCard}
+            target={project.link.startsWith('http') ? '_blank' : '_self'} // Open external links in a new tab
+          >
+            <div className={styles.imageContainer}>
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                priority={project.id === 'dxy-forecast'} // Priority loading for the first card
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+            <div className={styles.cardContent}>
+              <h3 className={styles.cardTitle}>{project.title}</h3>
+            </div>
+          </Link>
         ))}
       </section>
     </main>

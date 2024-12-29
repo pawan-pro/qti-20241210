@@ -1,0 +1,42 @@
+/* components/Header.module.css */
+
+/* Base Styles */
+.headerSection {
+  background-color: #1e1e1e; /* Dark background consistent with global.css */
+  text-align: center;
+  padding: 1rem; /* Consistent padding */
+  margin-bottom: 2rem;
+  font-family: 'Century Gothic', Arial, sans-serif; /* Consistent font from global.css */
+}
+
+.title {
+  font-size: 2rem;
+  color: #fff; /* Light text color consistent with global.css */
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #ccc; /* Lighter text consistent with global.css */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem; /* Slightly reduce size for smaller screens */
+  }
+
+  .subtitle {
+    font-size: 1.125rem; /* Adjust subtitle for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem; /* Further reduce title size for very small screens */
+  }
+
+  .subtitle {
+    font-size: 1rem; /* Adjust subtitle size for very small screens */
+  }
+}
