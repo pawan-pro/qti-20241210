@@ -7,7 +7,7 @@ const projects = [
     id: 'blog20240106',
     title: 'Key Economic Events: Week Of 05th Jan 2025',
     image: '/blogs/blog-cover/20250106.png',
-    link: '/blogs/20250105.html', // blog html file
+    link: '/blogs/20250106.html', // blog html file
   },
   {
     id: 'blog0',
