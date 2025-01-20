@@ -4,7 +4,7 @@ import styles from './page.module.css';
 
 const projects = [
   {
-    id: 'blog20240120',
+    id: 'blog20240120',  
     title: 'Key Economic Events: Week Of 20th Jan 2025',
     image: '/blogs/blog-cover/20250120.png',
     link: '/blogs/20250120.html', // blog html file
@@ -123,3 +123,7 @@ export default function ResourcesPage() {
     </main>
   );
 }
+
+//git add .                                                                                                          
+//git commit -m "20250120 update - 20240118 blog added"
+//git push origin main
