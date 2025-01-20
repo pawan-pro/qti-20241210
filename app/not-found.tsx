@@ -38,7 +38,7 @@ export default function NotFound() {
         Please try another link or return to our homepage.
       </p>
       <Link href="/" className={styles.link}>
-        Go back to Home
+        Home
       </Link>
     </div>
   );
