@@ -34,7 +34,7 @@ export default function NotFound() {
       </div>
       <p className={styles.message}>
         Oh no! It looks like the page you&apos;re looking for has gone on a coffee break with Business Cat.<br></br><br></br> 
-        While Business Cat&apos;s busy presenting the figures, we&apos;re working to find where this page has scampered off to. <br></br><br></br>
+        While Business Cat is busy presenting the figures, we&apos;re working to find where this page has scampered off to. <br></br><br></br>
         Please try another link or return to our homepage.
       </p>
       <Link href="/" className={styles.link}>
