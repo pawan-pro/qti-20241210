@@ -1,22 +1,40 @@
+"use client"; // Add this directive at the top of the file
+
 import styles from './not-found.module.css'; // Updated import path
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function NotFound() {
+  const [randomImage, setRandomImage] = useState('');
+
+  useEffect(() => {
+    // Define the list of image paths
+    const images = [
+      '/404/Business-Cat-giving-presentation-Red.jpg','/404/Business-Cat-giving-presentation-Green.jpg','/404/Business-Cat-giving-presentation-Blue.jpg'
+    ];
+
+    // Randomly select an image
+    const randomIndex = Math.floor(Math.random() * images.length);
+    setRandomImage(images[randomIndex]);
+  }, []);
+
   return (
     <div className={styles.container}>
       <h1 className={styles.heading}>404 - Page Not Found</h1>
       <div className={styles.image}>
-        <Image
-          src="/404/business-cat-giving-presentation.jpg" // Ensure this path is correct
-          alt="404 Error"
-          width={400}
-          height={300}
-        />
+        {randomImage && (
+          <Image
+            src={randomImage} // Use the randomly selected image
+            alt="404 Error"
+            width={400}
+            height={300}
+          />
+        )}
       </div>
       <p className={styles.message}>
         Oh no! It looks like the page you&apos;re looking for has gone on a coffee break with Business Cat.<br></br><br></br> 
-        While he&apos;s busy presenting the figures, we&apos;re working to find where this page has scampered off to. <br></br><br></br>
+        While Business Cat&apos;s busy presenting the figures, we&apos;re working to find where this page has scampered off to. <br></br><br></br>
         Please try another link or return to our homepage.
       </p>
       <Link href="/" className={styles.link}>
