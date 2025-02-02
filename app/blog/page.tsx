@@ -5,7 +5,7 @@ import styles from './page.module.css';
 const projects = [
   {
     id: 'blog20250202',  
-    title: 'Key Economic Events: Week Of 03rd Feb 2025',
+    title: 'Key Economic Events: Week Of 02nd Feb 2025',
     image: '/blogs/blog-cover/20250202.png',
     link: '/blogs/20250202.html', // blog html file
   }, 
