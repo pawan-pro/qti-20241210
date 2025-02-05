@@ -6,6 +6,9 @@
 # Functions settings
 [functions]
   node_bundler = "esbuild"
+  included_files = ["**/*.prisma", "**/*.so", "**/*.node"]
+  node_bundler = "esbuild"
+  external_node_modules = ["next"]
 
 # Set Node.js version
 [build.environment]
@@ -21,3 +24,5 @@
   query = { q = ":quality", url = ":url", w = ":width" }
   to = "/.netlify/images?url=:url&w=:width&q=:quality"
   status = 200
+
+  
