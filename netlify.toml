@@ -1,25 +1,44 @@
+# Netlify Configuration File
+
 [build]
   command = "npm run build"
   publish = ".next"
 
 [functions]
-  included_files = ["**/*.prisma", "**/*.so", "**/*.node"]
-  external_node_modules = ["next"]
   node_bundler = "esbuild"
-  node_bundler_exclude_files = [
+
+  [functions.node_bundler_exclude_files]
+  external_node_modules = []
+  included_files = [
     "node_modules/.cache/**",
     "node_modules/**/*.map",
     "node_modules/**/*.md"
   ]
 
+[dev]
+  command = "npm run dev"
+  port = 8888
+  targetPort = 3000
+  framework = "next"
+
+[build.environment]
+  NODE_VERSION = "18"
+
 [[redirects]]
   from = "/_next/image"
-  query = { q = ":quality", url = ":url", w = ":width" }
+  to = "/.netlify/images"
   status = 200
-  to = "/.netlify/images?url=:url&w=:width&q=:quality"
+  query = { url = ":url", w = ":width", q = ":quality" }
 
 [[redirects]]
   from = "/_ipx/*"
-  query = { q = ":quality", url = ":url", w = ":width" }
+  to = "/.netlify/images"
   status = 200
-  to = "/.netlify/images?url=:url&w=:width&q=:quality"
+  query = { url = ":url", w = ":width", q = ":quality" }
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
