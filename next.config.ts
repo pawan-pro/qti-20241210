@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "*": ["node_modules/.prisma/**"], // Ensures Prisma files are included if used
   },
+  images: {
+    domains: [], // Add any external domains if needed
+  },
 };
 
 export default nextConfig;
