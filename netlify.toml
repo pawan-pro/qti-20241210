@@ -1,0 +1,23 @@
+# Build settings
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Functions settings
+[functions]
+  node_bundler = "esbuild"
+
+# Set Node.js version
+[build.environment]
+  NODE_VERSION = "18"
+
+# Enable Netlify's Next.js plugin
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Redirect settings for Next.js images (optional)
+[[redirects]]
+  from = "/_next/image"
+  query = { q = ":quality", url = ":url", w = ":width" }
+  to = "/.netlify/images?url=:url&w=:width&q=:quality"
+  status = 200
