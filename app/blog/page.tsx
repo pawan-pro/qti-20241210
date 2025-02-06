@@ -2,31 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './page.module.css';
 
-const projects = [
-  {
-    id: 'blog20250202',  
-    title: 'Key Economic Events: Week Of 02nd Feb 2025',
-    image: '/blogs/blog-cover/20250202.png',
-    link: '/blogs/20250202.html', // blog html file
-  }, 
-  {
-    id: 'blog20240126',  
-    title: 'Key Economic Events: Week Of 26th Jan 2025',
-    image: '/blogs/blog-cover/20250126.png',
-    link: '/blogs/20250126.html', // blog html file
-  }, 
-  {
-    id: 'blog20250120',  
-    title: 'Key Economic Events: Week Of 20th Jan 2025',
-    image: '/blogs/blog-cover/20250120.png',
-    link: '/blogs/20250120.html', // blog html file
-  },
-  {
-    id: 'blog20250112',
-    title: 'Key Economic Events: Week Of 12th Jan 2025',
-    image: '/blogs/blog-cover/20250112.png',
-    link: '/blogs/20250112.html', // blog html file
-  },
+const projects = [ 
   {
     id: 'blog20250106',
     title: 'Key Economic Events: Week Of 05th Jan 2025',
