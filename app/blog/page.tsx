@@ -15,6 +15,28 @@ const projects = [
     image: '/blogs/blog-cover/20250202.png',
     link: '/blogs/20250202.html', // blog html file
   },
+
+  {
+    id: 'blog20250126',
+    title: 'Key Economic Events: Week Of 26th Jan 2025',
+    image: '/blogs/blog-cover/20250126.png',
+    link: '/blogs/20250126.html', // blog html file
+  },
+
+  {
+    id: 'blog20250120',
+    title: 'Key Economic Events: Week Of 20th Jan 2025',
+    image: '/blogs/blog-cover/20250120.png',
+    link: '/blogs/20250120.html', // blog html file
+  },
+
+  {
+    id: 'blog20250112',
+    title: 'Key Economic Events: Week Of 12th Jan 2025',
+    image: '/blogs/blog-cover/20250112.png',
+    link: '/blogs/20250112.html', // blog html file
+  },
+
   {
     id: 'blog20250106',
     title: 'Key Economic Events: Week Of 05th Jan 2025',
