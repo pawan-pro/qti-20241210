@@ -65,6 +65,19 @@
             line-height: 1.6;
         }
 
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #e9e9e9ac;
+            margin-bottom: 10px;
+        }
+
+        .blog-subtitle {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
         .blog-container {
             padding: 33px;
         }
@@ -77,7 +90,7 @@
             background: rgba(42, 42, 42, 0.8);
             border-radius: 8px;
             backdrop-filter: blur(5px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(3, 3, 3, 0.1);
             width: 160px;
             font-size: 0.7rem;
         }
@@ -90,24 +103,38 @@
             width: 2px;
             background-color: #444;
             font-size: 0.7rem;
+            
         }
 
         .timeline-item {
             position: relative;
             margin: 15px 0;
-            padding: 8px 25px;
+            padding: 12px 15px;
             cursor: pointer;
             transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            font-size: 0.7rem;
+            border-radius: 6px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item.active {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .timeline-info {
             display: flex;
             flex-direction: column;
-            margin-left: 15px;
+            gap: 4px;
+            margin-left: 0px;
             font-size: 0.7rem;
+            text-align: center ; /* Ensure info is xxxx-aligned */
         }
 
         .timeline-events {
@@ -115,51 +142,45 @@
             color: #888;
             margin-top: 2px;
             font-size: 0.7rem;
+            margin-left: 0 px;
+            text-align: center ; /* Ensure info is xxxx-aligned */
+
+
         }
 
-        .timeline-item:hover {
-            transform: translateX(5px);
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-            font-size: 0.7rem;
-        }
-
-        .timeline-dot {
+        /*.timeline-dot {
             position: absolute;
             left: 4px;
-            width: 10px;
-            height: 10px;
+            width: 4px;
+            height: 4px;
             background-color: #d4af37;
             border-radius: 50%;
             font-size: 0.7rem;
-        }
+        }*/
 
         .timeline-date {
-            color: #bbb;
-            font-size: 0.9rem;
-            margin-left: 15px;
+            color: #e9e9e9ac;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-left: 10px;
             font-size: 0.7rem;
+            text-align: center; /* Ensure date is left-aligned */
+            padding-bottom: 3px;
+
         }
 
         .blog-content {
             margin-left: 200px;
-        }
-
-        .blog-title {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #d4af37;
-            margin-bottom: 10px;
-        }
-
-        .blog-subtitle {
-            font-size: 1rem;
-            color: #bbb;
-            margin-bottom: 30px;
+            max-width: 1200px;
+            padding-right: 33px;
         }
 
         .event-day-group {
             margin-bottom: 40px;
+        }
+
+        .event-day-group:last-child {
+            margin-bottom: 0; /* Remove bottom margin from last group */
         }
 
         .event-card {
@@ -197,9 +218,9 @@
         }
 
         .historical-impact a {
-            color: #fff;
+            color: #e9e9e9ac;
             text-decoration: none;
-            background-color: #4a90e2;
+            background-color: #357ae8;
             padding: 2px 5px;
             border-radius: 3px;
             transition: background-color 0.3s;
@@ -207,7 +228,7 @@
         }
 
         .historical-impact a:hover {
-            background-color: #357ae8;
+            background-color: #3565e8;
         }
 
         @media (max-width: 768px) {
@@ -217,16 +238,23 @@
 
             .blog-content {
                 margin-left: 0;
+                padding: 20px;
+            }
+
+            .source-footer {
+                margin: 00px;
+                width: calc(100% - 40px);
             }
         }
 
         .source-footer {
-            background-color: #2a2a2a;
+            background-color: #161616;
             border: 1px solid #444;
             border-radius: 8px;
             padding: 15px;
-            margin: 20px 0 20px 200px;
-            width: calc(100% - 240px);
+            margin: 20px 0 20px 230px;
+            width: calc(100% - 295px);
+            max-width: 1200px;
             color: #bbb;
             font-size: 0.8rem;
         }
@@ -239,13 +267,6 @@
 
         .source-footer a:hover {
             color: #357ae8;
-        }
-
-        @media (max-width: 768px) {
-            .source-footer {
-                margin-left: 0;
-                width: 100%;
-            }
         }
 
         /* Add timeline link styles */
@@ -285,7 +306,7 @@
                 <a href="#day-17feb">
                     <div class="timeline-info">
                         <span class="timeline-date">17 Feb</span>
-                        <span class="timeline-events">3 Events (2 Holidays)</span>
+                        <span class="timeline-events">3 Events <br>(2 Holidays)</span>
                     </div>
                 </a>
             </div>
@@ -735,7 +756,7 @@
 
     <div class="source-footer">
         <p>Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 17th February 2025, 10 AM.<br></p>
-        <p>For historical data, please visit: <a href="https://quantwater.tech/research" style="color: #dadaee;">https://quantwater.tech/resources</a>
+        <p>For historical data, please visit: <a href="https://quantwater.tech/research" style="color: #dadaee;">https://quantwater.tech/resources</a></p>
     </div>
 </body>
 </html>
