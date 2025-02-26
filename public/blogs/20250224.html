@@ -177,6 +177,7 @@
 
         .event-day-group {
             margin-bottom: 40px;
+            padding-bottom: 20px;
         }
 
         .event-day-group:last-child {
@@ -234,22 +235,14 @@
         .source-card {
             background-color: #222;
             padding: 15px;
-            margin-top: 25px;
+            margin: 40px 0 20px 0;  /* Adjusted margins */
             border-radius: 10px;
-            text-align: Left;
+            text-align: left;
             font-size: 14px;
             color: #6f6f6f;
             border: 1px solid #444;
+            width: 100%;  /* Full width */
         }
-        .source-card a {
-            color: #4A90E2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .source-card a:hover {
-            text-decoration: underline;
-        }
-
 
         @media (max-width: 768px) {
             .blog-timeline {
@@ -542,35 +535,32 @@
                     </div>
                 </div>
             </div>
-
-            <div class="event-card">
-                <div class="event-title">USD - NVIDIA earnings release</div>
-                <div class="event-details">
-                    <span class="event-label">Date:</span>
-                    <span class="event-value">27-Feb-25, Wed, 02:30 IST</span>
-                    <span class="event-label">Currency:</span>
-                    <span class="event-value">USD</span>
-                    <span class="event-label">Importance:</span>
-                    <span class="event-value">3</span>
-                    <span class="event-label">Forecast:</span>
-                    <span class="event-value">0.79</span>
-                    <span class="event-label">Previous:</span>
-                    <span class="event-value">0.49</span>
-                    <span class="event-label">Notes:</span>
-                    <span class="event-value">Scheduled to be released after the market close.
-                    </span>
-                    <span class="event-label">Learn More:</span>
-                    <span class="event-value historical-impact">
-                        <a href="/blogs/blog-pdf/20250224.pdf" target="_blank" rel="noopener noreferrer">UT100Roll</a>
-                        <a href="/blogs/blog-pdf/20250224.pdf" target="_blank" rel="noopener noreferrer">NVIDIA</a>
-                    </span>
-                </div>
-            </div>
-        
-
             <div class="event-day-group" id="day-27feb">
-                <h2 class="timeline-date">27 February 2025</h2>
+                <h2 class="timeline-date">27 February 2025</h2>    
                 <div class="event-card">
+                    <div class="event-title">USD - NVIDIA earnings release</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">27-Feb-25, Wed, 02:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.79</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.49</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">Scheduled to be released after the market close.
+                        </span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250224.pdf" target="_blank" rel="noopener noreferrer">UT100Roll</a>
+                            <a href="/blogs/blog-pdf/20250224.pdf" target="_blank" rel="noopener noreferrer">NVIDIA</a>
+                        </span>
+                    </div>
+                </div>
+                 <div class="event-card">
                     <div class="event-title">CHF - GDP (QoQ) (Q4)</div>
                     <div class="event-details">
                         <span class="event-label">Date:</span>
@@ -662,7 +652,7 @@
                         </span>
                     </div>
                 </div>
-            
+            </div>
 
             <div class="event-day-group" id="day-28feb">
                 <h2 class="timeline-date">28 February 2025</h2>
@@ -817,10 +807,12 @@
                         </span>
                     </div>
                 </div>
-                <div class="source-card">
-                    Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 24th February 2025, 10 AM. <br>
-                    For historical data, please visit: <a href="https://quantwater.tech/resources">https://quantwater.tech/resources</a>
-                </div>     
+            </div>
+
+            <!-- Source card at content level -->
+            <div class="source-card">
+                Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 24th February 2025, 10 AM. <br>
+                For historical data, please visit: <a href="https://quantwater.tech/resources">https://quantwater.tech/resources</a>
             </div>
         </div>
     </div>
