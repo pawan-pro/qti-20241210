@@ -177,7 +177,6 @@
 
         .event-day-group {
             margin-bottom: 40px;
-            padding-bottom: 20px;
         }
 
         .event-day-group:last-child {
@@ -235,14 +234,22 @@
         .source-card {
             background-color: #222;
             padding: 15px;
-            margin: 40px 0 20px 0;  /* Adjusted margins */
+            margin-top: 25px;
             border-radius: 10px;
-            text-align: left;
+            text-align: Left;
             font-size: 14px;
-            color: #6f6f6f;
+            color: #e9e9e9ac;
             border: 1px solid #444;
-            width: 100%;  /* Full width */
         }
+        .source-card a {
+            color: #e9e9e9ac;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .source-card a:hover {
+            text-decoration: underline;
+        }
+
 
         @media (max-width: 768px) {
             .blog-timeline {
@@ -560,7 +567,8 @@
                         </span>
                     </div>
                 </div>
-                 <div class="event-card">
+        
+                <div class="event-card">
                     <div class="event-title">CHF - GDP (QoQ) (Q4)</div>
                     <div class="event-details">
                         <span class="event-label">Date:</span>
@@ -807,12 +815,13 @@
                         </span>
                     </div>
                 </div>
-            </div>
-
-            <!-- Source card at content level -->
-            <div class="source-card">
-                Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 24th February 2025, 10 AM. <br>
-                For historical data, please visit: <a href="https://quantwater.tech/resources">https://quantwater.tech/resources</a>
+                <div class="source-card">
+                    Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 24th February 2025, 10 AM. <br>
+                    For historical data, please visit: 
+                    <span class="event-value historical-impact">
+                        <a href="https://quantwater.tech/research" target="_blank" rel="noopener noreferrer" >https://quantwater.tech/resources</a>
+                    </span>
+                </div>     
             </div>
         </div>
     </div>
