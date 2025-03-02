@@ -3,6 +3,13 @@ import Image from 'next/image';
 import styles from './page.module.css';
 
 const projects = [ 
+  
+  {
+    id: 'blog20250303',
+    title: 'Key Economic Events: Week Of 03rd Mar 2025',
+    image: '/blogs/blog-cover/20250303.png',
+    link: '/blogs/20250303.html', // blog html file
+  },
   {
     id: 'blog20250224',
     title: 'Key Economic Events: Week Of 24th Feb 2025',
