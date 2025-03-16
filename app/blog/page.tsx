@@ -17,7 +17,7 @@ const projects = [
     image: '/blogs/blog-cover/20250310.png',
     link: '/blogs/20250310.html',
     description: 'Key Economic Events',
-  },
+  },   
   {
     id: 'blog20250303',
     title: 'Key Economic Events: Week Of 03rd Mar 2025',
