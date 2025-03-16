@@ -10,7 +10,7 @@ const projects = [
     image: '/blogs/blog-cover/20250317.png',
     link: '/blogs/20250317.html',
     //description: 'Analyzing the impact of central bank decisions on equity and bond markets.',
-  }
+  },
   {
     id: 'blog20250310',
     title: 'Key Economic Events: Week Of 10th Mar 2025',
