@@ -13,10 +13,10 @@ const projects = [
   },
   {
     id: 'blog20250310',
-    title: 'Key Economic Events: Week Of 10th Mar 2025',
+    title: 'Week Of 10th Mar 2025',
     image: '/blogs/blog-cover/20250310.png',
     link: '/blogs/20250310.html',
-    //description: 'Analyzing the impact of central bank decisions on equity and bond markets.',
+    description: 'Key Economic Events',
   },
   {
     id: 'blog20250303',
