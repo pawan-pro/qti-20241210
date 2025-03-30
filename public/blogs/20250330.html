@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar</title>
+    <link rel="stylesheet" href="/global.css">
+    <style>
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .firm-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007acc;
+        }
+
+        /* Blog styles */
+        @font-face {
+            font-family: 'Century Gothic';
+            src: url('/fonts/CenturyGothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Century Gothic', Arial, sans-serif !important;
+        }
+
+        body {
+            background-color: #000000;
+            color: #313131;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #e9e9e9ac;
+            margin-bottom: 10px;
+        }
+
+        .blog-subtitle {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        .blog-container {
+            padding: 33px;
+        }
+
+        .blog-timeline {
+            position: fixed;
+            left: 20px;
+            top: 100px;
+            padding: 15px;
+            background: rgba(42, 42, 42, 0.8);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(3, 3, 3, 0.1);
+            width: 160px;
+            font-size: 0.7rem;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #444;
+            font-size: 0.7rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 15px 0;
+            padding: 12px 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item.active {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-left: 0px;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        .timeline-events {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 2px;
+            font-size: 0.7rem;
+            margin-left: 0px;
+            text-align: center;
+        }
+
+        .timeline-date {
+            color: #e9e9e9ac;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-left: 10px;
+            font-size: 0.7rem;
+            text-align: center;
+            padding-bottom: 3px;
+        }
+
+        .blog-content {
+            margin-left: 200px;
+            max-width: 1200px;
+            padding-right: 33px;
+        }
+
+        .event-day-group {
+            margin-bottom: 40px;
+        }
+
+        .event-day-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .event-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .event-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #6495ED;
+            margin-bottom: 10px;
+        }
+
+        .event-details {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 8px 15px;
+            margin-bottom: 15px;
+        }
+
+        .event-label {
+            font-weight: bold;
+            color: #bbb;
+            font-size: 0.9rem;
+            min-width: 80px;
+        }
+
+        .event-value {
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        .historical-impact a {
+            color: #e9e9e9ac;
+            text-decoration: none;
+            background-color: #357ae8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+            margin-right: 5px;
+        }
+
+        .historical-impact a:hover {
+            background-color: #3565e8;
+        }
+
+        .source-card {
+            background-color: #222;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 14px;
+            color: #e9e9e9ac;
+            border: 1px solid #444;
+        }
+
+        .source-card a {
+            color: #e9e9e9ac;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .source-card a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .blog-timeline {
+                display: none;
+            }
+
+            .blog-content {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .source-footer {
+                margin: 0px;
+                width: calc(100% - 40px);
+            }
+        }
+
+        .source-footer {
+            background-color: #161616;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0 20px 230px;
+            width: calc(100% - 295px);
+            max-width: 1200px;
+            color: #bbb;
+            font-size: 0.8rem;
+        }
+
+        .source-footer a {
+            color: #4a90e2;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .source-footer a:hover {
+            color: #357ae8;
+        }
+
+        .timeline-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            font-size: 0.7rem;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="firm-name">Quantwater Tech Investments</a>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/solutions">Solutions</a>
+            <a href="/research">Research</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="blog-container">
+        <!-- Timeline items with anchor links -->
+        <div class="blog-timeline">
+            <div class="timeline-line"></div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <a href="#day-31mar">
+                    <div class="timeline-info">
+                        <span class="timeline-date">31 Mar</span>
+                        <span class="timeline-events">5 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <a href="#day-01apr">
+                    <div class="timeline-info">
+                        <span class="timeline-date">01 Apr</span>
+                        <span class="timeline-events">6 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <a href="#day-02apr">
+                    <div class="timeline-info">
+                        <span class="timeline-date">02 Apr</span>
+                        <span class="timeline-events">2 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <a href="#day-03apr">
+                    <div class="timeline-info">
+                        <span class="timeline-date">03 Apr</span>
+                        <span class="timeline-events">4 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <a href="#day-04apr">
+                    <div class="timeline-info">
+                        <span class="timeline-date">04 Apr</span>
+                        <span class="timeline-events">5 Events</span>
+                    </div>
+                </a>
+            </div>
+             <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <a href="#day-07may">
+                    <div class="timeline-info">
+                        <span class="timeline-date">07 May</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="blog-content">
+            <div class="blog-title">Key Economic Events: Week Of 31st March 2025</div>
+            <div class="blog-subtitle">Release Date: 31st March 2025</div>
+
+            <div class="event-day-group" id="day-31mar">
+                <h2 class="timeline-date">31 March 2025</h2>
+                <div class="event-card">
+                    <div class="event-title">SGD - Singapore Eid al-Fitr</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">31-Mar-25, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">SGD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">[]</span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">INR - India - Ramzan (Id-Ul-Fitr)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">31-Mar-25, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">INR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">[]</span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">CNY - Manufacturing PMI (Mar)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">31-Mar-25, Mon, 7:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">CNY</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">50.50</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">50.20</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">China Manufacturing Purchasing Managers Index (PMI) provides an early indication each month of economic activities in the Chinese manufacturing sector. It is compiled by China Federation of Logistics & Purchasing (CFLP) and China Logistics Information Centre (CLIC), based on data collected by the National Bureau of Statistics (NBS).Li & Fung Research Centre is responsible for drafting and disseminating the English PMI report. Every month questionnaires are sent to over 700 manufacturing enterprises all over China. The data presented here is compiled from the enterprises responses about their purchasing activities and supply situations. The PMI should be compared to other economic data sources when used in decision-making. A reading that is stronger than forecast is generally supportive (bullish) for the CNY , while a weaker than forecast reading is generally negative (bearish) for the CNY.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDCNY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDCNH</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">EUR - German CPI (MoM) (Mar) P</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">31-Mar-25, Mon, 17:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.40%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">The Consumer Price Index (CPI) measures the change in the prices of goods and services from the perspective of the consumer. As Germany has the largest output of any country in the euro-zone, the European Central bank pays very close attention to this figure in its role of maintaining price stability. A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">USD - Chicago PMI (Mar)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">31-Mar-25, Mon, 19:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">45.40</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">45.50</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">The Chicago Purchasing Managers' Index (PMI) is a diffusion index incorporating survey results provided by manufacturing firms around the Chicago area. A reading above fifty suggests the manufacturing sector is expanding, while a reading below fifty suggests the manufacturing sector is in contraction. The Chicago PMI can be of some assistance in forecasting the ISM manufacturing PMI. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-day-group" id="day-01apr">
+                <h2 class="timeline-date">01 April 2025</h2>
+                <div class="event-card">
+                    <div class="event-title">AUD - RBA Interest Rate Decision (Apr)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">01-Apr-25, Tue, 9:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">AUD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">4.10%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">4.10%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">The Reserve Bank of Australia (RBA) reports its decision on where to set the benchmark interest rate. As short term interest rates are an important determinant of currency valuation, traders watch interest rate changes closely. A reading that is stronger than forecast is generally supportive (bullish) for the AUD, while a weaker than forecast reading is generally negative (bearish) for the AUD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">AUDJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">AUDUSD</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">EUR - CPI (YoY) (Mar) P</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">01-Apr-25, Tue, 14:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">2.30%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">The Consumer Price Index (CPI) measures the change in the prices of goods and services contained in a basket of consumer items. The Central bank pays very close attention to this figure in its role of maintaining price stability. A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">USD - Manufacturing PMI (Mar)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">01-Apr-25, Tue, 19:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">49.80</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">52.70</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">The Manufacturing Purchasing Managers' Index (PMI) is a diffusion index incorporating survey results provided by manufacturing firms throughout the country. A reading above fifty suggests the manufacturing sector is expanding, while a reading below fifty suggests the manufacturing sector is in contraction. Policymakers and traders watch these surveys closely as purchasing managers usually have early access to data about their company’s performance, rather than waiting for the hard data to emerge. While manufacturing accounts for a far smaller percentage of economic output than services, it is far more cyclical and is therefore a useful indicator of where in the economic cycle the economy is currently situated. A reading that is stronger than forecast is generally supportive (bullish) for the USD while a weaker than forecast reading is generally negative (bearish) for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">USD - ISM Manufacturing PMI (Mar)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">01-Apr-25, Tue, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">50.30</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">50.30</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">The Institute of Supply Management (ISM) Manufacturing Purchasing Managers Index (PMI) Report on Business is based on data compiled from monthly replies to questions asked of purchasing and supply executives in over 400 industrial companies across the United States. For each of the indicators measured (New Orders, Backlog of Orders, New Export Orders, Imports, Production, Supplier Deliveries, Inventories, Customers Inventories, Employment, and Prices), a diffusion index is calculated by adding the percent of positive responses plus one-half of those responding the same (considered positive). The resulting single index number is then seasonally adjusted. The PMI is a composite index based on the seasonally adjusted diffusion indices for five of the indicators with differing weights: New Orders --30% Production --25% Employment --20% Supplier Deliveries --15% and Inventories -- 10%. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">USD - ISM Manufacturing Prices (Mar)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">01-Apr-25, Tue, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">62.40</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">The Institute of Supply Management (ISM) Manufacturing Purchasing Managers Index (PMI) Report on Business is based on data compiled from monthly replies to questions asked of purchasing and supply executives in over 400 industrial companies. For each of the indicators measured (New Orders, Backlog of Orders, New Export Orders, Imports, Production, Supplier Deliveries, Inventories, Customers Inventories, Employment, and Prices), this report shows the percentage reporting each response, the net difference between the number of responses in the positive economic direction and the negative economic direction and the diffusion index. Responses are raw data and are never changed. The diffusion index includes the percent of positive responses plus one-half of those responding the same (considered positive). The resulting single index number is then seasonally adjusted to allow for the effects of repetitive intra-year variations resulting primarily from normal differences in weather conditions, various institutional arrangements, and differences attributable to non-moveable holidays. All seasonal adjustment factors are supplied by the U.S. Department of Commerce and are subject annually to relatively minor changes when conditions warrant them. The PMI is a composite index based on the seasonally adjusted diffusion indices for five of the indicators with varying weights: New Orders --30% Production --25% Employment --20% Supplier Deliveries --15% and Inventories -- 10%. The Prices Paid subcategory is a diffusion index calculated by adding the percent of responses indicating they paid more for inputs plus one-half of those responding that they paid the same for inputs. The resulting single index number is then seasonally adjusted. The Prices Paid diffusion index is one of a number of indicators pointing to the degree of inflationary pressures in the economy. A higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">USD - JOLTS Job Openings (Feb)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">01-Apr-25, Tue, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">7.740M</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">A survey done by the US Bureau of Labor Statistics to help measure job vacancies. It collects data from employers about their businesses' employment, job openings, recruitment, hires and separations. JOLTS defines Job Openings as all positions that are open (not filled) on the last business day of the month. A job is ""open"" only if it meets all three of the following conditions: 1. A specific position exists and there is work available for that position. 2. The job could start within 30 days, whether or not the establishment finds a suitable candidate during that time. 3. There is active recruiting for workers from outside the establishment location that has the opening. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-day-group" id="day-02apr">
+                <h2 class="timeline-date">02 April 2025</h2>
+                <div class="event-card">
+                    <div class="event-title">USD - ADP Nonfarm Employment Change (Mar)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">02-Apr-25, Wed, 17:45 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">77K</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">ADP is performs payroll services for its clients. The ADP National Employment Report is a measure of the monthly change in non-farm, private employment, based on the payroll data of approximately 400,000 U.S. business clients. The release, two days ahead of government data, is used as a predictor of the government's Labour Market Report. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">Global - Crude Oil Inventories</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">02-Apr-25, Wed, 20:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Global</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-3.341M</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">The Energy Information Administration's (EIA) Crude Oil Inventories measures the weekly change in the number of barrels of commercial crude oil held by US firms. The level of inventories influences the price of petroleum products, which can have an impact on inflation. If the increase in crude inventories is more than expected, it implies weaker demand and is bearish for crude prices. The same can be said if a decline in inventories is less than expected. If the increase in crude is less than expected, it implies greater demand and is bullish for crude prices. The same can be said if a decline in inventories is more than expected.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USOILRoll</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-day-group" id="day-03apr">
+                <h2 class="timeline-date">03 April 2025</h2>
+                <div class="event-card">
+                    <div class="event-title">USD - Initial Jobless Claims</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">03-Apr-25, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">224K</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">Initial Jobless Claims measures the number of people who filed for unemployment insurance for the first time during the past week. This is the most timely U.S. economic data, but the market impact varies from week to week. A reading that is higher than forecast is generally negative (bearish) for the USD, while a lower than forecast reading is generally supportive (bullish) for the USD.</span>
+                         <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">USD - Services PMI (Mar)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">03-Apr-25, Thu, 19:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">54.30</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">51.00</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">The Service PMI release is published monthly by Markit Economics. The data are based on surveys of over 400 executives in private sector service companies. The surveys cover transport and communication, financial intermediaries, business and personal services, computing & IT, hotels and restaurants. An index level of 50 denotes no change since the previous month, while a level above 50 signals an improvement, and below 50 indicates a deterioration. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">USD - ISM Non-Manufacturing PMI (Mar)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">03-Apr-25, Thu, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">53.00</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">53.50</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">The Institute of Supply Management (ISM) Non-Manufacturing Purchasing Managers' Index (PMI) (also known as the ISM Services PMI) report on Business, is based on data compiled from monthly replies to questions asked of more than 370 purchasing and supply executives in over 62 different industries. The NMI is a composite index based on the diffusion indexes for four of the indicators with equal weights: Business Activity (seasonally adjusted), New Orders (seasonally adjusted), Employment (seasonally adjusted) and Supplier Deliveries. A reading above 50 percent indicates the non-manufacturing sector economy is generally expanding; below 50 percent indicates the non-manufacturing sector is generally contracting. Given the large proportion of the US economy engaged in the services sector, this report offers insights into the health of the overall US economy. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">USD - ISM Non-Manufacturing Prices (Mar)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">03-Apr-25, Thu, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">62.60</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">The Institute of Supply Management (ISM) Non-Manufacturing Purchasing Managers' Index (PMI) (also known as the ISM Services PMI) report on Business, is based on data compiled from monthly replies to questions asked of more than 370 purchasing and supply executives in over 62 different industries. The Prices Paid subcategory is a diffusion index calculated by adding the percent of responses indicating they paid more for inputs plus one-half of those responding that they paid the same for inputs. The resulting single index number is then seasonally adjusted. The Prices Paid diffusion index is one of a number of indicators pointing to the degree of inflationary pressures in the economy. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-day-group" id="day-04apr">
+                <h2 class="timeline-date">04 April 2025</h2>
+                <div class="event-card">
+                    <div class="event-title">HKD - Hong Kong - Ching Ming Festival</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">04-Apr-25, Fri, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">HKD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">[]</span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">CNY - China - Ching Ming Festival</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">04-Apr-25, Fri, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">CNY</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">[]</span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">USD - Average Hourly Earnings (MoM) (Mar)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">04-Apr-25, Fri, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.30%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">Average Hourly Earnings measures the change in the amount of money businesses pay for labour, excluding the agricultural sector. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">USD - Nonfarm Payrolls (Mar)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">04-Apr-25, Fri, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">128K</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">151K</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">Nonfarm Payrolls measures the change in the number of people employed during the prior month, excluding workers in the farming industry. Given that full employment is one of the Federal Reserves mandates, it is very closely watched. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-title">USD - Unemployment Rate (Mar)</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">04-Apr-25, Fri, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">4.20%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">4.10%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">The Unemployment Rate measures the percentage of the total work force that is not working, yet actively seeking employment. A reading that is higher than forecast is generally negative (bearish) for the USD, while a lower than forecast reading is generally supportive (bullish) for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250331.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-day-group" id="day-07may">
+                <h2 class="timeline-date">07 May 2025</h2>
+                <div class="event-card">
+                    <div class="event-title">Fed Interest Rate Decision</div>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">07-May-25, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">4.35%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">4.37%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-value">As per CME FedWatch Tool, the FFR is expected to be 4.35% on the Decision day</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener noreferrer">CME FedWatch Tool</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="source-footer">
+                <p>Source: Bloomberg, News Articles, Company Research. Notes as of 30th March 2025, 10 AM.</p>
+            </footer>
+        </div>
+    </div> <!-- Close blog-container -->
+</body>
+</html>
