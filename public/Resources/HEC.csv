@@ -2045,216 +2045,166 @@ A reading that is stronger than forecast is generally supportive (bullish) for t
 Learn More: USDJPY, EURUSD",
 ,30-Jan-25, Thu ,0:30,USD,3,Fed Interest Rate Decision,,4.37%,4.62%,"As per CME FedWatch, the FFR is expected to be 4.37%",
 ,"Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 10th February 2025, 10 AM.",,,,,,,,,,
-x,03-Mar-25, Mon ,All Day,,Holiday,R$ - Brazil - Carnival,,,,"[]
+x,24-Feb-25, Mon ,All Day,JPY,Holiday,JPY - Japan - Emperor's Birthday,,,,"Japan observes Emperor’s Birthday, a national holiday. Markets remain closed, leading to lower liquidity in JPY pairs.
 
-Learn More: []",
-,03-Mar-25, Mon ,All Day,,Holiday,KRW - South Korea Independence Movement Day,,,,"[]
+Learn More: Legacy Reference (hyperling: https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://en.wikipedia.org/wiki/The_Emperor%2527s_Birthday&ved=2ahUKEwi36Za-n9qLAxVZsFYBHRiGH3oQFnoECFgQAQ&usg=AOvVaw0B421pm151g656U7ABFws)",
+,24-Feb-25, Mon ,15:30,EUR,3,EUR - CPI (YoY) (Jan),,,2.50%,"
+Bloomberg's expectations suggest YoY inflation will increase from 2.4% in December to 2.5% in January, while the YoY core inflation to remain steady at 2.7%. Notably, sources from the European Central Bank have hinted at lowering the neutral interest rate ceiling - from 2.5% to a range of 1.75% - 2.25%. This highlights uncertainty over its precise level. A lower-than-expected inflation reading could support further ECB rate cuts, aimed at boosting European GDP growth. This could benefit stock indices such ESTOX. DE40.
 
-Learn More: []",
-,03-Mar-25, Mon ,15:30,,3,EUR - CPI (YoY) (Feb) P,,,2.50%,"The Consumer Price Index (CPI) measures the change in the prices of goods and services contained in a basket of consumer items. The Central bank pays very close attention to this figure in its role of maintaining price stability.
+Learn More: EURJPY | EURUSD | ESTOX | DE40Roll",
+,25-Feb-25, Tue ,12:30,EUR,3,EUR - German GDP (QoQ) (Q4),,,-0.20%,"Gross Domestic Product (GDP) is the broadest measure of economic activity and is a key indicator of economic health. The quarterly percent changes in GDP show the growth rate of the economy as a whole.
 
 A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.
 
 Learn More: EURJPY | EURUSD",
-,03-Mar-25, Mon ,20:15,,3,USD - Manufacturing PMI (Feb),, 51.60 , 51.20 ,"
-The Manufacturing Purchasing Managers' Index (PMI) is a diffusion index incorporating survey results provided by manufacturing firms throughout the country. A reading above fifty suggests the manufacturing sector is expanding, while a reading below fifty suggests the manufacturing sector is in contraction. Policymakers and traders watch these surveys closely as purchasing managers usually have early access to data about their company’s performance, rather than waiting for the hard data to emerge. While manufacturing accounts for a far smaller percentage of economic output than services, it is far more cyclical and is therefore a useful indicator of where in the economic cycle the economy is currently situated. A reading that is stronger than forecast is generally supportive (bullish) for the USD while a weaker than forecast reading is generally negative (bearish) for the USD.
-
-Learn More: USDJPY | EURUSD",
-,03-Mar-25, Mon ,20:30,,3,USD - ISM Manufacturing PMI (Feb),,, 50.90 ,"The Institute of Supply Management (ISM) Manufacturing Purchasing Managers Index (PMI) Report on Business is based on data compiled from monthly replies to questions asked of purchasing and supply executives in over 400 industrial companies across the United States. For each of the indicators measured (New Orders, Backlog of Orders, New Export Orders, Imports, Production, Supplier Deliveries, Inventories, Customers Inventories, Employment, and Prices), a diffusion index is calculated by adding the percent of positive responses plus one-half of those responding the same (considered positive). The resulting single index number is then seasonally adjusted.
-
-The PMI is a composite index based on the seasonally adjusted diffusion indices for five of the indicators with differing weights: New Orders --30% Production --25% Employment --20% Supplier Deliveries --15% and Inventories -- 10%.
+,25-Feb-25,  Tue  ,20:30,USD,3,USD - CB Consumer Confidence (Feb),,, 104.10 ,"Conference Board (CB) Consumer Confidence measures the level of confidence consumers have in the economy. When consumers are optimistic, they tend to spend more which increases consumption and overall economic growth.
 
 A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
 Learn More: USDJPY | EURUSD",
-,03-Mar-25, Mon ,20:30,,3,USD - ISM Manufacturing Prices (Feb),,, 54.90 ,"The Institute of Supply Management (ISM) Manufacturing Purchasing Managers Index (PMI) Report on Business is based on data compiled from monthly replies to questions asked of purchasing and supply executives in over 400 industrial companies. For each of the indicators measured (New Orders, Backlog of Orders, New Export Orders, Imports, Production, Supplier Deliveries, Inventories, Customers Inventories, Employment, and Prices), this report shows the percentage reporting each response, the net difference between the number of responses in the positive economic direction and the negative economic direction and the diffusion index. Responses are raw data and are never changed.
+,26-Feb-25, Wed ,All Day,INR,Holiday,INR - India - Mahashivratri,,,,"A major Hindu festival dedicated to Lord Shiva, Mahashivratri is observed across India. Financial markets remain closed, leading to reduced liquidity in INR trading.
 
-The diffusion index includes the percent of positive responses plus one-half of those responding the same (considered positive). The resulting single index number is then seasonally adjusted to allow for the effects of repetitive intra-year variations resulting primarily from normal differences in weather conditions, various institutional arrangements, and differences attributable to non-moveable holidays. All seasonal adjustment factors are supplied by the U.S. Department of Commerce and are subject annually to relatively minor changes when conditions warrant them.
+Learn More: Legacy Reference (Hyperlink: https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://en.wikipedia.org/wiki/Maha_Shivaratri&ved=2ahUKEwjfof7xn9qLAxUDrlYBHbv9EtAQFnoECBsQAQ&usg=AOvVaw0jLuuurYN4ucTmvXDzPPSQ)",
+,26-Feb-25, Wed ,20:30,USD,3,Global - Crude Oil Inventories,,, 4.633M ,"The Energy Information Administration's (EIA) Crude Oil Inventories measures the weekly change in the number of barrels of commercial crude oil held by US firms. The level of inventories influences the price of petroleum products, which can have an impact on inflation.
 
-The PMI is a composite index based on the seasonally adjusted diffusion indices for five of the indicators with varying weights: New Orders --30% Production --25% Employment --20% Supplier Deliveries --15% and Inventories -- 10%.
+If the increase in crude inventories is more than expected, it implies weaker demand and is bearish for crude prices. The same can be said if a decline in inventories is less than expected.
+If the increase in crude is less than expected, it implies greater demand and is bullish for crude prices. The same can be said if a decline in inventories is more than expected.
 
-The Prices Paid subcategory is a diffusion index calculated by adding the percent of responses indicating they paid more for inputs plus one-half of those responding that they paid the same for inputs. The resulting single index number is then seasonally adjusted.
-
-The Prices Paid diffusion index is one of a number of indicators pointing to the degree of inflationary pressures in the economy.
-
-A higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD.
-
-Learn More: USDJPY | EURUSD",
-,04-Mar-25, Tue ,All Day,,Holiday,R$ - Brazil - Carnival,,,,"[]
-
-Learn More: []",
-,04-Mar-25, Tue ,17:30,,3,Multi – U.S. Tariffs Announcements,,,,"On February 1, 2025, President Donald J. Trump announced the imposition of tariffs on imports from Canada, Mexico, and China, effective March 4, 2025.  The tariffs are structured as follows:
-
-• Canada: A 25% tariff on general imports, with a reduced 10% tariff specifically on energy resources.
-• Mexico: A 25% tariff on all imports.
-• China: An additional 10% tariff on top of existing duties.
-
-These measures aim to address concerns over illegal immigration and the influx of drugs, including fentanyl, into the United States.
-
-On March 1, 2025, U.S. Treasury Secretary Scott Bessent acknowledged Mexico’s proposal to align its tariffs with those of the U.S. on Chinese goods, urging Canada to consider a similar approach. This strategy envisions a unified North American stance against Chinese imports.  
-
-As of now, the tariffs are scheduled to take effect on March 4, 2025. However, discussions among the involved nations continue, and adjustments to these measures remain possible.
-
-The imposition of tariffs typically strengthens (bullish) the USD, while the absence of tariffs or their removal tends to weaken (bearish) the USD.
-Learn More: USDMXN | USDCAD | USDCNH",
-,05-Mar-25, Wed ,18:45,,3,USD - ADP Nonfarm Employment Change (Feb),,,183K,"ADP is performs payroll services for its clients. The ADP National Employment Report is a measure of the monthly change in non-farm, private employment, based on the payroll data of approximately 400,000 U.S. business clients. The release, two days ahead of government data, is used as a predictor of the government's Labour Market Report.
+Learn More: USOILRoll",
+,26-Feb-25, Wed ,20:30,USD,3,USD - New Home Sales (Jan),,, 698K ,"New Home Sales measures the annualised number of new single-family homes that were sold during the prior month. When it's released ahead of Existing Home Sales, this report tends to have more impact because the two reports are highly correlated.
 
 A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
 Learn More: USDJPY | EURUSD",
-,05-Mar-25, Wed ,20:15,,3,USD - Services PMI (Feb),, 49.70 , 52.90 ,"The Service PMI release is published monthly by Markit Economics. The data are based on surveys of over 400 executives in private sector service companies. The surveys cover transport and communication, financial intermediaries, business and personal services, computing & IT, hotels and restaurants. 
+,27-Feb-25, Thur ,2:30,USD,3,USD - NVIDIA earnings release,, 0.79 , 0.49 ,"Swiss GDP saw its strongest growth in over two years, rising from 1.5% in Q2 2024 to 2%, in Q3.
+
+The upcoming report will assess the contributions of consumer spending, business investments, and government expenditures to economic growth. 
+
+Bloomberg forecasts a 1.1% decline in Q4 GDP nonetheless, any upside surprise could boost investor sentiment and risk appetite, and have a positive impact on Swiss stock indices, including the Swiss Markets Index.
+
+It's worth highlighting that the Swiss index is approaching its December 2021 peak. A successful breakout could mark a new record high. 
+
+Learn More: US100Roll | NVIDIA",
+,27-Feb-25, Thur ,13:30,CHF,2,CHF - GDP (QoQ) (Q4),,0.20%,0.40%,"Swiss GDP saw its strongest growth in over two years, rising from 1.5% in Q2 2024 to 2%, in Q3.
+
+The upcoming report will assess the contributions of consumer spending, business investments, and government expenditures to economic growth. 
+
+Bloomberg forecasts a 1.1% decline in Q4 GDP nonetheless, any upside surprise could boost investor sentiment and risk appetite, and have a positive impact on Swiss stock indices, including the Swiss Markets Index.
+
+It's worth highlighting that the Swiss index is approaching its December 2021 peak. A successful breakout could mark a new record high. 
+
+Learn More: CHFJPY | Swiss20Roll",
+,27-Feb-25, Thur ,19:00,USD,3,USD - Durable Goods Orders (MoM) (Jan) P,,,-2.20%,"Durable Goods Orders reports the change in the total value of new orders for long lasting manufactured goods, including transportation items.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+
+Learn More: USDJPY | EURUSD",
+,27-Feb-25, Thur ,19:00,USD,3,USD - GDP (QoQ) (Q4) P,,,2.30%,"Gross Domestic Product (GDP) measures the annualised change in the inflation-adjusted value of all goods and services produced by the economy. It is the broadest measure of economic activity and the primary indicator of the economy's health.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+
+Learn More: USDJPY | EURUSD",
+,27-Feb-25, Thur ,19:00,USD,3,USD - Initial Jobless Claims,,,,"Initial Jobless Claims measures the number of people who filed for unemployment insurance for the first time during the past week. This is the most timely U.S. economic data, but the market impact varies from week to week.
+A reading that is higher than forecast is generally negative (bearish) for the USD, while a lower than forecast reading is generally supportive (bullish) for the USD.
+
+Learn More: USDJPY | EURUSD",
+,28-Feb-25, Fri ,18:30,EUR,3,EUR - German CPI (MoM) (Feb) P,,,-0.20%,"The Consumer Price Index (CPI) measures the change in the prices of goods and services from the perspective of the consumer. As Germany has the largest output of any country in the euro-zone, the European Central bank pays very close attention to this figure in its role of maintaining price stability.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.
+
+Learn More: EURJPY | EURUSD",
+,28-Feb-25, Fri ,19:00,USD,3,USD - Core PCE Price Index (MoM) (Jan),,,0.20%,"Bloomberg forecasts the YoY headline to ease from 2.6% in December to 2.5% in January, while the YoY core PCE is expected to decline from 2.8% to 2.7%. A hotter-than-expected reading would suggest persistent inflation, delaying potential Fed rate cuts and strenghtening the US dollar - potentially pressuring silver prices. Conversely, a softer print could support precious metals. 
+
+Learn More: USDJPY | EURUSD | XAGUSD",
+,28-Feb-25, Fri ,19:00,USD,3,USD - Core PCE Price Index (YoY) (Jan),,,2.80%,"Bloomberg forecasts the YoY headline to ease from 2.6% in December to 2.5% in January, while the YoY core PCE is expected to decline from 2.8% to 2.7%. A hotter-than-expected reading would suggest persistent inflation, delaying potential Fed rate cuts and strenghtening the US dollar - potentially pressuring silver prices. Conversely, a softer print could support precious metals. 
+
+Learn More: USDJPY | EURUSD | XAGUSD",
+,28-Feb-25, Fri ,20:15,USD,3,USD - Chicago PMI (Feb),,, 39.50 ,"The Chicago Purchasing Managers' Index (PMI) is a diffusion index incorporating survey results provided by manufacturing firms around the Chicago area. A reading above fifty suggests the manufacturing sector is expanding, while a reading below fifty suggests the manufacturing sector is in contraction. The Chicago PMI can be of some assistance in forecasting the ISM manufacturing PMI.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+
+Learn More: USDJPY | EURUSD",
+,01-Mar-25, Sat ,All Day,KRW,Holiday,KRW - South Korea - Independence Movement Day,,,,"South Korea observes the Independence Movement Day, commemorating the 1919 protest against Japanese rule. Markets remain closed, impacting KRW liquidity.
+
+Learn More: Legacy Reference (hyperling: https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://en.wikipedia.org/wiki/March_First_Movement&ved=2ahUKEwjX8LOJoNqLAxVZ5DQHHcbJCZQQFnoECA8QAQ&usg=AOvVaw0mADMg4uDFjm5RbF2oa6Ve",
+,01-Mar-25, Sat ,7:00,CNY,3,CNY - Manufacturing PMI (Feb),,, 49.10 ,"China Manufacturing Purchasing Managers Index (PMI) provides an early indication each month of economic activities in the Chinese manufacturing sector. It is compiled by China Federation of Logistics & Purchasing (CFLP) and China Logistics Information Centre (CLIC), based on data collected by the National Bureau of Statistics (NBS).Li & Fung Research Centre is responsible for drafting and disseminating the English PMI report. Every month questionnaires are sent to over 700 manufacturing enterprises all over China. The data presented here is compiled from the enterprises responses about their purchasing activities and supply situations. The PMI should be compared to other economic data sources when used in decision-making.
+A reading that is stronger than forecast is generally supportive (bullish) for the CNY , while a weaker than forecast reading is generally negative (bearish) for the CNY.
+
+Learn More: USDCNY | USDCNH",
+,19-Mar-25, Thu ,0:30,USD,3,Fed Interest Rate Decision,,4.37%,4.38%,"As per CME FedWatch tool, the FFR is expected to be 4.37%
+
+Learn More: CME FedWatch",
+,"Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 24th February 2025, 10 AM.",,,,,,,,,,
+x,24-Mar-25, Mon ,19:15,USD,3,USD - Manufacturing PMI (Mar) P,,, 52.70 ,"The Manufacturing Purchasing Managers' Index (PMI) is a diffusion index incorporating survey results provided by manufacturing firms throughout the country. A reading above fifty suggests the manufacturing sector is expanding, while a reading below fifty suggests the manufacturing sector is in contraction. Policymakers and traders watch these surveys closely as purchasing managers usually have early access to data about their company’s performance, rather than waiting for the hard data to emerge. While manufacturing accounts for a far smaller percentage of economic output than services, it is far more cyclical and is therefore a useful indicator of where in the economic cycle the economy is currently situated. A reading that is stronger than forecast is generally supportive (bullish) for the USD while a weaker than forecast reading is generally negative (bearish) for the USD..
+
+Learn More: USDJPY | EURUSD",
+,24-Mar-25, Mon ,19:15,USD,3,USD - Services PMI (Mar) P,,, 51.00 ,"The Service PMI release is published monthly by Markit Economics. The data are based on surveys of over 400 executives in private sector service companies. The surveys cover transport and communication, financial intermediaries, business and personal services, computing & IT, hotels and restaurants. 
 An index level of 50 denotes no change since the previous month, while a level above 50 signals an improvement, and below 50 indicates a deterioration. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
 Learn More: USDJPY | EURUSD",
-,05-Mar-25, Wed ,20:30,,3,USD - ISM Non-Manufacturing PMI (Feb),,, 52.80 ,"ADP is performs payroll services for its clients. The ADP National Employment Report is a measure of the monthly change in non-farm, private employment, based on the payroll data of approximately 400,000 U.S. business clients. The release, two days ahead of government data, is used as a predictor of the government's Labour Market Report.
+,25-Mar-25, Tue ,19:30,USD,3,USD - CB Consumer Confidence (Mar),,, 98.30 ,"Conference Board (CB) Consumer Confidence measures the level of confidence consumers have in the economy. When consumers are optimistic, they tend to spend more which increases consumption and overall economic growth.
 
 A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
 Learn More: USDJPY | EURUSD",
-,05-Mar-25, Wed ,20:30,,3,USD - ISM Non-Manufacturing Prices (Feb),,, 60.40 ,"The Institute of Supply Management (ISM) Non-Manufacturing Purchasing Managers' Index (PMI) (also known as the ISM Services PMI) report on Business, is based on data compiled from monthly replies to questions asked of more than 370 purchasing and supply executives in over 62 different industries.
+,25-Mar-25, Tue ,19:30,USD,3,USD - New Home Sales (Feb),,,657K,"New Home Sales measures the annualised number of new single-family homes that were sold during the prior month. When it's released ahead of Existing Home Sales, this report tends to have more impact because the two reports are highly correlated.
 
-The Prices Paid subcategory is a diffusion index calculated by adding the percent of responses indicating they paid more for inputs plus one-half of those responding that they paid the same for inputs. The resulting single index number is then seasonally adjusted.
-
-The Prices Paid diffusion index is one of a number of indicators pointing to the degree of inflationary pressures in the economy.
-
-A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.								
-
-Learn More: USDJPY | EURUSD",
-,05-Mar-25, Wed ,21:00,,3,USD - Crude Oil Inventories,,, -2.332M ,"The Energy Information Administration's (EIA) Crude Oil Inventories measures the weekly change in the number of barrels of commercial crude oil held by US firms. The level of inventories influences the price of petroleum products, which can have an impact on inflation.
-
-If the increase in crude inventories is more than expected, it implies weaker demand and is bearish for crude prices. The same can be said if a decline in inventories is less than expected.
-If the increase in crude is less than expected, it implies greater demand and is bullish for crude prices. The same can be said if a decline in inventories is more than expected.								
-
-Learn More: USOILRoll",
-,06-Mar-25, Thu ,18:45,,3,EUR - Deposit Facility Rate (Mar),,,2.75%,"[]								
-
-Learn More: EURJPY | EURUSD",
-,06-Mar-25, Thu ,18:45,,3,EUR - ECB Interest Rate Decision (Mar),,,2.90%,"The European Central Bank publishes its decision on where to set the benchmark interest rate. As short term interest rates are an important determinant of currency valuation, traders watch interest rate changes closely.
-
-
-
-A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.							
-
-Learn More: EURJPY | EURUSD",
-,06-Mar-25, Thu ,19:00,,3,USD - Initial Jobless Claims,,,,"
-Initial Jobless Claims measures the number of people who filed for unemployment insurance for the first time during the past week. This is the most timely U.S. economic data, but the market impact varies from week to week.
-A reading that is higher than forecast is generally negative (bearish) for the USD, while a lower than forecast reading is generally supportive (bullish) for the USD.
-
-Learn More: EURJPY | EURUSD",
-,06-Mar-25, Thu ,19:15,,3,EUR - ECB Press Conference ,,,,"The European Central Bank (ECB) press conference is held monthly, about 45 minutes after the Minimum Bid Rate is announced. The conference is approximately an hour long and has two parts. Firstly, a prepared statement is read, then the conference is open to press questions. The press conference examines the factors which affected the ECB's interest rate decision and deals with the overall economic outlook and inflation. Most importantly, it provides clues regarding future monetary policy. High levels of volatility can frequently be observed during the press conference as press questions lead to unscripted answers.
-
-Learn More: EURJPY | EURUSD",
-,07-Mar-25, Thu ,19:00,,3,USD - Average Hourly Earnings (MoM) (Feb),,,0.50%,"Average Hourly Earnings measures the change in the amount of money businesses pay for labour, excluding the agricultural sector.
-
-A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
-
-Learn More: USDJPY | EURUSD",
-,07-Mar-25, Thu ,19:00,,3,USD - Nonfarm Payrolls (Feb),,160K,143K,"Nonfarm Payrolls measures the change in the number of people employed during the prior month, excluding workers in the farming industry. Given that full employment is one of the Federal Reserves mandates, it is very closely watched.
-
-A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
-
-Learn More: USDJPY | EURUSD",
-,07-Mar-25, Thu ,19:00,,3,USD - Unemployment Rate (Feb),,,4.00%,"The Unemployment Rate measures the percentage of the total work force that is not working, yet actively seeking employment.
-
-A reading that is higher than forecast is generally negative (bearish) for the USD, while a lower than forecast reading is generally supportive (bullish) for the USD.
-
-Learn More: USDJPY | EURUSD",
-,07-Mar-25, Thu ,21:30,,3,USD - Fed Monetary Policy Report,,,,"
-The Federal Reserve Act requires the Federal Reserve Board to submit written reports to Congress containing discussions of ""the conduct of monetary policy and economic developments and prospects for the future."" This report--called the Monetary Policy Report--is submitted semiannually to the Senate Committee on Banking, Housing, and Urban Affairs and to the House Committee on Financial Services, along with testimony from the Federal Reserve Board Chair.
-
-Learn More: USDJPY | EURUSD",
-,07-Mar-25, Thu ,23:00,,3,USD - Fed Chair Powell Speaks,,,,"Federal Reserve Chair Jerome Powell (Feb. 2018 – Feb. 2026) is to speak. As head of the Fed, which controls short term interest rates, he has more influence over the U.S. dollar's value than any other person. Traders closely watch his speeches as they are often used to drop hints regarding future monetary policy.
-
-Learn More: USDJPY | EURUSD",
-,20-Mar-25, Thu ,0:30,,3,Fed Interest Rate Decision,,4.36%,4.38%,"Recent data indicates that while inflation has moderated to 2.4% as of November 2024, it remains above the Federal Reserve’s 2% target. Simultaneously, the labor market continues to exhibit resilience, with jobless claims reaching an eight-month low. This combination of easing inflation and a strong labor market may provide the Federal Reserve with increased flexibility to adjust interest rates without reigniting inflation concerns, thereby supporting the possibility of a soft landing for the economy.",
-,"Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 24th February 2025, 10 AM.",,,,,,,,,,
-x,17-Mar-25, Mon ,All Day,MXN,3,Mexico - President's Day,,,,"[]
-
-Learn More: []",
-,17-Mar-25, Mon ,18:00,USD,3,USD - Core Retail Sales (MoM) (Feb),,0.30%,-0.40%,"Core Retail Sales measures the change in the total value of sales at the retail level in the U.S., excluding automobiles. It is an important indicator of consumer spending which accounts for a large percentage of US GDP.
-
-A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
-
-Learn More: USDJPY | EURUSD",
-,17-Mar-25, Mon ,18:00,USD,3,USD - Retail Sales (MoM) (Feb),,0.60%,-0.90%,"Retail Sales gauges the change in the aggregate value of sales at the retail level across the country. It is an important indicator of consumer spending accounting for the majority of overall economic activity.
-
-A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
-
-Learn More: USDJPY | EURUSD",
-,19-Mar-25, Wed ,8:30,JPY,3,JPY - BoJ Interest Rate Decision,,0.50%,0.50%,"
-Bank of Japan (BOJ) policy board publishes its decision about where to set the target overnight rate. As short term interest rates are an important determinant of currency valuation, traders watch interest rate changes closely. A reading that is stronger than forecast is generally supportive (bullish) for the JPY, while a weaker than forecast reading is generally negative (bearish) for the JPY.
-
-Learn More: USDJPY | EURJPY",
-,19-Mar-25, Wed ,15:30,EUR,3,EUR - CPI (YoY) (Feb),,2.40%,2.50%,"
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.",
+,26-Mar-25, Wed ,12:30,GBP,3,GBP - CPI (YoY) (Feb),,,3.00%,"
 The Consumer Price Index (CPI) measures the change in the prices of goods and services contained in a basket of consumer items. The Central bank pays very close attention to this figure in its role of maintaining price stability.
-
-A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.
-
-Learn More: USDJPY | EURJPY",
-,19-Mar-25, Wed ,19:00,USD,3,Global - Crude Oil Inventories,,,1.448M,"
-The Consumer Price Index (CPI) measures the change in the prices of goods and services contained in a basket of consumer items. The Central bank pays very close attention to this figure in its role of maintaining price stability.
-
-A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.
-
-Learn More: USDJPY | EURJPY",
-,19-Mar-25, Wed ,23:30,USD,3,USD - FOMC Economic Projections,,,,"This report includes the Federal Open Market Committee's (FOMC) projection for inflation and economic growth over the next 2 years. An important part of the report is the breakdown of individual FOMC members' interest rate forecasts.
-
-Learn More: USDJPY | EURUSD",
-,19-Mar-25, Wed ,23:30,USD,3,USD - FOMC Statement,,,,"The U.S. Federal Reserve's Federal Open Market Committee (FOMC) statement is the primary tool the panel uses to communicate with investors about monetary policy. It contains the outcome of the vote on interest rates, discusses the economic outlook and offers clues on the outcome of future votes.
-
-A more dovish than expected statement could be taken as negative/bearish for the USD, while a more hawkish than expected statement could be taken as positive/bullish for the USD.
-
-Learn More: USDJPY | EURUSD",
-,19-Mar-25, Wed ,23:30,USD,3,USD - Fed Interest Rate Decision,,4.35%,4.62%,"Federal Open Market Committee (FOMC) members vote on where to set the target interest rate. Traders watch interest rate changes closely as relative short term interest rates are a primary factor in currency valuation.
-
-A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
-
-Learn More: USDJPY | EURUSD",
-,20-Mar-25, Thu ,All Day,JPY,3,JPY - Vernal Equinox,,,,"[]
-
-Learn More: []",
-,20-Mar-25, Thu ,0:00,USD,3,USD - FOMC Press Conference,,,,"[]
-
-Learn More: []",
-,20-Mar-25, Thu ,14:00,CHF,3,CHF - SNB Interest Rate Decision (Q1),,0.25%,0.50%,"Swiss National Bank (SNB) governing board members come to a consensus on where to set the target range for the rate. Traders watch interest rate changes closely as short term interest rates are the primary factor in currency valuation.
-
-A reading that is stronger than forecast is generally supportive (bullish) for the CHF, while a weaker than forecast reading is generally negative (bearish) for the CHF.
-
-Learn More: USDCHF | CHFJPY",
-,20-Mar-25, Thu ,17:30,GBP,3,GBP - BoE Interest Rate Decision (Mar),,4.50%,4.50%,"Bank of England (BOE) monetary policy committee members vote on where to set the Bank Rate. Traders watch interest rate changes closely because short term interest rates are the primary factor in currency valuation.
 
 A reading that is stronger than forecast is generally supportive (bullish) for the GBP, while a weaker than forecast reading is generally negative (bearish) for the GBP.
 
 Learn More: GBPJPY | GBPUSD",
-,20-Mar-25, Thu ,18:00,USD,3,USD - Initial Jobless Claims,,222K,220K,"
+,26-Mar-25, Wed ,15:30,GBP,3,GBP - Spring Forecast Statement ,,,,"
+The Spring Statement of the British Government, also known as the 'mini-budget', is one of the two statements HM Treasury makes each year to Parliament upon publication of economic forecasts. It usually involves speeches in the House of Commons by the Chancellor of the Exchequer.
+
+Learn More: GBPJPY | GBPUSD",
+,26-Mar-25, Wed ,18:00,USD,3,USD - Durable Goods orders (MoM) (Feb) P,,,3.20%,"
+
+Durable Goods Orders reports the change in the total value of new orders for long lasting manufactured goods, including transportation items.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+
+Learn More: USDJPY | EURJPY",
+,26-Mar-25, Wed ,19:00,USD,3,USD - Crude Oil Inventories,,,1.745M,"
+The Energy Information Administration's (EIA) Crude Oil Inventories measures the weekly change in the number of barrels of commercial crude oil held by US firms. The level of inventories influences the price of petroleum products, which can have an impact on inflation.
+
+If the increase in crude inventories is more than expected, it implies weaker demand and is bearish for crude prices. The same can be said if a decline in inventories is less than expected.
+If the increase in crude is less than expected, it implies greater demand and is bullish for crude prices. The same can be said if a decline in inventories is more than expected.
+
+Learn More: USOILRoll",
+,27-Mar-25, Thu ,18:00,USD,3,USD - GDP (QoQ) (Q4),,,2.30%,"
+Gross Domestic Product (GDP) measures the annualised change in the inflation-adjusted value of all goods and services produced by the economy. It is the broadest measure of economic activity and the primary indicator of the economy's health.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+
+Learn More: USDJPY | EURJPY",
+,27-Mar-25, Thu ,18:00,USD,3,USD - Initial Jobless Claims,,,,"
 Initial Jobless Claims measures the number of people who filed for unemployment insurance for the first time during the past week. This is the most timely U.S. economic data, but the market impact varies from week to week.
 A reading that is higher than forecast is generally negative (bearish) for the USD, while a lower than forecast reading is generally supportive (bullish) for the USD.
 
 Learn More: USDJPY | EURUSD",
-,20-Mar-25, Thu ,18:00,USD,3,USD - Initial Jobless Claims,,,,"Initial Jobless Claims measures the number of people who filed for unemployment insurance for the first time during the past week. This is the most timely U.S. economic data, but the market impact varies from week to week.
-A reading that is higher than forecast is generally negative (bearish) for the USD, while a lower than forecast reading is generally supportive (bullish) for the USD.
+,28-Mar-25, Fri ,12:30,GBP,3,GBP - GDP (QoQ) (Q4),,,0.10%,"
+Gross Domestic Product (GDP) gauges the inflation-adjusted value of all goods and services produced within the economy. It is the most comprehensive measure of economic activity and an important indicator of economic health.
 
-Learn More: USDJPY | EURUSD",
-,20-Mar-25, Thu ,18:00,USD,3,USD - PPI (MoM) (Feb),,,0.40%,"The Producer Price Index (PPI) measures a change in input prices of raw, semi-finished or finished goods and services. If input costs rise, some will be absorbed by the producer and some passed on to the consumer. Conversely, if input costs fall, some of the decline will be enjoyed as wider profit margins by the producer and some will be passed on to the consumer in the form of lower prices. Because PPI impacts consumer prices, it is watched by central bankers as part of fulfilling their mandate of price stability.
+A reading that is stronger than forecast is generally supportive (bullish) for the GBP, while a weaker than forecast reading is generally negative (bearish) for the GBP.
 
-A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+Learn More: GBPJPY | GBPUSD",
+,29-Mar-25, Fri ,12:30,GBP,3,GBP - GDP (YoY) (Q4),,,1.40%,"
+Gross Domestic Product (GDP) gauges the inflation-adjusted value of all goods and services produced within the economy. It is the most comprehensive measure of economic activity and an important indicator of economic health.
 
-Learn More: USDJPY | EURUSD",
-,20-Mar-25, Thu ,18:00,USD,3,USD - Philadelphia Fed Manufacturing Index (Mar),, 9.40 , 18.10 ,"
-The Philadelphia Federal Reserve Manufacturing Index measures the relative level of business conditions amongst manufacturers in the Federal reserve district. A level above zero on the index indicates improving conditions; below indicates worsening conditions. The data is compiled from a survey of about 250 manufacturers in the Philadelphia Federal Reserve district.
+A reading that is stronger than forecast is generally supportive (bullish) for the GBP, while a weaker than forecast reading is generally negative (bearish) for the GBP.
 
-A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
-
-Learn More: USDJPY | EURUSD",
-,20-Mar-25, Thu ,19:30,USD,3,USD - Existing Home Sales (Feb),, 3.94M , 4.08M ,"
-Existing Home Sales measures the change in the annualised number of existing residential buildings that were sold during the prior month. This report helps to gauge the strength of the U.S. housing market and is an important indicator of overall economic strength.
+Learn More: GBPJPY | GBPUSD",
+,28-Mar-25, Fri ,18:00,USD,3,USD - Core PCE Price Index (MoM) (Feb),,,0.30%,"The Core Personal Consumption Expenditure (PCE) Price Index measures the changes in the price of goods and services purchased by consumers for the purpose of consumption, excluding food and energy. Unlike the fixed-weight CPI, PCE is chain-weighted and thus adjusts to changing consumer behaviour. Core PCE is the Fed's preferred inflation measure and thus receives greater attention.
 
 A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
 Learn More: USDJPY | EURUSD",
-,21-Mar-25, Fri ,All Day,ZAR,3,ZAR - South Africa - Human Rights Day,,,,"[]
+,28-Mar-25, Fri ,18:00,USD,3,USD - Core PCE Price Index (YoY) (Feb),,,2.60%,"The Core PCE price Index is the less volatile measure of the PCE price index which excludes the more volatile and seasonal food and energy prices. The impact on the currency may go both ways, a rise in inflation may lead to a rise in interest rates and a rise in local currency, on the other hand, during recession, a rise in inflation may lead to a deepened recession and therefore a fall in local currency.
 
-Learn More: []",
+Learn More: USDJPY | EURUSD",
 ,07-May-25, Wed ,23:30,USD,3,Fed Interest Rate Decision,,4.29%,4.37%,[],
-,"Source: Bloomberg, News Articles, Company Research. Notes as of 17th March 2025, 10 AM.",,,,,,,,,,
+,"Source: Bloomberg, News Articles, Company Research. Notes as of 21st March 2025, 10 AM.",,,,,,,,,,
 x,,,,,,,,,,,
