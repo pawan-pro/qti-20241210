@@ -28,8 +28,8 @@ export default function NotFound() {
           <Image
             src={randomImage} // Use the randomly selected image
             alt="404 Error"
-            width={400}
-            height={300}
+            //width={400}
+            //height={300}
           />
         )}
       </div>
