@@ -11,7 +11,8 @@ export default function NotFound() {
   useEffect(() => {
     // Define the list of image paths
     const images = [
-      '/404/Business-Cat-giving-presentation-Red.jpg','/404/Business-Cat-giving-presentation-Green.jpg','/404/Business-Cat-giving-presentation-Blue.jpg'
+      '/404/Business-Cat-giving-presentation-Red G.jpg','/404/Business-Cat-giving-presentation-Green G.jpg','/404/Business-Cat-giving-presentation-Blue G.jpg',
+      '/404/Business-Cat-giving-presentation-Red O.jpeg','/404/Business-Cat-giving-presentation-Green.jpeg','/404/Business-Cat-giving-presentation-Blue.jpeg',
     ];
 
     // Randomly select an image
