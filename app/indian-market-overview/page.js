@@ -26,7 +26,19 @@ export default function IndianMarketOverviewPage() {
         </p>
         <div className={styles.chartContainer}>
           <Image
-            src="/Resources/indian-market-overview/real-gdp-growth-chart.png" // ** DOUBLE CHECK PATH **
+            src="/Resources/indian-market-overview/real-gdp-growth.png" // ** DOUBLE CHECK PATH **
+            alt="India Real GDP Growth Chart (Annual % change)"
+            width={800}
+            height={450}
+            className={styles.chartImage}
+          />
+          <p className={styles.chartCaption}>
+            Historical and Projected Real GDP Growth. Source: IMF, RBI, World Bank (Illustrative)
+          </p>
+        </div>
+        <div className={styles.chartContainer}>
+          <Image
+            src="/Resources/indian-market-overview/gdp-contribution.png" // ** DOUBLE CHECK PATH **
             alt="India Real GDP Growth Chart (Annual % change)"
             width={800}
             height={450}
@@ -67,7 +79,7 @@ export default function IndianMarketOverviewPage() {
            {/* First Image Container & Image */}
            <div className={styles.chartContainer}>
              <Image
-               src="/Resources/indian-market-overview/inflation-trends-chart.png" // ** DOUBLE CHECK PATH **
+               src="/Resources/indian-market-overview/inflation-trends.png" // ** DOUBLE CHECK PATH **
                alt="India Inflation Trends (CPI & WPI)"
                width={600}
                height={350}
@@ -78,7 +90,7 @@ export default function IndianMarketOverviewPage() {
            {/* Second Image Container & Image */}
            <div className={styles.chartContainer}>
              <Image
-               src="/Resources/indian-market-overview/rbi-repo-rate-chart.png" // ** DOUBLE CHECK PATH **
+               src="/Resources/indian-market-overview/rbi-repo-rate.png" // ** DOUBLE CHECK PATH **
                alt="RBI Repo Rate Chart"
                width={600}
                height={350}
@@ -95,7 +107,7 @@ export default function IndianMarketOverviewPage() {
         </p>
          <div className={styles.chartContainer}>
           <Image
-            src="/Resources/indian-market-overview/fiscal-deficit-chart.png" // ** DOUBLE CHECK PATH **
+            src="/Resources/indian-market-overview/fiscal-deficit.png" // ** DOUBLE CHECK PATH **
             alt="India Fiscal Deficit as % of GDP"
             width={700}
             height={400}
