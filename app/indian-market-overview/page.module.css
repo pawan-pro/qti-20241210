@@ -1,0 +1,136 @@
+/* app/indian-market-overview/page.module.css */
+
+.articleContainer {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-family: 'Georgia', serif; /* Economist-like font */
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  .articleHeader {
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  
+  .articleHeader h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  
+  .publishDate {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+  }
+  
+  .intro {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  .section h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #b71c1c; /* Reddish accent like Economist */
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .section h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  
+  .section p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+  
+  .list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+  }
+  
+  .list li {
+    margin-bottom: 8px;
+  }
+  
+  .chartGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin: 25px 0;
+  }
+  
+  .chartContainer {
+    text-align: center;
+    margin: 25px auto; /* Center single charts */
+    max-width: 100%;
+  }
+  
+  .chartImage {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9; /* Light background for charts */
+  }
+  
+  .chartCaption {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 8px;
+    font-style: italic;
+  }
+  
+  .articleFooter {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.8rem;
+    color: #777;
+    text-align: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .articleContainer {
+      padding: 15px 20px;
+      margin: 20px auto;
+    }
+    .articleHeader h1 {
+      font-size: 2rem;
+    }
+    .section h2 {
+      font-size: 1.5rem;
+    }
+     .intro {
+       max-width: 100%;
+     }
+     .chartGrid {
+      grid-template-columns: 1fr; /* Stack charts on smaller screens */
+     }
+  }
