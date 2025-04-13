@@ -80,7 +80,8 @@ export default function IndianMarketOverviewPage() {
                className={styles.chartImage}
              />
              <p className={styles.chartCaption}>
-               CPI and WPI Inflation Trends. Source: Quantwater Analysis
+             CPI and WPI Inflation Trends. Source: MOSPI, PIB<br />
+             The Reserve Bank of India (RBI) has projected the Consumer Price Index (CPI) inflation to average 4.8% for the fiscal year 2024-25 (FY25) and to moderate to 4.2% for FY26.
              </p>
            </div>
            <div className={styles.chartContainer}>
@@ -92,9 +93,8 @@ export default function IndianMarketOverviewPage() {
                className={styles.chartImage}
              />
              <p className={styles.chartCaption}>
-               CPI and WPI Inflation Trends. Source: Quantwater Analysis<br />
-               The Reserve Bank of India (RBI) has projected the Consumer Price Index (CPI) inflation to average 4.8% for the fiscal year 2024-25 (FY25) and to moderate to 4.2% for FY26.
-             </p>
+               CPI and WPI Inflation Trends. Source: MOSPI, PIB<br />             
+                </p>
            </div>
         <p>
           The RBI recently cut the repo rate
@@ -123,8 +123,8 @@ export default function IndianMarketOverviewPage() {
           <Image
             src="/Resources/indian-market-overview/fiscal-deficit.png"
             alt="India Fiscal Deficit as % of GDP"
-            width={700}
-            height={400}
+            width={600}
+            height={350}
             className={styles.chartImage}
           />
           <p className={styles.chartCaption}>Fiscal Deficit Trajectory. Source: Government Data </p>
@@ -143,55 +143,66 @@ export default function IndianMarketOverviewPage() {
              <Image
                src="/Resources/indian-market-overview/cmp-inr-1.png"
                alt="Capital Market Performance INR - Indices (10 Year)"
-               width={600}
-               height={350}
+               width={1000}
+               height={500}
                className={styles.chartImage}
              />
-           </div>
+             <p className={styles.chartCaption}>Capital Market Performance INR - Indices (10 Year) </p>
+             </div>
            <div className={styles.chartContainer}>
              <Image
                src="/Resources/indian-market-overview/cmp-inr-2.png"
                alt="Capital Market Performance INR - Indices (6 Year)"
-               width={600}
-               height={350}
+               width={1000}
+               height={500}
                className={styles.chartImage}
              />
+            <p className={styles.chartCaption}>Capital Market Performance INR - Indices (6 Year) </p>
+
            </div>
-           <div className={styles.chartContainer}>
-             <Image
-               src="/Resources/indian-market-overview/cmp-inr-3.png"
-               alt="Density Plot Nifty 50 (10 Years, daily returns)"
-               width={600}
-               height={350}
-               className={styles.chartImage}
-             />
-           </div>
+           
            <div className={styles.chartContainer}>
              <Image
                src="/Resources/indian-market-overview/cmp-inr-4.png"
                alt="Historical Returns – 10 Years"
-               width={600}
-               height={350}
+               width={1000}
+               height={500}
                className={styles.chartImage}
              />
+            <p className={styles.chartCaption}>Historical Returns – 10 Years </p>
+
            </div>
            <div className={styles.chartContainer}>
              <Image
                src="/Resources/indian-market-overview/cmp-inr-5.png"
                alt="Historical Returns – 6 Years"
-               width={600}
-               height={350}
+               width={1000}
+               height={500}
                className={styles.chartImage}
              />
+            <p className={styles.chartCaption}>Historical Returns – 6 Years </p>
+
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-3.png"
+               alt="Density Plot Nifty 50 (10 Years, daily returns)"
+               width={1000}
+               height={500}
+               className={styles.chartImage}
+             />
+            <p className={styles.chartCaption}>Density Plot Nifty 50 (10 Years, daily returns)</p>
+
            </div>
            <div className={styles.chartContainer}>
              <Image
                src="/Resources/indian-market-overview/cmp-inr-6.png"
                alt="Density Plot Nifty 50 (10 Years, monthly returns)"
-               width={600}
-               height={350}
+               width={1000}
+               height={500}
                className={styles.chartImage}
              />
+            <p className={styles.chartCaption}>Density Plot Nifty 50 (10 Years, monthly returns)</p>
            </div>
          </div>
          <p>
@@ -204,10 +215,12 @@ export default function IndianMarketOverviewPage() {
              <Image
                src="/Resources/indian-market-overview/cmp-inr-7.png"
                alt="Sectoral Performance (10 Years) (1st Jan 2015 = 100) "
-               width={600}
-               height={350}
+               width={1000}
+               height={500}
                className={styles.chartImage}
              />
+                         <p className={styles.chartCaption}>Sectoral Performance (10 Years) (1st Jan 2015 = 100) </p>
+
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -217,16 +230,10 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+                                      <p className={styles.chartCaption}>Sectoral Performance (6 Years) (1st Jan 2019 = 100)</p>
+
            </div>
-           <div className={styles.chartContainer}>
-             <Image
-               src="/Resources/indian-market-overview/cmp-inr-9.png"
-               alt="Density Plot Nifty IT (10 Years, monthly returns)"
-               width={600}
-               height={350}
-               className={styles.chartImage}
-             />
-           </div>
+           
            <div className={styles.chartContainer}>
              <Image
                src="/Resources/indian-market-overview/cmp-inr-10.png"
@@ -235,6 +242,20 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+                                                   <p className={styles.chartCaption}>Historical Returns – 10 Years</p>
+
+           </div>
+           
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-9.png"
+               alt="Density Plot Nifty IT (10 Years, monthly returns)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+            <p className={styles.chartCaption}>Density Plot Nifty IT (10 Years, monthly returns)</p>
+
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -244,6 +265,8 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+            <p className={styles.chartCaption}>Historical Returns – 6 Years</p>
+
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -254,6 +277,8 @@ export default function IndianMarketOverviewPage() {
                className={styles.chartImage}
              />
            </div>
+           <p className={styles.chartCaption}>Density Plot Nifty Infra (10 Years, monthly returns)</p>
+
          </div>
          <p>
            Volatility remains a factor, influenced by domestic policy, global events, and fund flows. Understanding historical return patterns
