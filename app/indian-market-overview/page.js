@@ -9,9 +9,8 @@ export default function IndianMarketOverviewPage() {
       <header className={styles.articleHeader}>
         <h1>Indian Market Overview - 2025 & Beyond</h1>
         <p className={styles.publishDate}>Analysis as of: 28th March 2025</p>
-        {/* Line 14 Correction */}
         <p className={styles.intro}>
-          India continues its trajectory as one of the world's fastest-growing major economies,
+          India continues its trajectory as one of the world&apos;s fastest-growing major economies,
           presenting significant opportunities alongside evolving challenges. This overview delves
           into the macroeconomic landscape, market performance, key sectors, and potential risks
           shaping the Indian market outlook for 2025 and the years ahead.
@@ -20,11 +19,10 @@ export default function IndianMarketOverviewPage() {
 
       <section className={styles.section}>
         <h2>Economic Powerhouse: Growth & Drivers</h2>
-         {/* Line 25 & 27 Corrections */}
         <p>
-          India's GDP growth is projected to remain robust, estimated between 6-7% for 2025. This resilience
+          India&apos;s GDP growth is projected to remain robust, estimated between 6-7% for 2025. This resilience
           is fueled by strong domestic demand, accelerating digital transformation, and supportive government
-          initiatives like 'Atmanirbhar Bharat' (Self-reliant India) and 'Make in India'.
+          initiatives like &apos;Atmanirbhar Bharat&apos; (Self-reliant India) and &apos;Make in India&apos;.
         </p>
         <div className={styles.chartContainer}>
           <Image
@@ -58,11 +56,10 @@ export default function IndianMarketOverviewPage() {
 
       <section className={styles.section}>
         <h2>Macroeconomic Stability: Inflation, Fiscal Policy & Rates</h2>
-         {/* Line 65 Correction */}
         <p>
           Managing inflation remains a key focus for the Reserve Bank of India (RBI). While headline inflation
           has shown signs of moderation, core inflation requires monitoring. The RBI recently cut the repo rate
-          to 6.25% (as of Feb 2025 in the report) to stimulate growth, maintaining a 'neutral' stance aimed at aligning inflation
+          to 6.25% (as of Feb 2025 in the report) to stimulate growth, maintaining a &apos;neutral&apos; stance aimed at aligning inflation
           with its target while supporting economic activity. Further rate adjustments are anticipated depending on
           inflation trends and global conditions.
         </p>
@@ -166,13 +163,12 @@ export default function IndianMarketOverviewPage() {
 
        <section className={styles.section}>
          <h2>Foreign Investment & Currency</h2>
-         {/* Line 179 Correction */}
          <p>
            India remains an attractive destination for Foreign Direct Investment (FDI), particularly in Services, Computer Hardware/Software,
            and Manufacturing. While influenced by global uncertainties, FDI flows have been relatively stable. Foreign Institutional Investor (FII)
            flows into equity markets are more volatile, often reacting to global risk sentiment and interest rate cycles (like US Fed actions).
            The INR/USD exchange rate has shown a gradual depreciation trend over the long term, influenced by factors like oil prices,
-           capital flows, and India's trade balance.
+           capital flows, and India&apos;s trade balance.
          </p>
          <div className={styles.chartGrid}>
            <div className={styles.chartContainer}>
@@ -207,8 +203,7 @@ export default function IndianMarketOverviewPage() {
           <li><strong>Artificial Intelligence (AI):</strong> Rapidly growing market ($17B projected by 2027), supported by government missions and research centers.</li>
           <li><strong>Electric Vehicles (EV) & Renewable Energy:</strong> Strong CAGR in EVs, significant renewable capacity addition (especially solar), backed by policies like FAME II and PLI schemes.</li>
           <li><strong>Digital Payments & FinTech:</strong> Explosive growth in UPI transactions, burgeoning FinTech ecosystem valued potentially over $150B by 2025.</li>
-           {/* Line 215 Correction */}
-          <li><strong>Advanced Manufacturing:</strong> Boosted by PLI schemes in electronics, semiconductors, pharma, and textiles, positioning India as a "China+1" hub.</li>
+          <li><strong>Advanced Manufacturing:</strong> Boosted by PLI schemes in electronics, semiconductors, pharma, and textiles, positioning India as a &quot;China+1&quot; hub.</li>
           <li><strong>Digital Public Infrastructure:</strong> Platforms like UPI, Aadhaar, and ONDC enabling large-scale innovation.</li>
         </ul>
         <p>
