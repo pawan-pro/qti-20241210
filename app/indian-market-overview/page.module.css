@@ -1,136 +1,191 @@
 /* app/indian-market-overview/page.module.css */
 
+/* --- Global Styles for the Article --- */
 .articleContainer {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px 30px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    font-family: 'Georgia', serif; /* Economist-like font */
-    line-height: 1.7;
-    color: #333;
+    max-width: 1000px; /* Adjust max-width as needed for readability */
+    margin: 2rem auto; /* Center the container */
+    padding: 2rem 4rem; /* Add padding */
+    background-color: #f4f4f4; /* Light grey background */
+    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
+    color: #333; /* Darker text color for contrast */
+    text-align: justify; /* Justify all text */
+    line-height: 1.7; /* Improve readability of justified text */
+    border-radius: 8px; /* Optional: slightly rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Optional: subtle shadow */
   }
   
+  /* --- Header --- */
   .articleHeader {
-    border-bottom: 2px solid #e0e0e0;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    text-align: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center; /* Center align header elements */
   }
   
   .articleHeader h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2.5rem; /* Adjust size as needed */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
     color: #1a1a1a;
-    margin-bottom: 10px;
-    line-height: 1.2;
+    text-align: center; /* Override justify for main title */
   }
   
   .publishDate {
     font-size: 0.9rem;
     color: #666;
-    margin-bottom: 15px;
-    font-style: italic;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Override justify */
   }
   
   .intro {
     font-size: 1.1rem;
-    color: #444;
-    max-width: 80%;
-    margin: 0 auto;
+    color: #555;
+    /* text-align: justify; is inherited */
   }
   
+  /* --- Sections --- */
   .section {
-    margin-bottom: 40px;
+    margin-bottom: 3rem;
   }
   
   .section h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #b71c1c; /* Reddish accent like Economist */
-    margin-bottom: 20px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #e0e0e0;
-  }
-  
-  .section h3 {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #333;
-    margin-top: 25px;
-    margin-bottom: 15px;
+    font-size: 1.8rem; /* Adjust size */
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+    /* text-align: justify; is inherited, but left might look better */
+    /* text-align: left; */ /* Uncomment this if justified headings look odd */
   }
   
   .section p {
-    margin-bottom: 15px;
-    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    /* text-align: justify; is inherited */
   }
   
+  /* --- Lists --- */
   .list {
-    list-style: disc;
-    margin-left: 25px;
-    margin-bottom: 15px;
-    padding-left: 10px;
+    list-style: disc; /* Or square, circle */
+    padding-left: 2.5rem; /* Indent list */
+    margin-bottom: 1.5rem;
   }
   
   .list li {
-    margin-bottom: 8px;
+    margin-bottom: 0.75rem;
+    /* text-align: justify; is inherited */
   }
   
-  .chartGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin: 25px 0;
+  .list li strong {
+      font-weight: 600; /* Make strong tags bolder */
   }
   
+  /* --- Charts & Images --- */
   .chartContainer {
-    text-align: center;
-    margin: 25px auto; /* Center single charts */
+    margin: 2rem auto; /* Center chart blocks */
+    text-align: center; /* Center image and caption within container */
     max-width: 100%;
   }
   
   .chartImage {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f9f9f9; /* Light background for charts */
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Optional: slight rounding */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    margin-bottom: 0.5rem;
   }
   
   .chartCaption {
     font-size: 0.85rem;
-    color: #555;
-    margin-top: 8px;
-    font-style: italic;
-  }
-  
-  .articleFooter {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #e0e0e0;
-    font-size: 0.8rem;
     color: #777;
-    text-align: center;
+    margin-top: 0.5rem;
+    text-align: center; /* Override justify for captions */
   }
   
-  /* Responsive adjustments */
+  /* --- Chart Grid Layout --- */
+  .chartGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Space between grid items */
+    margin: 2rem 0;
+    align-items: start; /* Align items to the top */
+  }
+  
+  /* Ensure chart containers within the grid don't add extra auto margins */
+  .chartGrid .chartContainer {
+      margin: 0;
+  }
+  
+  /* --- Footer --- */
+  .articleFooter {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+    font-size: 0.8rem;
+    color: #888;
+    /* text-align: justify; is inherited */
+  }
+  
+  /* --- Responsive Adjustments --- */
   @media (max-width: 768px) {
     .articleContainer {
-      padding: 15px 20px;
-      margin: 20px auto;
+      padding: 1.5rem 2rem;
+      margin: 1rem auto;
     }
+  
     .articleHeader h1 {
       font-size: 2rem;
     }
+  
     .section h2 {
       font-size: 1.5rem;
     }
-     .intro {
-       max-width: 100%;
-     }
-     .chartGrid {
+  
+    .chartGrid {
       grid-template-columns: 1fr; /* Stack charts on smaller screens */
-     }
+      gap: 1.5rem;
+    }
+  
+    .list {
+      padding-left: 1.5rem;
+    }
   }
+  
+  @media (max-width: 480px) {
+    .articleContainer {
+      padding: 1rem 1rem;
+    }
+  
+    .articleHeader h1 {
+      font-size: 1.75rem;
+    }
+  
+    .section h2 {
+      font-size: 1.3rem;
+    }
+  
+    .intro {
+        font-size: 1rem;
+    }
+  
+    .list {
+      padding-left: 1.2rem;
+    }
+  }
+  
+  /* --- Font Loading (Important!) ---
+   * Make sure 'Century Gothic' is available.
+   * You might need to load it using @font-face if it's not a standard system font
+   * or use a web font service. Example using @font-face (if you have the font files):
+   *
+   * @font-face {
+   *   font-family: 'Century Gothic';
+   *   src: url('/fonts/CenturyGothic.woff2') format('woff2'),
+   *        url('/fonts/CenturyGothic.woff') format('woff');
+   *   font-weight: normal;
+   *   font-style: normal;
+   *   font-display: swap;
+   * }
+   *
+   * Place font files (e.g., .woff2, .woff) in your public/fonts directory.
+   */

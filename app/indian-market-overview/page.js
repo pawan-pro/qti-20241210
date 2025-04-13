@@ -1,7 +1,6 @@
 // app/indian-market-overview/page.js
 import Image from 'next/image';
-import styles from './page.module.css';
-// Link import remains removed
+import styles from './page.module.css'; // Make sure this import points to the CSS file below
 
 export default function IndianMarketOverviewPage() {
   return (
@@ -39,13 +38,13 @@ export default function IndianMarketOverviewPage() {
         <div className={styles.chartContainer}>
           <Image
             src="/Resources/indian-market-overview/gdp-contribution.png" // ** DOUBLE CHECK PATH **
-            alt="India GDP Contribution Chart" // Corrected Alt Text
+            alt="India GDP Contribution by Sector Chart" // Updated Alt Text
             width={800}
-            height={450} // Adjust height if needed for this chart
+            height={450}
             className={styles.chartImage}
           />
           <p className={styles.chartCaption}>
-            GDP Contribution by Sector (2023-2024 %). Source: Quantwater Analysis (Illustrative)  // Corrected Caption
+            GDP Contribution by Sector (Services, Manufacturing, Agriculture). Source: MoSPI (Illustrative)
           </p>
         </div>
         <p>
@@ -74,6 +73,7 @@ export default function IndianMarketOverviewPage() {
           inflation trends and global conditions.
         </p>
         <div className={styles.chartGrid}>
+           {/* First Image Container & Image */}
            <div className={styles.chartContainer}>
              <Image
                src="/Resources/indian-market-overview/inflation-trends.png" // ** DOUBLE CHECK PATH **
@@ -84,6 +84,7 @@ export default function IndianMarketOverviewPage() {
              />
              <p className={styles.chartCaption}>CPI and WPI Inflation Trends. Source: Quantwater Analysis (Illustrative)</p>
            </div>
+           {/* Second Image Container & Image */}
            <div className={styles.chartContainer}>
              <Image
                src="/Resources/indian-market-overview/rbi-repo-rate.png" // ** DOUBLE CHECK PATH **
@@ -131,6 +132,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+              <p className={styles.chartCaption}>10-Year Index Performance (INR). Source: NSE/BSE (Illustrative)</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -140,6 +142,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+              <p className={styles.chartCaption}>6-Year Index Performance (INR). Source: NSE/BSE (Illustrative)</p>
            </div>
          </div>
          <p>
@@ -181,7 +184,7 @@ export default function IndianMarketOverviewPage() {
          <div className={styles.chartGrid}>
            <div className={styles.chartContainer}>
             <Image
-              src="/Resources/indian-market-overview/fdi-sector-inflow.png" // ** CORRECTED PATH **
+              src="/Resources/indian-market-overview/fdi-sector-inflow-chart.png" // ** DOUBLE CHECK PATH ** Note: Path changed from original example
               alt="FDI Sector-wise Equity Inflow Chart"
               width={600}
               height={400}
@@ -191,7 +194,7 @@ export default function IndianMarketOverviewPage() {
           </div>
            <div className={styles.chartContainer}>
             <Image
-              src="/Resources/indian-market-overview/inr-usd-exchange-rate.png" // ** CORRECTED PATH **
+              src="/Resources/indian-market-overview/inr-usd-exchange-rate-chart.png" // ** DOUBLE CHECK PATH ** Note: Path changed from original example
               alt="INR/USD Exchange Rate Trend"
               width={600}
               height={400}
