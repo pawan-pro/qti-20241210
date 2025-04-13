@@ -302,7 +302,7 @@ export default function IndianMarketOverviewPage() {
       <section className={styles.section}>
         <h2>Capital Markets: Performance & Volatility - USD</h2>
         <p>
-          Indian equity market returns adjusted after taking into consideration currency returns impact, from the perspective of a USD / USD pegged currency investor.
+          Indian equity market returns adjusted after taking into consideration currency returns impact, from the perspective of an investor whose base currency is USD or a USD-pegged currency.
         </p>
          <div className={styles.chartGrid}>
            <div className={styles.chartContainer}>
@@ -361,7 +361,7 @@ export default function IndianMarketOverviewPage() {
            </div>
          </div>
          <p>
-         Sectoral returns adjusted after taking into consideration currency returns impact, from the perspective of a USD / USD pegged currency investor.
+         Sectoral returns adjusted after taking into consideration currency returns impact, from the perspective of an investor whose base currency is USD or a USD-pegged currency.
         </p>
         <div className={styles.chartGrid}>
            <div className={styles.chartContainer}>
@@ -420,7 +420,7 @@ export default function IndianMarketOverviewPage() {
            </div>
          </div>
          <p>
-         Volatility adjusted after taking into consideration currency volatility impact, from the perspective of a USD / USD pegged currency investor.
+         Volatility adjusted after taking into consideration currency volatility impact, from the perspective of an investor whose base currency is USD or a USD-pegged currency.
          </p>
          <div className={styles.chartGrid}>
            <div className={styles.chartContainer}>
@@ -454,8 +454,80 @@ export default function IndianMarketOverviewPage() {
       </section>
 
       <section className={styles.section}>
-         <h2>Fixed Income Landscape</h2>
+         <h2>Fixed Income Landscape - Government Bonds</h2>
          <p>
+           The Indian fixed income market offers opportunities across government securities (G-Secs) and corporate bonds.
+           The G-Sec yield curve is currently upward sloping, reflecting growth expectations. The spread between G-Secs and US Treasuries
+           remains significant.
+         </p>
+         <div className={styles.chartContainer}>
+          <Image
+            src="/Resources/indian-market-overview/FIM-1.png"
+            alt="10Y & 5Y G-Sec Yield"
+            width={700}
+            height={400}
+            className={styles.chartImage}
+          />
+           <p className={styles.chartCaption}>G-Sec Yield Curve Dynamics. Source: Quantwater Analysis </p>
+        </div>
+        <div className={styles.chartContainer}>
+        <Image
+            src="/Resources/indian-market-overview/FIM-2.png"
+            alt="10Y & 5Y G-Sec Yield"
+            width={700}
+            height={400}
+            className={styles.chartImage}
+          />
+           <p className={styles.chartCaption}>G-Sec Yield Curve Dynamics. Source: Quantwater Analysis </p>
+        </div>
+        <div className={styles.chartContainer}>
+        <Image
+            src="/Resources/indian-market-overview/FIM-3.png"
+            alt="Yield Curve Trend"
+            width={700}
+            height={400}
+            className={styles.chartImage}
+          />
+           <p className={styles.chartCaption}>Normal positive slope maintained across all periods, suggesting economic growth expectations</p>
+        </div>
+        <div className={styles.chartContainer}>
+        <Image
+            src="/Resources/indian-market-overview/FIM-4.png"
+            alt="India-US10Y Yield Spread"
+            width={700}
+            height={400}
+            className={styles.chartImage}
+          />
+           <p className={styles.chartCaption}>Average India-US 10 Y yield spread is 4.5% over the last 10 years </p>
+        </div>
+        <div className={styles.chartContainer}>
+        <Image
+            src="/Resources/indian-market-overview/FIM-5.png"
+            alt="India-US10Y Yield Spread"
+            width={700}
+            height={400}
+            className={styles.chartImage}
+          />
+           <p className={styles.chartCaption}>Average India-US 10 Y yield spread is 4.5% over the last 10 years </p>
+        </div>
+        <p>
+           The Indian fixed income market offers opportunities across government securities (G-Secs) and corporate bonds.
+           The G-Sec yield curve is currently upward sloping, reflecting growth expectations. The spread between G-Secs and US Treasuries
+           remains significant. Corporate bond spreads vary based on credit ratings, with upgrades generally outpacing downgrades,
+           indicating healthy corporate balance sheets. For retail investors, Fixed Deposits and Debt Mutual Funds (including Gilt, Corporate Bond,
+           and Short Duration funds) are common avenues, with real returns being a key consideration in the inflationary environment.
+         </p>
+         <div className={styles.chartContainer}>
+          <Image
+            src="/Resources/indian-market-overview/yield-curve-trend.png"
+            alt="India G-Sec Yield Curve Trend"
+            width={700}
+            height={400}
+            className={styles.chartImage}
+          />
+           <p className={styles.chartCaption}>G-Sec Yield Curve Dynamics. Source: Quantwater Analysis </p>
+        </div>
+        <p>
            The Indian fixed income market offers opportunities across government securities (G-Secs) and corporate bonds.
            The G-Sec yield curve is currently upward sloping, reflecting growth expectations. The spread between G-Secs and US Treasuries
            remains significant. Corporate bond spreads vary based on credit ratings, with upgrades generally outpacing downgrades,
