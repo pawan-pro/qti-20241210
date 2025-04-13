@@ -26,7 +26,7 @@ export default function IndianMarketOverviewPage() {
         </p>
         <div className={styles.chartContainer}>
           <Image
-            src="/images/indian-market/real-gdp-growth-chart.png" // ** DOUBLE CHECK PATH **
+            src="/Resources/indian-market-overview/real-gdp-growth-chart.png" // ** DOUBLE CHECK PATH **
             alt="India Real GDP Growth Chart (Annual % change)"
             width={800}
             height={450}
@@ -67,7 +67,7 @@ export default function IndianMarketOverviewPage() {
            {/* First Image Container & Image */}
            <div className={styles.chartContainer}>
              <Image
-               src="/images/indian-market/inflation-trends-chart.png" // ** DOUBLE CHECK PATH **
+               src="/Resources/indian-market-overview/inflation-trends-chart.png" // ** DOUBLE CHECK PATH **
                alt="India Inflation Trends (CPI & WPI)"
                width={600}
                height={350}
@@ -78,7 +78,7 @@ export default function IndianMarketOverviewPage() {
            {/* Second Image Container & Image */}
            <div className={styles.chartContainer}>
              <Image
-               src="/images/indian-market/rbi-repo-rate-chart.png" // ** DOUBLE CHECK PATH **
+               src="/Resources/indian-market-overview/rbi-repo-rate-chart.png" // ** DOUBLE CHECK PATH **
                alt="RBI Repo Rate Chart"
                width={600}
                height={350}
@@ -95,7 +95,7 @@ export default function IndianMarketOverviewPage() {
         </p>
          <div className={styles.chartContainer}>
           <Image
-            src="/images/indian-market/fiscal-deficit-chart.png" // ** DOUBLE CHECK PATH **
+            src="/Resources/indian-market-overview/fiscal-deficit-chart.png" // ** DOUBLE CHECK PATH **
             alt="India Fiscal Deficit as % of GDP"
             width={700}
             height={400}
@@ -117,7 +117,7 @@ export default function IndianMarketOverviewPage() {
          <div className={styles.chartGrid}>
            <div className={styles.chartContainer}>
              <Image
-               src="/images/indian-market/cmp-inr-1.png" // ** DOUBLE CHECK PATH **
+               src="/Resources/indian-market-overview/cmp-inr-1.png" // ** DOUBLE CHECK PATH **
                alt="Capital Market Performance INR - Indices (10 Year)"
                width={600}
                height={350}
@@ -126,7 +126,7 @@ export default function IndianMarketOverviewPage() {
            </div>
            <div className={styles.chartContainer}>
              <Image
-               src="/images/indian-market/cmp-inr-2.png" // ** DOUBLE CHECK PATH **
+               src="/Resources/indian-market-overview/cmp-inr-2.png" // ** DOUBLE CHECK PATH **
                alt="Capital Market Performance INR - Indices (6 Year)"
                width={600}
                height={350}
@@ -151,7 +151,7 @@ export default function IndianMarketOverviewPage() {
          </p>
          <div className={styles.chartContainer}>
           <Image
-            src="/images/indian-market/yield-curve-trend.png" // ** DOUBLE CHECK PATH **
+            src="/Resources/indian-market-overview/yield-curve-trend.png" // ** DOUBLE CHECK PATH **
             alt="India G-Sec Yield Curve Trend"
             width={700}
             height={400}
