@@ -219,7 +219,7 @@ export default function IndianMarketOverviewPage() {
                height={500}
                className={styles.chartImage}
              />
-                         <p className={styles.chartCaption}>Sectoral Performance (10 Years) (1st Jan 2015 = 100) </p>
+             <p className={styles.chartCaption}>Sectoral Performance (10 Years) (1st Jan 2015 = 100) </p>
 
            </div>
            <div className={styles.chartContainer}>
@@ -230,7 +230,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
-                                      <p className={styles.chartCaption}>Sectoral Performance (6 Years) (1st Jan 2019 = 100)</p>
+             <p className={styles.chartCaption}>Sectoral Performance (6 Years) (1st Jan 2019 = 100)</p>
 
            </div>
            
@@ -242,7 +242,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
-                                                   <p className={styles.chartCaption}>Historical Returns – 10 Years</p>
+             <p className={styles.chartCaption}>Historical Returns – 10 Years</p>
 
            </div>
            
@@ -276,9 +276,8 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Density Plot Nifty Infra (10 Years, monthly returns)</p>
            </div>
-           <p className={styles.chartCaption}>Density Plot Nifty Infra (10 Years, monthly returns)</p>
-
          </div>
          <p>
            Volatility remains a factor, influenced by domestic policy, global events, and fund flows. Understanding historical return patterns
@@ -293,6 +292,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+            <p className={styles.chartCaption}>Annualized Volatility - Indices</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -302,6 +302,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+            <p className={styles.chartCaption}>Annualized Volatility - Sectors</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -311,6 +312,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Rolling Volatility (1 month) - Indices</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -320,6 +322,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Rolling Volatility (1 month) - Sectors</p>
            </div>
          </div>
       </section>
@@ -338,6 +341,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Capital Market Performance USD - Indices (10 Year)</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -347,6 +351,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Capital Market Performance USD - Indices (6 Year)</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -356,6 +361,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Density Plot Nifty 50 (10 Years, daily returns)</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -365,6 +371,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Historical Returns – 10 Years</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -374,6 +381,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Historical Returns – 6 Years</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -383,6 +391,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Density Plot Nifty 50 (10 Years, monthly returns)</p>
            </div>
          </div>
          <p>
@@ -397,6 +406,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Sectoral Performance (10 Years) (1st Jan 2015 = 100)</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -406,6 +416,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Sectoral Performance (6 Years) (1st Jan 2019 = 100)</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -415,6 +426,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Density Plot Nifty IT (10 Years, monthly returns)</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -424,6 +436,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Historical Returns – 10 Years</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -433,6 +446,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Historical Returns – 6 Years</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -442,6 +456,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Density Plot Nifty Infra (10 Years, monthly returns)</p>
            </div>
          </div>
          <p>
@@ -456,6 +471,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Annualized Volatility - Indices & Sectors</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -465,6 +481,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Rolling Volatility (1 month) - Indices</p>
            </div>
            <div className={styles.chartContainer}>
              <Image
@@ -474,6 +491,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
+             <p className={styles.chartCaption}>Rolling Volatility (1 month) - Sectors</p>
            </div>
          </div>
       </section>
@@ -563,7 +581,7 @@ export default function IndianMarketOverviewPage() {
             height={400}
             className={styles.chartImage}
           />
-           <p className={styles.chartCaption}></p>
+           <p className={styles.chartCaption}>FD Interest Rates</p>
         </div>
         <div className={styles.chartContainer}>
          <Image
@@ -573,7 +591,7 @@ export default function IndianMarketOverviewPage() {
             height={400}
             className={styles.chartImage}
           />
-           <p className={styles.chartCaption}></p>
+           <p className={styles.chartCaption}>Debt MF Returns</p>
         </div>
         <div className={styles.chartContainer}>
          <Image
@@ -583,7 +601,7 @@ export default function IndianMarketOverviewPage() {
             height={400}
             className={styles.chartImage}
           />
-           <p className={styles.chartCaption}></p>
+           <p className={styles.chartCaption}>Debt MF Returns</p>
         </div>
         <div className={styles.chartContainer}>
          <Image
@@ -593,7 +611,7 @@ export default function IndianMarketOverviewPage() {
             height={400}
             className={styles.chartImage}
           />
-           <p className={styles.chartCaption}></p>
+           <p className={styles.chartCaption}>CPI Inflation vs Returns (Real return view)</p>
         </div>
         <div className={styles.chartContainer}>
          <Image
@@ -603,7 +621,7 @@ export default function IndianMarketOverviewPage() {
             height={400}
             className={styles.chartImage}
           />
-           <p className={styles.chartCaption}></p>
+           <p className={styles.chartCaption}>FD Interest Rates</p>
         </div>
       </section>
 
@@ -636,7 +654,7 @@ export default function IndianMarketOverviewPage() {
               height={400}
               className={styles.chartImage}
             />
-            <p className={styles.chartCaption}></p>
+            <p className={styles.chartCaption}>FII Flows - AUC</p>
           </div>
           <div className={styles.chartContainer}>
             <Image
