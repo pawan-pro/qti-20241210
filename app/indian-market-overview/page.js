@@ -33,7 +33,7 @@ export default function IndianMarketOverviewPage() {
           />
           <p className={styles.chartCaption}>
           Real GDP growth (Annual % change). Source: IMF, RBI, World Bank<br />
-          As per World Bank's Long-Term Growth Modeling (LTGM), India's long-term GDP growth rate is projected to stabilize around 6.5% by 2035, before gradually slowing to 5.5% by 2050, reflecting economic maturation and demographic shifts.
+          As per World Bank&apos;s Long-Term Growth Modeling (LTGM), India&apos;s long-term GDP growth rate is projected to stabilize around 6.5% by 2035, before gradually slowing to 5.5% by 2050, reflecting economic maturation and demographic shifts.
           </p>
         </div>
         <div className={styles.chartContainer}>
@@ -594,23 +594,34 @@ export default function IndianMarketOverviewPage() {
          <div className={styles.chartGrid}>
            <div className={styles.chartContainer}>
             <Image
-              src="/images/indian-market/fdi-sector-inflow-chart.png"
-              alt="FDI Sector-wise Equity Inflow Chart"
+              src="/images/indian-market/FICM-1.png"
+              alt="FDI Flows – Sector wise equity inflow from Apr 2000 to Dec 2024"
               width={600}
               height={400}
               className={styles.chartImage}
             />
-             <p className={styles.chartCaption}>Sectoral FDI Inflows (Apr 2000 - Dec 2024). Source: DPIIT </p>
+             <p className={styles.chartCaption}>Total Inflow: USD 720B. Source: DPIIT </p>
           </div>
+           
            <div className={styles.chartContainer}>
             <Image
-              src="/images/indian-market/inr-usd-exchange-rate-chart.png"
-              alt="INR/USD Exchange Rate Trend"
+              src="/images/indian-market/FICM-2.png"
+              alt="FII Flows - AUC"
               width={600}
               height={400}
               className={styles.chartImage}
             />
-            <p className={styles.chartCaption}>INR/USD Exchange Rate (10 Years). Source: Quantwater Analysis </p>
+            <p className={styles.chartCaption}></p>
+          </div>
+          <div className={styles.chartContainer}>
+            <Image
+              src="/images/indian-market/FICM-3.png"
+              alt="INR/USD Exchange Rate"
+              width={600}
+              height={400}
+              className={styles.chartImage}
+            />
+            <p className={styles.chartCaption}>CAGR 3% over last 10 years</p>
           </div>
          </div>
       </section>
