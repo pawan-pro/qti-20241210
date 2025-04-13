@@ -32,7 +32,10 @@ export default function IndianMarketOverviewPage() {
             className={styles.chartImage}
           />
           <p className={styles.chartCaption}>
-            Historical and Projected Real GDP Growth. Source: IMF, RBI, World Bank (Illustrative)
+          Real GDP growth (Annual % change). Source: IMF, RBI, World Bank<br />
+          As per World Bank’s Long-Term Growth Modeling (LTGM), India’s long-term GDP growth rate is projected to stabilize around 6.5% by 2035, before gradually slowing to 5.5% by 2050, reflecting economic maturation and demographic shifts.
+            <br />
+
           </p>
         </div>
         <div className={styles.chartContainer}>
@@ -44,7 +47,7 @@ export default function IndianMarketOverviewPage() {
             className={styles.chartImage}
           />
           <p className={styles.chartCaption}>
-            Historical and Projected Real GDP Growth. Source: IMF, RBI, World Bank (Illustrative)
+            Historical and Projected Real GDP Growth. Source: IMF, RBI, World Bank 
           </p>
         </div>
         <p>
@@ -67,22 +70,38 @@ export default function IndianMarketOverviewPage() {
         <h2>Macroeconomic Stability: Inflation, Fiscal Policy & Rates</h2>
         <p>
           Managing inflation remains a key focus for the Reserve Bank of India (RBI). While headline inflation
-          has shown signs of moderation, core inflation requires monitoring. The RBI recently cut the repo rate
-          to 6.25% (as of Feb 2025 in the report) to stimulate growth, maintaining a &apos;neutral&apos; stance aimed at aligning inflation
-          with its target while supporting economic activity. Further rate adjustments are anticipated depending on
-          inflation trends and global conditions.
+          has shown signs of moderation, core inflation requires monitoring.
         </p>
         <div className={styles.chartGrid}>
            <div className={styles.chartContainer}>
              <Image
-               src="/Resources/indian-market-overview/inflation-trends.png"
+               src="/Resources/indian-market-overview/inflation-trends1.png"
                alt="India Inflation Trends (CPI & WPI)"
                width={600}
                height={350}
                className={styles.chartImage}
              />
-             <p className={styles.chartCaption}>CPI and WPI Inflation Trends. Source: Quantwater Analysis (Illustrative)</p>
+             <p className={styles.chartCaption}><br>CPI and WPI Inflation Trends. Source: Quantwater Analysis</br>
+             </p>
            </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/inflation-trends2.png"
+               alt="India Inflation Trends (CPI & WPI)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+             <p className={styles.chartCaption}><br>CPI and WPI Inflation Trends. Source: Quantwater Analysis</br>
+             The Reserve Bank of India (RBI) has projected the Consumer Price Index (CPI) inflation to average 4.8% for the fiscal year 2024-25 (FY25) and to moderate to 4.2% for FY26.
+             </p>
+           </div>
+        <p>
+          The RBI recently cut the repo rate
+          to 6.25% (as of Feb 2025 in the report) to stimulate growth, maintaining a &apos;neutral&apos; stance aimed at aligning inflation
+          with its target while supporting economic activity. Further rate adjustments are anticipated depending on
+          inflation trends and global conditions.
+        </p>
            <div className={styles.chartContainer}>
              <Image
                src="/Resources/indian-market-overview/rbi-repo-rate.png"
@@ -91,7 +110,7 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
-             <p className={styles.chartCaption}>RBI Policy Repo Rate. Source: RBI (Illustrative)</p>
+             <p className={styles.chartCaption}>RBI Policy Repo Rate. Source: RBI </p>
            </div>
          </div>
         <p>
@@ -108,18 +127,16 @@ export default function IndianMarketOverviewPage() {
             height={400}
             className={styles.chartImage}
           />
-          <p className={styles.chartCaption}>Fiscal Deficit Trajectory. Source: Government Data (Illustrative)</p>
+          <p className={styles.chartCaption}>Fiscal Deficit Trajectory. Source: Government Data </p>
         </div>
       </section>
 
        <section className={styles.section}>
-        <h2>Capital Markets: Performance & Volatility</h2>
+        <h2>Capital Markets: Performance & Volatility - INR</h2>
         <p>
           Indian equity markets have delivered strong returns over the medium to long term, albeit with periods of volatility.
           In INR terms, major indices like the Nifty 50 and BSE Sensex have shown significant growth, with Midcap and Smallcap indices
-          often outperforming during bull runs but also exhibiting higher volatility. Sector performance varies, with IT, Banking,
-          and Infrastructure showing distinct trends. When viewed in USD terms, returns are moderated by currency fluctuations,
-          highlighting the importance of the INR/USD exchange rate for foreign investors.
+          often outperforming during bull runs but also exhibiting higher volatility.
         </p>
          <div className={styles.chartGrid}>
            <div className={styles.chartContainer}>
@@ -140,11 +157,300 @@ export default function IndianMarketOverviewPage() {
                className={styles.chartImage}
              />
            </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-3.png"
+               alt="Density Plot Nifty 50 (10 Years, daily returns)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-4.png"
+               alt="Historical Returns – 10 Years"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-5.png"
+               alt="Historical Returns – 6 Years"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-6.png"
+               alt="Density Plot Nifty 50 (10 Years, monthly returns)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+         </div>
+         <p>
+        Sector performance varies, with IT, Banking,
+          and Infrastructure showing distinct trends. When viewed in USD terms, returns are moderated by currency fluctuations,
+          highlighting the importance of the INR/USD exchange rate for foreign investors.
+        </p>
+        <div className={styles.chartGrid}>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-7.png"
+               alt="Sectoral Performance (10 Years) (1st Jan 2015 = 100) "
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-8.png"
+               alt="Sectoral Performance (6 Years) (1st Jan 2019 = 100)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-9.png"
+               alt="Density Plot Nifty IT (10 Years, monthly returns)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-10.png"
+               alt="Historical Returns – 10 Years"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-11.png"
+               alt="Historical Returns – 6 Years"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-12.png"
+               alt="Density Plot Nifty Infra (10 Years, monthly returns)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
          </div>
          <p>
            Volatility remains a factor, influenced by domestic policy, global events, and fund flows. Understanding historical return patterns
            and volatility characteristics is crucial for asset allocation.
          </p>
+         <div className={styles.chartGrid}>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-13.png"
+               alt="Annualized Volatility - Indices"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-14.png"
+               alt="Annualized Volatility - Sectors"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-15.png"
+               alt="Rolling Volatility (1 month) - Indices"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-16.png"
+               alt="Rolling Volatility (1 month) - Sectors"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+         </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2>Capital Markets: Performance & Volatility - USD</h2>
+        <p>
+          Indian equity market returns adjusted after taking into consideration currency returns impact, from the perspective of a USD / USD pegged currency investor.
+        </p>
+         <div className={styles.chartGrid}>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-usd-1.png"
+               alt="Capital Market Performance USD - Indices (10 Year)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-USD-2.png"
+               alt="Capital Market Performance USD - Indices (6 Year)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-USD-3.png"
+               alt="Density Plot Nifty 50 (10 Years, daily returns)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-USD-4.png"
+               alt="Historical Returns – 10 Years"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-usd-5.png"
+               alt="Historical Returns – 6 Years"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-usd-6.png"
+               alt="Density Plot Nifty 50 (10 Years, monthly returns)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+         </div>
+         <p>
+         Sectoral returns adjusted after taking into consideration currency returns impact, from the perspective of a USD / USD pegged currency investor.
+        </p>
+        <div className={styles.chartGrid}>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-usd-7.png"
+               alt="Sectoral Performance (10 Years) (1st Jan 2015 = 100) "
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-usd-8.png"
+               alt="Sectoral Performance (6 Years) (1st Jan 2019 = 100)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-usd-9.png"
+               alt="Density Plot Nifty IT (10 Years, monthly returns)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-usd-10.png"
+               alt="Historical Returns – 10 Years"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-usd-11.png"
+               alt="Historical Returns – 6 Years"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-usd-12.png"
+               alt="Density Plot Nifty Infra (10 Years, monthly returns)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+         </div>
+         <p>
+         Volatility adjusted after taking into consideration currency volatility impact, from the perspective of a USD / USD pegged currency investor.
+         </p>
+         <div className={styles.chartGrid}>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-usd-13.png"
+               alt="Annualized Volatility - Indices & Sectors"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-usd-14.png"
+               alt="Rolling Volatility (1 month) - Indices "
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           <div className={styles.chartContainer}>
+             <Image
+               src="/Resources/indian-market-overview/cmp-inr-15.png"
+               alt="Rolling Volatility (1 month) - Sectors"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+         </div>
       </section>
 
       <section className={styles.section}>
@@ -164,7 +470,7 @@ export default function IndianMarketOverviewPage() {
             height={400}
             className={styles.chartImage}
           />
-           <p className={styles.chartCaption}>G-Sec Yield Curve Dynamics. Source: Quantwater Analysis (Illustrative)</p>
+           <p className={styles.chartCaption}>G-Sec Yield Curve Dynamics. Source: Quantwater Analysis </p>
         </div>
       </section>
 
@@ -186,7 +492,7 @@ export default function IndianMarketOverviewPage() {
               height={400}
               className={styles.chartImage}
             />
-             <p className={styles.chartCaption}>Sectoral FDI Inflows (Apr 2000 - Dec 2024). Source: DPIIT (Illustrative)</p>
+             <p className={styles.chartCaption}>Sectoral FDI Inflows (Apr 2000 - Dec 2024). Source: DPIIT </p>
           </div>
            <div className={styles.chartContainer}>
             <Image
@@ -196,7 +502,7 @@ export default function IndianMarketOverviewPage() {
               height={400}
               className={styles.chartImage}
             />
-            <p className={styles.chartCaption}>INR/USD Exchange Rate (10 Years). Source: Quantwater Analysis (Illustrative)</p>
+            <p className={styles.chartCaption}>INR/USD Exchange Rate (10 Years). Source: Quantwater Analysis </p>
           </div>
          </div>
       </section>
