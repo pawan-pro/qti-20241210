@@ -33,9 +33,7 @@ export default function IndianMarketOverviewPage() {
           />
           <p className={styles.chartCaption}>
           Real GDP growth (Annual % change). Source: IMF, RBI, World Bank<br />
-          As per World Bank’s Long-Term Growth Modeling (LTGM), India’s long-term GDP growth rate is projected to stabilize around 6.5% by 2035, before gradually slowing to 5.5% by 2050, reflecting economic maturation and demographic shifts.
-            <br />
-
+          As per World Bank's Long-Term Growth Modeling (LTGM), India's long-term GDP growth rate is projected to stabilize around 6.5% by 2035, before gradually slowing to 5.5% by 2050, reflecting economic maturation and demographic shifts.
           </p>
         </div>
         <div className={styles.chartContainer}>
@@ -81,7 +79,8 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
-             <p className={styles.chartCaption}><br>CPI and WPI Inflation Trends. Source: Quantwater Analysis</br>
+             <p className={styles.chartCaption}>
+               CPI and WPI Inflation Trends. Source: Quantwater Analysis
              </p>
            </div>
            <div className={styles.chartContainer}>
@@ -92,8 +91,9 @@ export default function IndianMarketOverviewPage() {
                height={350}
                className={styles.chartImage}
              />
-             <p className={styles.chartCaption}><br>CPI and WPI Inflation Trends. Source: Quantwater Analysis</br>
-             The Reserve Bank of India (RBI) has projected the Consumer Price Index (CPI) inflation to average 4.8% for the fiscal year 2024-25 (FY25) and to moderate to 4.2% for FY26.
+             <p className={styles.chartCaption}>
+               CPI and WPI Inflation Trends. Source: Quantwater Analysis<br />
+               The Reserve Bank of India (RBI) has projected the Consumer Price Index (CPI) inflation to average 4.8% for the fiscal year 2024-25 (FY25) and to moderate to 4.2% for FY26.
              </p>
            </div>
         <p>
@@ -503,46 +503,82 @@ export default function IndianMarketOverviewPage() {
         <div className={styles.chartContainer}>
         <Image
             src="/Resources/indian-market-overview/FIM-5.png"
-            alt="India-US10Y Yield Spread"
+            alt="10Y G-Sec - Repo Rate Spread"
             width={700}
             height={400}
             className={styles.chartImage}
           />
-           <p className={styles.chartCaption}>Average India-US 10 Y yield spread is 4.5% over the last 10 years </p>
+           <p className={styles.chartCaption}>Average 10Y G-Sec - repo rate spread is ~1.0% over the last 10 years </p>
         </div>
+        <h2>Fixed Income Landscape - Corporate Bonds</h2>
         <p>
-           The Indian fixed income market offers opportunities across government securities (G-Secs) and corporate bonds.
-           The G-Sec yield curve is currently upward sloping, reflecting growth expectations. The spread between G-Secs and US Treasuries
-           remains significant. Corporate bond spreads vary based on credit ratings, with upgrades generally outpacing downgrades,
-           indicating healthy corporate balance sheets. For retail investors, Fixed Deposits and Debt Mutual Funds (including Gilt, Corporate Bond,
+           Corporate bond spreads vary based on credit ratings, with upgrades generally outpacing downgrades,
+           indicating healthy corporate balance sheets.
+         </p>
+         <div className={styles.chartContainer}>
+         <Image
+            src="/Resources/indian-market-overview/FIM-6.png"
+            alt="Spread Over 5Y G-Sec yields (bps)"
+            width={700}
+            height={400}
+            className={styles.chartImage}
+          />
+           <p className={styles.chartCaption}>Credit spreads represent the additional yield investors demand for holding corporate bonds over government securities (G-Secs), compensating for credit risk and issuer uncertainty.</p>
+        </div>
+        <h2>Fixed Income Landscape - FDs & Debt Mutual Funds</h2>
+        <p>
+           For retail investors, Fixed Deposits and Debt Mutual Funds (including Gilt, Corporate Bond,
            and Short Duration funds) are common avenues, with real returns being a key consideration in the inflationary environment.
          </p>
          <div className={styles.chartContainer}>
-          <Image
-            src="/Resources/indian-market-overview/yield-curve-trend.png"
-            alt="India G-Sec Yield Curve Trend"
+         <Image
+            src="/Resources/indian-market-overview/FIM-7.png"
+            alt="FD Interest Rates"
             width={700}
             height={400}
             className={styles.chartImage}
           />
-           <p className={styles.chartCaption}>G-Sec Yield Curve Dynamics. Source: Quantwater Analysis </p>
+           <p className={styles.chartCaption}></p>
         </div>
-        <p>
-           The Indian fixed income market offers opportunities across government securities (G-Secs) and corporate bonds.
-           The G-Sec yield curve is currently upward sloping, reflecting growth expectations. The spread between G-Secs and US Treasuries
-           remains significant. Corporate bond spreads vary based on credit ratings, with upgrades generally outpacing downgrades,
-           indicating healthy corporate balance sheets. For retail investors, Fixed Deposits and Debt Mutual Funds (including Gilt, Corporate Bond,
-           and Short Duration funds) are common avenues, with real returns being a key consideration in the inflationary environment.
-         </p>
-         <div className={styles.chartContainer}>
-          <Image
-            src="/Resources/indian-market-overview/yield-curve-trend.png"
-            alt="India G-Sec Yield Curve Trend"
+        <div className={styles.chartContainer}>
+         <Image
+            src="/Resources/indian-market-overview/FIM-8.png"
+            alt="Debt MF Returns"
             width={700}
             height={400}
             className={styles.chartImage}
           />
-           <p className={styles.chartCaption}>G-Sec Yield Curve Dynamics. Source: Quantwater Analysis </p>
+           <p className={styles.chartCaption}></p>
+        </div>
+        <div className={styles.chartContainer}>
+         <Image
+            src="/Resources/indian-market-overview/FIM-9.png"
+            alt="Debt MF Returns"
+            width={700}
+            height={400}
+            className={styles.chartImage}
+          />
+           <p className={styles.chartCaption}></p>
+        </div>
+        <div className={styles.chartContainer}>
+         <Image
+            src="/Resources/indian-market-overview/FIM-10.png"
+            alt="CPI Inflation vs Returns (Real return view)"
+            width={700}
+            height={400}
+            className={styles.chartImage}
+          />
+           <p className={styles.chartCaption}></p>
+        </div>
+        <div className={styles.chartContainer}>
+         <Image
+            src="/Resources/indian-market-overview/FIM-7.png"
+            alt="FD Interest Rates"
+            width={700}
+            height={400}
+            className={styles.chartImage}
+          />
+           <p className={styles.chartCaption}></p>
         </div>
       </section>
 
