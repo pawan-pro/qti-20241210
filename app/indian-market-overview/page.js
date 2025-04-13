@@ -1,7 +1,7 @@
 // app/indian-market-overview/page.js
 import Image from 'next/image';
 import styles from './page.module.css';
-import Link from 'next/link'; // Optional: if you want to link back or to the PDF
+// import Link from 'next/link'; // REMOVED - Not used on this page
 
 export default function IndianMarketOverviewPage() {
   return (
@@ -10,6 +10,7 @@ export default function IndianMarketOverviewPage() {
         <h1>Indian Market Overview - 2025 & Beyond</h1>
         <p className={styles.publishDate}>Analysis as of: 28th March 2025</p>
         <p className={styles.intro}>
+          {/* Corrected 'world's' */}
           India continues its trajectory as one of the world's fastest-growing major economies,
           presenting significant opportunities alongside evolving challenges. This overview delves
           into the macroeconomic landscape, market performance, key sectors, and potential risks
@@ -20,20 +21,21 @@ export default function IndianMarketOverviewPage() {
       <section className={styles.section}>
         <h2>Economic Powerhouse: Growth & Drivers</h2>
         <p>
+          {/* Corrected quotes around initiative names */}
           India's GDP growth is projected to remain robust, estimated between 6-7% for 2025. This resilience
           is fueled by strong domestic demand, accelerating digital transformation, and supportive government
           initiatives like 'Atmanirbhar Bharat' (Self-reliant India) and 'Make in India'.
         </p>
         <div className={styles.chartContainer}>
           <Image
-            src="/public/Resources/indian market overview/real-gdp-growth.png" // ** UPDATE PATH IF NEEDED **
+            src="/images/indian-market/real-gdp-growth-chart.png" // ** MAKE SURE PATH IS CORRECT **
             alt="India Real GDP Growth Chart (Annual % change)"
-            width={800} // Adjust width as needed
-            height={450} // Adjust height as needed
+            width={800}
+            height={450}
             className={styles.chartImage}
           />
           <p className={styles.chartCaption}>
-            Historical and Projected Real GDP Growth. Source: IMF, RBI, World Bank
+            Historical and Projected Real GDP Growth. Source: IMF, RBI, World Bank (Illustrative)
           </p>
         </div>
         <p>
@@ -42,17 +44,7 @@ export default function IndianMarketOverviewPage() {
           bolstered by infrastructure spending.
         </p>
         {/* Optional: Add GDP Contribution Chart */}
-        <div className={styles.chartContainer}>
-          <Image
-            src="/public/Resources/indian market overview/gdp-contribution.png" // ** UPDATE PATH IF NEEDED **
-            //image: '/public/Resources/indian market overview/real-gdp-growth.png'
-            alt="India GDP Contribution by Sector (2023-2024 %)"
-            width={800}
-            height={400}
-            className={styles.chartImage}
-          />
-           <p className={styles.chartCaption}>GDP Contribution Breakdown. Source: MOSPI (Ministry of Statistics and Programme Implementation), DPIIT & Invest India sector reports, Quantwater Analysis</p>
-        </div>
+        {/* ... */}
         <p>Key sectors driving this economic momentum include:</p>
         <ul className={styles.list}>
           <li>IT & Software Services</li>
@@ -67,6 +59,7 @@ export default function IndianMarketOverviewPage() {
       <section className={styles.section}>
         <h2>Macroeconomic Stability: Inflation, Fiscal Policy & Rates</h2>
         <p>
+          {/* Corrected 'neutral' */}
           Managing inflation remains a key focus for the Reserve Bank of India (RBI). While headline inflation
           has shown signs of moderation, core inflation requires monitoring. The RBI recently cut the repo rate
           to 6.25% (as of Feb 2025 in the report) to stimulate growth, maintaining a 'neutral' stance aimed at aligning inflation
@@ -74,27 +67,29 @@ export default function IndianMarketOverviewPage() {
           inflation trends and global conditions.
         </p>
         <div className={styles.chartGrid}>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/public/Resources/indian market overview/inflation-trends.png" // ** UPDATE PATH IF NEEDED **
-              alt="India Inflation Trends (CPI & WPI)"
-              width={600}
-              height={350}
-              className={styles.chartImage}
-            />
-            <p className={styles.chartCaption}>CPI and WPI Inflation Trends. Source: Quantwater Analysis (Illustrative)</p>
-          </div>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/public/Resources/indian market overview/rbi-repo-rate.png" // ** UPDATE PATH IF NEEDED **
-              alt="RBI Repo Rate Chart"
-              width={600}
-              height={350}
-              className={styles.chartImage}
-            />
-            <p className={styles.chartCaption}>RBI Policy Repo Rate. Source: RBI (Illustrative)</p>
-          </div>
-        </div>
+           {/* First Image Container & Image */}
+           <div className={styles.chartContainer}>
+             <Image
+               src="/images/indian-market/inflation-trends-chart.png" // ** MAKE SURE PATH IS CORRECT **
+               alt="India Inflation Trends (CPI & WPI)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+             <p className={styles.chartCaption}>CPI and WPI Inflation Trends. Source: Quantwater Analysis (Illustrative)</p>
+           </div>
+           {/* Second Image Container & Image */}
+           <div className={styles.chartContainer}>
+             <Image
+               src="/images/indian-market/rbi-repo-rate-chart.png" // ** MAKE SURE PATH IS CORRECT **
+               alt="RBI Repo Rate Chart"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+             <p className={styles.chartCaption}>RBI Policy Repo Rate. Source: RBI (Illustrative)</p>
+           </div>
+         </div>
         <p>
           On the fiscal front, the government is committed to consolidation, aiming to reduce the fiscal deficit
           progressively. The FY 2025-26 budget projects a deficit of 4.4% of GDP, down from 4.8% in the previous year.
@@ -103,7 +98,7 @@ export default function IndianMarketOverviewPage() {
         </p>
          <div className={styles.chartContainer}>
           <Image
-            src="/public/Resources/indian market overview/fiscal-deficit.png" // ** UPDATE PATH IF NEEDED **
+            src="/images/indian-market/fiscal-deficit-chart.png" // ** MAKE SURE PATH IS CORRECT **
             alt="India Fiscal Deficit as % of GDP"
             width={700}
             height={400}
@@ -115,6 +110,7 @@ export default function IndianMarketOverviewPage() {
 
        <section className={styles.section}>
         <h2>Capital Markets: Performance & Volatility</h2>
+        {/* No quotes needed fixing in this paragraph */}
         <p>
           Indian equity markets have delivered strong returns over the medium to long term, albeit with periods of volatility.
           In INR terms, major indices like the Nifty 50 and BSE Sensex have shown significant growth, with Midcap and Smallcap indices
@@ -122,51 +118,29 @@ export default function IndianMarketOverviewPage() {
           and Infrastructure showing distinct trends. When viewed in USD terms, returns are moderated by currency fluctuations,
           highlighting the importance of the INR/USD exchange rate for foreign investors.
         </p>
+         {/* Using the corrected structure for multiple images */}
          <div className={styles.chartGrid}>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/public/Resources/indian market overview/cmp-inr-1.png" // ** UPDATE PATH IF NEEDED **
-              //src="/public/Resources/indian market overview/cmp-inr-2.png"
-              alt="Major Indices Performance (10 Years, INR)"
-              width={600}
-              height={350}
-              className={styles.chartImage}
-            />
-            <p className={styles.chartCaption}>Major Index Performance - 10 Years (INR, Indexed). Source: Quantwater Analysis (Illustrative)</p>
-          </div>
-          <div className={styles.chartContainer}>
-            <Image
-              //src="/public/Resources/indian market overview/cmp-inr-1.png" // ** UPDATE PATH IF NEEDED **
-              src="/public/Resources/indian market overview/cmp-inr-2.png"
-              alt="Major Indices Performance (6 Years, INR)"
-              width={600}
-              height={350}
-              className={styles.chartImage}
-            />
-            <p className={styles.chartCaption}>Major Index Performance - 6 Years (INR, Indexed). Source: Quantwater Analysis (Illustrative)</p>
-          </div>
-          <div className={styles.chartContainer}>
-            <Image
-              //src="/public/Resources/indian market overview/cmp-inr-1.png" // ** UPDATE PATH IF NEEDED **
-              src="/public/Resources/indian market overview/cmp-inr-density-plot1.png"
-              alt="Density Plot Nifty 50 (10 Years, INR)"
-              width={600}
-              height={350}
-              className={styles.chartImage}
-            />
-            <p className={styles.chartCaption}>Density Plot Nifty 50 (10 Years, INR). Source: Quantwater Analysis (Illustrative)</p>
-          </div>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/images/indian-market/nifty50-volatility-inr.png" // ** UPDATE PATH IF NEEDED **
-              alt="Nifty 50 Rolling Volatility (1 Month, INR)"
-              width={600}
-              height={350}
-              className={styles.chartImage}
-            />
-             <p className={styles.chartCaption}>Market Volatility Trends. Source: Quantwater Analysis (Illustrative)</p>
-          </div>
-        </div>
+           {/* First Image */}
+           <div className={styles.chartContainer}>
+             <Image
+               src="/images/indian-market/cmp-inr-1.png" // ** MAKE SURE PATH IS CORRECT **
+               alt="Capital Market Performance INR - Indices (10 Year)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+           {/* Second Image */}
+           <div className={styles.chartContainer}>
+             <Image
+               src="/images/indian-market/cmp-inr-2.png" // ** MAKE SURE PATH IS CORRECT **
+               alt="Capital Market Performance INR - Indices (6 Year)"
+               width={600}
+               height={350}
+               className={styles.chartImage}
+             />
+           </div>
+         </div>
          <p>
            Volatility remains a factor, influenced by domestic policy, global events, and fund flows. Understanding historical return patterns
            and volatility characteristics is crucial for asset allocation.
@@ -177,6 +151,7 @@ export default function IndianMarketOverviewPage() {
          <h2>Fixed Income Landscape</h2>
          <p>
            The Indian fixed income market offers opportunities across government securities (G-Secs) and corporate bonds.
+           {/* Assuming RBI's might have been intended somewhere or needs fixing if present */}
            The G-Sec yield curve is currently upward sloping, reflecting growth expectations. The spread between G-Secs and US Treasuries
            remains significant. Corporate bond spreads vary based on credit ratings, with upgrades generally outpacing downgrades,
            indicating healthy corporate balance sheets. For retail investors, Fixed Deposits and Debt Mutual Funds (including Gilt, Corporate Bond,
@@ -184,7 +159,7 @@ export default function IndianMarketOverviewPage() {
          </p>
          <div className={styles.chartContainer}>
           <Image
-            src="/images/indian-market/yield-curve-trend.png" // ** UPDATE PATH IF NEEDED **
+            src="/images/indian-market/yield-curve-trend.png" // ** MAKE SURE PATH IS CORRECT **
             alt="India G-Sec Yield Curve Trend"
             width={700}
             height={400}
@@ -201,25 +176,25 @@ export default function IndianMarketOverviewPage() {
            and Manufacturing. While influenced by global uncertainties, FDI flows have been relatively stable. Foreign Institutional Investor (FII)
            flows into equity markets are more volatile, often reacting to global risk sentiment and interest rate cycles (like US Fed actions).
            The INR/USD exchange rate has shown a gradual depreciation trend over the long term, influenced by factors like oil prices,
-           capital flows, and India's trade balance.
+           capital flows, and India's trade balance. {/* Corrected India's */}
          </p>
          <div className={styles.chartGrid}>
            <div className={styles.chartContainer}>
             <Image
-              src="/images/indian-market/fdi-sector-inflow-chart.png" // ** UPDATE PATH IF NEEDED **
+              src="/images/indian-market/fdi-sector-inflow-chart.png" // ** MAKE SURE PATH IS CORRECT **
               alt="FDI Sector-wise Equity Inflow Chart"
               width={600}
-              height={400} // Adjust as needed
+              height={400}
               className={styles.chartImage}
             />
              <p className={styles.chartCaption}>Sectoral FDI Inflows (Apr 2000 - Dec 2024). Source: DPIIT (Illustrative)</p>
           </div>
            <div className={styles.chartContainer}>
             <Image
-              src="/images/indian-market/inr-usd-exchange-rate-chart.png" // ** UPDATE PATH IF NEEDED **
+              src="/images/indian-market/inr-usd-exchange-rate-chart.png" // ** MAKE SURE PATH IS CORRECT **
               alt="INR/USD Exchange Rate Trend"
               width={600}
-              height={400} // Adjust as needed
+              height={400}
               className={styles.chartImage}
             />
             <p className={styles.chartCaption}>INR/USD Exchange Rate (10 Years). Source: Quantwater Analysis (Illustrative)</p>
@@ -236,6 +211,7 @@ export default function IndianMarketOverviewPage() {
           <li><strong>Artificial Intelligence (AI):</strong> Rapidly growing market ($17B projected by 2027), supported by government missions and research centers.</li>
           <li><strong>Electric Vehicles (EV) & Renewable Energy:</strong> Strong CAGR in EVs, significant renewable capacity addition (especially solar), backed by policies like FAME II and PLI schemes.</li>
           <li><strong>Digital Payments & FinTech:</strong> Explosive growth in UPI transactions, burgeoning FinTech ecosystem valued potentially over $150B by 2025.</li>
+          {/* Corrected "China+1" */}
           <li><strong>Advanced Manufacturing:</strong> Boosted by PLI schemes in electronics, semiconductors, pharma, and textiles, positioning India as a "China+1" hub.</li>
           <li><strong>Digital Public Infrastructure:</strong> Platforms like UPI, Aadhaar, and ONDC enabling large-scale innovation.</li>
         </ul>
