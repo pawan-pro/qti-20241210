@@ -4,6 +4,7 @@
   background-color: #000;
   min-height: 100vh; /* Ensure it takes at least full viewport height */
   box-sizing: border-box; /* Include padding in width/height calculation */
+  font-family: 'Century Gothic', Arial, sans-serif; /* Consistent font from global.css */
 }
 
 .headerSection {

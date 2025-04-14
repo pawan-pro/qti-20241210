@@ -2,6 +2,7 @@
 .mainContainer {
   padding: 4rem 2rem;
   background-color: #f4f4f4; /* Light background for a clean look */
+  font-family: 'Century Gothic', Arial, sans-serif; /* Ensure fallback */
 }
 
 .headerSection {

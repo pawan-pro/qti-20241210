@@ -9,6 +9,7 @@
   background-color: #000000; /* Dark background */
   color: #e0e0e0; /* Light text color */
   padding: 1rem;
+  font-family: 'Century Gothic', Arial, sans-serif; /* Consistent font from global.css */
 }
 
 .heading {

@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: left;  /* left content horizontally */
   color: white;  /* Bright text for better readability */
+  font-family: 'Century Gothic', Arial, sans-serif; /* Consistent font from global.css */
+  
 }
 
 .heroOverlay {

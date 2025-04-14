@@ -15,6 +15,7 @@
   font-weight: normal; /* Adjust weight/style if needed */
   font-style: normal;
   font-display: swap; /* Use swap for better performance */
+  font-family: 'Century Gothic', Arial, sans-serif; /* Consistent font from global.css */
 }
 
 /* Body Styles */
