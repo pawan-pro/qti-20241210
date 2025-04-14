@@ -7,7 +7,7 @@ export default function IndianMarketOverviewPage() {
     <><main className={styles.articleContainer}>
       <header className={styles.articleHeader}>
         <h1>Indian Market Overview - 2025 & Beyond</h1>
-        <p className={styles.publishDate}>Analysis as of: 28th March 2025</p>
+        <p className={styles.publishDate}>Analysis as of: 28th March 2025, Pawan</p>
         <p className={styles.intro}>
           India continues its trajectory as <span className={styles.bold}>one of the world&apos;s fastest-growing major economies</span>,
           presenting significant opportunities alongside evolving challenges. This overview delves
@@ -19,7 +19,7 @@ export default function IndianMarketOverviewPage() {
       <section className={styles.section}>
         <h2>Economic Powerhouse: Growth & Drivers</h2>
         <p>
-          India&apos;s GDP growth is projected to remain robust, estimated between <span className={styles.bold}>6-7%</span>for 2025. This resilience
+          India&apos;s GDP growth is projected to remain robust, estimated between <span className={styles.bold}>6-7%</span> for 2025. This resilience
           is fueled by strong domestic demand, accelerating digital transformation, and supportive government
           initiatives like <span className={styles.bold}>&apos;Atmanirbhar Bharat</span>&apos; (Self-reliant India) and &apos;<span className={styles.bold}>Make in India</span>&apos;.
         </p>
@@ -30,8 +30,8 @@ export default function IndianMarketOverviewPage() {
             width={800}
             height={450}
             className={styles.chartImage} />
-          <p className={styles.chartCaption}>
-            Real GDP growth (Annual % change). Source: IMF, RBI, World Bank<br /> <br />
+          <p className={styles.chartCaption}><span className={styles.bold}>
+            Real GDP growth (Annual % change). Source: IMF, RBI, World Bank<br /> <br /></span>
             As per World Bank&apos;s Long-Term Growth Modeling (LTGM), India&apos;s long-term GDP growth rate is projected to stabilize around <span className={styles.bold}>6.5% by 2035</span>, before gradually slowing to <span className={styles.bold}>5.5% by 2050</span>, reflecting economic maturation and demographic shifts.
           </p>
         </div>
@@ -42,8 +42,8 @@ export default function IndianMarketOverviewPage() {
             width={800}
             height={450}
             className={styles.chartImage} />
-          <p className={styles.chartCaption}>
-            GDP Contribution (2023-2024 %). Source: MoSPI.
+          <p className={styles.chartCaption}><span className={styles.bold}>
+            GDP Contribution (2023-2024 %). Source: MoSPI.</span>
           </p>
         </div>
         <p>
@@ -76,8 +76,8 @@ export default function IndianMarketOverviewPage() {
               width={600}
               height={350}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>
-              CPI and WPI Inflation Trends. Source: MoSPI, PIB<br /> <br />
+            <p className={styles.chartCaption}><span className={styles.bold}>
+              CPI and WPI Inflation Trends. Source: MoSPI, PIB<br /> <br /></span>
               The Reserve Bank of India (RBI) has projected the Consumer Price Index (CPI) inflation to average <span className={styles.bold}>4.8%</span> for the fiscal year 2024-25 (FY25) and to moderate to <span className={styles.bold}>4.2%</span> for FY26.
             </p>
           </div>
@@ -90,8 +90,8 @@ export default function IndianMarketOverviewPage() {
               width={600}
               height={350}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>
-              CPI and WPI Inflation Trends. Source: MoSPI, PIB<br />
+            <p className={styles.chartCaption}><span className={styles.bold}>
+              CPI and WPI Inflation Trends. Source: MoSPI, PIB<br /></span>
             </p>
           </div>
         </div>
@@ -118,8 +118,8 @@ export default function IndianMarketOverviewPage() {
             alt="RBI Repo Rate Chart"
             width={500}
             height={250}
-            className={styles.chartImage} />
-          <p className={styles.chartCaption}>RBI Policy Repo Rate. Source: RBI </p>
+            className={styles.chartImage} /><span className={styles.bold}>
+          <p className={styles.chartCaption}>RBI Policy Repo Rate. Source: RBI </p></span>
         </div>
         <p>
           <p><span className={styles.bold}>Fiscal Deficit & Government Spending: </span></p>
@@ -138,8 +138,8 @@ export default function IndianMarketOverviewPage() {
           alt="India Fiscal Deficit as % of GDP"
           width={500}
           height={250}
-          className={styles.chartImage} />
-        <p className={styles.chartCaption}>Fiscal Deficit Trajectory. Source: https://www.indiabudget.gov.in </p>
+          className={styles.chartImage} /><span className={styles.bold}>
+        <p className={styles.chartCaption}>Fiscal Deficit Trajectory. Source: https://www.indiabudget.gov.in </p></span>
       </div>
     </section><section className={styles.section}>
         <h2>Capital Markets: Performance & Volatility - INR</h2>
