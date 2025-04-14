@@ -110,7 +110,6 @@ export default function IndianMarketOverviewPage() {
             className={styles.chartImage} />
           <p className={styles.chartCaption}>RBI Policy Repo Rate. Source: RBI </p>
         </div>
-      </div>
       <p>
         On the fiscal front, the government is committed to consolidation, aiming to reduce the fiscal deficit
         progressively. The FY 2025-26 budget projects a deficit of 4.4% of GDP, down from 4.8% in the previous year.
