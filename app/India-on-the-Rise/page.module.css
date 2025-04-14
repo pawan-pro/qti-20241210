@@ -2,226 +2,263 @@
 
 /* --- Global Styles for the Article --- */
 .articleContainer {
-    max-width: 1000px; /* Adjust max-width as needed for readability */
-    margin: 2rem auto; /* Center the container */
-    padding: 2rem 4rem; /* Add padding */
-    background-color: #f4f4f4; /* Light grey background */
-    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
-    color: #333; /* Darker text color for contrast */
-    text-align: justify; /* Justify all text */
-    line-height: 1.7; /* Improve readability of justified text */
-    border-radius: 8px; /* Optional: slightly rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Optional: subtle shadow */
-  }
+  max-width: 1100px; /* Slightly wider for more content */
+  margin: 3rem auto; /* Center container with more top/bottom margin */
+  padding: 3rem 4rem; /* Generous padding */
+  background-color: #ffffff; /* White background for content area */
+  font-family: 'Century Gothic', Arial, sans-serif; /* Ensure fallback */
+  color: #212529; /* Darker text for better contrast on white */
+  text-align: justify; /* Justify body text */
+  line-height: 1.8; /* Increased line height for readability */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+  border: 1px solid #dee2e6; /* Subtle border */
+}
 
-  .bold {
-    color: #000000; /* Example: reddish highlight */
-    font-weight: bold;
-  }
+.bold {
+  font-weight: 600; /* Use font-weight for standard bold */
+  color: inherit; /* Inherit base text color */
+}
 
-  .boldRed {
-    color: #ff0015;
-    font-weight: bold;
-  }
-  
-  
-  /* --- Header --- */
-  .articleHeader {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
-    text-align: center; /* Center align header elements */
-  }
-  
-  .articleHeader h1 {
-    font-size: 2.5rem; /* Adjust size as needed */
+.boldRed {
+  color: #c90011; /* Specific highlight color */
+  font-weight: 600;
+}
+
+.linkText {
+  color: #0056b3; /* Professional blue for links */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.linkText:hover {
+  text-decoration: underline;
+  color: #003d80; /* Darker blue on hover */
+}
+
+
+/* --- Header --- */
+.articleHeader {
+  border-bottom: 1px solid #dee2e6; /* Lighter border */
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  text-align: left; /* Align header text left for formal look */
+}
+
+.articleHeader h1 {
+  font-size: 2.8rem; /* Larger title */
+  font-weight: 600; /* Bold but not overly heavy */
+  margin-bottom: 0.75rem;
+  color: #111; /* Very dark grey / black */
+  line-height: 1.3;
+}
+
+.publishDate {
+  font-size: 0.9rem;
+  color: #6c757d; /* Muted grey */
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.intro {
+  font-size: 1.15rem; /* Slightly larger intro */
+  color: #495057; /* Slightly muted text */
+  /* text-align: justify; is inherited */
+}
+
+/* --- Sections --- */
+.section {
+  margin-bottom: 3.5rem; /* More space between sections */
+}
+
+.section h2 {
+  font-size: 2rem; /* Prominent section heading */
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #004080; /* Accent border color (muted blue) */
+  text-align: left; /* Keep headings left-aligned */
+  line-height: 1.4;
+}
+
+.section h3 {
+  font-size: 1.4rem; /* Sub-heading size */
+  font-weight: 600;
+  color: #343a40;
+  margin-top: 2.5rem; /* Add space before H3 */
+  margin-bottom: 1.5rem;
+  text-align: left;
+  /* Optional: add a lighter border or remove border */
+  /* border-bottom: 1px solid #eee; */
+  /* padding-bottom: 0.5rem; */
+}
+
+.section p {
+  margin-bottom: 1.5rem; /* Consistent paragraph spacing */
+  /* text-align: justify; is inherited */
+}
+
+/* Correct nested <p> tags if any (HTML structure issue) */
+/* If <p> is directly inside <p>, browser might close first one early. Better structure needed in HTML. */
+/* Assuming the structure is <p><strong>Title:</strong></p><ul>...</ul> */
+.section p + .list {
+    margin-top: -0.5rem; /* Adjust space if list follows a <p> title */
+}
+
+
+/* --- Lists --- */
+.list {
+  list-style: disc;
+  padding-left: 2.5rem; /* Deeper indent */
+  margin-bottom: 1.75rem;
+}
+
+.list li {
+  margin-bottom: 0.85rem; /* More space between list items */
+  /* text-align: justify; is inherited */
+}
+
+/* Style for bold text used as mini-headings within list items */
+.list li strong {
     font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #1a1a1a;
-    text-align: center; /* Override justify for main title */
-  }
-  
-  .publishDate {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 1.5rem;
-    text-align: center; /* Override justify */
-  }
-  
-  .intro {
-    font-size: 1.1rem;
-    color: #555;
-    /* text-align: justify; is inherited */
-  }
-  
-  /* --- Sections --- */
-  .section {
-    margin-bottom: 3rem;
-  }
-  
-  .section h2 {
-    font-size: 1.8rem; /* Adjust size */
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #eee;
-    /* text-align: justify; is inherited, but left might look better */
-    /* text-align: left; */ /* Uncomment this if justified headings look odd */
-  }
-  
-  .section h3 {
-    font-size: 1.2rem; /* Adjust size */
-    font-weight: 500;
-    color: #222;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #eee;
-    /* text-align: justify; is inherited, but left might look better */
-    /* text-align: left; */ /* Uncomment this if justified headings look odd */
-  }
+    display: inline-block; /* Or block if it's on its own line */
+    margin-bottom: 0.25rem; /* Space after the bold heading */
+    color: #343a40;
+}
 
-  .section p {
-    margin-bottom: 1.25rem;
-    /* text-align: justify; is inherited */
+/* --- Charts & Images --- */
+.chartContainer {
+  margin: 0; /* Handled by grid gap */
+  text-align: center;
+  width: 100%; /* Ensure container takes full grid cell width */
+}
+
+.chartImage {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #d5d5d5; /* Slightly darker border for charts */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  margin-bottom: 0.75rem;
+}
+
+.chartCaption {
+  font-size: 0.85rem;
+  color: #6c757d; /* Muted grey */
+  margin-top: 0.75rem;
+  padding: 0 0.5rem; /* Add slight horizontal padding */
+  text-align: center;
+  line-height: 1.5;
+}
+
+.chartCaption strong {
+    font-weight: 600; /* Make title part of caption bold */
+    color: #495057; /* Slightly darker than regular caption text */
+    display: block; /* Put title on its own line */
+    margin-bottom: 0.25rem;
+}
+
+/* --- Chart Grid Layout --- */
+.chartGrid {
+  display: grid;
+  /* Adjust minmax for better fit - 400px ensures larger charts don't get too squished */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem; /* Increased gap */
+  margin: 2.5rem 0;
+  align-items: start;
+}
+
+/* Optional: Force single column for specific charts if needed */
+.chartGrid .fullWidth {
+    grid-column: 1 / -1; /* Make container span all columns */
+}
+
+
+/* --- Footer --- */
+.articleFooter {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ced4da; /* Slightly darker top border */
+  font-size: 0.85rem;
+  color: #6c757d;
+  text-align: center; /* Center align footer text */
+  line-height: 1.6;
+}
+
+.articleFooter p {
+    margin-bottom: 1rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .articleContainer {
+    padding: 2.5rem 3rem;
   }
-  
-  /* --- Lists --- */
-  .list {
-    list-style: disc; /* Or square, circle */
-    padding-left: 2.5rem; /* Indent list */
-    margin-bottom: 1.5rem;
-  }
-  
-  .list li {
-    margin-bottom: 0.75rem;
-    /* text-align: justify; is inherited */
-  }
-  
-  .list li strong {
-      font-weight: 600; /* Make strong tags bolder */
-  }
-  
-  /* --- Charts & Images --- */
-  .chartContainer {
-    margin: 2rem auto; /* Center chart blocks */
-    text-align: center; /* Center image and caption within container */
-    max-width: 100%;
-  }
-  
-  .chartImage {
-    max-width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 4px; /* Optional: slight rounding */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-    margin-bottom: 0.5rem;
-  }
-  
-  .chartCaption {
-    font-size: 0.85rem;
-    color: #777;
-    margin-top: 0.5rem;
-    text-align: center; /* Override justify for captions */
-  }
-  
-  /* --- Chart Grid Layout --- */
   .chartGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 2rem; /* Space between grid items */
-    margin: 2rem 0;
-    align-items: start; /* Align items to the top */
+      /* Adjust minmax earlier if needed, or keep as is for tablet */
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
   }
-  
-  /* Ensure chart containers within the grid don't add extra auto margins */
-  .chartGrid .chartContainer {
-      margin: 0;
+}
+
+@media (max-width: 768px) {
+  .articleContainer {
+    padding: 2rem 1.5rem; /* Reduce padding more */
+    margin: 2rem auto;
+    border: none; /* Remove border on smaller screens if desired */
+    box-shadow: none; /* Remove shadow on smaller screens if desired */
   }
 
-  /* Styles for 'Learn More' / 'Historical Impact' links */
-  .historical-impact a {
-    color: #e0e0e0; /* Light text color */
-    text-decoration: none;
-    background-color: #357ae8; /* Blue background */
-    padding: 3px 6px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-    margin-right: 5px; /* Space between links */
-    font-size: 0.85rem;
-    display: inline-block; /* Allows padding/margin and respects wrapping */
-    margin-bottom: 3px; /* Space if links wrap to next line */
+  .articleHeader h1 {
+    font-size: 2.2rem;
   }
-  
-  /* --- Footer --- */
-  .articleFooter {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #ddd;
-    font-size: 0.8rem;
-    color: #888;
-    /* text-align: justify; is inherited */
+
+  .section h2 {
+    font-size: 1.7rem;
   }
-  
-  /* --- Responsive Adjustments --- */
-  @media (max-width: 768px) {
-    .articleContainer {
-      padding: 1.5rem 2rem;
-      margin: 1rem auto;
-    }
-  
-    .articleHeader h1 {
-      font-size: 2rem;
-    }
-  
-    .section h2 {
-      font-size: 1.5rem;
-    }
-  
-    .chartGrid {
-      grid-template-columns: 1fr; /* Stack charts on smaller screens */
-      gap: 1.5rem;
-    }
-  
-    .list {
-      padding-left: 1.5rem;
-    }
+   .section h3 {
+    font-size: 1.25rem;
   }
-  
-  @media (max-width: 480px) {
-    .articleContainer {
-      padding: 1rem 1rem;
-    }
-  
-    .articleHeader h1 {
-      font-size: 1.75rem;
-    }
-  
-    .section h2 {
-      font-size: 1.3rem;
-    }
-  
-    .intro {
-        font-size: 1rem;
-    }
-  
-    .list {
-      padding-left: 1.2rem;
-    }
+
+  .chartGrid {
+    grid-template-columns: 1fr; /* Stack charts */
+    gap: 2rem;
   }
-  
-  /* --- Font Loading (Important!) ---
-   * Make sure 'Century Gothic' is available.
-   * You might need to load it using @font-face if it's not a standard system font
-   * or use a web font service. Example using @font-face (if you have the font files):
-   *
-   * @font-face {
-   *   font-family: 'Century Gothic';
-   *   src: url('/fonts/CenturyGothic.woff2') format('woff2'),
-   *        url('/fonts/CenturyGothic.woff') format('woff');
-   *   font-weight: normal;
-   *   font-style: normal;
-   *   font-display: swap;
-   * }
-   *
-   * Place font files (e.g., .woff2, .woff) in your public/fonts directory.
-   */
+
+  .list {
+    padding-left: 1.5rem; /* Reduce list indent */
+  }
+   /* Justification might look poor on narrow screens */
+   .articleContainer, .section p, .list li {
+      text-align: left;
+   }
+   .intro {
+       text-align: left;
+   }
+}
+
+@media (max-width: 576px) {
+  .articleContainer {
+    padding: 1.5rem 1rem;
+  }
+
+  .articleHeader h1 {
+    font-size: 1.8rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+   .section h3 {
+    font-size: 1.15rem;
+  }
+
+  .intro {
+      font-size: 1rem;
+  }
+  .publishDate {
+      font-size: 0.8rem;
+  }
+   .chartCaption {
+      font-size: 0.8rem;
+   }
+}

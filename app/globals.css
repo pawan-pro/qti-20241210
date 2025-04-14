@@ -10,86 +10,110 @@
 /* Font Setup */
 @font-face {
   font-family: 'Century Gothic';
+  /* Ensure you have the woff2 file in public/fonts */
   src: url('/fonts/CenturyGothic.woff2') format('woff2');
-  font-weight: normal;
+  font-weight: normal; /* Adjust weight/style if needed */
   font-style: normal;
+  font-display: swap; /* Use swap for better performance */
 }
 
 /* Body Styles */
 html, body {
-  height: 100%; /* Ensure full height */
+  height: 100%;
 }
 
 body {
+  /* Apply base font to body for inheritance */
   font-family: 'Century Gothic', Arial, sans-serif;
-  background-color: #1e1e1e; /* Dark background */
-  color: #e0e0e0; /* Light text color */
+  background-color: #1e1e1e; /* Dark background for the overall site */
+  color: #e0e0e0; /* Light default text for elements outside the main article */
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.6; /* Default line height */
 }
 
+/* Link Styles (Global - can be overridden) */
+a {
+  color: #3b82f6; /* Example global link color for dark background */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Main container for content pages */
 main {
-  min-height: 100%; /* Ensure the main content fills the height */
+  width: 100%;
+  /* min-height: 100vh; Remove if causing layout issues with sticky header/footer */
 }
 
-/* Header Styles */
-.header {
+/* Header Styles (Example - Adapt to your actual header component) */
+.site-header { /* Example class name */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #000;
+  background-color: #000; /* Black header background */
+  color: #fff; /* White text in header */
   position: sticky;
   top: 0;
   z-index: 1000;
-  flex-wrap: nowrap; /* Prevent wrapping by default */
+  flex-wrap: nowrap;
+  border-bottom: 1px solid #333; /* Subtle border */
 }
 
-.firm-name {
+.firm-name { /* Example class name */
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
 }
 
-.nav-links {
+.nav-links { /* Example class name */
   display: flex;
-  gap: 1.5rem; /* Space between links */
+  gap: 1.5rem;
 }
 
 .nav-links a {
-  text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
-  color: #fff;
+  color: #fff; /* White nav links */
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #007acc;
+  color: #a0aec0; /* Lighter grey on hover */
 }
 
-/* Responsive Adjustments */
+/* Responsive Adjustments for Header */
 @media (max-width: 768px) {
-  .firm-name {
-    font-size: 1.2rem; /* Slightly reduce size for smaller screens */
+  .site-header {
+      padding: 0.8rem 1rem;
   }
-
+  .firm-name {
+    font-size: 1.2rem;
+  }
   .nav-links {
-    flex-wrap: wrap; /* Allow wrapping for small screens */
-    justify-content: center;
     gap: 1rem;
+  }
+  .nav-links a {
+      font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  .firm-name {
-    font-size: 1rem; /* Further reduce size for phones */
-    text-align: center;
+  .site-header {
+      flex-direction: column;
+      align-items: center;
+      padding: 0.8rem;
   }
-
-  .nav-links {
-    flex-direction: row; /* Keep links horizontal on smaller screens */
-    gap: 0.5rem;
-    justify-content: center;
+  .firm-name {
+      margin-bottom: 0.5rem;
+  }
+   .nav-links {
+       gap: 0.8rem;
+       justify-content: center;
+       flex-wrap: wrap; /* Allow wrapping */
+   }
+   .nav-links a {
+      font-size: 0.85rem;
   }
 }
