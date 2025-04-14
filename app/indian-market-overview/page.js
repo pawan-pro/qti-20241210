@@ -180,8 +180,8 @@ export default function IndianMarketOverviewPage() {
                 className={styles.chartImage} />
               <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty 50 (10 Years, daily returns)</span></p>
             </div>
-          </div>
-          <div className={styles.chartGrid}>
+        </div>
+        <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
                 src="/Resources/indian-market-overview/cmp-inr-6.png"
@@ -191,8 +191,8 @@ export default function IndianMarketOverviewPage() {
                 className={styles.chartImage} />
               <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty 50 (10 Years, monthly returns)</span></p>
             </div>
-          </div>
-          <div className={styles.chartGrid}>
+        </div>
+        <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
                 src="/Resources/indian-market-overview/cmp-inr-4.png"
@@ -202,17 +202,16 @@ export default function IndianMarketOverviewPage() {
                 className={styles.chartImage} />
               <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns: 10 Years</span> </p>
             </div>
-          </div>
-          <div className={styles.chartGrid}></div>
-            <div className={styles.chartContainer}>
-              <Image
-                src="/Resources/indian-market-overview/cmp-inr-5.png"
-                alt="Historical Returns – 6 Years"
-                width={1000}
-                height={500}
-                className={styles.chartImage} />
-              <p className={styles.chartCaption}>Historical Returns: 6 Years </p>
-            </div>
+        </div>
+        <div className={styles.chartGrid}>
+          <div className={styles.chartContainer}>
+            <Image
+              src="/Resources/indian-market-overview/cmp-inr-5.png"
+              alt="Historical Returns – 6 Years"
+              width={1000}
+              height={500}
+              className={styles.chartImage} />
+            <p className={styles.chartCaption}>Historical Returns: 6 Years </p>
           </div>
         </div>
         <p>
