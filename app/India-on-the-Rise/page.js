@@ -731,10 +731,14 @@ export default function IndiaontheRise() {
             Market conditions and projections are subject to change. Data derived from publicly available sources and internal analysis as of March 28, 2025.
           </p>
           <p>
-          <br>Spreadsheet with raw data:
-                    <a href="https://quantwater.tech/databook.xlsx" target="_blank" rel="noopener noreferrer"><span style="color: rgb(168, 168, 168);">Databook</span></a></br>
-          <br>Deck:
-                    <a href="https://quantwater.tech/IndiaontheRise.pdf" target="_blank" rel="noopener noreferrer"><span style="color: rgb(168, 168, 168);">India on the Rise - Deck</span></a></br>
+            <br />Spreadsheet with raw data:
+            <a href="https://quantwater.tech/databook.xlsx" target="_blank" rel="noopener noreferrer">
+              <span className={styles.linkText}>Databook</span>
+            </a>
+            <br />Deck:
+            <a href="https://quantwater.tech/IndiaontheRise.pdf" target="_blank" rel="noopener noreferrer">
+              <span className={styles.linkText}>India on the Rise - Deck</span>
+            </a>
           </p>
         </footer>
     </main>
