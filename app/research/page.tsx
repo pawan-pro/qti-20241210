@@ -8,7 +8,7 @@ const projects = [
   {
     id: 'India-on-the-Rise',
     title: 'India on the Rise: Market Outlook & Investment Trends',
-    image: '/indian-market-overview.png', // ** USE YOUR THUMBNAIL IMAGE PATH **
+    image: '/India-on-the-Rise.png', // ** USE YOUR THUMBNAIL IMAGE PATH **
     link: '/India-on-the-Rise', // Link to the new Next.js page route
   },
   {
