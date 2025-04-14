@@ -14,7 +14,6 @@
   border: 1px solid #dee2e6;
 }
 
-/* Base paragraph and list item font size (implicitly 1rem if body is 1rem, but can be set) */
 .section p, .list li {
   font-size: 1rem; /* Base size for desktop */
 }
@@ -67,7 +66,6 @@
 .intro {
   font-size: 1.15rem;
   color: #495057;
-  /* text-align: justify; is inherited */
 }
 
 /* --- Sections --- */
@@ -97,7 +95,6 @@
 
 .section p {
   margin-bottom: 1.5rem;
-  /* text-align: justify; is inherited */
 }
 
 /* --- Lists --- */
@@ -109,13 +106,13 @@
 
 .list li {
   margin-bottom: 0.85rem;
-  /* text-align: justify; is inherited */
 }
 
+/* Desktop style for strong tag in list */
 .list li strong {
     font-weight: 600;
-    display: inline-block;
-    margin-bottom: 0.25rem;
+    display: inline; /* Default inline display for desktop */
+    margin-right: 0.3em; /* Add slight space after bold part */
     color: #343a40;
 }
 
@@ -188,7 +185,6 @@
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 2rem;
   }
-  /* Adjust font sizes for medium screens if needed */
   .articleHeader h1 { font-size: 2.5rem; }
   .section h2 { font-size: 1.8rem; }
   .section h3 { font-size: 1.3rem; }
@@ -201,19 +197,30 @@
     margin: 2rem auto;
     border: none;
     box-shadow: none;
-    /* Justification might look poor on narrow screens, switch to left */
     text-align: left;
   }
 
   /* Font Size Adjustments for Tablets/Small Laptops */
   .articleHeader h1 { font-size: 2.1rem; line-height: 1.3; }
   .publishDate { font-size: 0.85rem; }
-  .intro { font-size: 1.05rem; text-align: left; } /* Align intro left */
+  .intro { font-size: 1.05rem; text-align: left; }
   .section h2 { font-size: 1.6rem; line-height: 1.3; }
   .section h3 { font-size: 1.2rem; line-height: 1.3; }
-  .section p { font-size: 0.95rem; text-align: left; line-height: 1.7; } /* Explicit size, align left */
+  .section p { font-size: 0.95rem; text-align: left; line-height: 1.7; }
   .list { padding-left: 1.5rem; }
-  .list li { font-size: 0.95rem; text-align: left; line-height: 1.7; } /* Explicit size, align left */
+  .list li {
+      font-size: 0.95rem;
+      text-align: left;
+      line-height: 1.7; /* Consistent line height for the whole item */
+      margin-bottom: 0.75rem; /* Adjust spacing */
+  }
+  /* Style for strong tag specifically within lists on mobile */
+  .list li strong {
+      font-size: inherit; /* Ensure strong tag uses li's font size */
+      display: inline; /* Keep it inline */
+      margin-right: 0.3em; /* Space after bold part */
+      /* font-weight 600 and color are inherited or set above */
+  }
   .chartCaption { font-size: 0.8rem; line-height: 1.4; }
   .articleFooter { font-size: 0.8rem; }
 
@@ -231,11 +238,21 @@
   /* Font Size Adjustments for Small Mobiles */
   .articleHeader h1 { font-size: 1.8rem; }
   .publishDate { font-size: 0.8rem; }
-  .intro { font-size: 1rem; } /* Keep intro readable */
+  .intro { font-size: 1rem; }
   .section h2 { font-size: 1.4rem; }
   .section h3 { font-size: 1.1rem; }
-  .section p { font-size: 0.9rem; } /* Slightly smaller body text */
-  .list li { font-size: 0.9rem; } /* Consistent list item size */
-  .chartCaption { font-size: 0.75rem; } /* Smaller captions */
+  .section p { font-size: 0.9rem; }
+  .list li {
+      font-size: 0.9rem; /* Adjust base size for smaller mobile */
+      line-height: 1.65; /* Slightly adjust line height if needed */
+      margin-bottom: 0.65rem;
+  }
+  /* Strong tag inherits size automatically now from the rule above */
+  .list li strong {
+      font-size: inherit; /* Reiterate inheritance */
+      display: inline;
+      margin-right: 0.3em;
+  }
+  .chartCaption { font-size: 0.75rem; }
   .articleFooter { font-size: 0.75rem; }
 }
