@@ -71,7 +71,7 @@ export default function IndianMarketOverviewPage() {
         <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
-              src="/Resources/indian-market-overview/inflation-trends1.png"
+              src="/Resources/indian-market-overview/macro-1.png"
               alt="India Inflation Trends (CPI & WPI)"
               width={1000}
               height={500}
@@ -83,7 +83,7 @@ export default function IndianMarketOverviewPage() {
         <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
-              src="/Resources/indian-market-overview/inflation-trends2.png"
+              src="/Resources/indian-market-overview/macro-2.png"
               alt="India Inflation Trends (CPI & WPI)"
               width={1000}
               height={500}
@@ -111,7 +111,7 @@ export default function IndianMarketOverviewPage() {
         <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
-              src="/Resources/indian-market-overview/rbi-repo-rate.png"
+              src="/Resources/indian-market-overview/macro-3.png"
               alt="RBI Repo Rate Chart"
               width={500}
               height={250}
@@ -133,7 +133,7 @@ export default function IndianMarketOverviewPage() {
       <div className={styles.chartGrid}>
         <div className={styles.chartContainer}>
           <Image
-            src="/Resources/indian-market-overview/fiscal-deficit.png"
+            src="/Resources/indian-market-overview/macro-4.png"
             alt="India Fiscal Deficit as % of GDP"
             width={500}
             height={250}
@@ -156,7 +156,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance INR - Indices (10 Year)</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance INR - Indices (10 Year)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -167,7 +167,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance INR - Indices (6 Year)</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance INR - Indices (6 Year)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -178,7 +178,7 @@ export default function IndianMarketOverviewPage() {
                 width={1000}
                 height={500}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty 50 (10 Years, daily returns)</span></p>
+              <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty 50 (10 Years, daily returns)</span>. Source: Quantwater Analysis</p>
             </div>
         </div>
         <div className={styles.chartGrid}>
@@ -189,7 +189,7 @@ export default function IndianMarketOverviewPage() {
                 width={1000}
                 height={500}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty 50 (10 Years, monthly returns)</span></p>
+              <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty 50 (10 Years, monthly returns)</span>. Source: Quantwater Analysis</p>
             </div>
         </div>
         <div className={styles.chartGrid}>
@@ -200,7 +200,7 @@ export default function IndianMarketOverviewPage() {
                 width={1000}
                 height={500}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns: 10 Years</span></p>
+              <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns: 10 Years</span>. Source: Quantwater Analysis</p>
             </div>
         </div>
         <div className={styles.chartGrid}>
@@ -211,9 +211,10 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns: 6 Years</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns: 6 Years</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
+        <h3>Sector Performance - INR</h3>
         <p>
           Sector performance varies, with IT, Banking,
           and Infrastructure showing distinct trends. When viewed in USD terms, returns are moderated by currency fluctuations,
@@ -227,7 +228,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Sectoral Performance (10 Years) (1st Jan 2015 = 100)</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Sectoral Performance (10 Years) (1st Jan 2015 = 100)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -238,18 +239,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Sectoral Performance (6 Years) (1st Jan 2019 = 100)</span></p>
-          </div>
-        </div>
-        <div className={styles.chartGrid}>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/cmp-inr-10.png"
-              alt="Historical Returns – 10 Years"
-              width={1000}
-              height={500}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 10 Years</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Sectoral Performance (6 Years) (1st Jan 2019 = 100)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -260,18 +250,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty IT (10 Years, monthly returns)</span></p>
-          </div>
-        </div>
-        <div className={styles.chartGrid}>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/cmp-inr-11.png"
-              alt="Historical Returns – 6 Years"
-              width={1000}
-              height={500}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 6 Years</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty IT (10 Years, monthly returns)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -282,9 +261,32 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty Infra (10 Years, monthly returns)</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty Infra (10 Years, monthly returns)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
+        <div className={styles.chartGrid}>
+          <div className={styles.chartContainer}>
+            <Image
+              src="/Resources/indian-market-overview/cmp-inr-10.png"
+              alt="Historical Returns – 10 Years"
+              width={1000}
+              height={500}
+              className={styles.chartImage} />
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 10 Years</span>. Source: Quantwater Analysis</p>
+          </div>
+        </div>
+        <div className={styles.chartGrid}>
+          <div className={styles.chartContainer}>
+            <Image
+              src="/Resources/indian-market-overview/cmp-inr-11.png"
+              alt="Historical Returns – 6 Years"
+              width={1000}
+              height={500}
+              className={styles.chartImage} />
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 6 Years</span>. Source: Quantwater Analysis</p>
+          </div>
+        </div>
+        <h3>Volatility - INR</h3>
         <p>
           Volatility remains a factor, influenced by domestic policy, global events, and fund flows. Understanding historical return patterns
           and volatility characteristics is crucial for asset allocation.
@@ -297,7 +299,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Annualized Volatility - Indices</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Annualized Volatility - Indices</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -308,7 +310,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Annualized Volatility - Sectors</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Annualized Volatility - Sectors</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -319,7 +321,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Rolling Volatility (1 month) - Indices</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Rolling Volatility (1 month) - Indices</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -330,7 +332,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Rolling Volatility (1 month) - Sectors</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Rolling Volatility (1 month) - Sectors</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
       </section><section className={styles.section}>
@@ -346,7 +348,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance USD - Indices (10 Year)</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance USD - Indices (10 Year)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -357,7 +359,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance USD - Indices (6 Year)</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance USD - Indices (6 Year)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -368,29 +370,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty 50 (10 Years, daily returns)</span></p>
-          </div>
-        </div>
-        <div className={styles.chartGrid}>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/cmp-USD-4.png"
-              alt="Historical Returns – 10 Years"
-              width={1000}
-              height={500}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 10 Years</span></p>
-          </div>
-        </div>
-        <div className={styles.chartGrid}>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/cmp-usd-5.png"
-              alt="Historical Returns – 6 Years"
-              width={1000}
-              height={500}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 6 Years</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty 50 (10 Years, daily returns)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -401,9 +381,32 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty 50 (10 Years, monthly returns)</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty 50 (10 Years, monthly returns)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
+        <div className={styles.chartGrid}>
+          <div className={styles.chartContainer}>
+            <Image
+              src="/Resources/indian-market-overview/cmp-USD-4.png"
+              alt="Historical Returns – 10 Years"
+              width={1000}
+              height={500}
+              className={styles.chartImage} />
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 10 Years</span>. Source: Quantwater Analysis</p>
+          </div>
+        </div>
+        <div className={styles.chartGrid}>
+          <div className={styles.chartContainer}>
+            <Image
+              src="/Resources/indian-market-overview/cmp-usd-5.png"
+              alt="Historical Returns – 6 Years"
+              width={1000}
+              height={500}
+              className={styles.chartImage} />
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 6 Years</span>. Source: Quantwater Analysis</p>
+          </div>
+        </div>
+        <h3>Sector Performance - USD</h3>
         <p>
           Sectoral returns adjusted after taking into consideration currency returns impact, from the perspective of an investor whose base currency is USD or a USD-pegged currency.
         </p>
@@ -415,7 +418,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Sectoral Performance (10 Years) (1st Jan 2015 = 100)</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Sectoral Performance (10 Years) (1st Jan 2015 = 100)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -426,7 +429,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Sectoral Performance (6 Years) (1st Jan 2019 = 100)</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Sectoral Performance (6 Years) (1st Jan 2019 = 100)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -437,29 +440,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty IT (10 Years, monthly returns)</span></p>
-          </div>
-        </div>
-        <div className={styles.chartGrid}>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/cmp-usd-10.png"
-              alt="Historical Returns – 10 Years"
-              width={1000}
-              height={500}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 10 Years</span></p>
-          </div>
-        </div>
-        <div className={styles.chartGrid}>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/cmp-usd-11.png"
-              alt="Historical Returns – 6 Years"
-              width={1000}
-              height={500}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 6 Years</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty IT (10 Years, monthly returns)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -470,9 +451,32 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty Infra (10 Years, monthly returns)</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty Infra (10 Years, monthly returns)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
+        <div className={styles.chartGrid}>
+          <div className={styles.chartContainer}>
+            <Image
+              src="/Resources/indian-market-overview/cmp-usd-10.png"
+              alt="Historical Returns – 10 Years"
+              width={1000}
+              height={500}
+              className={styles.chartImage} />
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 10 Years</span>. Source: Quantwater Analysis</p>
+          </div>
+        </div>
+        <div className={styles.chartGrid}>
+          <div className={styles.chartContainer}>
+            <Image
+              src="/Resources/indian-market-overview/cmp-usd-11.png"
+              alt="Historical Returns – 6 Years"
+              width={1000}
+              height={500}
+              className={styles.chartImage} />
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 6 Years</span>. Source: Quantwater Analysis</p>
+          </div>
+        </div>
+        <h3>Volatility - USD</h3>
         <p>
           Volatility adjusted after taking into consideration currency volatility impact, from the perspective of an investor whose base currency is USD or a USD-pegged currency.
         </p>
@@ -484,7 +488,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Annualized Volatility - Indices & Sectors</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Annualized Volatility - Indices & Sectors</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -495,7 +499,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Rolling Volatility (1 month) - Indices</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Rolling Volatility (1 month) - Indices</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -506,7 +510,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Rolling Volatility (1 month) - Sectors</span></p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Rolling Volatility (1 month) - Sectors</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
       </section><section className={styles.section}>
@@ -538,6 +542,7 @@ export default function IndianMarketOverviewPage() {
               <p className={styles.chartCaption}><span className={styles.bold}>G-Sec Yield Curve Dynamics</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
+          
           <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
@@ -546,9 +551,21 @@ export default function IndianMarketOverviewPage() {
                 width={700}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>Normal positive slope maintained across all periods, suggesting economic growth expectations</span></p>
+              <p className={styles.chartCaption}><span className={styles.bold}>Normal positive slope maintained across all periods, suggesting economic growth expectations</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
+          <p><span className={styles.bold}>OMO – Impact of RBI bond purchases </span><br /></p>
+            <ul className={styles.list}>
+              <li>
+              RBI conducts Open Market Operations (OMOs) by purchasing/selling government securities in the secondary market to regulate money supply and manage long-term interest rates</li>
+              <li>
+              In April 2025, RBI announced plans to purchase ₹80,000 crore of G-Secs across four ₹20,000 crore tranches (April 3, 8, 22, 29) to enhance market liquidity. </li>
+              <li>
+              First auction saw strongest demand for mid-to-long dated securities with 8.24% GS 2033 receiving highest allocation (₹7,660 crore)
+              </li>
+              <li>
+              These operations support the current positive yield curve slope and demonstrate RBI's proactive approach to maintaining orderly market conditions amid changing interest rate environment</li>
+            </ul>
           <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
@@ -557,7 +574,7 @@ export default function IndianMarketOverviewPage() {
                 width={700}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>Average India-US 10 Y yield spread is 4.5% over the last 10 years</span></p>
+              <p className={styles.chartCaption}><span className={styles.bold}>Average India-US 10 Y yield spread is 4.5% over the last 10 years</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
           <div className={styles.chartGrid}>
@@ -568,7 +585,7 @@ export default function IndianMarketOverviewPage() {
                 width={700}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>Average 10Y G-Sec - repo rate spread is ~1.0% over the last 10 years</span></p>
+              <p className={styles.chartCaption}><span className={styles.bold}>Average 10Y G-Sec - repo rate spread is ~1.0% over the last 10 years</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
           <h2>Fixed Income Landscape - Corporate Bonds</h2>
@@ -581,10 +598,11 @@ export default function IndianMarketOverviewPage() {
               <Image
                 src="/Resources/indian-market-overview/FIM-6.png"
                 alt="Spread Over 5Y G-Sec yields (bps)"
-                width={700}
-                height={400}
+                width={100}
+                height={50}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>Credit spreads represent the additional yield investors demand for holding corporate bonds over government securities (G-Secs), compensating for credit risk and issuer uncertainty.</span></p>
+              <p className={styles.chartCaption}><span className={styles.bold}>Chart - Spread Over 5Y G-Sec yields. Credit spreads represent the additional yield investors demand for holding corporate bonds over government securities (G-Secs), compensating for credit risk and issuer uncertainty.(bps)
+              </span>. Source: Quantwater Analysis</p>
             </div>
           </div>
           <h2>Fixed Income Landscape - FDs & Debt Mutual Funds</h2>
@@ -600,7 +618,7 @@ export default function IndianMarketOverviewPage() {
                 width={700}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>FD Interest Rates</span></p>
+              <p className={styles.chartCaption}><span className={styles.bold}>FD Interest Rates</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
           <div className={styles.chartGrid}>
@@ -611,7 +629,7 @@ export default function IndianMarketOverviewPage() {
                 width={700}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>Debt MF Returns</span></p>
+              <p className={styles.chartCaption}><span className={styles.bold}>Debt MF Returns</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
           <div className={styles.chartGrid}>
@@ -622,7 +640,7 @@ export default function IndianMarketOverviewPage() {
                 width={700}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>Debt MF Returns</span></p>
+              <p className={styles.chartCaption}><span className={styles.bold}>Debt MF Returns</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
           <div className={styles.chartGrid}>
@@ -633,18 +651,7 @@ export default function IndianMarketOverviewPage() {
                 width={700}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>CPI Inflation vs Returns (Real return view)</span></p>
-            </div>
-          </div>
-          <div className={styles.chartGrid}>
-            <div className={styles.chartContainer}>
-              <Image
-                src="/Resources/indian-market-overview/FIM-7.png"
-                alt="FD Interest Rates"
-                width={700}
-                height={400}
-                className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>FD Interest Rates</span></p>
+              <p className={styles.chartCaption}><span className={styles.bold}>CPI Inflation vs Returns (Real return view)</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
         </section><section className={styles.section}>
@@ -675,7 +682,7 @@ export default function IndianMarketOverviewPage() {
                 width={600}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>FII Flows - AUC</span></p>
+              <p className={styles.chartCaption}><span className={styles.bold}>FII Flows - AUC</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
           <div className={styles.chartGrid}>
@@ -686,7 +693,7 @@ export default function IndianMarketOverviewPage() {
                 width={600}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>CAGR 3% over last 10 years</span></p>
+              <p className={styles.chartCaption}><span className={styles.bold}>CAGR 3% over last 10 years</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
         </section><section className={styles.section}>
@@ -702,7 +709,7 @@ export default function IndianMarketOverviewPage() {
             <li><strong>Digital Public Infrastructure:</strong> Platforms like UPI, Aadhaar, and ONDC enabling large-scale innovation.</li>
           </ul>
           <p>
-            Investment opportunities exist across public and private equity, government and corporate bonds, and specialized funds focusing on these themes.
+            India is at the cusp of a <span className={styles.bold}>tech-industrial transformation</span>, with policy push, global realignment, and digital infrastructure as key tailwinds. These sectors will likely dominate <span className={styles.bold}>investment narratives</span> over the medium term.
           </p>
         </section><section className={styles.section}>
           <h2>Risks & Challenges</h2>
@@ -714,12 +721,20 @@ export default function IndianMarketOverviewPage() {
             <li><strong>Geopolitical Tensions:</strong> Conflicts and trade disputes can disrupt supply chains and fuel commodity price volatility (especially oil).</li>
             <li><strong>Sticky Inflation:</strong> Persistent core inflation could prompt further RBI tightening, impacting demand.</li>
             <li><strong>Global Rate Hikes:</strong> Actions by major central banks (Fed, ECB) can trigger capital outflows.</li>
-            <li><strong>Regulatory Landscape:</strong> Evolving regulations in tech (data privacy, AI ethics, antitrust) and crypto require careful navigation.</li>
+            <li><strong>Strengthening Tech & Crypto Regulations in Response to Data Misuse & Privacy Breaches
+            </strong> <span className={styles.bold}>Global momentum around tech regulation is intensifying</span>, particularly in <span className={styles.bold}>data privacy</span> — a necessary shift in response to increasing misuse and exploitation of personal information. Regulatory scrutiny is also rising in areas like antitrust and AI ethics. 
+            </li>
           </ul>
         </section><footer className={styles.articleFooter}>
           <p>
             Disclaimer: This overview is for informational purposes only and does not constitute investment advice.
             Market conditions and projections are subject to change. Data derived from publicly available sources and internal analysis as of March 28, 2025.
+          </p>
+          <p>
+          <br>Spreadsheet with raw data:
+                    <a href="https://quantwater.tech/databook.xlsx" target="_blank" rel="noopener noreferrer"><span style="color: rgb(168, 168, 168);">Databook</span></a></br>
+          <br>Presentation:
+                    <a href="https://quantwater.tech/databook.xlsx" target="_blank" rel="noopener noreferrer"><span style="color: rgb(168, 168, 168);">Databook</span></a></br>
           </p>
         </footer>
     </main>

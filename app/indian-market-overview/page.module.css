@@ -24,10 +24,6 @@
     font-weight: bold;
   }
   
-  .underlineGreen {
-    color: #2a9d8f;
-    text-decoration: underline;
-  }
   
   /* --- Header --- */
   .articleHeader {
@@ -74,6 +70,17 @@
     /* text-align: left; */ /* Uncomment this if justified headings look odd */
   }
   
+  .section h3 {
+    font-size: 1.2rem; /* Adjust size */
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+    /* text-align: justify; is inherited, but left might look better */
+    /* text-align: left; */ /* Uncomment this if justified headings look odd */
+  }
+
   .section p {
     margin-bottom: 1.25rem;
     /* text-align: justify; is inherited */
@@ -131,6 +138,19 @@
       margin: 0;
   }
 
+  /* Styles for 'Learn More' / 'Historical Impact' links */
+  .historical-impact a {
+    color: #e0e0e0; /* Light text color */
+    text-decoration: none;
+    background-color: #357ae8; /* Blue background */
+    padding: 3px 6px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 5px; /* Space between links */
+    font-size: 0.85rem;
+    display: inline-block; /* Allows padding/margin and respects wrapping */
+    margin-bottom: 3px; /* Space if links wrap to next line */
+  }
   
   /* --- Footer --- */
   .articleFooter {
