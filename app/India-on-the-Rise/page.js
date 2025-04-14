@@ -598,7 +598,7 @@ export default function IndiaontheRise() {
                 src="/Resources/indian-market-overview/FIM-6.png"
                 alt="Spread Over 5Y G-Sec yields (bps)"
                 width={350}
-                height={100}
+                height={500}
                 className={styles.chartImage} />
               <p className={styles.chartCaption}><span className={styles.bold}>Chart - Spread Over 5Y G-Sec yields. Credit spreads represent the additional yield investors demand for holding corporate bonds over government securities (G-Secs), compensating for credit risk and issuer uncertainty.(bps)
               </span>. Source: Quantwater Analysis</p>
@@ -730,13 +730,9 @@ export default function IndiaontheRise() {
             Market conditions and projections are subject to change. Data derived from publicly available sources and internal analysis as of March 28, 2025.
           </p>
           <p>
-            <br />Spreadsheet with raw data: 
-            <a href="https://quantwater.tech/databook.xlsx" target="_blank" rel="noopener noreferrer">
-              <span className={styles.linkText}>Databook</span>
+            <br />Spreadsheet with raw data: <a href="https://quantwater.tech/databook.xlsx" target="_blank" rel="noopener noreferrer"> <span className={styles.linkText}>Databook</span>
             </a>
-            <br />Deck: 
-            <a href="https://quantwater.tech/IndiaontheRise.pdf" target="_blank" rel="noopener noreferrer">
-              <span className={styles.linkText}>India on the Rise - Deck</span>
+            <br />Deck: <a href="https://quantwater.tech/IndiaontheRise.pdf" target="_blank" rel="noopener noreferrer"> <span className={styles.linkText}>India on the Rise - Deck</span>
             </a>
           </p>
         </footer>
