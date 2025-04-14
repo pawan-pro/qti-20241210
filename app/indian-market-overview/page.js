@@ -722,7 +722,7 @@ export default function IndianMarketOverviewPage() {
             <li><strong>Sticky Inflation:</strong> Persistent core inflation could prompt further RBI tightening, impacting demand.</li>
             <li><strong>Global Rate Hikes:</strong> Actions by major central banks (Fed, ECB) can trigger capital outflows.</li>
             <li><strong>Strengthening Tech & Crypto Regulations in Response to Data Misuse & Privacy Breaches
-            </strong> <span className={styles.bold}>Global momentum around tech regulation is intensifying</span>, particularly in <span className={styles.bold}>data privacy</span> — a necessary shift in response to increasing misuse and exploitation of personal information. Regulatory scrutiny is also rising in areas like antitrust and AI ethics. 
+            </strong> <span className={styles.bold}>Global momentum around tech regulation is intensifying</span>, particularly in <span className={styles.bold}>data privacy</span> — a necessary shift in response to increasing misuse with reagrds to exploitation of personal information. Regulatory scrutiny is also rising in areas like antitrust and AI ethics. 
             </li>
           </ul>
         </section><footer className={styles.articleFooter}>
@@ -733,8 +733,8 @@ export default function IndianMarketOverviewPage() {
           <p>
           <br>Spreadsheet with raw data:
                     <a href="https://quantwater.tech/databook.xlsx" target="_blank" rel="noopener noreferrer"><span style="color: rgb(168, 168, 168);">Databook</span></a></br>
-          <br>Presentation:
-                    <a href="https://quantwater.tech/databook.xlsx" target="_blank" rel="noopener noreferrer"><span style="color: rgb(168, 168, 168);">Databook</span></a></br>
+          <br>Deck:
+                    <a href="https://quantwater.tech/IndiaontheRise.pdf" target="_blank" rel="noopener noreferrer"><span style="color: rgb(168, 168, 168);">India on the Rise - Deck</span></a></br>
           </p>
         </footer>
     </main>
