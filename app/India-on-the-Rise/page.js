@@ -2,11 +2,11 @@
 import Image from 'next/image';
 import styles from './page.module.css';
 
-export default function IndianMarketOverviewPage() {
+export default function IndiaontheRise() {
   return (
     <><main className={styles.articleContainer}>
       <header className={styles.articleHeader}>
-        <h1>Indian Market Overview - 2025 & Beyond</h1>
+        <h1>India on the Rise: Market Outlook & Investment Trends</h1>
         <p className={styles.publishDate}>Analysis as of: 28th March 2025, Pawan</p>
         <p className={styles.intro}>
           India continues its trajectory as <span className={styles.bold}>one of the world&apos;s fastest-growing major economies</span>,

@@ -4,11 +4,12 @@ import Image from 'next/image';
 import styles from './page.module.css'; // Assuming you have styles for this page
 
 const projects = [
+  // --- NEW ENTRY ADDED BELOW ---
   {
-    id: 'dxy-forecast',
-    title: 'Project: Forex - $ DXY Index - 10 Year Forecast',
-    image: '/r114.jpg', // Keep existing image path
-    link: '/resources/DXY-10-Year-Outlook.pdf', // Keep existing link
+    id: 'India-on-the-Rise',
+    title: 'India on the Rise: Market Outlook & Investment Trends',
+    image: '/indian-market-overview.png', // ** USE YOUR THUMBNAIL IMAGE PATH **
+    link: '/India-on-the-Rise', // Link to the new Next.js page route
   },
   {
     id: 'GCC REIT Market Overview',
@@ -17,18 +18,19 @@ const projects = [
     link: '/resources/GCC REIT Market Overview.pdf', // Keep existing link
   },
   {
+    id: 'dxy-forecast',
+    title: 'Project: Forex - $ DXY Index - 10 Year Forecast',
+    image: '/r114.jpg', // Keep existing image path
+    link: '/resources/DXY-10-Year-Outlook.pdf', // Keep existing link
+  },
+  
+  {
     id: 'historical-calendar',
     title: 'Historical Economic Calendar',
     image: '/r31.jpg', // Keep existing image path
     link: '/resources/HEC.xlsx', // Keep existing link
   },
-  // --- NEW ENTRY ADDED BELOW ---
-  {
-    id: 'indian-market-overview',
-    title: 'Indian Market Overview - 2025 & Beyond',
-    image: '/indian-market-overview.png', // ** USE YOUR THUMBNAIL IMAGE PATH **
-    link: '/indian-market-overview', // Link to the new Next.js page route
-  },
+  
   // --- END OF NEW ENTRY ---
 ];
 
