@@ -20,8 +20,8 @@ export default function IndiaontheRise() {
         <h2>Economic Powerhouse: Growth & Drivers</h2>
         <p>
           India&apos;s GDP growth is projected to remain robust, estimated between <span className={styles.bold}>6-7%</span> for 2025. This resilience
-          is fueled by strong domestic demand, accelerating digital transformation, and supportive government
-          initiatives like <span className={styles.bold}>&apos;Atmanirbhar Bharat</span>&apos; (Self-reliant India) and &apos;<span className={styles.bold}>Make in India</span>&apos;.
+          is fueled by <span className={styles.bold}>strong domestic demand, accelerating digital transformation, and supportive government
+          initiatives</span> like <span className={styles.bold}>&apos;Atmanirbhar Bharat</span>&apos; (Self-reliant India) and &apos;<span className={styles.bold}>Make in India</span>&apos;.
         </p>
         <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
@@ -95,16 +95,16 @@ export default function IndiaontheRise() {
           <p><span className={styles.bold}>Interest Rates & RBI Policy Stance: </span><br /></p>
         <ul className={styles.list}>
           <li>
-          <span className={styles.bold}>Recent Rate Cut: </span>
-          Recent Rate Cut: On February 7, 2025, the Reserve Bank of India (RBI) reduced the repo rate by 25 basis points, bringing it down from 6.50% to 6.25%, aiming to stimulate economic growth amid easing inflation.</li>
+          <span className={styles.bold}>Recent Rate Cut: </span><br />
+          On February 7, 2025, the Reserve Bank of India (RBI) reduced the repo rate by 25 basis points, bringing it down from 6.50% to 6.25%, aiming to stimulate economic growth amid easing inflation.</li>
           <li>
-          <span className={styles.bold}>Neutral Policy Stance: </span>
+          <span className={styles.bold}>Neutral Policy Stance: </span><br />
           Despite the rate cut, the RBI maintained a <span className={styles.bold}>&apos;neutral&apos;</span> policy stance, focusing on achieving a durable alignment of inflation with the target while supporting growth.</li>
           <li>
-          <span className={styles.bold}>Anticipated Future Rate Cuts: </span>
+          <span className={styles.bold}>Anticipated Future Rate Cuts: </span><br />
           Market analysts project further rate cuts in 2025, with expectations of an additional <span className={styles.bold}>50 basis points reduction by August</span>, as the RBI seeks to balance growth and inflation dynamics.</li>
           <li>
-          <span className={styles.bold}>Mid to Long-Term Projections (2027-2031): </span>
+          <span className={styles.bold}>Mid to Long-Term Projections (2027-2031): </span><br />
           Specific forecasts for the RBI&apos;s policy rates beyond 2026 are limited. However, the central bank&apos;s actions will likely be influenced by factors such as <span className={styles.bold}>domestic inflation trends, economic growth rates, and global financial conditions.</span></li>
         </ul>
         </p>
@@ -126,7 +126,7 @@ export default function IndiaontheRise() {
           <span className={styles.bold}>Fiscal Deficit Reduction: </span><br />
           The government aims to decrease the fiscal deficit from <span className={styles.bold}>4.8% of GDP in FY 2024-25 to 4.4% in FY 2025-26</span>, demonstrating a commitment to fiscal consolidation.</li>
           <li>
-          <span className={styles.bold}>Debt-to-GDP Ratio Goal:</span>
+          <span className={styles.bold}>Debt-to-GDP Ratio Goal:</span><br />
           A strategic objective has been set to reduce the central government&apos;s debt-to-GDP ratio from <span className={styles.bold}>57.1% in FY 2024-25 to 50% by March 2031</span>, promoting long-term fiscal sustainability.</li>
         </ul>
         </p>
@@ -142,7 +142,7 @@ export default function IndiaontheRise() {
         </div>
       </div>
     </section><section className={styles.section}>
-        <h2>Capital Markets: Performance & Volatility - INR</h2>
+        <h2>Capital Markets: Performance & Volatility - in INR Terms</h2>
         <p>
           Indian equity markets have delivered strong returns over the medium to long term, albeit with periods of volatility.
           In INR terms, major indices like the Nifty 50 and BSE Sensex have shown significant growth, with Midcap and Smallcap indices
@@ -156,7 +156,7 @@ export default function IndiaontheRise() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance INR - Indices (10 Year)</span>. Source: Quantwater Analysis</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance INR - Indices (Last 10 Years)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -167,7 +167,7 @@ export default function IndiaontheRise() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance INR - Indices (6 Year)</span>. Source: Quantwater Analysis</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance INR - Indices (Last 6 Year)</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -214,11 +214,10 @@ export default function IndiaontheRise() {
             <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns: 6 Years</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
-        <h3>Sector Performance - INR</h3>
+        <h3>Sector Performance - in INR Terms</h3>
         <p>
           Sector performance varies, with IT, Banking,
-          and Infrastructure showing distinct trends. When viewed in USD terms, returns are moderated by currency fluctuations,
-          highlighting the importance of the INR/USD exchange rate for foreign investors.
+          and Infrastructure showing distinct trends.
         </p>
         <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
@@ -286,7 +285,7 @@ export default function IndiaontheRise() {
             <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 6 Years</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
-        <h3>Volatility - INR</h3>
+        <h3>Volatility - in INR Terms</h3>
         <p>
           Volatility remains a factor, influenced by domestic policy, global events, and fund flows. Understanding historical return patterns
           and volatility characteristics is crucial for asset allocation.
@@ -406,7 +405,7 @@ export default function IndiaontheRise() {
             <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 6 Years</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
-        <h3>Sector Performance - USD</h3>
+        <h3>Sector Performance - in USD Terms</h3>
         <p>
           Sectoral returns adjusted after taking into consideration currency returns impact, from the perspective of an investor whose base currency is USD or a USD-pegged currency.
         </p>
@@ -476,7 +475,7 @@ export default function IndiaontheRise() {
             <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 6 Years</span>. Source: Quantwater Analysis</p>
           </div>
         </div>
-        <h3>Volatility - USD</h3>
+        <h3>Volatility - in USD Terms</h3>
         <p>
           Volatility adjusted after taking into consideration currency volatility impact, from the perspective of an investor whose base currency is USD or a USD-pegged currency.
         </p>
@@ -528,7 +527,7 @@ export default function IndiaontheRise() {
                 width={700}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>G-Sec Yield Curve Dynamics</span>. Source: Quantwater Analysis</p>
+              <p className={styles.chartCaption}><span className={styles.bold}>10Y G-Sec Yield %</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
           <div className={styles.chartGrid}>
@@ -539,7 +538,7 @@ export default function IndiaontheRise() {
                 width={700}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>G-Sec Yield Curve Dynamics</span>. Source: Quantwater Analysis</p>
+              <p className={styles.chartCaption}><span className={styles.bold}>5Y G-Sec Yield %</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
           
@@ -551,7 +550,7 @@ export default function IndiaontheRise() {
                 width={700}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>Normal positive slope maintained across all periods, suggesting economic growth expectations</span>. Source: Quantwater Analysis</p>
+              <p className={styles.chartCaption}><span className={styles.bold}>Yield Curve: Normal positive slope maintained across all periods, suggesting economic growth expectations</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
           <p><span className={styles.bold}>OMO – Impact of RBI bond purchases </span><br /></p>
@@ -564,7 +563,7 @@ export default function IndiaontheRise() {
               First auction saw strongest demand for mid-to-long dated securities with 8.24% GS 2033 receiving highest allocation (₹7,660 crore)
               </li>
               <li>
-              These operations support the current positive yield curve slope and demonstrate RBI&apos;s proactive approach to maintaining orderly market conditions amid changing interest rate environment</li>
+              These operations support the current positive yield curve slope and demonstrate <span className={styles.bold}>RBI&apos;s proactive approach to maintaining orderly market conditions</span> amid changing interest rate environment</li>
             </ul>
           <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
@@ -574,7 +573,7 @@ export default function IndiaontheRise() {
                 width={700}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>Average India-US 10 Y yield spread is 4.5% over the last 10 years</span>. Source: Quantwater Analysis</p>
+              <p className={styles.chartCaption}><span className={styles.bold}>India-US 10Y Yield Spread: Average spread is 4.5% over the last 10 years</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
           <div className={styles.chartGrid}>
@@ -585,7 +584,7 @@ export default function IndiaontheRise() {
                 width={700}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>Average 10Y G-Sec - repo rate spread is ~1.0% over the last 10 years</span>. Source: Quantwater Analysis</p>
+              <p className={styles.chartCaption}><span className={styles.bold}>10Y G-Sec - Repo Rate Spread: Average spread is ~1.0% over the last 10 years</span>. Source: Quantwater Analysis</p>
             </div>
           </div>
           <h2>Fixed Income Landscape - Corporate Bonds</h2>
@@ -598,8 +597,8 @@ export default function IndiaontheRise() {
               <Image
                 src="/Resources/indian-market-overview/FIM-6.png"
                 alt="Spread Over 5Y G-Sec yields (bps)"
-                width={100}
-                height={50}
+                width={700}
+                height={400}
                 className={styles.chartImage} />
               <p className={styles.chartCaption}><span className={styles.bold}>Chart - Spread Over 5Y G-Sec yields. Credit spreads represent the additional yield investors demand for holding corporate bonds over government securities (G-Secs), compensating for credit risk and issuer uncertainty.(bps)
               </span>. Source: Quantwater Analysis</p>
@@ -666,7 +665,7 @@ export default function IndiaontheRise() {
           <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
-                src="/images/indian-market/FICM-1.png"
+                src="/images/indian-market-overview/FICM-1.png"
                 alt="FDI Flows – Sector wise equity inflow from Apr 2000 to Dec 2024"
                 width={600}
                 height={400}
@@ -677,7 +676,7 @@ export default function IndiaontheRise() {
           <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
-                src="/images/indian-market/FICM-2.png"
+                src="/images/indian-market-overview/FICM-2.png"
                 alt="FII Flows - AUC"
                 width={600}
                 height={400}
@@ -688,7 +687,7 @@ export default function IndiaontheRise() {
           <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
-                src="/images/indian-market/FICM-3.png"
+                src="/images/indian-market-overview/FICM-3.png"
                 alt="INR/USD Exchange Rate"
                 width={600}
                 height={400}
@@ -721,8 +720,8 @@ export default function IndiaontheRise() {
             <li><strong>Geopolitical Tensions:</strong> Conflicts and trade disputes can disrupt supply chains and fuel commodity price volatility (especially oil).</li>
             <li><strong>Sticky Inflation:</strong> Persistent core inflation could prompt further RBI tightening, impacting demand.</li>
             <li><strong>Global Rate Hikes:</strong> Actions by major central banks (Fed, ECB) can trigger capital outflows.</li>
-            <li><strong>Strengthening Tech & Crypto Regulations in Response to Data Misuse & Privacy Breaches
-            </strong> <span className={styles.bold}>Global momentum around tech regulation is intensifying</span>, particularly in <span className={styles.bold}>data privacy</span> — a necessary shift in response to increasing misuse with reagrds to exploitation of personal information. Regulatory scrutiny is also rising in areas like antitrust and AI ethics. 
+            <li><strong>Strengthening Tech & Crypto Regulations in Response to Data Misuse & Privacy Breaches: 
+            </strong> <span className={styles.bold}>Global momentum around tech regulation is intensifying</span>, particularly in <span className={styles.boldRed}>data privacy</span> — a necessary shift in response to increasing misuse with reagrds to exploitation of personal information. Regulatory scrutiny is also rising in areas like antitrust and AI ethics. 
             </li>
           </ul>
         </section><footer className={styles.articleFooter}>
@@ -733,11 +732,11 @@ export default function IndiaontheRise() {
           <p>
             <br />Spreadsheet with raw data:
             <a href="https://quantwater.tech/databook.xlsx" target="_blank" rel="noopener noreferrer">
-              <span className={styles.linkText}>Databook</span>
+              <span className={styles.linkText}> Databook</span>
             </a>
             <br />Deck:
             <a href="https://quantwater.tech/IndiaontheRise.pdf" target="_blank" rel="noopener noreferrer">
-              <span className={styles.linkText}>India on the Rise - Deck</span>
+              <span className={styles.linkText}> India on the Rise - Deck</span>
             </a>
           </p>
         </footer>
