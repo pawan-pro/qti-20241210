@@ -564,7 +564,7 @@ export default function IndiaontheRise() {
               First auction saw strongest demand for mid-to-long dated securities with 8.24% GS 2033 receiving highest allocation (₹7,660 crore)
               </li>
               <li>
-              These operations support the current positive yield curve slope and demonstrate RBI's proactive approach to maintaining orderly market conditions amid changing interest rate environment</li>
+              These operations support the current positive yield curve slope and demonstrate RBI&apos;s proactive approach to maintaining orderly market conditions amid changing interest rate environment</li>
             </ul>
           <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
