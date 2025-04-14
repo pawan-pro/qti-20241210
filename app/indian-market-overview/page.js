@@ -65,7 +65,7 @@ export default function IndianMarketOverviewPage() {
       <section className={styles.section}>
         <h2>Macroeconomic Stability: Inflation, Fiscal Policy & Rates</h2>
         <p>
-          Managing inflation remains a key focus for the Reserve Bank of India (RBI). While headline inflation
+        <span className={styles.bold}>Inflation Trends: </span>Managing inflation remains a key focus for the Reserve Bank of India (RBI). While headline inflation
           has shown signs of moderation, core inflation requires monitoring.
         </p>
         <div className={styles.chartGrid}>
@@ -91,15 +91,26 @@ export default function IndianMarketOverviewPage() {
               height={350}
               className={styles.chartImage} />
             <p className={styles.chartCaption}>
-              CPI and WPI Inflation Trends. Source: MOSPI, PIB<br />
+              CPI and WPI Inflation Trends. Source: MoSPI, PIB<br />
             </p>
           </div>
         </div>
         <p>
-          The RBI recently cut the repo rate
-          to 6.25% (as of Feb 2025 in the report) to stimulate growth, maintaining a &apos;neutral&apos; stance aimed at aligning inflation
-          with its target while supporting economic activity. Further rate adjustments are anticipated depending on
-          inflation trends and global conditions.
+        <span className={styles.bold}>Interest Rates & RBI Policy Stance: </span>
+        <ul className={styles.list}>
+          <li>
+          <span className={styles.bold}>Recent Rate Cut: </span>
+          Recent Rate Cut: On February 7, 2025, the Reserve Bank of India (RBI) reduced the repo rate by 25 basis points, bringing it down from 6.50% to 6.25%, aiming to stimulate economic growth amid easing inflation.</li>
+          <li>
+          <span className={styles.bold}>Neutral Policy Stance: </span>
+          Despite the rate cut, the RBI maintained a <span className={styles.bold}>&apos;neutral&apos;</span> policy stance, focusing on achieving a durable alignment of inflation with the target while supporting growth.</li>
+          <li>
+          <span className={styles.bold}>Anticipated Future Rate Cuts: </span>
+          Market analysts project further rate cuts in 2025, with expectations of an additional <span className={styles.bold}>50 basis points reduction by August</span>, as the RBI seeks to balance growth and inflation dynamics.</li>
+          <li>
+          <span className={styles.bold}>Mid to Long-Term Projections (2027-2031): </span>
+          Specific forecasts for the RBI&apos;s policy rates beyond 2026 are limited. However, the central bank&apos;s actions will likely be influenced by factors such as <span className={styles.bold}>domestic inflation trends, economic growth rates, and global financial conditions.</span></li>
+        </ul>
         </p>
         <div className={styles.chartContainer}>
           <Image
@@ -110,12 +121,17 @@ export default function IndianMarketOverviewPage() {
             className={styles.chartImage} />
           <p className={styles.chartCaption}>RBI Policy Repo Rate. Source: RBI </p>
         </div>
-      <p>
-        On the fiscal front, the government is committed to consolidation, aiming to reduce the fiscal deficit
-        progressively. The FY 2025-26 budget projects a deficit of 4.4% of GDP, down from 4.8% in the previous year.
-        Significant capital expenditure is earmarked for infrastructure development, financed partly through
-        market borrowings. Reducing the debt-to-GDP ratio remains a long-term strategic goal.
-      </p>
+        <p>
+        <span className={styles.bold}>Fiscal Deficit & Government Spending: </span>
+        <ul className={styles.list}>
+          <li>
+          <span className={styles.bold}>Fiscal Deficit Reduction: </span>
+          The government aims to decrease the fiscal deficit from <span className={styles.bold}>4.8% of GDP in FY 2024-25 to 4.4% in FY 2025-26</span>, demonstrating a commitment to fiscal consolidation.</li>
+          <li>
+          <span className={styles.bold}>Debt-to-GDP Ratio Goal:</span>
+          A strategic objective has been set to reduce the central government&apos;s debt-to-GDP ratio from <span className={styles.bold}>57.1% in FY 2024-25 to 50% by March 2031</span>, promoting long-term fiscal sustainability.</li>
+        </ul>
+        </p>
       <div className={styles.chartContainer}>
         <Image
           src="/Resources/indian-market-overview/fiscal-deficit.png"
@@ -123,7 +139,7 @@ export default function IndianMarketOverviewPage() {
           width={500}
           height={250}
           className={styles.chartImage} />
-        <p className={styles.chartCaption}>Fiscal Deficit Trajectory. Source: Government Data </p>
+        <p className={styles.chartCaption}>Fiscal Deficit Trajectory. Source: https://www.indiabudget.gov.in </p>
       </div>
     </section><section className={styles.section}>
         <h2>Capital Markets: Performance & Volatility - INR</h2>
