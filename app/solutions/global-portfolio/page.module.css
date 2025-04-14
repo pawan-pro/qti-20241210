@@ -3,6 +3,7 @@
   min-height: 100vh;
   background-color: rgb(0, 0, 0); /* Black background for contrast */
   padding: 2rem 1rem;
+  font-family: 'Century Gothic', Arial, sans-serif; /* Consistent font from global.css */
 }
 
 /* Header section */
