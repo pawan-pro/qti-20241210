@@ -597,8 +597,8 @@ export default function IndiaontheRise() {
               <Image
                 src="/Resources/indian-market-overview/FIM-6.png"
                 alt="Spread Over 5Y G-Sec yields (bps)"
-                width={700}
-                height={400}
+                width={350}
+                height={100}
                 className={styles.chartImage} />
               <p className={styles.chartCaption}><span className={styles.bold}>Chart - Spread Over 5Y G-Sec yields. Credit spreads represent the additional yield investors demand for holding corporate bonds over government securities (G-Secs), compensating for credit risk and issuer uncertainty.(bps)
               </span>. Source: Quantwater Analysis</p>
@@ -665,7 +665,7 @@ export default function IndiaontheRise() {
           <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
-                src="/images/indian-market-overview/FICM-1.png"
+                src="/Resources/indian-market-overview/FICM-1.png"
                 alt="FDI Flows – Sector wise equity inflow from Apr 2000 to Dec 2024"
                 width={600}
                 height={400}
@@ -676,7 +676,7 @@ export default function IndiaontheRise() {
           <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
-                src="/images/indian-market-overview/FICM-2.png"
+                src="/Resources/indian-market-overview/FICM-2.png"
                 alt="FII Flows - AUC"
                 width={600}
                 height={400}
@@ -687,7 +687,7 @@ export default function IndiaontheRise() {
           <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
-                src="/images/indian-market-overview/FICM-3.png"
+                src="/Resources/indian-market-overview/FICM-3.png"
                 alt="INR/USD Exchange Rate"
                 width={600}
                 height={400}
@@ -730,13 +730,13 @@ export default function IndiaontheRise() {
             Market conditions and projections are subject to change. Data derived from publicly available sources and internal analysis as of March 28, 2025.
           </p>
           <p>
-            <br />Spreadsheet with raw data:
+            <br />Spreadsheet with raw data: 
             <a href="https://quantwater.tech/databook.xlsx" target="_blank" rel="noopener noreferrer">
-              <span className={styles.linkText}> Databook</span>
+              <span className={styles.linkText}>Databook</span>
             </a>
-            <br />Deck:
+            <br />Deck: 
             <a href="https://quantwater.tech/IndiaontheRise.pdf" target="_blank" rel="noopener noreferrer">
-              <span className={styles.linkText}> India on the Rise - Deck</span>
+              <span className={styles.linkText}>India on the Rise - Deck</span>
             </a>
           </p>
         </footer>
