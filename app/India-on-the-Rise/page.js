@@ -11,7 +11,7 @@ export default function IndiaontheRise() {
           <h1>India on the Rise: Market Outlook & Investment Trends</h1>
           <p className={styles.publishDate}>Analysis as of: 28th March 2025, Pawan</p>
           <p className={styles.intro}>
-            India continues its trajectory as <span className={styles.bold}>one of the world&apos;s fastest-growing major economies</span>,
+            India continues its trajectory as <span className={styles.bold}>one of the world's fastest-growing major economies</span>,
             presenting significant opportunities alongside evolving challenges. This overview delves
             into the macroeconomic landscape, market performance, key sectors, and potential risks
             shaping the Indian market outlook for 2025 and the years ahead.
@@ -21,9 +21,9 @@ export default function IndiaontheRise() {
         <section className={styles.section}>
           <h2>Economic Powerhouse: Growth & Drivers</h2>
           <p>
-            India&apos;s GDP growth is projected to remain robust, estimated between <span className={styles.bold}>6-7%</span> for 2025. This resilience
+            India's GDP growth is projected to remain robust, estimated between <span className={styles.bold}>6-7%</span> for 2025. This resilience
             is fueled by <span className={styles.bold}>strong domestic demand, accelerating digital transformation, and supportive government
-            initiatives</span> like <span className={styles.bold}>&apos;Atmanirbhar Bharat&apos;</span> (Self-reliant India) and <span className={styles.bold}>&apos;Make in India&apos;</span>.
+            initiatives</span> like <span className={styles.bold}>'Atmanirbhar Bharat'</span> (Self-reliant India) and <span className={styles.bold}>'Make in India'</span>.
           </p>
           {/* Chart Grid Example (Repeat for other charts) */}
           <div className={styles.chartGrid}>
@@ -38,7 +38,7 @@ export default function IndiaontheRise() {
               />
               <p className={styles.chartCaption}>
                 <strong>Real GDP growth (Annual % change).</strong> Source: IMF, RBI, World Bank<br /><br />
-                As per World Bank&apos;s Long-Term Growth Modeling (LTGM), India&apos;s long-term GDP growth rate is projected to stabilize around <span className={styles.bold}>6.5% by 2035</span>, before gradually slowing to <span className={styles.bold}>5.5% by 2050</span>, reflecting economic maturation and demographic shifts.
+                As per World Bank's Long-Term Growth Modeling (LTGM), India's long-term GDP growth rate is projected to stabilize around <span className={styles.bold}>6.5% by 2035</span>, before gradually slowing to <span className={styles.bold}>5.5% by 2050</span>, reflecting economic maturation and demographic shifts.
               </p>
             </div>
             <div className={styles.chartContainer}>
@@ -103,7 +103,7 @@ export default function IndiaontheRise() {
             </li>
             <li>
                 <strong>Neutral Policy Stance:</strong><br />
-                Despite the rate cut, the RBI maintained a <span className={styles.bold}>&apos;neutral&apos;</span> policy stance, focusing on achieving a durable alignment of inflation with the target while supporting growth.
+                Despite the rate cut, the RBI maintained a <span className={styles.bold}>'neutral'</span> policy stance, focusing on achieving a durable alignment of inflation with the target while supporting growth.
             </li>
             <li>
                 <strong>Anticipated Future Rate Cuts:</strong><br />
@@ -111,7 +111,7 @@ export default function IndiaontheRise() {
             </li>
             <li>
                 <strong>Mid to Long-Term Projections (2027-2031):</strong><br />
-                Specific forecasts for the RBI&apos;s policy rates beyond 2026 are limited. However, the central bank&apos;s actions will likely be influenced by factors such as <span className={styles.bold}>domestic inflation trends, economic growth rates, and global financial conditions.</span>
+                Specific forecasts for the RBI's policy rates beyond 2026 are limited. However, the central bank's actions will likely be influenced by factors such as <span className={styles.bold}>domestic inflation trends, economic growth rates, and global financial conditions.</span>
             </li>
           </ul>
 
@@ -138,7 +138,7 @@ export default function IndiaontheRise() {
             </li>
             <li>
                 <strong>Debt-to-GDP Ratio Goal:</strong><br />
-                A strategic objective has been set to reduce the central government&apos;s debt-to-GDP ratio from <span className={styles.bold}>57.1% in FY 2024-25 to 50% by March 2031</span>, promoting long-term fiscal sustainability.
+                A strategic objective has been set to reduce the central government's debt-to-GDP ratio from <span className={styles.bold}>57.1% in FY 2024-25 to 50% by March 2031</span>, promoting long-term fiscal sustainability.
             </li>
           </ul>
 
@@ -384,7 +384,7 @@ export default function IndiaontheRise() {
             <li>RBI conducts Open Market Operations (OMOs) by purchasing/selling government securities in the secondary market to regulate money supply and manage long-term interest rates.</li>
             <li>In April 2025, RBI announced plans to purchase ₹80,000 crore of G-Secs across four ₹20,000 crore tranches (April 3, 8, 22, 29) to enhance market liquidity.</li>
             <li>First auction saw strongest demand for mid-to-long dated securities with 8.24% GS 2033 receiving highest allocation (₹7,660 crore).</li>
-            <li>These operations support the current positive yield curve slope and demonstrate <span className={styles.bold}>RBI&apos;s proactive approach to maintaining orderly market conditions</span> amid changing interest rate environment.</li>
+            <li>These operations support the current positive yield curve slope and demonstrate <span className={styles.bold}>RBI's proactive approach to maintaining orderly market conditions</span> amid changing interest rate environment.</li>
             </ul>
 
             <div className={styles.chartGrid}>
@@ -420,7 +420,7 @@ export default function IndiaontheRise() {
                         src="/Resources/indian-market-overview/FIM-6.png"
                         alt="Spread Over 5Y G-Sec yields (bps)"
                         width={350} /* Original width seemed small, adjust if needed */
-                        height={50} /* Adjust height based on aspect ratio */
+                        height={150} /* Adjust height based on aspect ratio */
                         className={styles.chartImage} />
                     <p className={styles.chartCaption}><strong>Spread Over 5Y G-Sec yields (bps).</strong> Credit spreads compensate for credit risk. Source: Quantwater Analysis</p>
                 </div>
@@ -478,7 +478,7 @@ export default function IndiaontheRise() {
             and Manufacturing. While influenced by global uncertainties, FDI flows have been relatively stable. Foreign Institutional Investor (FII)
             flows into equity markets are more volatile, often reacting to global risk sentiment and interest rate cycles (like US Fed actions).
             The INR/USD exchange rate has shown a gradual depreciation trend over the long term, influenced by factors like oil prices,
-            capital flows, and India&apos;s trade balance.
+            capital flows, and India's trade balance.
           </p>
           <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
@@ -541,6 +541,25 @@ export default function IndiaontheRise() {
             <li><strong>Strengthening Tech & Crypto Regulations:</strong> <span className={styles.bold}>Global momentum around tech regulation is intensifying</span>, particularly in <span className={styles.boldRed}>data privacy</span> — a necessary shift in response to increasing misuse regarding exploitation of personal information. Regulatory scrutiny is also rising in areas like antitrust and AI ethics.</li>
           </ul>
         </section>
+
+        {/* <<< NEW CONCLUSION SECTION START >>> */}
+        <section className={styles.section}>
+            <h2>Conclusion: Navigating the India Opportunity</h2>
+            <p>
+                India presents a <span className={styles.bold}>compelling long-term investment proposition</span>, underpinned by strong macroeconomic fundamentals, favorable demographics, ongoing structural reforms, and a burgeoning digital economy. The resilience shown amidst global uncertainties highlights the depth of its domestic market and the effectiveness of policy support.
+            </p>
+            <p>
+                Significant opportunities exist across various sectors, particularly those benefiting from the digital transformation, infrastructure development, green energy transition, and advanced manufacturing push. Capital markets, while offering attractive potential returns in both INR and USD terms, come with inherent volatility influenced by domestic and global factors. The fixed income market provides diversification opportunities, albeit with careful consideration required for inflation and credit spreads.
+            </p>
+            <p>
+                However, investors must remain cognizant of the outlined risks. Global economic conditions, geopolitical instability, persistent inflation, and evolving regulatory landscapes necessitate a <span className={styles.bold}>disciplined and selective approach</span>. Careful monitoring of policy actions, currency movements, and market sentiment is crucial.
+            </p>
+            <p>
+                Overall, while challenges persist, the positive structural drivers supporting India's growth trajectory remain largely intact. For investors with a <span className={styles.bold}>long-term horizon and a robust risk management framework</span>, India continues to offer a significant allocation opportunity within emerging market portfolios. Navigating its complexities effectively will be key to unlocking its potential.
+            </p>
+        </section>
+        {/* <<< NEW CONCLUSION SECTION END >>> */}
+
 
         <footer className={styles.articleFooter}>
           <p>

@@ -2,174 +2,165 @@
 
 /* --- Global Styles for the Article --- */
 .articleContainer {
-  max-width: 1100px; /* Slightly wider for more content */
-  margin: 3rem auto; /* Center container with more top/bottom margin */
-  padding: 3rem 4rem; /* Generous padding */
-  background-color: #ffffff; /* White background for content area */
-  font-family: 'Century Gothic', Arial, sans-serif; /* Ensure fallback */
-  color: #212529; /* Darker text for better contrast on white */
-  text-align: justify; /* Justify body text */
-  line-height: 1.8; /* Increased line height for readability */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
-  border: 1px solid #dee2e6; /* Subtle border */
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 3rem 4rem;
+  background-color: #ffffff;
+  font-family: 'Century Gothic', Arial, sans-serif;
+  color: #212529;
+  text-align: justify;
+  line-height: 1.8;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dee2e6;
+}
+
+/* Base paragraph and list item font size (implicitly 1rem if body is 1rem, but can be set) */
+.section p, .list li {
+  font-size: 1rem; /* Base size for desktop */
 }
 
 .bold {
-  font-weight: 600; /* Use font-weight for standard bold */
-  color: inherit; /* Inherit base text color */
+  font-weight: 600;
+  color: inherit;
 }
 
 .boldRed {
-  color: #c90011; /* Specific highlight color */
+  color: #c90011;
   font-weight: 600;
 }
 
 .linkText {
-  color: #0056b3; /* Professional blue for links */
+  color: #0056b3;
   text-decoration: none;
   font-weight: 500;
 }
 
 .linkText:hover {
   text-decoration: underline;
-  color: #003d80; /* Darker blue on hover */
+  color: #003d80;
 }
 
 
 /* --- Header --- */
 .articleHeader {
-  border-bottom: 1px solid #dee2e6; /* Lighter border */
+  border-bottom: 1px solid #dee2e6;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  text-align: left; /* Align header text left for formal look */
+  text-align: left;
 }
 
 .articleHeader h1 {
-  font-size: 2.8rem; /* Larger title */
-  font-weight: 600; /* Bold but not overly heavy */
+  font-size: 2.8rem;
+  font-weight: 600;
   margin-bottom: 0.75rem;
-  color: #111; /* Very dark grey / black */
+  color: #111;
   line-height: 1.3;
 }
 
 .publishDate {
   font-size: 0.9rem;
-  color: #6c757d; /* Muted grey */
+  color: #6c757d;
   margin-bottom: 1.5rem;
   text-align: left;
 }
 
 .intro {
-  font-size: 1.15rem; /* Slightly larger intro */
-  color: #495057; /* Slightly muted text */
+  font-size: 1.15rem;
+  color: #495057;
   /* text-align: justify; is inherited */
 }
 
 /* --- Sections --- */
 .section {
-  margin-bottom: 3.5rem; /* More space between sections */
+  margin-bottom: 3.5rem;
 }
 
 .section h2 {
-  font-size: 2rem; /* Prominent section heading */
+  font-size: 2rem;
   font-weight: 600;
   color: #212529;
   margin-bottom: 2rem;
   padding-bottom: 0.75rem;
-  border-bottom: 2px solid #004080; /* Accent border color (muted blue) */
-  text-align: left; /* Keep headings left-aligned */
+  border-bottom: 2px solid #004080;
+  text-align: left;
   line-height: 1.4;
 }
 
 .section h3 {
-  font-size: 1.4rem; /* Sub-heading size */
+  font-size: 1.4rem;
   font-weight: 600;
   color: #343a40;
-  margin-top: 2.5rem; /* Add space before H3 */
+  margin-top: 2.5rem;
   margin-bottom: 1.5rem;
   text-align: left;
-  /* Optional: add a lighter border or remove border */
-  /* border-bottom: 1px solid #eee; */
-  /* padding-bottom: 0.5rem; */
 }
 
 .section p {
-  margin-bottom: 1.5rem; /* Consistent paragraph spacing */
+  margin-bottom: 1.5rem;
   /* text-align: justify; is inherited */
 }
-
-/* Correct nested <p> tags if any (HTML structure issue) */
-/* If <p> is directly inside <p>, browser might close first one early. Better structure needed in HTML. */
-/* Assuming the structure is <p><strong>Title:</strong></p><ul>...</ul> */
-.section p + .list {
-    margin-top: -0.5rem; /* Adjust space if list follows a <p> title */
-}
-
 
 /* --- Lists --- */
 .list {
   list-style: disc;
-  padding-left: 2.5rem; /* Deeper indent */
+  padding-left: 2.5rem;
   margin-bottom: 1.75rem;
 }
 
 .list li {
-  margin-bottom: 0.85rem; /* More space between list items */
+  margin-bottom: 0.85rem;
   /* text-align: justify; is inherited */
 }
 
-/* Style for bold text used as mini-headings within list items */
 .list li strong {
     font-weight: 600;
-    display: inline-block; /* Or block if it's on its own line */
-    margin-bottom: 0.25rem; /* Space after the bold heading */
+    display: inline-block;
+    margin-bottom: 0.25rem;
     color: #343a40;
 }
 
 /* --- Charts & Images --- */
 .chartContainer {
-  margin: 0; /* Handled by grid gap */
+  margin: 0;
   text-align: center;
-  width: 100%; /* Ensure container takes full grid cell width */
+  width: 100%;
 }
 
 .chartImage {
   max-width: 100%;
   height: auto;
-  border: 1px solid #d5d5d5; /* Slightly darker border for charts */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  border: 1px solid #d5d5d5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
   margin-bottom: 0.75rem;
 }
 
 .chartCaption {
   font-size: 0.85rem;
-  color: #6c757d; /* Muted grey */
+  color: #6c757d;
   margin-top: 0.75rem;
-  padding: 0 0.5rem; /* Add slight horizontal padding */
+  padding: 0 0.5rem;
   text-align: center;
   line-height: 1.5;
 }
 
 .chartCaption strong {
-    font-weight: 600; /* Make title part of caption bold */
-    color: #495057; /* Slightly darker than regular caption text */
-    display: block; /* Put title on its own line */
+    font-weight: 600;
+    color: #495057;
+    display: block;
     margin-bottom: 0.25rem;
 }
 
 /* --- Chart Grid Layout --- */
 .chartGrid {
   display: grid;
-  /* Adjust minmax for better fit - 400px ensures larger charts don't get too squished */
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2.5rem; /* Increased gap */
+  gap: 2.5rem;
   margin: 2.5rem 0;
   align-items: start;
 }
 
-/* Optional: Force single column for specific charts if needed */
 .chartGrid .fullWidth {
-    grid-column: 1 / -1; /* Make container span all columns */
+    grid-column: 1 / -1;
 }
 
 
@@ -177,10 +168,10 @@
 .articleFooter {
   margin-top: 4rem;
   padding-top: 2rem;
-  border-top: 1px solid #ced4da; /* Slightly darker top border */
+  border-top: 1px solid #ced4da;
   font-size: 0.85rem;
   color: #6c757d;
-  text-align: center; /* Center align footer text */
+  text-align: center;
   line-height: 1.6;
 }
 
@@ -194,46 +185,42 @@
     padding: 2.5rem 3rem;
   }
   .chartGrid {
-      /* Adjust minmax earlier if needed, or keep as is for tablet */
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 2rem;
   }
+  /* Adjust font sizes for medium screens if needed */
+  .articleHeader h1 { font-size: 2.5rem; }
+  .section h2 { font-size: 1.8rem; }
+  .section h3 { font-size: 1.3rem; }
+  .intro { font-size: 1.1rem; }
 }
 
 @media (max-width: 768px) {
   .articleContainer {
-    padding: 2rem 1.5rem; /* Reduce padding more */
+    padding: 2rem 1.5rem;
     margin: 2rem auto;
-    border: none; /* Remove border on smaller screens if desired */
-    box-shadow: none; /* Remove shadow on smaller screens if desired */
+    border: none;
+    box-shadow: none;
+    /* Justification might look poor on narrow screens, switch to left */
+    text-align: left;
   }
 
-  .articleHeader h1 {
-    font-size: 2.2rem;
-  }
-
-  .section h2 {
-    font-size: 1.7rem;
-  }
-   .section h3 {
-    font-size: 1.25rem;
-  }
+  /* Font Size Adjustments for Tablets/Small Laptops */
+  .articleHeader h1 { font-size: 2.1rem; line-height: 1.3; }
+  .publishDate { font-size: 0.85rem; }
+  .intro { font-size: 1.05rem; text-align: left; } /* Align intro left */
+  .section h2 { font-size: 1.6rem; line-height: 1.3; }
+  .section h3 { font-size: 1.2rem; line-height: 1.3; }
+  .section p { font-size: 0.95rem; text-align: left; line-height: 1.7; } /* Explicit size, align left */
+  .list { padding-left: 1.5rem; }
+  .list li { font-size: 0.95rem; text-align: left; line-height: 1.7; } /* Explicit size, align left */
+  .chartCaption { font-size: 0.8rem; line-height: 1.4; }
+  .articleFooter { font-size: 0.8rem; }
 
   .chartGrid {
     grid-template-columns: 1fr; /* Stack charts */
     gap: 2rem;
   }
-
-  .list {
-    padding-left: 1.5rem; /* Reduce list indent */
-  }
-   /* Justification might look poor on narrow screens */
-   .articleContainer, .section p, .list li {
-      text-align: left;
-   }
-   .intro {
-       text-align: left;
-   }
 }
 
 @media (max-width: 576px) {
@@ -241,24 +228,14 @@
     padding: 1.5rem 1rem;
   }
 
-  .articleHeader h1 {
-    font-size: 1.8rem;
-  }
-
-  .section h2 {
-    font-size: 1.5rem;
-  }
-   .section h3 {
-    font-size: 1.15rem;
-  }
-
-  .intro {
-      font-size: 1rem;
-  }
-  .publishDate {
-      font-size: 0.8rem;
-  }
-   .chartCaption {
-      font-size: 0.8rem;
-   }
+  /* Font Size Adjustments for Small Mobiles */
+  .articleHeader h1 { font-size: 1.8rem; }
+  .publishDate { font-size: 0.8rem; }
+  .intro { font-size: 1rem; } /* Keep intro readable */
+  .section h2 { font-size: 1.4rem; }
+  .section h3 { font-size: 1.1rem; }
+  .section p { font-size: 0.9rem; } /* Slightly smaller body text */
+  .list li { font-size: 0.9rem; } /* Consistent list item size */
+  .chartCaption { font-size: 0.75rem; } /* Smaller captions */
+  .articleFooter { font-size: 0.75rem; }
 }
