@@ -96,7 +96,7 @@ export default function IndianMarketOverviewPage() {
           </div>
         </div>
         <p>
-        <span className={styles.bold}>Interest Rates & RBI Policy Stance: </span><br />
+          <p><span className={styles.bold}>Interest Rates & RBI Policy Stance: </span><br /></p>
         <ul className={styles.list}>
           <li>
           <span className={styles.bold}>Recent Rate Cut: </span>
@@ -122,7 +122,7 @@ export default function IndianMarketOverviewPage() {
           <p className={styles.chartCaption}>RBI Policy Repo Rate. Source: RBI </p>
         </div>
         <p>
-        <span className={styles.bold}>Fiscal Deficit & Government Spending: </span>
+          <p><span className={styles.bold}>Fiscal Deficit & Government Spending: </span></p>
         <ul className={styles.list}>
           <li>
           <span className={styles.bold}>Fiscal Deficit Reduction: </span><br />
@@ -153,8 +153,8 @@ export default function IndianMarketOverviewPage() {
             <Image
               src="/Resources/indian-market-overview/cmp-inr-1.png"
               alt="Capital Market Performance INR - Indices (10 Year)"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
             <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance INR - Indices (10 Year)</span></p>
           </div>
@@ -164,8 +164,8 @@ export default function IndianMarketOverviewPage() {
             <Image
               src="/Resources/indian-market-overview/cmp-inr-2.png"
               alt="Capital Market Performance INR - Indices (6 Year)"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
             <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance INR - Indices (6 Year)</span></p>
           </div>
@@ -211,7 +211,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Historical Returns: 6 Years </p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns: 6 Years</span> </p>
           </div>
         </div>
         <p>
