@@ -11,7 +11,7 @@ export default function IndiaontheRise() {
           <h1>India on the Rise: Market Outlook & Investment Trends</h1>
           <p className={styles.publishDate}>Analysis as of: 28th March 2025, Pawan</p>
           <p className={styles.intro}>
-            India continues its trajectory as <span className={styles.bold}>one of the world's fastest-growing major economies</span>,
+            India continues its trajectory as <span className={styles.bold}>one of the world&apos;s fastest-growing major economies</span>,
             presenting significant opportunities alongside evolving challenges. This overview delves
             into the macroeconomic landscape, market performance, key sectors, and potential risks
             shaping the Indian market outlook for 2025 and the years ahead.
@@ -21,9 +21,9 @@ export default function IndiaontheRise() {
         <section className={styles.section}>
           <h2>Economic Powerhouse: Growth & Drivers</h2>
           <p>
-            India's GDP growth is projected to remain robust, estimated between <span className={styles.bold}>6-7%</span> for 2025. This resilience
+            India&apos;s GDP growth is projected to remain robust, estimated between <span className={styles.bold}>6-7%</span> for 2025. This resilience
             is fueled by <span className={styles.bold}>strong domestic demand, accelerating digital transformation, and supportive government
-            initiatives</span> like <span className={styles.bold}>'Atmanirbhar Bharat'</span> (Self-reliant India) and <span className={styles.bold}>'Make in India'</span>.
+            initiatives</span> like <span className={styles.bold}>&apos;Atmanirbhar Bharat&apos;</span> (Self-reliant India) and <span className={styles.bold}>&apos;Make in India&apos;</span>.
           </p>
           {/* Chart Grid Example (Repeat for other charts) */}
           <div className={styles.chartGrid}>
@@ -38,7 +38,7 @@ export default function IndiaontheRise() {
               />
               <p className={styles.chartCaption}>
                 <strong>Real GDP growth (Annual % change).</strong> Source: IMF, RBI, World Bank<br /><br />
-                As per World Bank's Long-Term Growth Modeling (LTGM), India's long-term GDP growth rate is projected to stabilize around <span className={styles.bold}>6.5% by 2035</span>, before gradually slowing to <span className={styles.bold}>5.5% by 2050</span>, reflecting economic maturation and demographic shifts.
+                As per World Bank&apos;s Long-Term Growth Modeling (LTGM), India&apos;;s long-term GDP growth rate is projected to stabilize around <span className={styles.bold}>6.5% by 2035</span>, before gradually slowing to <span className={styles.bold}>5.5% by 2050</span>, reflecting economic maturation and demographic shifts.
               </p>
             </div>
             <div className={styles.chartContainer}>
@@ -103,7 +103,7 @@ export default function IndiaontheRise() {
             </li>
             <li>
                 <strong>Neutral Policy Stance:</strong><br />
-                Despite the rate cut, the RBI maintained a <span className={styles.bold}>'neutral'</span> policy stance, focusing on achieving a durable alignment of inflation with the target while supporting growth.
+                Despite the rate cut, the RBI maintained a <span className={styles.bold}>&apos;;neutral&apos;;</span> policy stance, focusing on achieving a durable alignment of inflation with the target while supporting growth.
             </li>
             <li>
                 <strong>Anticipated Future Rate Cuts:</strong><br />
@@ -111,7 +111,7 @@ export default function IndiaontheRise() {
             </li>
             <li>
                 <strong>Mid to Long-Term Projections (2027-2031):</strong><br />
-                Specific forecasts for the RBI's policy rates beyond 2026 are limited. However, the central bank's actions will likely be influenced by factors such as <span className={styles.bold}>domestic inflation trends, economic growth rates, and global financial conditions.</span>
+                Specific forecasts for the RBI&apos;;s policy rates beyond 2026 are limited. However, the central bank&apos;;s actions will likely be influenced by factors such as <span className={styles.bold}>domestic inflation trends, economic growth rates, and global financial conditions.</span>
             </li>
           </ul>
 
@@ -138,7 +138,7 @@ export default function IndiaontheRise() {
             </li>
             <li>
                 <strong>Debt-to-GDP Ratio Goal:</strong><br />
-                A strategic objective has been set to reduce the central government's debt-to-GDP ratio from <span className={styles.bold}>57.1% in FY 2024-25 to 50% by March 2031</span>, promoting long-term fiscal sustainability.
+                A strategic objective has been set to reduce the central government&apos;;s debt-to-GDP ratio from <span className={styles.bold}>57.1% in FY 2024-25 to 50% by March 2031</span>, promoting long-term fiscal sustainability.
             </li>
           </ul>
 
@@ -384,7 +384,7 @@ export default function IndiaontheRise() {
             <li>RBI conducts Open Market Operations (OMOs) by purchasing/selling government securities in the secondary market to regulate money supply and manage long-term interest rates.</li>
             <li>In April 2025, RBI announced plans to purchase ₹80,000 crore of G-Secs across four ₹20,000 crore tranches (April 3, 8, 22, 29) to enhance market liquidity.</li>
             <li>First auction saw strongest demand for mid-to-long dated securities with 8.24% GS 2033 receiving highest allocation (₹7,660 crore).</li>
-            <li>These operations support the current positive yield curve slope and demonstrate <span className={styles.bold}>RBI's proactive approach to maintaining orderly market conditions</span> amid changing interest rate environment.</li>
+            <li>These operations support the current positive yield curve slope and demonstrate <span className={styles.bold}>RBI&apos;;s proactive approach to maintaining orderly market conditions</span> amid changing interest rate environment.</li>
             </ul>
 
             <div className={styles.chartGrid}>
@@ -478,7 +478,7 @@ export default function IndiaontheRise() {
             and Manufacturing. While influenced by global uncertainties, FDI flows have been relatively stable. Foreign Institutional Investor (FII)
             flows into equity markets are more volatile, often reacting to global risk sentiment and interest rate cycles (like US Fed actions).
             The INR/USD exchange rate has shown a gradual depreciation trend over the long term, influenced by factors like oil prices,
-            capital flows, and India's trade balance.
+            capital flows, and India&apos;;s trade balance.
           </p>
           <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
