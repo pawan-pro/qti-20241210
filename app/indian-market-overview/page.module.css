@@ -13,6 +13,21 @@
     border-radius: 8px; /* Optional: slightly rounded corners */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Optional: subtle shadow */
   }
+
+  .bold {
+    color: #000000; /* Example: reddish highlight */
+    font-weight: bold;
+  }
+
+  .boldRed {
+    color: #ff0015;
+    font-weight: bold;
+  }
+  
+  .underlineGreen {
+    color: #2a9d8f;
+    text-decoration: underline;
+  }
   
   /* --- Header --- */
   .articleHeader {
@@ -115,6 +130,7 @@
   .chartGrid .chartContainer {
       margin: 0;
   }
+
   
   /* --- Footer --- */
   .articleFooter {

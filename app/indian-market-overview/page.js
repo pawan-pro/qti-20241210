@@ -9,7 +9,7 @@ export default function IndianMarketOverviewPage() {
         <h1>Indian Market Overview - 2025 & Beyond</h1>
         <p className={styles.publishDate}>Analysis as of: 28th March 2025</p>
         <p className={styles.intro}>
-          India continues its trajectory as one of the world&apos;s fastest-growing major economies,
+          India continues its trajectory as <span className={styles.bold}>one of the world&apos;s fastest-growing major economies</span>,
           presenting significant opportunities alongside evolving challenges. This overview delves
           into the macroeconomic landscape, market performance, key sectors, and potential risks
           shaping the Indian market outlook for 2025 and the years ahead.
@@ -19,9 +19,9 @@ export default function IndianMarketOverviewPage() {
       <section className={styles.section}>
         <h2>Economic Powerhouse: Growth & Drivers</h2>
         <p>
-          India&apos;s GDP growth is projected to remain robust, estimated between 6-7% for 2025. This resilience
+          India&apos;s GDP growth is projected to remain robust, estimated between <span className={styles.bold}>6-7%</span>for 2025. This resilience
           is fueled by strong domestic demand, accelerating digital transformation, and supportive government
-          initiatives like &apos;Atmanirbhar Bharat&apos; (Self-reliant India) and &apos;Make in India&apos;.
+          initiatives like <span className={styles.bold}>&apos;Atmanirbhar Bharat</span>&apos; (Self-reliant India) and &apos;<span className={styles.bold}>Make in India</span>&apos;.
         </p>
         <div className={styles.chartContainer}>
           <Image
@@ -32,20 +32,20 @@ export default function IndianMarketOverviewPage() {
             className={styles.chartImage}
           />
           <p className={styles.chartCaption}>
-          Real GDP growth (Annual % change). Source: IMF, RBI, World Bank<br />
-          As per World Bank&apos;s Long-Term Growth Modeling (LTGM), India&apos;s long-term GDP growth rate is projected to stabilize around 6.5% by 2035, before gradually slowing to 5.5% by 2050, reflecting economic maturation and demographic shifts.
+          Real GDP growth (Annual % change). Source: IMF, RBI, World Bank<br /> <br />
+          As per World Bank&apos;s Long-Term Growth Modeling (LTGM), India&apos;s long-term GDP growth rate is projected to stabilize around <span className={styles.bold}>6.5% by 2035</span>, before gradually slowing to <span className={styles.bold}>5.5%</span> by 2050, reflecting economic maturation and demographic shifts.
           </p>
         </div>
         <div className={styles.chartContainer}>
           <Image
             src="/Resources/indian-market-overview/gdp-contribution.png"
-            alt="India Real GDP Growth Chart (Annual % change)"
+            alt="GDP Contribution (2023-2024 %)"
             width={800}
             height={450}
             className={styles.chartImage}
           />
           <p className={styles.chartCaption}>
-            Historical and Projected Real GDP Growth. Source: IMF, RBI, World Bank 
+          GDP Contribution (2023-2024 %). Source: MoSPI. 
           </p>
         </div>
         <p>
@@ -80,10 +80,12 @@ export default function IndianMarketOverviewPage() {
                className={styles.chartImage}
              />
              <p className={styles.chartCaption}>
-             CPI and WPI Inflation Trends. Source: MOSPI, PIB<br />
-             The Reserve Bank of India (RBI) has projected the Consumer Price Index (CPI) inflation to average 4.8% for the fiscal year 2024-25 (FY25) and to moderate to 4.2% for FY26.
+             CPI and WPI Inflation Trends. Source: MOSPI, PIB<br /> <br />
+             The Reserve Bank of India (RBI) has projected the Consumer Price Index (CPI) inflation to average <span className={styles.bold}>4.8%</span> for the fiscal year 2024-25 (FY25) and to moderate to <span className={styles.bold}>4.2%</span> for FY26.
              </p>
            </div>
+        </div>
+        <div className={styles.chartGrid}>
            <div className={styles.chartContainer}>
              <Image
                src="/Resources/indian-market-overview/inflation-trends2.png"
