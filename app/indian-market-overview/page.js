@@ -23,28 +23,28 @@ export default function IndianMarketOverviewPage() {
           is fueled by strong domestic demand, accelerating digital transformation, and supportive government
           initiatives like <span className={styles.bold}>&apos;Atmanirbhar Bharat</span>&apos; (Self-reliant India) and &apos;<span className={styles.bold}>Make in India</span>&apos;.
         </p>
-        <div className={styles.chartContainer}>
-          <Image
-            src="/Resources/indian-market-overview/real-gdp-growth.png"
-            alt="India Real GDP Growth Chart (Annual % change)"
-            width={800}
-            height={450}
-            className={styles.chartImage} />
-          <p className={styles.chartCaption}><span className={styles.bold}>
-            Real GDP growth (Annual % change). Source: IMF, RBI, World Bank<br /> <br /></span>
-            As per World Bank&apos;s Long-Term Growth Modeling (LTGM), India&apos;s long-term GDP growth rate is projected to stabilize around <span className={styles.bold}>6.5% by 2035</span>, before gradually slowing to <span className={styles.bold}>5.5% by 2050</span>, reflecting economic maturation and demographic shifts.
-          </p>
+        <div className={styles.chartGrid}>
+          <div className={styles.chartContainer}>
+            <Image
+              src="/Resources/indian-market-overview/real-gdp-growth.png"
+              alt="India Real GDP Growth Chart (Annual % change)"
+              width={800}
+              height={450}
+              className={styles.chartImage} />
+            <p className={styles.chartCaption}><span className={styles.bold}>Real GDP growth (Annual % change)</span>. Source: IMF, RBI, World Bank<br /> <br />
+            As per World Bank&apos;s Long-Term Growth Modeling (LTGM), India&apos;s long-term GDP growth rate is projected to stabilize around <span className={styles.bold}>6.5% by 2035</span>, before gradually slowing to <span className={styles.bold}>5.5% by 2050</span>, reflecting economic maturation and demographic shifts.</p>
+          </div>
         </div>
-        <div className={styles.chartContainer}>
-          <Image
-            src="/Resources/indian-market-overview/gdp-contribution.png"
-            alt="GDP Contribution (2023-2024 %)"
-            width={800}
-            height={450}
-            className={styles.chartImage} />
-          <p className={styles.chartCaption}><span className={styles.bold}>
-            GDP Contribution (2023-2024 %). Source: MoSPI.</span>
-          </p>
+        <div className={styles.chartGrid}>
+          <div className={styles.chartContainer}>
+            <Image
+              src="/Resources/indian-market-overview/gdp-contribution.png"
+              alt="GDP Contribution (2023-2024 %)"
+              width={800}
+              height={450}
+              className={styles.chartImage} />
+            <p className={styles.chartCaption}><span className={styles.bold}>GDP Contribution (2023-2024 %)</span>. Source: MoSPI.</p>
+          </div>
         </div>
         <p>
           The services sector remains the largest contributor to GDP, particularly Financial Services,
@@ -73,13 +73,11 @@ export default function IndianMarketOverviewPage() {
             <Image
               src="/Resources/indian-market-overview/inflation-trends1.png"
               alt="India Inflation Trends (CPI & WPI)"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>
-              CPI and WPI Inflation Trends. Source: MoSPI, PIB<br /> <br /></span>
-              The Reserve Bank of India (RBI) has projected the Consumer Price Index (CPI) inflation to average <span className={styles.bold}>4.8%</span> for the fiscal year 2024-25 (FY25) and to moderate to <span className={styles.bold}>4.2%</span> for FY26.
-            </p>
+            <p className={styles.chartCaption}><span className={styles.bold}>CPI and WPI Inflation Trends</span>. Source: MoSPI, PIB<br /> <br />
+              The Reserve Bank of India (RBI) has projected the Consumer Price Index (CPI) inflation to average <span className={styles.bold}>4.8%</span> for the fiscal year 2024-25 (FY25) and to moderate to <span className={styles.bold}>4.2%</span> for FY26.</p>
           </div>
         </div>
         <div className={styles.chartGrid}>
@@ -87,12 +85,10 @@ export default function IndianMarketOverviewPage() {
             <Image
               src="/Resources/indian-market-overview/inflation-trends2.png"
               alt="India Inflation Trends (CPI & WPI)"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>
-              CPI and WPI Inflation Trends. Source: MoSPI, PIB<br /></span>
-            </p>
+            <p className={styles.chartCaption}><span className={styles.bold}>CPI and WPI Inflation Trends</span>. Source: MoSPI, PIB</p>
           </div>
         </div>
         <p>
@@ -112,14 +108,16 @@ export default function IndianMarketOverviewPage() {
           Specific forecasts for the RBI&apos;s policy rates beyond 2026 are limited. However, the central bank&apos;s actions will likely be influenced by factors such as <span className={styles.bold}>domestic inflation trends, economic growth rates, and global financial conditions.</span></li>
         </ul>
         </p>
-        <div className={styles.chartContainer}>
-          <Image
-            src="/Resources/indian-market-overview/rbi-repo-rate.png"
-            alt="RBI Repo Rate Chart"
-            width={500}
-            height={250}
-            className={styles.chartImage} /><span className={styles.bold}>
-          <p className={styles.chartCaption}>RBI Policy Repo Rate. Source: RBI </p></span>
+        <div className={styles.chartGrid}>
+          <div className={styles.chartContainer}>
+            <Image
+              src="/Resources/indian-market-overview/rbi-repo-rate.png"
+              alt="RBI Repo Rate Chart"
+              width={500}
+              height={250}
+              className={styles.chartImage} />
+            <p className={styles.chartCaption}><span className={styles.bold}>RBI Policy Repo Rate</span>. Source: RBI</p>
+          </div>
         </div>
         <p>
           <p><span className={styles.bold}>Fiscal Deficit & Government Spending: </span></p>
@@ -132,14 +130,16 @@ export default function IndianMarketOverviewPage() {
           A strategic objective has been set to reduce the central government&apos;s debt-to-GDP ratio from <span className={styles.bold}>57.1% in FY 2024-25 to 50% by March 2031</span>, promoting long-term fiscal sustainability.</li>
         </ul>
         </p>
-      <div className={styles.chartContainer}>
-        <Image
-          src="/Resources/indian-market-overview/fiscal-deficit.png"
-          alt="India Fiscal Deficit as % of GDP"
-          width={500}
-          height={250}
-          className={styles.chartImage} /><span className={styles.bold}>
-        <p className={styles.chartCaption}>Fiscal Deficit Trajectory. Source: https://www.indiabudget.gov.in </p></span>
+      <div className={styles.chartGrid}>
+        <div className={styles.chartContainer}>
+          <Image
+            src="/Resources/indian-market-overview/fiscal-deficit.png"
+            alt="India Fiscal Deficit as % of GDP"
+            width={500}
+            height={250}
+            className={styles.chartImage} />
+          <p className={styles.chartCaption}><span className={styles.bold}>Fiscal Deficit Trajectory</span>. Source: https://www.indiabudget.gov.in</p>
+        </div>
       </div>
     </section><section className={styles.section}>
         <h2>Capital Markets: Performance & Volatility - INR</h2>
@@ -200,7 +200,7 @@ export default function IndianMarketOverviewPage() {
                 width={1000}
                 height={500}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns: 10 Years</span> </p>
+              <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns: 10 Years</span></p>
             </div>
         </div>
         <div className={styles.chartGrid}>
@@ -211,7 +211,7 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns: 6 Years</span> </p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns: 6 Years</span></p>
           </div>
         </div>
         <p>
@@ -227,59 +227,62 @@ export default function IndianMarketOverviewPage() {
               width={1000}
               height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Sectoral Performance (10 Years) (1st Jan 2015 = 100) </p>
-
+            <p className={styles.chartCaption}><span className={styles.bold}>Sectoral Performance (10 Years) (1st Jan 2015 = 100)</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-inr-8.png"
               alt="Sectoral Performance (6 Years) (1st Jan 2019 = 100)"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Sectoral Performance (6 Years) (1st Jan 2019 = 100)</p>
-
+            <p className={styles.chartCaption}><span className={styles.bold}>Sectoral Performance (6 Years) (1st Jan 2019 = 100)</span></p>
           </div>
-
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-inr-10.png"
               alt="Historical Returns – 10 Years"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Historical Returns – 10 Years</p>
-
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 10 Years</span></p>
           </div>
-
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-inr-9.png"
               alt="Density Plot Nifty IT (10 Years, monthly returns)"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Density Plot Nifty IT (10 Years, monthly returns)</p>
-
+            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty IT (10 Years, monthly returns)</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-inr-11.png"
               alt="Historical Returns – 6 Years"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Historical Returns – 6 Years</p>
-
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 6 Years</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-inr-12.png"
               alt="Density Plot Nifty Infra (10 Years, monthly returns)"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Density Plot Nifty Infra (10 Years, monthly returns)</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty Infra (10 Years, monthly returns)</span></p>
           </div>
         </div>
         <p>
@@ -291,40 +294,46 @@ export default function IndianMarketOverviewPage() {
             <Image
               src="/Resources/indian-market-overview/cmp-inr-13.png"
               alt="Annualized Volatility - Indices"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Annualized Volatility - Indices</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Annualized Volatility - Indices</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-inr-14.png"
               alt="Annualized Volatility - Sectors"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Annualized Volatility - Sectors</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Annualized Volatility - Sectors</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-inr-15.png"
               alt="Rolling Volatility (1 month) - Indices"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Rolling Volatility (1 month) - Indices</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Rolling Volatility (1 month) - Indices</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-inr-16.png"
               alt="Rolling Volatility (1 month) - Sectors"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Rolling Volatility (1 month) - Sectors</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Rolling Volatility (1 month) - Sectors</span></p>
           </div>
         </div>
-      </section><><section className={styles.section}>
+      </section><section className={styles.section}>
         <h2>Capital Markets: Performance & Volatility - USD</h2>
         <p>
           Indian equity market returns adjusted after taking into consideration currency returns impact, from the perspective of an investor whose base currency is USD or a USD-pegged currency.
@@ -334,55 +343,65 @@ export default function IndianMarketOverviewPage() {
             <Image
               src="/Resources/indian-market-overview/cmp-usd-1.png"
               alt="Capital Market Performance USD - Indices (10 Year)"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Capital Market Performance USD - Indices (10 Year)</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance USD - Indices (10 Year)</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-USD-2.png"
               alt="Capital Market Performance USD - Indices (6 Year)"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Capital Market Performance USD - Indices (6 Year)</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Capital Market Performance USD - Indices (6 Year)</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-USD-3.png"
               alt="Density Plot Nifty 50 (10 Years, daily returns)"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Density Plot Nifty 50 (10 Years, daily returns)</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty 50 (10 Years, daily returns)</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-USD-4.png"
               alt="Historical Returns – 10 Years"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Historical Returns – 10 Years</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 10 Years</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-usd-5.png"
               alt="Historical Returns – 6 Years"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Historical Returns – 6 Years</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 6 Years</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-usd-6.png"
               alt="Density Plot Nifty 50 (10 Years, monthly returns)"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Density Plot Nifty 50 (10 Years, monthly returns)</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty 50 (10 Years, monthly returns)</span></p>
           </div>
         </div>
         <p>
@@ -393,55 +412,65 @@ export default function IndianMarketOverviewPage() {
             <Image
               src="/Resources/indian-market-overview/cmp-usd-7.png"
               alt="Sectoral Performance (10 Years) (1st Jan 2015 = 100) "
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Sectoral Performance (10 Years) (1st Jan 2015 = 100)</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Sectoral Performance (10 Years) (1st Jan 2015 = 100)</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-usd-8.png"
               alt="Sectoral Performance (6 Years) (1st Jan 2019 = 100)"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Sectoral Performance (6 Years) (1st Jan 2019 = 100)</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Sectoral Performance (6 Years) (1st Jan 2019 = 100)</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-usd-9.png"
               alt="Density Plot Nifty IT (10 Years, monthly returns)"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Density Plot Nifty IT (10 Years, monthly returns)</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty IT (10 Years, monthly returns)</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-usd-10.png"
               alt="Historical Returns – 10 Years"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Historical Returns – 10 Years</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 10 Years</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-usd-11.png"
               alt="Historical Returns – 6 Years"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Historical Returns – 6 Years</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Historical Returns – 6 Years</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-usd-12.png"
               alt="Density Plot Nifty Infra (10 Years, monthly returns)"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Density Plot Nifty Infra (10 Years, monthly returns)</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Density Plot Nifty Infra (10 Years, monthly returns)</span></p>
           </div>
         </div>
         <p>
@@ -452,28 +481,32 @@ export default function IndianMarketOverviewPage() {
             <Image
               src="/Resources/indian-market-overview/cmp-usd-13.png"
               alt="Annualized Volatility - Indices & Sectors"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Annualized Volatility - Indices & Sectors</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Annualized Volatility - Indices & Sectors</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-usd-14.png"
               alt="Rolling Volatility (1 month) - Indices "
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Rolling Volatility (1 month) - Indices</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Rolling Volatility (1 month) - Indices</span></p>
           </div>
+        </div>
+        <div className={styles.chartGrid}>
           <div className={styles.chartContainer}>
             <Image
               src="/Resources/indian-market-overview/cmp-inr-15.png"
               alt="Rolling Volatility (1 month) - Sectors"
-              width={600}
-              height={350}
+              width={1000}
+              height={500}
               className={styles.chartImage} />
-            <p className={styles.chartCaption}>Rolling Volatility (1 month) - Sectors</p>
+            <p className={styles.chartCaption}><span className={styles.bold}>Rolling Volatility (1 month) - Sectors</span></p>
           </div>
         </div>
       </section><section className={styles.section}>
@@ -483,114 +516,136 @@ export default function IndianMarketOverviewPage() {
             The G-Sec yield curve is currently upward sloping, reflecting growth expectations. The spread between G-Secs and US Treasuries
             remains significant.
           </p>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/FIM-1.png"
-              alt="10Y & 5Y G-Sec Yield"
-              width={700}
-              height={400}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}>G-Sec Yield Curve Dynamics. Source: Quantwater Analysis </p>
+          <div className={styles.chartGrid}>
+            <div className={styles.chartContainer}>
+              <Image
+                src="/Resources/indian-market-overview/FIM-1.png"
+                alt="10Y & 5Y G-Sec Yield"
+                width={700}
+                height={400}
+                className={styles.chartImage} />
+              <p className={styles.chartCaption}><span className={styles.bold}>G-Sec Yield Curve Dynamics</span>. Source: Quantwater Analysis</p>
+            </div>
           </div>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/FIM-2.png"
-              alt="10Y & 5Y G-Sec Yield"
-              width={700}
-              height={400}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}>G-Sec Yield Curve Dynamics. Source: Quantwater Analysis </p>
+          <div className={styles.chartGrid}>
+            <div className={styles.chartContainer}>
+              <Image
+                src="/Resources/indian-market-overview/FIM-2.png"
+                alt="10Y & 5Y G-Sec Yield"
+                width={700}
+                height={400}
+                className={styles.chartImage} />
+              <p className={styles.chartCaption}><span className={styles.bold}>G-Sec Yield Curve Dynamics</span>. Source: Quantwater Analysis</p>
+            </div>
           </div>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/FIM-3.png"
-              alt="Yield Curve Trend"
-              width={700}
-              height={400}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}>Normal positive slope maintained across all periods, suggesting economic growth expectations</p>
+          <div className={styles.chartGrid}>
+            <div className={styles.chartContainer}>
+              <Image
+                src="/Resources/indian-market-overview/FIM-3.png"
+                alt="Yield Curve Trend"
+                width={700}
+                height={400}
+                className={styles.chartImage} />
+              <p className={styles.chartCaption}><span className={styles.bold}>Normal positive slope maintained across all periods, suggesting economic growth expectations</span></p>
+            </div>
           </div>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/FIM-4.png"
-              alt="India-US10Y Yield Spread"
-              width={700}
-              height={400}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}>Average India-US 10 Y yield spread is 4.5% over the last 10 years </p>
+          <div className={styles.chartGrid}>
+            <div className={styles.chartContainer}>
+              <Image
+                src="/Resources/indian-market-overview/FIM-4.png"
+                alt="India-US10Y Yield Spread"
+                width={700}
+                height={400}
+                className={styles.chartImage} />
+              <p className={styles.chartCaption}><span className={styles.bold}>Average India-US 10 Y yield spread is 4.5% over the last 10 years</span></p>
+            </div>
           </div>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/FIM-5.png"
-              alt="10Y G-Sec - Repo Rate Spread"
-              width={700}
-              height={400}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}>Average 10Y G-Sec - repo rate spread is ~1.0% over the last 10 years </p>
+          <div className={styles.chartGrid}>
+            <div className={styles.chartContainer}>
+              <Image
+                src="/Resources/indian-market-overview/FIM-5.png"
+                alt="10Y G-Sec - Repo Rate Spread"
+                width={700}
+                height={400}
+                className={styles.chartImage} />
+              <p className={styles.chartCaption}><span className={styles.bold}>Average 10Y G-Sec - repo rate spread is ~1.0% over the last 10 years</span></p>
+            </div>
           </div>
           <h2>Fixed Income Landscape - Corporate Bonds</h2>
           <p>
             Corporate bond spreads vary based on credit ratings, with upgrades generally outpacing downgrades,
             indicating healthy corporate balance sheets.
           </p>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/FIM-6.png"
-              alt="Spread Over 5Y G-Sec yields (bps)"
-              width={700}
-              height={400}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}>Credit spreads represent the additional yield investors demand for holding corporate bonds over government securities (G-Secs), compensating for credit risk and issuer uncertainty.</p>
+          <div className={styles.chartGrid}>
+            <div className={styles.chartContainer}>
+              <Image
+                src="/Resources/indian-market-overview/FIM-6.png"
+                alt="Spread Over 5Y G-Sec yields (bps)"
+                width={700}
+                height={400}
+                className={styles.chartImage} />
+              <p className={styles.chartCaption}><span className={styles.bold}>Credit spreads represent the additional yield investors demand for holding corporate bonds over government securities (G-Secs), compensating for credit risk and issuer uncertainty.</span></p>
+            </div>
           </div>
           <h2>Fixed Income Landscape - FDs & Debt Mutual Funds</h2>
           <p>
             For retail investors, Fixed Deposits and Debt Mutual Funds (including Gilt, Corporate Bond,
             and Short Duration funds) are common avenues, with real returns being a key consideration in the inflationary environment.
           </p>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/FIM-7.png"
-              alt="FD Interest Rates"
-              width={700}
-              height={400}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}>FD Interest Rates</p>
+          <div className={styles.chartGrid}>
+            <div className={styles.chartContainer}>
+              <Image
+                src="/Resources/indian-market-overview/FIM-7.png"
+                alt="FD Interest Rates"
+                width={700}
+                height={400}
+                className={styles.chartImage} />
+              <p className={styles.chartCaption}><span className={styles.bold}>FD Interest Rates</span></p>
+            </div>
           </div>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/FIM-8.png"
-              alt="Debt MF Returns"
-              width={700}
-              height={400}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}>Debt MF Returns</p>
+          <div className={styles.chartGrid}>
+            <div className={styles.chartContainer}>
+              <Image
+                src="/Resources/indian-market-overview/FIM-8.png"
+                alt="Debt MF Returns"
+                width={700}
+                height={400}
+                className={styles.chartImage} />
+              <p className={styles.chartCaption}><span className={styles.bold}>Debt MF Returns</span></p>
+            </div>
           </div>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/FIM-9.png"
-              alt="Debt MF Returns"
-              width={700}
-              height={400}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}>Debt MF Returns</p>
+          <div className={styles.chartGrid}>
+            <div className={styles.chartContainer}>
+              <Image
+                src="/Resources/indian-market-overview/FIM-9.png"
+                alt="Debt MF Returns"
+                width={700}
+                height={400}
+                className={styles.chartImage} />
+              <p className={styles.chartCaption}><span className={styles.bold}>Debt MF Returns</span></p>
+            </div>
           </div>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/FIM-10.png"
-              alt="CPI Inflation vs Returns (Real return view)"
-              width={700}
-              height={400}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}>CPI Inflation vs Returns (Real return view)</p>
+          <div className={styles.chartGrid}>
+            <div className={styles.chartContainer}>
+              <Image
+                src="/Resources/indian-market-overview/FIM-10.png"
+                alt="CPI Inflation vs Returns (Real return view)"
+                width={700}
+                height={400}
+                className={styles.chartImage} />
+              <p className={styles.chartCaption}><span className={styles.bold}>CPI Inflation vs Returns (Real return view)</span></p>
+            </div>
           </div>
-          <div className={styles.chartContainer}>
-            <Image
-              src="/Resources/indian-market-overview/FIM-7.png"
-              alt="FD Interest Rates"
-              width={700}
-              height={400}
-              className={styles.chartImage} />
-            <p className={styles.chartCaption}>FD Interest Rates</p>
+          <div className={styles.chartGrid}>
+            <div className={styles.chartContainer}>
+              <Image
+                src="/Resources/indian-market-overview/FIM-7.png"
+                alt="FD Interest Rates"
+                width={700}
+                height={400}
+                className={styles.chartImage} />
+              <p className={styles.chartCaption}><span className={styles.bold}>FD Interest Rates</span></p>
+            </div>
           </div>
         </section><section className={styles.section}>
           <h2>Foreign Investment & Currency</h2>
@@ -609,9 +664,10 @@ export default function IndianMarketOverviewPage() {
                 width={600}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}>Total Inflow: USD 720B. Source: DPIIT </p>
+              <p className={styles.chartCaption}><span className={styles.bold}>Total Inflow: USD 720B</span>. Source: DPIIT</p>
             </div>
-
+          </div>
+          <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
                 src="/images/indian-market/FICM-2.png"
@@ -619,8 +675,10 @@ export default function IndianMarketOverviewPage() {
                 width={600}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}>FII Flows - AUC</p>
+              <p className={styles.chartCaption}><span className={styles.bold}>FII Flows - AUC</span></p>
             </div>
+          </div>
+          <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
                 src="/images/indian-market/FICM-3.png"
@@ -628,7 +686,7 @@ export default function IndianMarketOverviewPage() {
                 width={600}
                 height={400}
                 className={styles.chartImage} />
-              <p className={styles.chartCaption}>CAGR 3% over last 10 years</p>
+              <p className={styles.chartCaption}><span className={styles.bold}>CAGR 3% over last 10 years</span></p>
             </div>
           </div>
         </section><section className={styles.section}>
@@ -663,7 +721,7 @@ export default function IndianMarketOverviewPage() {
             Disclaimer: This overview is for informational purposes only and does not constitute investment advice.
             Market conditions and projections are subject to change. Data derived from publicly available sources and internal analysis as of March 28, 2025.
           </p>
-        </footer></>
+        </footer>
     </main>
     </>
   );
