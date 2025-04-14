@@ -642,7 +642,8 @@ export default function IndianMarketOverviewPage() {
           Disclaimer: This overview is for informational purposes only and does not constitute investment advice.
           Market conditions and projections are subject to change. Data derived from publicly available sources and internal analysis as of March 28, 2025.
         </p>
-      </footer></>
+      </footer>
     </main>
+    </>
   );
 }
