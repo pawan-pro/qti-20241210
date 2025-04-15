@@ -30,8 +30,8 @@ export default function GraduationPortfolio() {
               <Image
                 src="/Resources/tgp-av/roadmap-cs.png" // Placeholder path
                 alt="Roadmap for Arnav - Computer Science Pathway"
-                width={800}
-                height={450}
+                width={1200}
+                height={500}
                 className={styles.chartImage}
                 priority // If this is the main visual focus
               />
@@ -43,8 +43,8 @@ export default function GraduationPortfolio() {
               <Image
                 src="/Resources/tgp-av/roadmap-aero.png" // Placeholder path
                 alt="Roadmap for Arnav - Aeronautical Engineering Pathway"
-                width={800}
-                height={450}
+                width={1200}
+                height={500}
                 className={styles.chartImage} />
               <p className={styles.chartCaption}><strong>Potential Pathway: Aeronautical Engineering.</strong> Similar structured planning across phases.</p>
             </div>
@@ -58,8 +58,8 @@ export default function GraduationPortfolio() {
                 <Image
                     src="/Resources/tgp-av/financing-overview.png" // Placeholder path
                     alt="Overall Financing Overview - 8 Semester Programme at IITs"
-                    width={800}
-                    height={450} // Adjust height based on aspect ratio
+                    width={1200}
+                    height={500} // Adjust height based on aspect ratio
                     className={styles.chartImage} />
                 <p className={styles.chartCaption}>
                     <strong>IIT Financing Example (2024 Fees):</strong> Current net cost ~₹5.4 Lakhs.
@@ -111,8 +111,8 @@ export default function GraduationPortfolio() {
               <Image
                 src="/Resources/tgp-av/portfolio-sip-simulation.png" // Placeholder path
                 alt="SIP Simulation @ INR 10,000 per month for 6 years"
-                width={800}
-                height={450}
+                width={1200}
+                height={500}
                 className={styles.chartImage}
               />
               <p className={styles.chartCaption}>
@@ -123,8 +123,8 @@ export default function GraduationPortfolio() {
               <Image
                 src="/Resources/tgp-av/portfolio-asset-class.png" // Placeholder path
                 alt="Portfolio Asset Class Exposure"
-                width={800}
-                height={450} // Adjust height
+                width={1200}
+                height={500} // Adjust height
                 className={styles.chartImage} />
               <p className={styles.chartCaption}><strong>Portfolio Asset Class Exposure:</strong> Diversified across Indian Large Cap, Mid Cap, Technology Sector, European Equities, and Indian Debt.</p>
             </div>
@@ -168,8 +168,8 @@ export default function GraduationPortfolio() {
               <Image
                 src="/Resources/tgp-av/cmp-inr-1.png" // From Deck Page 8
                 alt="Capital Market Performance INR - Major Indices (10 Year)"
-                width={800}
-                height={450}
+                width={1200}
+                height={500}
                 className={styles.chartImage}
               />
               <p className={styles.chartCaption}>
@@ -180,8 +180,8 @@ export default function GraduationPortfolio() {
               <Image
                 src="/Resources/tgp-av/FIM-3.png" // From Deck Page 16
                 alt="Fixed Income Yield Curve Trend"
-                width={800}
-                height={450}
+                width={1200}
+                height={500}
                 className={styles.chartImage}
               />
               <p className={styles.chartCaption}>
