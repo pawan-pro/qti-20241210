@@ -1,4 +1,4 @@
-// app/graduation-portfolio/page.js
+// app/tgp-a/page.js
 import Image from 'next/image';
 import styles from './page.module.css'; // Ensure you have a corresponding CSS module
 
