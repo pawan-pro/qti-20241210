@@ -11,12 +11,12 @@ export default function GraduationPortfolioTGP_Aaryan() {
       <main className={styles.articleContainer}>
         <header className={styles.articleHeader}>
           {/* --- UPDATED FOR AARYAN --- */}
-          <h1>The Graduation Portfolio: Investing for Aaryan's Future Education</h1>
+          <h1>The Graduation Portfolio: Investing for Aaryan&apos;s Future Education</h1>
           <p className={styles.publishDate}>Plan Prepared: 28th March 2025 [Suggestive Plan], by Quantwater Tech Investments</p>
           <p className={styles.intro}>
             This plan outlines a long-term investment strategy designed specifically to build a corpus for
             {/* --- UPDATED FOR AARYAN --- */}
-            <span className={styles.bold}> Aaryan's future higher education goals</span>. It considers potential
+            <span className={styles.bold}> Aaryan&apos;s future higher education goals</span>. It considers potential
             costs associated with premier Indian institutions and proposes a tailored investment portfolio to help achieve
             these aspirations over the coming years.
           </p>
@@ -24,21 +24,21 @@ export default function GraduationPortfolioTGP_Aaryan() {
 
         <section className={styles.section}>
           {/* --- UPDATED FOR AARYAN --- */}
-          <h2>The Goal: Funding Aaryan's Higher Education</h2>
+          <h2>The Goal: Funding Aaryan&apos;s Higher Education</h2>
           <p>
-            The primary objective is to accumulate sufficient funds to cover the potential costs of Aaryan's undergraduate education.
+            The primary objective is to accumulate sufficient funds to cover the potential costs of Aaryan&apos;s undergraduate education.
             While specific aspirations and fields of study may evolve as Aaryan progresses, this plan focuses on building a financial foundation
             strong enough to potentially support studies at top Indian institutions like the <span className={styles.bold}>IITs, IIITs, or BITS</span>.
-            Further analysis for specific pathways (including opportunities abroad) can be conducted as Aaryan's interests become clearer.
+            Further analysis for specific pathways (including opportunities abroad) can be conducted as Aaryan&apos;s interests become clearer.
           </p>
 
           {/* --- REMOVED SPECIFIC ROADMAP IMAGES for CS/Aero --- */}
-          {/* The roadmap images specific to Arnav's interests have been removed */}
+          {/* The roadmap images specific to Arnav&apos;s interests have been removed */}
           {/* A more general image could be added here later if desired */}
 
           <h3>Understanding the Financial Need (Example: IITs)</h3>
           <p>
-             Higher education, especially at premier institutions like the IITs, involves significant costs. As a representative example, based on current fee structures (e.g., IIT Delhi 2024 fees) and projecting potential inflation over the next <span className={styles.bold}>6+ years</span> (aligning with Aaryan's current stage), the estimated cost for an 8-semester program could range significantly:
+             Higher education, especially at premier institutions like the IITs, involves significant costs. As a representative example, based on current fee structures (e.g., IIT Delhi 2024 fees) and projecting potential inflation over the next <span className={styles.bold}>6+ years</span> (aligning with Aaryan&apos;s current stage), the estimated cost for an 8-semester program could range significantly:
           </p>
 
            {/* --- Kept Financing Overview Image as the example --- */}
@@ -65,13 +65,13 @@ export default function GraduationPortfolioTGP_Aaryan() {
           {/* This section remains relevant */}
           <h2>The Investment Environment: Why India?</h2>
           <p>
-            The investment strategy leverages India's position as one of the world's fastest-growing economies (projected GDP growth <span className={styles.bold}>6-7%</span> for 2025). Key drivers include strong domestic demand, digital transformation, and supportive government policies ('Make in India'). While global factors and market volatility exist, the long-term outlook provides a favourable backdrop for equity investments aimed at wealth creation. Emerging sectors like AI, Renewables, FinTech, and Advanced Manufacturing offer significant future potential.
+            The investment strategy leverages India&apos;s position as one of the world&apos;s fastest-growing economies (projected GDP growth <span className={styles.bold}>6-7%</span> for 2025). Key drivers include strong domestic demand, digital transformation, and supportive government policies (&apos;Make in India&apos;). While global factors and market volatility exist, the long-term outlook provides a favourable backdrop for equity investments aimed at wealth creation. Emerging sectors like AI, Renewables, FinTech, and Advanced Manufacturing offer significant future potential.
           </p>
         </section>
 
         <section className={styles.section}>
            {/* --- Content remains largely the same, framed as a proposal --- */}
-          <h2>The Proposed 'Graduation Portfolio' for Aaryan</h2>
+          <h2>The Proposed &apos;Graduation Portfolio&apos; for Aaryan</h2>
           <p>
             To build a corpus towards the potential educational funding goal, we propose starting with a diversified portfolio accessed via a Systematic Investment Plan (SIP). This serves as a solid foundation that can be reviewed and adjusted over time.
           </p>
@@ -137,13 +137,13 @@ export default function GraduationPortfolioTGP_Aaryan() {
           {/* Strategy explanation remains relevant */}
           <h2>Investment Strategy Explained</h2>
           <ul className={styles.list}>
-            <li><strong>Equity-Heavy Allocation (80%):</strong> Aims for higher long-term growth potential, suitable for a long investment horizon like Aaryan's education planning. Aligns with the portfolio's expected return target.</li>
+            <li><strong>Equity-Heavy Allocation (80%):</strong> Aims for higher long-term growth potential, suitable for a long investment horizon like Aaryan&apos;s education planning. Aligns with the portfolio&apos;s expected return target.</li>
             <li><strong>Debt/Short-Term Exposure (20%):</strong> Provides stability and reduces overall portfolio volatility, acting as a cushion during market downturns.</li>
             <li><strong>Growth Investing Focus:</strong> Prioritizes sectors and companies with strong growth potential.</li>
             <li><strong>Diversification:</strong> Across Market Caps, Sectors, Geography, and Asset Class.</li>
             <li><strong>Systematic Investment Plan (SIP) Approach:</strong> Ensures discipline, benefits from Rupee Cost Averaging, and reduces market timing risk.</li>
              <li><strong>Use of Mutual Funds/ETFs:</strong> Provides professional management and instant diversification.</li>
-             <li><strong>Periodic Review & Rebalancing:</strong> Essential to maintain the desired allocation and adjust the strategy based on Aaryan's evolving goals and market conditions.</li>
+             <li><strong>Periodic Review & Rebalancing:</strong> Essential to maintain the desired allocation and adjust the strategy based on Aaryan&apos;s evolving goals and market conditions.</li>
           </ul>
         </section>
 
@@ -189,7 +189,7 @@ export default function GraduationPortfolioTGP_Aaryan() {
           {/* Risks remain relevant */}
           <h2>Risks & Considerations</h2>
           <p>
-            All investments carry risk. It's important to be aware of potential challenges:
+            All investments carry risk. It&apos;s important to be aware of potential challenges:
           </p>
           <ul className={styles.list}>
             <li><strong>Market Volatility:</strong> Equity markets can experience significant short-term fluctuations.</li>
@@ -197,10 +197,10 @@ export default function GraduationPortfolioTGP_Aaryan() {
             <li><strong>Interest Rate Changes:</strong> Affect both equity and debt investments.</li>
             <li><strong>Regulatory Changes:</strong> Can impact specific sectors or markets.</li>
             <li><strong>Fund Performance Risk:</strong> Individual fund performance may vary.</li>
-             <li><strong>Goal Specificity Risk:</strong> Since Aaryan's specific goals are not yet defined, the target corpus based on IITs is an estimate. Actual costs may differ based on the chosen path.</li>
+             <li><strong>Goal Specificity Risk:</strong> Since Aaryan&apos;s specific goals are not yet defined, the target corpus based on IITs is an estimate. Actual costs may differ based on the chosen path.</li>
           </ul>
            <p>
-             The diversified nature of the portfolio and the long-term strategy are designed to navigate these risks. Regular reviews and potential adjustments based on Aaryan's future choices will be essential.
+             The diversified nature of the portfolio and the long-term strategy are designed to navigate these risks. Regular reviews and potential adjustments based on Aaryan&apos;s future choices will be essential.
            </p>
         </section>
 
@@ -208,13 +208,13 @@ export default function GraduationPortfolioTGP_Aaryan() {
             {/* --- UPDATED CONCLUSION FOR AARYAN --- */}
             <h2>Conclusion: A Foundational Plan for Aaryan</h2>
             <p>
-                This 'Graduation Portfolio' proposal provides a structured and disciplined approach to begin investing for Aaryan's future higher education. By starting early with a consistent SIP (<span className={styles.bold}>₹10,000 per month</span>) into a diversified portfolio (<span className={styles.bold}>80% Equity, 20% Debt</span>), the aim is to harness the long-term growth potential of the Indian market and build a substantial corpus.
+                This &apos;Graduation Portfolio&apos; proposal provides a structured and disciplined approach to begin investing for Aaryan&apos;s future higher education. By starting early with a consistent SIP (<span className={styles.bold}>₹10,000 per month</span>) into a diversified portfolio (<span className={styles.bold}>80% Equity, 20% Debt</span>), the aim is to harness the long-term growth potential of the Indian market and build a substantial corpus.
             </p>
              <p>
                 The analysis suggests this approach has the potential to generate funds sufficient to cover projected costs at premier institutions like the IITs, based on current estimates and reasonable inflation assumptions.
             </p>
             <p>
-                The proposed strategy balances growth potential with stability. Success requires a <span className={styles.bold}>long-term commitment and discipline</span> in maintaining the SIP. While market fluctuations are inevitable, staying invested and periodically reviewing the portfolio's alignment with Aaryan's evolving goals will be key to navigating the journey towards funding his future educational aspirations.
+                The proposed strategy balances growth potential with stability. Success requires a <span className={styles.bold}>long-term commitment and discipline</span> in maintaining the SIP. While market fluctuations are inevitable, staying invested and periodically reviewing the portfolio&apos;s alignment with Aaryan&apos;s evolving goals will be key to navigating the journey towards funding his future educational aspirations.
             </p>
         </section>
 
