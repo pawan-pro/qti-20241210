@@ -5,6 +5,7 @@ import styles from './page.module.css'; // Assuming you have styles for this pag
 
 const projects = [
   // --- NEW ENTRY ADDED BELOW ---
+
   {
     id: 'India-on-the-Rise',
     title: 'India on the Rise: Market Outlook & Investment Trends',
