@@ -18,6 +18,16 @@
     font-size: 1rem; /* Base size for desktop */
   }
   
+  /* Example in page.module.css */
+  .fundLink {
+    text-decoration: underline; /* Example: underline */
+    color: blue; /* Example: Inherit text color */
+    /* Add other styles as needed */
+  }
+  .fundLink:hover {
+    text-decoration: underline; /* Example: Add underline on hover */
+  }
+
   .bold {
     font-weight: 600;
     color: inherit;
