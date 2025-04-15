@@ -41,7 +41,7 @@ export default function GraduationPortfolio() {
             </div>
             <div className={styles.chartContainer}>
               <Image
-                src="/Resources/graduation-portfolio/roadmap-aero.png" // Placeholder path
+                src="/Resources/tgp-av/roadmap-aero.png" // Placeholder path
                 alt="Roadmap for Arnav - Aeronautical Engineering Pathway"
                 width={800}
                 height={450}
@@ -56,7 +56,7 @@ export default function GraduationPortfolio() {
            <div className={styles.chartGrid}>
              <div className={styles.chartContainer} style={{ gridColumn: '1 / -1', maxWidth: '800px', margin: '0 auto' }}> {/* Centering the single chart */}
                 <Image
-                    src="/Resources/graduation-portfolio/financing-overview.png" // Placeholder path
+                    src="/Resources/tgp-av/financing-overview.png" // Placeholder path
                     alt="Overall Financing Overview - 8 Semester Programme at IITs"
                     width={800}
                     height={450} // Adjust height based on aspect ratio
@@ -109,7 +109,7 @@ export default function GraduationPortfolio() {
            <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
-                src="/Resources/graduation-portfolio/portfolio-sip-simulation.png" // Placeholder path
+                src="/Resources/tgp-av/portfolio-sip-simulation.png" // Placeholder path
                 alt="SIP Simulation @ INR 10,000 per month for 6 years"
                 width={800}
                 height={450}
@@ -121,7 +121,7 @@ export default function GraduationPortfolio() {
             </div>
             <div className={styles.chartContainer}>
               <Image
-                src="/Resources/graduation-portfolio/portfolio-asset-class.png" // Placeholder path
+                src="/Resources/tgp-av/portfolio-asset-class.png" // Placeholder path
                 alt="Portfolio Asset Class Exposure"
                 width={800}
                 height={450} // Adjust height
@@ -166,7 +166,7 @@ export default function GraduationPortfolio() {
           <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
-                src="/Resources/graduation-portfolio/cmp-inr-1.png" // From Deck Page 8
+                src="/Resources/tgp-av/cmp-inr-1.png" // From Deck Page 8
                 alt="Capital Market Performance INR - Major Indices (10 Year)"
                 width={800}
                 height={450}
@@ -178,7 +178,7 @@ export default function GraduationPortfolio() {
             </div>
              <div className={styles.chartContainer}>
               <Image
-                src="/Resources/graduation-portfolio/FIM-3.png" // From Deck Page 16
+                src="/Resources/tgp-av/FIM-3.png" // From Deck Page 16
                 alt="Fixed Income Yield Curve Trend"
                 width={800}
                 height={450}
