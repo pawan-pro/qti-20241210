@@ -1,37 +1,40 @@
 // app/tgp-a/page.js
 import Image from 'next/image';
-import styles from './page.module.css'; // Ensure you have a corresponding CSS module
+// Make sure this path is correct relative to this file OR you have a page.module.css in this folder
+import styles from './page.module.css';
 
-export default function GraduationPortfolio() {
+export default function GraduationPortfolioTGP_A() { // Renamed component slightly for clarity
   return (
     <>
       {/* Assuming a Layout component might wrap this */}
       <main className={styles.articleContainer}>
         <header className={styles.articleHeader}>
-          <h1>The Graduation Portfolio: Investing for Arnav&apos;s Future Education</h1>
+          <h1>The Graduation Portfolio: Investing for Arnav's Future Education</h1>
           <p className={styles.publishDate}>Plan Prepared: 28th March 2025, by Quantwater Tech Investments</p>
           <p className={styles.intro}>
             This plan outlines a long-term investment strategy designed specifically to build a corpus for
-            <span className={styles.bold}> Arnav&apos;s future higher education goals</span>. It considers potential
+            <span className={styles.bold}> Arnav's future higher education goals</span>. It considers potential
             educational pathways, associated costs, and proposes a tailored investment portfolio to help achieve
             these aspirations over the coming years.
           </p>
         </header>
 
         <section className={styles.section}>
-          <h2>The Goal: Funding Arnav&apos;s Higher Education</h2>
+          <h2>The Goal: Funding Arnav's Higher Education</h2>
           <p>
-            The primary objective is to accumulate sufficient funds to cover the costs of Arnav&apos;s undergraduate education,
-            potentially in fields like Computer Science or Aeronautical Engineering. We&apos;ve considered pathways involving
+            The primary objective is to accumulate sufficient funds to cover the costs of Arnav's undergraduate education,
+            potentially in fields like Computer Science or Aeronautical Engineering. We've considered pathways involving
             top Indian institutions (like IITs, IIITs, BITS), as of now, and if there is interest in pursuing studies abroad (MIT, CMU, Stanford, etc.) then similar analysis can be done.
           </p>
+
+          {/* --- Image 1: Roadmap CS (Applying Financing Overview Style) --- */}
           <div className={styles.chartGrid}>
-            <div className={styles.chartContainer}>
+             <div className={styles.chartContainer} style={{ gridColumn: '1 / -1', maxWidth: '800px', margin: '0 auto' }}>
               <Image
-                src="/Resources/tgp-av/roadmap-cs.png" // Placeholder path
+                src="/Resources/tgp-av/roadmap-cs.png"
                 alt="Roadmap for Arnav - Computer Science Pathway"
-                width={5000}
-                height={1000}
+                width={1200} // Adjusted width - maxWidth will control display size
+                height={500} // Adjusted height for better aspect ratio consistency
                 className={styles.chartImage}
                 priority // If this is the main visual focus
               />
@@ -39,9 +42,13 @@ export default function GraduationPortfolio() {
                 <strong>Potential Pathway: Computer Science.</strong> Includes foundation years, launchpad (Grades 11-12), and future options.
               </p>
             </div>
-            <div className={styles.chartContainer}>
+          </div>
+
+          {/* --- Image 2: Roadmap Aero (Applying Financing Overview Style) --- */}
+           <div className={styles.chartGrid}>
+             <div className={styles.chartContainer} style={{ gridColumn: '1 / -1', maxWidth: '800px', margin: '0 auto' }}>
               <Image
-                src="/Resources/tgp-av/roadmap-aero.png" // Placeholder path
+                src="/Resources/tgp-av/roadmap-aero.png"
                 alt="Roadmap for Arnav - Aeronautical Engineering Pathway"
                 width={1200}
                 height={500}
@@ -49,22 +56,25 @@ export default function GraduationPortfolio() {
               <p className={styles.chartCaption}><strong>Potential Pathway: Aeronautical Engineering.</strong> Similar structured planning across phases.</p>
             </div>
           </div>
+
           <h3>Understanding the Financial Need</h3>
           <p>
             Higher education, especially at premier institutions, involves significant costs. Based on current fee structures (e.g., IIT Delhi 2024 fees) and projecting potential inflation over the next 6+ years, the estimated cost for an 8-semester program could range significantly:
           </p>
+
+           {/* --- Image 3: Financing Overview (Already in the desired format) --- */}
            <div className={styles.chartGrid}>
-             <div className={styles.chartContainer} style={{ gridColumn: '1 / -1', maxWidth: '800px', margin: '0 auto' }}> {/* Centering the single chart */}
+             <div className={styles.chartContainer} style={{ gridColumn: '1 / -1', maxWidth: '800px', margin: '0 auto' }}> {/* This is the target format */}
                 <Image
-                    src="/Resources/tgp-av/financing-overview.png" // Placeholder path
+                    src="/Resources/tgp-av/financing-overview.png"
                     alt="Overall Financing Overview - 8 Semester Programme at IITs"
                     width={1200}
-                    height={500} // Adjust height based on aspect ratio
+                    height={500} // Keep consistent aspect ratio if desired
                     className={styles.chartImage} />
                 <p className={styles.chartCaption}>
                     <strong>IIT Financing Example (2024 Fees):</strong> Current net cost ~₹5.4 Lakhs.
                     <br />With moderate inflation (5-6% CAGR), this could rise to <span className={styles.bold}>₹7.2L - ₹7.6L</span>.
-                    <br />With higher cost expansion (11-12% CAGR), it could reach <span className={styles.bold}>₹10L - ₹10.6L+</span>.
+                    <br />With higher cost expansion (11-12% CAGR), it could reach <span className={styles.boldRed}>₹10L - ₹10.6L+</span>.
                     <br />This highlights the importance of planning and investing early.
                 </p>
             </div>
@@ -74,13 +84,13 @@ export default function GraduationPortfolio() {
         <section className={styles.section}>
           <h2>The Investment Environment: Why India?</h2>
           <p>
-            The investment strategy leverages India&apos;s position as one of the world&apos;s fastest-growing economies (projected GDP growth <span className={styles.bold}>6-7%</span> for 2025). Key drivers include strong domestic demand, digital transformation, and supportive government policies (&apos;Make in India&apos;). While global factors and market volatility exist, the long-term outlook provides a favourable backdrop for equity investments aimed at wealth creation. Emerging sectors like AI, Renewables, FinTech, and Advanced Manufacturing offer significant future potential.
+            The investment strategy leverages India's position as one of the world's fastest-growing economies (projected GDP growth <span className={styles.bold}>6-7%</span> for 2025). Key drivers include strong domestic demand, digital transformation, and supportive government policies ('Make in India'). While global factors and market volatility exist, the long-term outlook provides a favourable backdrop for equity investments aimed at wealth creation. Emerging sectors like AI, Renewables, FinTech, and Advanced Manufacturing offer significant future potential.
           </p>
           {/* Optional: Include 1-2 high-level charts like GDP Growth or Sector Contribution if desired, but keep focus on Arnav */}
         </section>
 
         <section className={styles.section}>
-          <h2>The Proposed &apos;Graduation Portfolio&apos;</h2>
+          <h2>The Proposed 'Graduation Portfolio'</h2>
           <p>
             To meet the educational funding goal, we propose a diversified portfolio accessed via a Systematic Investment Plan (SIP).
           </p>
@@ -106,35 +116,41 @@ export default function GraduationPortfolio() {
            </p>
 
           <h3>Projected Growth & Asset Mix</h3>
+
+           {/* --- Image 4: SIP Simulation (Applying Financing Overview Style) --- */}
            <div className={styles.chartGrid}>
-            <div className={styles.chartContainer}>
-              <Image
-                src="/Resources/tgp-av/portfolio-sip-simulation.png" // Placeholder path
-                alt="SIP Simulation @ INR 10,000 per month for 6 years"
-                width={1200}
-                height={500}
-                className={styles.chartImage}
-              />
-              <p className={styles.chartCaption}>
-                <strong>SIP Simulation (6 Years @ 15.49% p.a.):</strong> Shows projected portfolio growth (pre-tax) against total investment. The dotted lines indicate potential ranges needed based on the inflation-adjusted cost scenarios for education.
-              </p>
+              <div className={styles.chartContainer} style={{ gridColumn: '1 / -1', maxWidth: '800px', margin: '0 auto' }}>
+                <Image
+                  src="/Resources/tgp-av/portfolio-sip-simulation.png"
+                  alt="SIP Simulation @ INR 10,000 per month for 6 years"
+                  width={1200}
+                  height={500}
+                  className={styles.chartImage}
+                />
+                <p className={styles.chartCaption}>
+                  <strong>SIP Simulation (6 Years @ 15.49% p.a.):</strong> Shows projected portfolio growth (pre-tax) against total investment. The dotted lines indicate potential ranges needed based on the inflation-adjusted cost scenarios for education.
+                </p>
+              </div>
+           </div>
+
+           {/* --- Image 5: Asset Class (Applying Financing Overview Style) --- */}
+           <div className={styles.chartGrid}>
+              <div className={styles.chartContainer} style={{ gridColumn: '1 / -1', maxWidth: '800px', margin: '0 auto' }}>
+                <Image
+                  src="/Resources/tgp-av/portfolio-asset-class.png"
+                  alt="Portfolio Asset Class Exposure"
+                  width={1200}
+                  height={500} // Adjust height
+                  className={styles.chartImage} />
+                <p className={styles.chartCaption}><strong>Portfolio Asset Class Exposure:</strong> Diversified across Indian Large Cap, Mid Cap, Technology Sector, European Equities, and Indian Debt.</p>
+              </div>
             </div>
-            <div className={styles.chartContainer}>
-              <Image
-                src="/Resources/tgp-av/portfolio-asset-class.png" // Placeholder path
-                alt="Portfolio Asset Class Exposure"
-                width={1200}
-                height={500} // Adjust height
-                className={styles.chartImage} />
-              <p className={styles.chartCaption}><strong>Portfolio Asset Class Exposure:</strong> Diversified across Indian Large Cap, Mid Cap, Technology Sector, European Equities, and Indian Debt.</p>
-            </div>
-          </div>
         </section>
 
         <section className={styles.section}>
           <h2>Investment Strategy Explained</h2>
           <ul className={styles.list}>
-            <li><strong>Equity-Heavy Allocation (80%):</strong> Aims for higher long-term growth potential, suitable for a long investment horizon like Arnav&apos;s education planning. Aligns with the portfolio&apos;s expected return target.</li>
+            <li><strong>Equity-Heavy Allocation (80%):</strong> Aims for higher long-term growth potential, suitable for a long investment horizon like Arnav's education planning. Aligns with the portfolio's expected return target.</li>
             <li><strong>Debt/Short-Term Exposure (20%):</strong> Provides stability and reduces overall portfolio volatility, acting as a cushion during market downturns (via HDFC Short Term Debt).</li>
             <li><strong>Growth Investing Focus:</strong> Prioritizes sectors and companies with strong growth potential, reflected in the allocation to Technology (SBI Tech) and Mid Caps (Kotak Emerging Equity).</li>
             <li><strong>Diversification:</strong>
@@ -162,26 +178,26 @@ export default function GraduationPortfolio() {
           <p>
             While future performance cannot be guaranteed, looking at historical trends helps understand the potential and risks involved. Indian equity markets (like Nifty 50, Sensex) have historically provided strong long-term returns in INR, though with volatility. Fixed income markets offer stability, and the yield curve provides insights into economic expectations.
           </p>
-          {/* Include 1-2 key historical charts */}
+          {/* Keep remaining images in their original grid format if desired */}
           <div className={styles.chartGrid}>
-            <div className={styles.chartContainer}>
+            <div className={styles.chartContainer}> {/* Image 6 - Keep original format or apply new style if needed */}
               <Image
                 src="/Resources/tgp-av/cmp-inr-1.png" // From Deck Page 8
                 alt="Capital Market Performance INR - Major Indices (10 Year)"
-                width={1200}
-                height={500}
+                width={1200} // Or adjust as needed
+                height={500} // Or adjust as needed
                 className={styles.chartImage}
               />
               <p className={styles.chartCaption}>
                 <strong>Historical Index Performance (10 Years, INR):</strong> Illustrates long-term growth trends (e.g., Nifty 50 CAGR ~11%). Source: Quantwater Analysis.
               </p>
             </div>
-             <div className={styles.chartContainer}>
+             <div className={styles.chartContainer}> {/* Image 7 - Keep original format or apply new style if needed */}
               <Image
                 src="/Resources/tgp-av/FIM-3.png" // From Deck Page 16
                 alt="Fixed Income Yield Curve Trend"
-                width={1200}
-                height={500}
+                width={1200} // Or adjust as needed
+                height={500} // Or adjust as needed
                 className={styles.chartImage}
               />
               <p className={styles.chartCaption}>
@@ -197,7 +213,7 @@ export default function GraduationPortfolio() {
         <section className={styles.section}>
           <h2>Risks & Considerations</h2>
           <p>
-            All investments carry risk. It&apos;s important to be aware of potential challenges:
+            All investments carry risk. It's important to be aware of potential challenges:
           </p>
           <ul className={styles.list}>
             <li><strong>Market Volatility:</strong> Equity markets can experience significant short-term fluctuations. The long-term horizon and SIP approach help mitigate this.</li>
@@ -214,13 +230,13 @@ export default function GraduationPortfolio() {
         <section className={styles.section}>
             <h2>Conclusion: A Long-Term Plan for Arnav</h2>
             <p>
-                &apos;The Graduation Portfolio&apos; provides a structured and disciplined approach to investing for Arnav&apos;s higher education. By starting early with a consistent SIP (<span className={styles.bold}>₹10,000 per month</span>) into a diversified portfolio (<span className={styles.bold}>80% Equity, 20% Debt</span>), the aim is to harness the long-term growth potential of the Indian market and build a substantial corpus to meet future educational expenses.
+                'The Graduation Portfolio' provides a structured and disciplined approach to investing for Arnav's higher education. By starting early with a consistent SIP (<span className={styles.bold}>₹10,000 per month</span>) into a diversified portfolio (<span className={styles.bold}>80% Equity, 20% Debt</span>), the aim is to harness the long-term growth potential of the Indian market and build a substantial corpus to meet future educational expenses.
             </p>
             <p>
                 The strategy balances growth potential (through equity, particularly large-cap, mid-cap, and tech) with stability (through short-term debt). International diversification adds another layer.
             </p>
             <p>
-                Success requires a <span className={styles.bold}>long-term commitment and discipline</span> in maintaining the SIP. While market fluctuations are inevitable, staying invested and periodically reviewing the portfolio&apos;s alignment with the goal will be key to navigating the journey towards funding Arnav&apos;s educational dreams.
+                Success requires a <span className={styles.bold}>long-term commitment and discipline</span> in maintaining the SIP. While market fluctuations are inevitable, staying invested and periodically reviewing the portfolio's alignment with the goal will be key to navigating the journey towards funding Arnav's educational dreams.
             </p>
         </section>
 
