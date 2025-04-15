@@ -23,12 +23,12 @@ export default function GraduationPortfolio() {
           <p>
             The primary objective is to accumulate sufficient funds to cover the costs of Arnav&apos;s undergraduate education,
             potentially in fields like Computer Science or Aeronautical Engineering. We&apos;ve considered pathways involving
-            top Indian institutions (like IITs, IIITs, BITS) and potential opportunities abroad (MIT, CMU, Stanford, etc.).
+            top Indian institutions (like IITs, IIITs, BITS), as of now, and if there is interest in pursuing studies abroad (MIT, CMU, Stanford, etc.) then similar analysis can be done.
           </p>
           <div className={styles.chartGrid}>
             <div className={styles.chartContainer}>
               <Image
-                src="/Resources/graduation-portfolio/roadmap-cs.png" // Placeholder path
+                src="/Resources/tgp-av/roadmap-cs.png" // Placeholder path
                 alt="Roadmap for Arnav - Computer Science Pathway"
                 width={800}
                 height={450}
@@ -64,7 +64,7 @@ export default function GraduationPortfolio() {
                 <p className={styles.chartCaption}>
                     <strong>IIT Financing Example (2024 Fees):</strong> Current net cost ~₹5.4 Lakhs.
                     <br />With moderate inflation (5-6% CAGR), this could rise to <span className={styles.bold}>₹7.2L - ₹7.6L</span>.
-                    <br />With higher cost expansion (11-12% CAGR), it could reach <span className={styles.boldRed}>₹10L - ₹10.6L+</span>.
+                    <br />With higher cost expansion (11-12% CAGR), it could reach <span className={styles.bold}>₹10L - ₹10.6L+</span>.
                     <br />This highlights the importance of planning and investing early.
                 </p>
             </div>
@@ -93,7 +93,7 @@ export default function GraduationPortfolio() {
             <li>HDFC Short Term Debt Fund: <span className={styles.bold}>20%</span> (Stability & Lower Risk)</li>
           </ul>
            <p>
-             <strong>Proposed Monthly SIP: ₹10,000</strong>
+             <strong>Proposed Monthly SIP: ₹10,000 (Total)</strong>
            </p>
            <p>
              Based on historical data and fund characteristics, this portfolio has an estimated:
@@ -230,7 +230,7 @@ export default function GraduationPortfolio() {
             Disclaimer: This document is for informational purposes only, based on the specific goal discussed for Arnav. It does not constitute universal investment advice. All investments involve risk, including the possible loss of principal. Past performance is not indicative of future results. Projections are estimates based on available data and assumptions as of March 28, 2025, and are subject to change.
           </p>
            <p>
-            <br />Full Presentation Deck: <a href="https://quantwater.tech/GraduationPortfolio_Arnav.pdf" target="_blank" rel="noopener noreferrer" className={styles.linkText}>The Graduation Portfolio - Deck</a> {/* Assumed filename */}
+            <br />Full Presentation Deck: <a href="https://quantwater.tech/thegraduationportfolio-long-terminvestingforarnavseducation.pdf" target="_blank" rel="noopener noreferrer" className={styles.linkText}>The Graduation Portfolio - Deck</a> {/* Assumed filename */}
           </p>
         </footer>
       </main>
