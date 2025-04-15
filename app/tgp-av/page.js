@@ -94,13 +94,19 @@ export default function GraduationPortfolioTGP_A() { // Renamed component slight
           <p>
             To meet the educational funding goal, we propose a diversified portfolio accessed via a Systematic Investment Plan (SIP).
           </p>
-          <h3>Portfolio Allocation (Starting April 2025)</h3>
+          <h3>Proposed Portfolio Allocation (Starting April 2025) (Click to Invest)</h3>
+           {/* The fund selection is kept the same as the initial proposal */}
           <ul className={styles.list}>
-            <li>Nippon India Large Cap Fund: <span className={styles.bold}>25%</span></li>
-            <li>Kotak Emerging Equity Fund (Mid Cap): <span className={styles.bold}>25%</span></li>
-            <li>SBI Technology Opportunities Fund: <span className={styles.bold}>25%</span> (Growth Focus)</li>
-            <li>Invesco European Equity Fund: <span className={styles.bold}>5%</span> (International Diversification)</li>
-            <li>HDFC Short Term Debt Fund: <span className={styles.bold}>20%</span> (Stability & Lower Risk)</li>
+            
+            <li><a href="https://www.paytmmoney.com/mutual-funds/scheme/nippon-india-large-cap-fund-direct-growth/inf204k01xi3" target="_blank" rel="noopener noreferrer">Nippon India Large Cap Fund</a>: <span className={styles.bold}>25%</span></li>
+            
+            <li><a href="https://www.paytmmoney.com/mutual-funds/scheme/kotak-emerging-equity-scheme-direct-growth/inf174k01lt0" target="_blank" rel="noopener noreferrer">Kotak Emerging Equity Fund (Mid Cap)</a>: <span className={styles.bold}>25%</span></li>
+
+            <li><a href="https://www.paytmmoney.com/mutual-funds/scheme/sbi-technology-opportunities-fund-direct-growth/inf200k01rv6" target="_blank" rel="noopener noreferrer">SBI Technology Opportunities Fund</a>: <span className={styles.bold}>25%</span> (Growth Focus)</li>
+
+            <li><a href="https://www.paytmmoney.com/mutual-funds/scheme/invesco-india-feeder-invesco-pan-european-equity-fund-direct-growth/inf205k01a24" target="_blank" rel="noopener noreferrer">Invesco European Equity Fund</a>: <span className={styles.bold}>5%</span> (International Diversification)</li>
+
+            <li><a href="https://www.paytmmoney.com/mutual-funds/scheme/hdfc-short-term-debt-fund-direct-plan-growth/inf179k01ym7" target="_blank" rel="noopener noreferrer">HDFC Short Term Debt Fund</a>: <span className={styles.bold}>20%</span> (Stability & Lower Risk)</li>
           </ul>
            <p>
              <strong>Proposed Monthly SIP: ₹10,000 (Total)</strong>
