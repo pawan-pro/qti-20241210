@@ -30,8 +30,8 @@ export default function GraduationPortfolio() {
               <Image
                 src="/Resources/tgp-av/roadmap-cs.png" // Placeholder path
                 alt="Roadmap for Arnav - Computer Science Pathway"
-                width={1200}
-                height={500}
+                width={2000}
+                height={1000}
                 className={styles.chartImage}
                 priority // If this is the main visual focus
               />
