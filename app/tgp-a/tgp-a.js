@@ -80,7 +80,7 @@ export default function GraduationPortfolio() {
         </section>
 
         <section className={styles.section}>
-          <h2>The Proposed "Graduation Portfolio"</h2>
+          <h2>The Proposed &apos;Graduation Portfolio&apos;</h2>
           <p>
             To meet the educational funding goal, we propose a diversified portfolio accessed via a Systematic Investment Plan (SIP).
           </p>
@@ -214,7 +214,7 @@ export default function GraduationPortfolio() {
         <section className={styles.section}>
             <h2>Conclusion: A Long-Term Plan for Arnav</h2>
             <p>
-                "The Graduation Portfolio" provides a structured and disciplined approach to investing for Arnav&apos;s higher education. By starting early with a consistent SIP (<span className={styles.bold}>₹10,000 per month</span>) into a diversified portfolio (<span className={styles.bold}>80% Equity, 20% Debt</span>), the aim is to harness the long-term growth potential of the Indian market and build a substantial corpus to meet future educational expenses.
+                &apos;The Graduation Portfolio&apos; provides a structured and disciplined approach to investing for Arnav&apos;s higher education. By starting early with a consistent SIP (<span className={styles.bold}>₹10,000 per month</span>) into a diversified portfolio (<span className={styles.bold}>80% Equity, 20% Debt</span>), the aim is to harness the long-term growth potential of the Indian market and build a substantial corpus to meet future educational expenses.
             </p>
             <p>
                 The strategy balances growth potential (through equity, particularly large-cap, mid-cap, and tech) with stability (through short-term debt). International diversification adds another layer.
