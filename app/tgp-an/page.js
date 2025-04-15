@@ -231,7 +231,7 @@ export default function GraduationPortfolioTGP_Aaryan() {
           </p>
            <p>
              {/* --- Consider if the PDF link needs updating --- */}
-            <br />Reference Presentation Deck: <a href="https://quantwater.tech/thegraduationportfolio-long-terminvestingforarnavseducation.pdf" target="_blank" rel="noopener noreferrer" className={styles.linkText}>The Graduation Portfolio - Deck [Reference]</a>
+            <br />Reference Presentation Deck: <a href="https://quantwater.tech/thegraduationportfolio-long-terminvestingforaaryanseducation.pdf" target="_blank" rel="noopener noreferrer" className={styles.linkText}>The Graduation Portfolio - Deck [Reference]</a>
           </p>
         </footer>
       </main>
