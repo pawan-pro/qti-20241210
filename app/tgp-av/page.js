@@ -119,7 +119,7 @@ export default function GraduationPortfolioTGP_A() { // Renamed component slight
 
            {/* --- Image 4: SIP Simulation (Applying Financing Overview Style) --- */}
            <div className={styles.chartGrid}>
-              <div className={styles.chartContainer} style={{ gridColumn: '1 / -1', maxWidth: '800px', margin: '0 auto' }}>
+              <div className={styles.chartContainer} style={{ gridColumn: '1 / -1', maxWidth: '1000px', margin: '0 auto' }}>
                 <Image
                   src="/Resources/tgp-av/portfolio-sip-simulation.png"
                   alt="SIP Simulation @ INR 10,000 per month for 6 years"
