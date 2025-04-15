@@ -9,21 +9,21 @@ export default function GraduationPortfolioTGP_A() { // Renamed component slight
       {/* Assuming a Layout component might wrap this */}
       <main className={styles.articleContainer}>
         <header className={styles.articleHeader}>
-          <h1>The Graduation Portfolio: Investing for Arnav's Future Education</h1>
+          <h1>The Graduation Portfolio: Investing for Arnav&apos;s Future Education</h1>
           <p className={styles.publishDate}>Plan Prepared: 28th March 2025, by Quantwater Tech Investments</p>
           <p className={styles.intro}>
             This plan outlines a long-term investment strategy designed specifically to build a corpus for
-            <span className={styles.bold}> Arnav's future higher education goals</span>. It considers potential
+            <span className={styles.bold}> Arnav&apos;s future higher education goals</span>. It considers potential
             educational pathways, associated costs, and proposes a tailored investment portfolio to help achieve
             these aspirations over the coming years.
           </p>
         </header>
 
         <section className={styles.section}>
-          <h2>The Goal: Funding Arnav's Higher Education</h2>
+          <h2>The Goal: Funding Arnav&apos;s Higher Education</h2>
           <p>
-            The primary objective is to accumulate sufficient funds to cover the costs of Arnav's undergraduate education,
-            potentially in fields like Computer Science or Aeronautical Engineering. We've considered pathways involving
+            The primary objective is to accumulate sufficient funds to cover the costs of Arnav&apos;s undergraduate education,
+            potentially in fields like Computer Science or Aeronautical Engineering. We&apos;ve considered pathways involving
             top Indian institutions (like IITs, IIITs, BITS), as of now, and if there is interest in pursuing studies abroad (MIT, CMU, Stanford, etc.) then similar analysis can be done.
           </p>
 
@@ -84,13 +84,13 @@ export default function GraduationPortfolioTGP_A() { // Renamed component slight
         <section className={styles.section}>
           <h2>The Investment Environment: Why India?</h2>
           <p>
-            The investment strategy leverages India's position as one of the world's fastest-growing economies (projected GDP growth <span className={styles.bold}>6-7%</span> for 2025). Key drivers include strong domestic demand, digital transformation, and supportive government policies ('Make in India'). While global factors and market volatility exist, the long-term outlook provides a favourable backdrop for equity investments aimed at wealth creation. Emerging sectors like AI, Renewables, FinTech, and Advanced Manufacturing offer significant future potential.
+            The investment strategy leverages India&apos;s position as one of the world&apos;s fastest-growing economies (projected GDP growth <span className={styles.bold}>6-7%</span> for 2025). Key drivers include strong domestic demand, digital transformation, and supportive government policies (&apos;Make in India&apos;). While global factors and market volatility exist, the long-term outlook provides a favourable backdrop for equity investments aimed at wealth creation. Emerging sectors like AI, Renewables, FinTech, and Advanced Manufacturing offer significant future potential.
           </p>
           {/* Optional: Include 1-2 high-level charts like GDP Growth or Sector Contribution if desired, but keep focus on Arnav */}
         </section>
 
         <section className={styles.section}>
-          <h2>The Proposed 'Graduation Portfolio'</h2>
+          <h2>The Proposed &apos;Graduation Portfolio&apos;</h2>
           <p>
             To meet the educational funding goal, we propose a diversified portfolio accessed via a Systematic Investment Plan (SIP).
           </p>
@@ -150,7 +150,7 @@ export default function GraduationPortfolioTGP_A() { // Renamed component slight
         <section className={styles.section}>
           <h2>Investment Strategy Explained</h2>
           <ul className={styles.list}>
-            <li><strong>Equity-Heavy Allocation (80%):</strong> Aims for higher long-term growth potential, suitable for a long investment horizon like Arnav's education planning. Aligns with the portfolio's expected return target.</li>
+            <li><strong>Equity-Heavy Allocation (80%):</strong> Aims for higher long-term growth potential, suitable for a long investment horizon like Arnav&apos;s education planning. Aligns with the portfolio&apos;s expected return target.</li>
             <li><strong>Debt/Short-Term Exposure (20%):</strong> Provides stability and reduces overall portfolio volatility, acting as a cushion during market downturns (via HDFC Short Term Debt).</li>
             <li><strong>Growth Investing Focus:</strong> Prioritizes sectors and companies with strong growth potential, reflected in the allocation to Technology (SBI Tech) and Mid Caps (Kotak Emerging Equity).</li>
             <li><strong>Diversification:</strong>
@@ -213,7 +213,7 @@ export default function GraduationPortfolioTGP_A() { // Renamed component slight
         <section className={styles.section}>
           <h2>Risks & Considerations</h2>
           <p>
-            All investments carry risk. It's important to be aware of potential challenges:
+            All investments carry risk. It&apos;s important to be aware of potential challenges:
           </p>
           <ul className={styles.list}>
             <li><strong>Market Volatility:</strong> Equity markets can experience significant short-term fluctuations. The long-term horizon and SIP approach help mitigate this.</li>
@@ -230,13 +230,13 @@ export default function GraduationPortfolioTGP_A() { // Renamed component slight
         <section className={styles.section}>
             <h2>Conclusion: A Long-Term Plan for Arnav</h2>
             <p>
-                'The Graduation Portfolio' provides a structured and disciplined approach to investing for Arnav's higher education. By starting early with a consistent SIP (<span className={styles.bold}>₹10,000 per month</span>) into a diversified portfolio (<span className={styles.bold}>80% Equity, 20% Debt</span>), the aim is to harness the long-term growth potential of the Indian market and build a substantial corpus to meet future educational expenses.
+                &apos;The Graduation Portfolio&apos; provides a structured and disciplined approach to investing for Arnav&apos;s higher education. By starting early with a consistent SIP (<span className={styles.bold}>₹10,000 per month</span>) into a diversified portfolio (<span className={styles.bold}>80% Equity, 20% Debt</span>), the aim is to harness the long-term growth potential of the Indian market and build a substantial corpus to meet future educational expenses.
             </p>
             <p>
                 The strategy balances growth potential (through equity, particularly large-cap, mid-cap, and tech) with stability (through short-term debt). International diversification adds another layer.
             </p>
             <p>
-                Success requires a <span className={styles.bold}>long-term commitment and discipline</span> in maintaining the SIP. While market fluctuations are inevitable, staying invested and periodically reviewing the portfolio's alignment with the goal will be key to navigating the journey towards funding Arnav's educational dreams.
+                Success requires a <span className={styles.bold}>long-term commitment and discipline</span> in maintaining the SIP. While market fluctuations are inevitable, staying invested and periodically reviewing the portfolio&apos;s alignment with the goal will be key to navigating the journey towards funding Arnav&apos;s educational dreams.
             </p>
         </section>
 
