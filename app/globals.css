@@ -44,7 +44,7 @@ main {
 }
 
 /* Header Styles - Updated */
-.site-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,7 +86,7 @@ main {
 
 /* Responsive Adjustments for Header */
 @media (max-width: 768px) {
-  .site-header {
+  .header {
     padding: 0 1rem;
     height: auto;
   }
@@ -105,7 +105,7 @@ main {
 }
 
 @media (max-width: 576px) {
-  .site-header {
+  .header {
     flex-direction: column;
     align-items: center;
     padding: 0.8rem;
@@ -129,7 +129,7 @@ main {
     font-size: 0.85rem;
   }
   
-  main {
+  body > *:not(.header) {
     padding-top: 100px; /* Adjust for taller header in mobile view */
   }
 }
