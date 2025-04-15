@@ -19,7 +19,7 @@ export default function GraduationPortfolio() {
         </header>
 
         <section className={styles.section}>
-          <h2>The Goal: Funding Arnav&apos;s Higher Education (Target: 2032-2036)</h2>
+          <h2>The Goal: Funding Arnav&apos;s Higher Education</h2>
           <p>
             The primary objective is to accumulate sufficient funds to cover the costs of Arnav&apos;s undergraduate education,
             potentially in fields like Computer Science or Aeronautical Engineering. We've considered pathways involving
