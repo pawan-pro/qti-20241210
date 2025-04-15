@@ -74,7 +74,7 @@ export default function GraduationPortfolioTGP_A() { // Renamed component slight
                 <p className={styles.chartCaption}>
                     <strong>IIT Financing Example (2024 Fees):</strong> Current net cost ~₹5.4 Lakhs.
                     <br />With moderate inflation (5-6% CAGR), this could rise to <span className={styles.bold}>₹7.2L - ₹7.6L</span>.
-                    <br />With higher cost expansion (11-12% CAGR), it could reach <span className={styles.boldRed}>₹10L - ₹10.6L+</span>.
+                    <br />With higher cost expansion (11-12% CAGR), it could reach <span className={styles.bold}>₹10L - ₹10.6L+</span>.
                     <br />This highlights the importance of planning and investing early.
                 </p>
             </div>
