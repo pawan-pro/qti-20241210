@@ -22,7 +22,7 @@ export default function GraduationPortfolio() {
           <h2>The Goal: Funding Arnav&apos;s Higher Education</h2>
           <p>
             The primary objective is to accumulate sufficient funds to cover the costs of Arnav&apos;s undergraduate education,
-            potentially in fields like Computer Science or Aeronautical Engineering. We've considered pathways involving
+            potentially in fields like Computer Science or Aeronautical Engineering. We&apos;ve considered pathways involving
             top Indian institutions (like IITs, IIITs, BITS) and potential opportunities abroad (MIT, CMU, Stanford, etc.).
           </p>
           <div className={styles.chartGrid}>
@@ -74,7 +74,7 @@ export default function GraduationPortfolio() {
         <section className={styles.section}>
           <h2>The Investment Environment: Why India?</h2>
           <p>
-            The investment strategy leverages India&apos;s position as one of the world&apos;s fastest-growing economies (projected GDP growth <span className={styles.bold}>6-7%</span> for 2025). Key drivers include strong domestic demand, digital transformation, and supportive government policies ('Make in India'). While global factors and market volatility exist, the long-term outlook provides a favourable backdrop for equity investments aimed at wealth creation. Emerging sectors like AI, Renewables, FinTech, and Advanced Manufacturing offer significant future potential.
+            The investment strategy leverages India&apos;s position as one of the world&apos;s fastest-growing economies (projected GDP growth <span className={styles.bold}>6-7%</span> for 2025). Key drivers include strong domestic demand, digital transformation, and supportive government policies (&apos;Make in India&apos;). While global factors and market volatility exist, the long-term outlook provides a favourable backdrop for equity investments aimed at wealth creation. Emerging sectors like AI, Renewables, FinTech, and Advanced Manufacturing offer significant future potential.
           </p>
           {/* Optional: Include 1-2 high-level charts like GDP Growth or Sector Contribution if desired, but keep focus on Arnav */}
         </section>
