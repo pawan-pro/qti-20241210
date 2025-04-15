@@ -87,20 +87,20 @@ main {
 /* Responsive Adjustments for Header */
 @media (max-width: 768px) {
   .header {
-    padding: 0 1rem;
-    height: auto;
+    padding: 0 1.5rem;
+    height: 90px; /* Increased height for tablet */
   }
-  
+    
   .firm-name {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
   }
-  
+    
   .nav-links {
-    gap: 1rem;
+    gap: 1.2rem;
   }
-  
+    
   .nav-links a {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -108,28 +108,32 @@ main {
   .header {
     flex-direction: column;
     align-items: center;
-    padding: 0.8rem;
-    height: auto;
+    padding: 1rem;
+    height: 120px; /* Significantly increased height for mobile */
+    justify-content: center;
   }
-  
+    
   .firm-name {
-    font-size: 1.15rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.4rem; /* Larger font size */
+    margin-bottom: 0.75rem;
     margin-left: 0;
+    font-weight: 600;
+    letter-spacing: 0.025em; /* Added slight letter spacing for premium feel */
   }
-  
+    
   .nav-links {
-    gap: 0.8rem;
+    gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
     margin-right: 0;
   }
-  
+    
   .nav-links a {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem; /* Added padding to make tap targets larger */
   }
-  
-  body > *:not(.header) {
-    padding-top: 100px; /* Adjust for taller header in mobile view */
+    
+  main {
+    padding-top: 130px; /* Adjust for taller header in mobile view */
   }
 }
