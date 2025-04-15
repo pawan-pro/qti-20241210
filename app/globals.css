@@ -1,5 +1,4 @@
 /* globals.css */
-
 /* General Reset */
 * {
   margin: 0;
@@ -41,35 +40,40 @@ a:hover {
 
 main {
   width: 100%;
+  padding-top: 70px; /* Add space for the fixed header */
 }
 
-/* Header Styles (Example - Adapt to your actual header component) */
+/* Header Styles - Updated */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   background-color: #000;
   color: #fff;
-  position: sticky;
+  position: fixed; /* Changed from sticky to fixed */
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  flex-wrap: nowrap;
+  height: 70px; /* Set explicit height */
   border-bottom: 1px solid #333;
 }
 
 .firm-name {
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.5rem;
   font-weight: bold;
+  margin-left: 1rem; /* Add margin to prevent touching the edge */
 }
 
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  margin-right: 1rem; /* Add margin to prevent touching the edge */
 }
 
 .nav-links a {
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
   font-weight: 500;
   color: #fff;
   transition: color 0.3s;
@@ -77,40 +81,55 @@ main {
 
 .nav-links a:hover {
   color: #a0aec0;
+  text-decoration: none;
 }
 
 /* Responsive Adjustments for Header */
 @media (max-width: 768px) {
   .site-header {
-      padding: 0.8rem 1rem;
+    padding: 0 1rem;
+    height: auto;
   }
+  
   .firm-name {
-    font-size: 1.25rem; /* 20px */
+    font-size: 1.25rem;
   }
+  
   .nav-links {
     gap: 1rem;
   }
+  
   .nav-links a {
-      font-size: 0.9rem; /* ~14px */
+    font-size: 0.9rem;
   }
 }
 
-@media (max-width: 576px) { /* Further refinement for smaller screens */
+@media (max-width: 576px) {
   .site-header {
-      flex-direction: column;
-      align-items: center;
-      padding: 0.8rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem;
+    height: auto;
   }
+  
   .firm-name {
-      font-size: 1.15rem; /* ~18px */
-      margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0;
   }
-   .nav-links {
-       gap: 0.8rem;
-       justify-content: center;
-       flex-wrap: wrap;
-   }
-   .nav-links a {
-      font-size: 0.85rem; /* ~13.6px */
+  
+  .nav-links {
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: 0;
+  }
+  
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+  
+  main {
+    padding-top: 100px; /* Adjust for taller header in mobile view */
   }
 }
