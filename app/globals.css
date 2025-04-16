@@ -26,7 +26,7 @@ body {
   color: #e0e0e0;
   padding: 0;
   line-height: 1.6;
-  font-size: 16px; /* Explicit base font size for rem calculation */
+  font-size: 16px;
 }
 
 a {
@@ -38,103 +38,96 @@ a:hover {
   text-decoration: underline;
 }
 
-main {
-  width: 100%;
-  padding-top: 70px; /* Add space for the fixed header */
-}
-
-/* Header Styles - Updated */
+/* Header Styles - Fixed/sticky for all screens */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
-  background-color: #000;
+  background-color: #0a0a0a;
   color: #fff;
-  position: fixed; /* Changed from sticky to fixed */
+  position: sticky; /* Changed to sticky instead of fixed */
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  height: 70px; /* Set explicit height */
+  height: 60px; /* More compact height */
   border-bottom: 1px solid #333;
 }
 
 .firm-name {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-left: 0.5rem; /* Add margin to prevent touching the edge */
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-right: 2em; /* Add space after the firm name */
 }
 
 .nav-links {
   display: flex;
   gap: 1.5rem;
-  margin-right: 0.5rem; /* Add margin to prevent touching the edge */
+  margin-left: auto; /* Push navigation to the right */
 }
 
 .nav-links a {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  color: #fff;
-  transition: color 0.3s;
+  color: #d0d0d0;
+  transition: color 0.2s, border-bottom 0.2s;
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .nav-links a:hover {
-  color: #a0aec0;
+  color: #ffffff;
+  border-bottom: 1px solid #3b82f6;
   text-decoration: none;
 }
 
-/* Responsive Adjustments for Header */
-@media (max-width: 768px) {
-  .header {
-    padding: 0 1.5rem;
-    height: auto; /* Increased height for tablet */
-  }
-    
-  .firm-name {
-    font-size: 1.00rem;
-  }
-    
-  .nav-links {
-    gap: 1.2rem;
-  }
-    
-  .nav-links a {
-    font-size: 0.95rem;
-  }
+/* Content spacing */
+main {
+  width: 100%;
+  padding-top: 1rem; /* Reduced since header is now sticky instead of fixed */
 }
 
-@media (max-width: 576px) {
+/* Mobile refinements - all on one line */
+@media screen and (max-width: 767px) {
   .header {
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
-    height: auto; /* Significantly increased height for mobile */
-    justify-content: center;
+    height: auto;
+    padding: 0.5rem 1rem;
   }
-  
-    
+
   .firm-name {
-    font-size: 1.4rem; /* Larger font size */
-    margin-bottom: 0.75rem;
-    margin-left: 0;
-    font-weight: 600;
-    letter-spacing: 0.025em; /* Added slight letter spacing for premium feel */
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+    text-align: center;
   }
-    
+
   .nav-links {
-    gap: 1rem;
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-right: 0;
+    gap: 0.4rem;
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
   }
-    
+
   .nav-links a {
-    font-size: 0.9rem;
-    padding: 0.25rem 0.5rem; /* Added padding to make tap targets larger */
+    font-size: 0.6rem;
+    padding: 0.2rem 0.4rem;
   }
-    
-  main {
-    padding-top: 130px; /* Adjust for taller header in mobile view */
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    padding: 0 1.5rem;
+  }
+  
+  .nav-links {
+    gap: 1.2rem;
   }
 }
