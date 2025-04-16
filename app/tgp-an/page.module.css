@@ -4,14 +4,14 @@
 .articleContainer {
     max-width: 1100px;
     margin: 3rem auto;
-    padding: 3rem 4rem;
+    padding: 5rem 5rem;
     background-color: #ffffff;
     font-family: 'Century Gothic', Arial, sans-serif;
     color: #212529;
     text-align: justify;
     line-height: 1.8;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    border: 1px solid #dee2e6;
+    border: 1px solid #000000;
   }
   
   .section p, .list li {
