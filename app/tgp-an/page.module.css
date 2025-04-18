@@ -2,75 +2,47 @@
 
 /* --- Global Styles for the Article --- */
 .articleContainer {
-    max-width: 1100px;
-    margin: 3rem auto;
-    padding: 5rem 5rem;
-    background-color: #ffffff;
-    font-family: 'Century Gothic', Arial, sans-serif;
-    color: #212529;
-    text-align: justify;
-    line-height: 1.8;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    border: 1px solid #1a1a1a;
-  }
-  
-  .section p, .list li {
-    font-size: 1rem; /* Base size for desktop */
-  }
-  
-  /* Example in page.module.css */
-  .fundLink {
-    text-decoration: underline; /* Example: underline */
-    color: blue; /* Example: Inherit text color */
-    /* Add other styles as needed */
-  }
-  .fundLink:hover {
-    text-decoration: underline; /* Example: Add underline on hover */
-  }
-/* app/indian-market-overview/page.module.css */
-
-/* --- Global Styles for the Article --- */
-.articleContainer {
   max-width: 1100px;
   margin: 3rem auto;
   padding: 3rem 4rem;
-  /* background-color: #ffffff; */ /* REMOVE WHITE BACKGROUND */
-  background-color: #222; /* Use a dark background, slightly lighter than body? */
+  background-color: #ffffff;
   font-family: 'Century Gothic', Arial, sans-serif;
-  color: #e0e0e0; /* Light text color */
+  color: #212529;
   text-align: justify;
   line-height: 1.8;
-  /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); */ /* Less relevant on dark bg */
-  /* border: 1px solid #dee2e6; */ /* Less relevant on dark bg */
-   border-radius: 8px; /* Optional: keep rounded corners */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dee2e6;
 }
 
-/* Adjust text colors for dark background */
+.section p, .list li {
+  font-size: 1rem; /* Base size for desktop */
+}
+
 .bold {
   font-weight: 600;
-  color: #ffffff; /* White bold text */
+  color: inherit;
 }
 
 .boldRed {
-  color: #ff5566; /* Brighter red for dark bg */
+  color: #c90011;
   font-weight: 600;
 }
 
 .linkText {
-  color: #bfa15a; /* Accent color for links */
+  color: #0056b3;
   text-decoration: none;
   font-weight: 500;
 }
 
 .linkText:hover {
-  /* text-decoration: underline; */
-  color: #d4b97a;
+  text-decoration: underline;
+  color: #003d80;
 }
 
 
 /* --- Header --- */
 .articleHeader {
-  border-bottom: 1px solid #444; /* Darker border */
+  border-bottom: 1px solid #dee2e6;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
   text-align: left;
@@ -80,20 +52,20 @@
   font-size: 2.8rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: #ffffff; /* White title */
+  color: #111;
   line-height: 1.3;
 }
 
 .publishDate {
   font-size: 0.9rem;
-  color: #a0aec0; /* Muted light grey */
+  color: #6c757d;
   margin-bottom: 1.5rem;
   text-align: left;
 }
 
 .intro {
   font-size: 1.15rem;
-  color: #c0c0c0; /* Lighter grey intro text */
+  color: #495057;
 }
 
 /* --- Sections --- */
@@ -104,10 +76,10 @@
 .section h2 {
   font-size: 2rem;
   font-weight: 600;
-  color: #ffffff; /* White heading */
+  color: #212529;
   margin-bottom: 2rem;
   padding-bottom: 0.75rem;
-  border-bottom: 2px solid #bfa15a; /* Accent border color */
+  border-bottom: 2px solid #004080;
   text-align: left;
   line-height: 1.4;
 }
@@ -115,7 +87,7 @@
 .section h3 {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #f0f0f0; /* Lighter heading */
+  color: #343a40;
   margin-top: 2.5rem;
   margin-bottom: 1.5rem;
   text-align: left;
@@ -123,7 +95,6 @@
 
 .section p {
   margin-bottom: 1.5rem;
-  color: #d0d0d0; /* Adjust paragraph color */
 }
 
 /* --- Lists --- */
@@ -135,14 +106,14 @@
 
 .list li {
   margin-bottom: 0.85rem;
-  color: #d0d0d0; /* Adjust list item color */
 }
 
+/* Desktop style for strong tag in list */
 .list li strong {
     font-weight: 600;
-    display: inline;
-    margin-right: 0.3em;
-    color: #ffffff; /* White bold text in list */
+    display: inline; /* Default inline display for desktop */
+    margin-right: 0.3em; /* Add slight space after bold part */
+    color: #343a40;
 }
 
 /* --- Charts & Images --- */
@@ -155,15 +126,14 @@
 .chartImage {
   max-width: 100%;
   height: auto;
-  border: 1px solid #555; /* Darker border for charts */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #d5d5d5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
   margin-bottom: 0.75rem;
-  border-radius: 4px;
 }
 
 .chartCaption {
   font-size: 0.85rem;
-  color: #a0aec0; /* Muted light grey */
+  color: #6c757d;
   margin-top: 0.75rem;
   padding: 0 0.5rem;
   text-align: center;
@@ -172,7 +142,7 @@
 
 .chartCaption strong {
     font-weight: 600;
-    color: #e0e0e0; /* Lighter caption title */
+    color: #495057;
     display: block;
     margin-bottom: 0.25rem;
 }
@@ -195,9 +165,9 @@
 .articleFooter {
   margin-top: 4rem;
   padding-top: 2rem;
-  border-top: 1px solid #444; /* Darker top border */
+  border-top: 1px solid #ced4da;
   font-size: 0.85rem;
-  color: #a0aec0; /* Muted light grey */
+  color: #6c757d;
   text-align: center;
   line-height: 1.6;
 }
@@ -206,10 +176,15 @@
     margin-bottom: 1rem;
 }
 
-/* --- Responsive Adjustments (Review sizes for dark theme) --- */
+/* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
-  .articleContainer { padding: 2.5rem 3rem; }
-  .chartGrid { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+  .articleContainer {
+    padding: 2.5rem 3rem;
+  }
+  .chartGrid {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+  }
   .articleHeader h1 { font-size: 2.5rem; }
   .section h2 { font-size: 1.8rem; }
   .section h3 { font-size: 1.3rem; }
@@ -220,11 +195,12 @@
   .articleContainer {
     padding: 2rem 1.5rem;
     margin: 2rem auto;
+    border: none;
+    box-shadow: none;
     text-align: left;
-    background-color: #1a1a1a; /* Match body on mobile? Or keep #222 */
-    border-radius: 0; /* Remove radius on mobile */
   }
 
+  /* Font Size Adjustments for Tablets/Small Laptops */
   .articleHeader h1 { font-size: 2.1rem; line-height: 1.3; }
   .publishDate { font-size: 0.85rem; }
   .intro { font-size: 1.05rem; text-align: left; }
@@ -232,23 +208,51 @@
   .section h3 { font-size: 1.2rem; line-height: 1.3; }
   .section p { font-size: 0.95rem; text-align: left; line-height: 1.7; }
   .list { padding-left: 1.5rem; }
-  .list li { font-size: 0.95rem; text-align: left; line-height: 1.7; margin-bottom: 0.75rem; }
-  .list li strong { font-size: inherit; }
+  .list li {
+      font-size: 0.95rem;
+      text-align: left;
+      line-height: 1.7; /* Consistent line height for the whole item */
+      margin-bottom: 0.75rem; /* Adjust spacing */
+  }
+  /* Style for strong tag specifically within lists on mobile */
+  .list li strong {
+      font-size: inherit; /* Ensure strong tag uses li's font size */
+      display: inline; /* Keep it inline */
+      margin-right: 0.3em; /* Space after bold part */
+      /* font-weight 600 and color are inherited or set above */
+  }
   .chartCaption { font-size: 0.8rem; line-height: 1.4; }
   .articleFooter { font-size: 0.8rem; }
-  .chartGrid { grid-template-columns: 1fr; gap: 2rem; }
+
+  .chartGrid {
+    grid-template-columns: 1fr; /* Stack charts */
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 576px) {
-  .articleContainer { padding: 1.5rem 1rem; }
+  .articleContainer {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Font Size Adjustments for Small Mobiles */
   .articleHeader h1 { font-size: 1.8rem; }
   .publishDate { font-size: 0.8rem; }
   .intro { font-size: 1rem; }
   .section h2 { font-size: 1.4rem; }
   .section h3 { font-size: 1.1rem; }
   .section p { font-size: 0.9rem; }
-  .list li { font-size: 0.9rem; line-height: 1.65; margin-bottom: 0.65rem; }
-  .list li strong { font-size: inherit; }
+  .list li {
+      font-size: 0.9rem; /* Adjust base size for smaller mobile */
+      line-height: 1.65; /* Slightly adjust line height if needed */
+      margin-bottom: 0.65rem;
+  }
+  /* Strong tag inherits size automatically now from the rule above */
+  .list li strong {
+      font-size: inherit; /* Reiterate inheritance */
+      display: inline;
+      margin-right: 0.3em;
+  }
   .chartCaption { font-size: 0.75rem; }
   .articleFooter { font-size: 0.75rem; }
 }
