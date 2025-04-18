@@ -111,7 +111,7 @@ export default function GraduationPortfolioTGP_Aaryan() {
           <p>
             To build a corpus towards the potential educational funding goal, we propose starting with a diversified portfolio accessed via a Systematic Investment Plan (SIP). This serves as a solid foundation that can be reviewed and adjusted over time.
           </p>
-          <h3>Proposed Portfolio Allocation (Starting April 2025) <span className={styles.italic}>(Click Fund Name to Invest via Paytm Money)</span></h3>
+          <h3>Proposed Portfolio Allocation (Starting April 2025) <span className={styles.italic}>(Click to Invest)</span></h3>
           <ul className={styles.list}>
             <li><a href="https://www.paytmmoney.com/mutual-funds/scheme/nippon-india-large-cap-fund-direct-growth/inf204k01xi3" target="_blank" rel="noopener noreferrer" className={styles.fundLink}>Nippon India Large Cap Fund</a>: <span className={styles.bold}>25%</span></li>
             <li><a href="https://www.paytmmoney.com/mutual-funds/scheme/kotak-emerging-equity-scheme-direct-growth/inf174k01lt0" target="_blank" rel="noopener noreferrer" className={styles.fundLink}>Kotak Emerging Equity Fund (Mid Cap)</a>: <span className={styles.bold}>25%</span></li>
