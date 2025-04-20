@@ -71,7 +71,7 @@ export default function IndiaontheRise() {
           <h2>Macroeconomic Stability: Inflation, Fiscal Policy & Rates</h2>
           <p>
             <strong>Inflation Trends: </strong>Managing inflation remains a key focus for the Reserve Bank of India (RBI). While headline inflation
-            has shown signs of moderation, core inflation requires monitoring.
+            has shown signs of moderation, core inflation is moderating as well.
           </p>
           <div className={styles.chartGrid}>
              <div className={styles.chartContainer}>
@@ -229,7 +229,7 @@ export default function IndiaontheRise() {
 
             <h3>Volatility - INR Terms</h3>
             <p>
-            Volatility remains a factor, influenced by domestic policy, global events, and fund flows. Understanding historical return patterns
+            Volatility remains a factor, influenced by global events, fund flows and policy. Understanding historical return patterns
             and volatility characteristics is crucial for asset allocation.
             </p>
              {/* INR Volatility Charts Grid */}
