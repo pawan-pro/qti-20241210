@@ -1,99 +1,133 @@
 /* globals.css */
-
-/* Reset */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fonts */
+/* Font Setup */
 @font-face {
-  font-family: 'SF Pro Display', sans-serif;
-  src: url('/fonts/SF-Pro-Display-Regular.otf') format('opentype');
+  font-family: 'Century Gothic';
+  src: url('/fonts/CenturyGothic.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-/* Use system fonts as fallback for a native macOS feel */
+/* Body Styles */
+html, body {
+  height: 100%;
+}
+
 body {
-  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Helvetica, Arial, sans-serif;
-  background-color: #0F0F0F; /* Dark slate like Apple's site */
-  color: #E0E0E0;
+  font-family: 'Century Gothic', Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  padding: 0;
   line-height: 1.6;
   font-size: 16px;
-  min-height: 100vh;
-}
-
-/* Variables-based Theme */
-:root {
-  --color-bg: #0F0F0F;
-  --color-fg: #E0E0E0;
-  --color-border: #2D2D2D;
-  --color-accent: #0071E3; /* iOS blue */
-  --color-muted: #717171;
-  --transition-speed: 0.2s;
-
-  --font-sans: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
-
-/* Apply variables */
-body {
-  --webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-bg);
-  color: var(--color-fg);
 }
 
 a {
-  color: var(--color-accent);
+  color: #3b82f6;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+/* Header Styles - Fixed/sticky for all screens */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: #000000;
+  color: #fff;
+  position: sticky; /* Changed to sticky instead of fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 60px; /* More compact height */
+  /*border-bottom: 1px solid #333;*/
 }
 
-/* Utility Classes */
-.text-muted {
-  color: var(--color-muted);
-}
-
-.font-semibold {
+.firm-name {
+  font-size: 1.3rem;
   font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-right: 2em; /* Add space after the firm name */
 }
 
-.font-medium {
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: centre; /* Push navigation to the right */
+}
+
+.nav-links a {
+  font-size: 0.9rem;
   font-weight: 500;
+  color: #d0d0d0;
+  transition: color 0.2s, border-bottom 0.2s;
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
-.tracking-tight {
-  letter-spacing: -0.02em;
+.nav-links a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #3b82f6;
+  text-decoration: none;
 }
 
-.text-accent {
-  color: var(--color-accent);
+/* Content spacing */
+main {
+  width: 100%;
+  padding-top: 1rem; /* Reduced since header is now sticky instead of fixed */
 }
 
-.border-border {
-  border-color: var(--color-border);
-}
+/* Mobile refinements - all on one line */
+@media screen and (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
 
-/* Media Queries – Responsive tweaks */
-@media (max-width: 768px) {
   .firm-name {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+    text-align: center;
   }
 
   .nav-links {
-    display: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
+  }
+
+  .nav-links a {
+    font-size: 0.5rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    padding: 0 1.5rem;
+  }
+  
+  .nav-links {
+    gap: 1.2rem;
   }
 }
