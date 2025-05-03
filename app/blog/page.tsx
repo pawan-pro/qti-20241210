@@ -5,6 +5,13 @@ import styles from './page.module.css';
 
 const projects = [
   {
+    id: 'blog20250505',
+    title: 'Key Economic Events: Week Of 05th May 2025',
+    image: '/blogs/blog-cover/20250505.png',
+    link: '/blogs/20250505.html',
+    //description: 'Analyzing the impact of central bank decisions on equity and bond markets.',
+  },
+  {
     id: 'blog20250427',
     title: 'Key Economic Events: Week Of 27th Apr 2025',
     image: '/blogs/blog-cover/20250427.png',

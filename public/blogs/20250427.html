@@ -1083,7 +1083,149 @@
     </div>
 
     <script>
-        // [Previous JavaScript code remains unchanged]
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header');
+            const timelineLinks = document.querySelectorAll('.blog-timeline .timeline-item a');
+            const sections = document.querySelectorAll('.event-day-group');
+            const timelineItems = document.querySelectorAll('.blog-timeline .timeline-item');
+
+            // --- Helper Function: Calculate Scroll Offset ---
+            function getScrollOffset() {
+                const headerHeight = header?.offsetHeight || 60; // Get header height or default
+                const extraPadding = 20; // Extra space below the sticky header
+                return headerHeight + extraPadding;
+            }
+
+            // --- Helper Function: Format Date to DDmon (e.g., 21apr) ---
+            function formatDateToIdSuffix(date) {
+                const day = date.getDate();
+                const month = date.toLocaleDateString('en-US', { month: 'short' }).toLowerCase();
+                return `${day}${month}`; // e.g., 21apr, 7may
+            }
+
+            // --- Helper Function: Scroll To Element ---
+            function scrollToElement(element, behavior = 'smooth') {
+                 if (!element) return;
+                 try {
+                    const offset = getScrollOffset();
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: behavior
+                    });
+                 } catch (error) {
+                     console.error("Error scrolling to element:", error, element);
+                 }
+            }
+
+            // --- Helper Function: Activate Timeline Item ---
+            function setActiveTimelineItem(targetId) {
+                timelineItems.forEach(item => item.classList.remove('active'));
+                if (targetId) {
+                    // Find the link whose href matches the targetId
+                    const targetLink = document.querySelector(`.blog-timeline .timeline-item a[href="${targetId}"]`);
+                    if (targetLink) {
+                        targetLink.closest('.timeline-item').classList.add('active');
+                    }
+                }
+            }
+
+
+            // --- Initial Load: Scroll to Today or First Available Date ---
+            function scrollToInitialSection() {
+                const today = new Date();
+                const todayIdSuffix = formatDateToIdSuffix(today);
+                let targetId = `#day-${todayIdSuffix}`; // e.g., #day-21apr
+                let targetElement = document.querySelector(targetId);
+
+                // Fallback: If today's section doesn't exist, find the first section
+                if (!targetElement && sections.length > 0) {
+                    targetElement = sections[0]; // Get the first event-day-group
+                    targetId = `#${targetElement.id}`; // Get its ID
+                    console.log(`Today's section (${targetId}) not found. Falling back to first section: #${targetElement.id}`);
+                }
+
+                if (targetElement) {
+                    // Scroll immediately on load, no smooth animation needed here
+                    scrollToElement(targetElement, 'auto');
+                    // Highlight the corresponding timeline item
+                    setActiveTimelineItem(targetId);
+                } else {
+                    console.log("No event sections found to scroll to.");
+                }
+            }
+
+            // Run the initial scroll logic
+            scrollToInitialSection();
+
+
+            // --- Smooth Scroll on Timeline Link Click (Existing Logic) ---
+            timelineLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href'); // Get '#day-...'
+                    try {
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            scrollToElement(targetElement, 'smooth'); // Use smooth scroll for clicks
+                            // Instantly update active state on click for better UX
+                            setActiveTimelineItem(targetId);
+                        } else {
+                             console.warn(`Target element not found for selector: ${targetId}`);
+                        }
+                    } catch (error) {
+                        console.error(`Invalid selector or DOM error for ${targetId}:`, error);
+                    }
+                });
+            });
+
+            // --- Highlight Timeline Item Based on Scroll Position (Throttled - Existing Logic) ---
+            let scrollTimeout; // Variable to hold timeout ID for throttling
+
+            function handleScroll() {
+                const offset = getScrollOffset();
+                let currentSectionId = '';
+
+                // Find the section currently in view (topmost part is past the offset)
+                sections.forEach(section => {
+                    if (section) {
+                        const sectionTop = section.offsetTop - offset;
+                        // Check if section top is above the offset point OR
+                        // if it's the first section and we are near the top of the page
+                        if (window.pageYOffset >= sectionTop - 5) { // Added a small buffer (-5)
+                            currentSectionId = section.getAttribute('id');
+                        }
+                    }
+                });
+
+                 // If scrolled near the top before the first section, maybe deactivate all
+                 if (window.pageYOffset < (sections[0]?.offsetTop - offset - 5 || 0)) {
+                     currentSectionId = ''; // Deactivate if above the first section
+                 }
+
+
+                // Update active class on timeline items based on the found section ID
+                setActiveTimelineItem(currentSectionId ? `#${currentSectionId}` : null);
+            }
+
+            // Throttle the scroll handler
+            window.addEventListener('scroll', () => {
+                if (!scrollTimeout) {
+                    scrollTimeout = setTimeout(() => {
+                        handleScroll();
+                        scrollTimeout = null; // Reset timeout ID
+                    }, 150);
+                }
+            }, { passive: true });
+
+             // Initial check in case the page loads scrolled (though scrollToInitialSection handles the very start)
+             // We might delay this slightly to ensure initial scroll is finished if needed,
+             // but setActiveTimelineItem in scrollToInitialSection should handle the initial state.
+             // handleScroll(); // Can call this too, but might be redundant with the explicit setActiveTimelineItem above.
+
+        });
     </script>
-    </body>
-    </html>
+</body>
+</html>
