@@ -1,3 +1,4 @@
+html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -815,15 +816,16 @@
                         <span class="event-value">USD</span>
                         <span class="event-label">Importance:</span>
                         <span class="event-value">3</span>
-                        <span class="event-label">Actual:</span>
-                        <span class="event-value">4.21%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">4.38%</span>
                         <span class="event-label">Forecast:</span>
-                        <span class="event-value">4.36%</span>
+                        <span class="event-value">4.33%</span>
                         <span class="event-label">Notes:</span>
-                        <span class="event-notes-value">Federal Open Market Committee (FOMC) members vote on where to set the target interest rate. Traders watch interest rate changes closely as relative short term interest rates are a primary factor in currency valuation.
-
-                            A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.</span>
-                        <!-- No Learn More link provided in the input data for this event -->
+                        <span class="event-notes-value">The Federal Open Market Committee (FOMC) announces its decision on the target range for the federal funds rate. Market expectations (e.g., via CME FedWatch Tool) and the accompanying statement/press conference are crucial for determining market impact and future policy direction.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener noreferrer">CME FedWatch Tool</a>
+                        </span>
                     </div>
                 </article>
             </section>
@@ -901,7 +903,7 @@
                 let targetId = `#day-${todayIdSuffix}`; // e.g., #day-21apr
                 let targetElement = document.querySelector(targetId);
 
-                // Fallback: If today's section doesn't exist, find the first section
+                // If today's section doesn't exist, find the first section in the current document
                 if (!targetElement && sections.length > 0) {
                     targetElement = sections[0]; // Get the first event-day-group
                     targetId = `#${targetElement.id}`; // Get its ID
@@ -962,9 +964,9 @@
                 });
 
                 // If scrolled near the top before the first section, maybe deactivate all
-                if (window.pageYOffset < (sections[0]?.offsetTop - offset - 5 || 0)) {
-                    currentSectionId = ''; // Deactivate if above the first section
-                }
+                if (sections.length > 0 && window.pageYOffset < (sections[0].offsetTop - offset - 5)) {
+                     currentSectionId = ''; // Deactivate if above the first section
+                 }
 
 
                 // Update active class on timeline items based on the found section ID
