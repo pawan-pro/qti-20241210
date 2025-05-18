@@ -829,7 +829,6 @@
                 </article>
             </section>
 
-
             <!-- Source Card -->
             <div class="source-card">
                 Source: Bloomberg, News Articles, Company Research. Notes as of 10th May 2025, 4 PM IST. <br>
@@ -894,7 +893,6 @@
                 }
             }
 
-
             // --- Initial Load: Scroll to Today or First Available Date ---
             function scrollToInitialSection() {
                 const today = new Date();
@@ -921,7 +919,6 @@
 
             // Run the initial scroll logic
             scrollToInitialSection();
-
 
             // --- Smooth Scroll on Timeline Link Click (Existing Logic) ---
             timelineLinks.forEach(link => {
@@ -967,7 +964,6 @@
                      currentSectionId = ''; // Deactivate if above the first section
                  }
 
-
                 // Update active class on timeline items based on the found section ID
                 setActiveTimelineItem(currentSectionId ? `#${currentSectionId}` : null);
             }
@@ -994,3 +990,4 @@
 </body>
 
 </html>
+
