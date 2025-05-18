@@ -11,19 +11,19 @@ export default function IndiaontheRise() {
           <h1>India on the Rise: Market Outlook & Investment Trends</h1>
           <p className={styles.publishDate}>Analysis as of: 28th March 2025, Pawan</p>
           <p className={styles.intro}>
-            India is surging ahead as <span className={styles.bold}>one of the world's most dynamic and fastest-growing major economies</span>,
+            India is surging ahead as <span className={styles.bold}>one of the world&apos;s most dynamic and fastest-growing major economies</span>,
             brimming with exciting opportunities! While, like any rapidly evolving market, it navigates certain common growth-related considerations,
             the overall trajectory is undeniably upward. This overview explores the vibrant macroeconomic landscape, stellar market performance,
-            key high-growth sectors, and the typical external factors to consider, all shaping India's brilliant market outlook for 2025 and beyond.
+            key high-growth sectors, and the typical external factors to consider, all shaping India&apos;s brilliant market outlook for 2025 and beyond.
           </p>
         </header>
 
         <section className={styles.section}>
           <h2>Economic Powerhouse: Growth & Drivers</h2>
           <p>
-            India's economic engine is firing on all cylinders, with GDP growth projected to maintain an impressive <span className={styles.bold}>6-7%</span> for 2025! This remarkable resilience
+            India&apos;s economic engine is firing on all cylinders, with GDP growth projected to maintain an impressive <span className={styles.bold}>6-7%</span> for 2025! This remarkable resilience
             is powered by <span className={styles.bold}>vibrant domestic demand, a rapidly accelerating digital revolution, and proactive government
-            initiatives</span> like <span className={styles.bold}>'Atmanirbhar Bharat'</span> (Self-reliant India) and <span className={styles.bold}>'Make in India'</span>.
+            initiatives</span> like <span className={styles.bold}>&apos;Atmanirbhar Bharat&apos;</span> (Self-reliant India) and <span className={styles.bold}>&apos;Make in India&apos;</span>.
           </p>
           {/* Chart Grid Example (Repeat for other charts) */}
           <div className={styles.chartGrid}>
@@ -38,7 +38,7 @@ export default function IndiaontheRise() {
               />
               <p className={styles.chartCaption}>
                 <strong>Real GDP growth (Annual % change).</strong> Source: IMF, RBI, World Bank<br /><br />
-                As per World Bank's Long-Term Growth Modeling (LTGM), India's long-term GDP growth rate is projected to stabilize around an encouraging <span className={styles.bold}>6.5% by 2035</span>, before gradually maturing to <span className={styles.bold}>5.5% by 2050</span>, reflecting economic development and demographic evolution.
+                As per World Bank&apos;s Long-Term Growth Modeling (LTGM), India&apos;s long-term GDP growth rate is projected to stabilize around an encouraging <span className={styles.bold}>6.5% by 2035</span>, before gradually maturing to <span className={styles.bold}>5.5% by 2050</span>, reflecting economic development and demographic evolution.
               </p>
             </div>
             <div className={styles.chartContainer}>
@@ -103,7 +103,7 @@ export default function IndiaontheRise() {
             </li>
             <li>
                 <strong>Neutral Policy Stance:</strong><br />
-                Despite the rate cut, the RBI maintained a <span className={styles.bold}>'neutral'</span> policy stance, prudently balancing its focus on ensuring inflation remains comfortably aligned with targets while championing robust growth.
+                Despite the rate cut, the RBI maintained a <span className={styles.bold}>&apos;neutral&apos;</span> policy stance, prudently balancing its focus on ensuring inflation remains comfortably aligned with targets while championing robust growth.
             </li>
             <li>
                 <strong>Anticipated Future Rate Cuts:</strong><br />
@@ -111,7 +111,7 @@ export default function IndiaontheRise() {
             </li>
             <li>
                 <strong>Mid to Long-Term Projections (2027-2031):</strong><br />
-                While specific forecasts for the RBI's policy rates beyond 2026 are data-dependent, the central bank's actions will undoubtedly be guided by positive factors such as <span className={styles.bold}>domestic inflation trends, economic growth rates, and global financial conditions, ensuring stability and progress.</span>
+                While specific forecasts for the RBI&apos;s policy rates beyond 2026 are data-dependent, the central bank&apos;s actions will undoubtedly be guided by positive factors such as <span className={styles.bold}>domestic inflation trends, economic growth rates, and global financial conditions, ensuring stability and progress.</span>
             </li>
           </ul>
 
@@ -138,7 +138,7 @@ export default function IndiaontheRise() {
             </li>
             <li>
                 <strong>Debt-to-GDP Ratio Goal:</strong><br />
-                A strategic objective has been set to reduce the central government's debt-to-GDP ratio from <span className={styles.bold}>57.1% in FY 2024-25 to a more sustainable 50% by March 2031</span>, paving the way for enhanced long-term fiscal health and resilience.
+                A strategic objective has been set to reduce the central government&apos;s debt-to-GDP ratio from <span className={styles.bold}>57.1% in FY 2024-25 to a more sustainable 50% by March 2031</span>, paving the way for enhanced long-term fiscal health and resilience.
             </li>
           </ul>
 
@@ -229,7 +229,7 @@ export default function IndiaontheRise() {
             <h3>Volatility - INR Terms</h3>
             <p>
             Volatility, a natural companion to high-growth markets, is primarily influenced by global currents, fund flows, and policy shifts.
-            A clear understanding of these dynamic patterns and historical return characteristics is key to strategic asset allocation, allowing investors to harness the market's energy.
+            A clear understanding of these dynamic patterns and historical return characteristics is key to strategic asset allocation, allowing investors to harness the market&apos;s energy.
             </p>
              {/* INR Volatility Charts Grid */}
             <div className={styles.chartGrid}>
@@ -255,7 +255,7 @@ export default function IndiaontheRise() {
         <section className={styles.section}>
             <h2>Capital Markets: Performance & Volatility - USD Terms</h2>
             <p>
-            For international investors, India's equity markets present a compelling picture even when viewed in USD terms,
+            For international investors, India&apos;s equity markets present a compelling picture even when viewed in USD terms,
             showcasing the fundamental strength of the growth story beyond currency fluctuations.
             </p>
              {/* USD Charts Grid */}
@@ -383,7 +383,7 @@ export default function IndiaontheRise() {
             <li>RBI conducts Open Market Operations (OMOs) by purchasing/selling government securities in the secondary market to skillfully regulate money supply and manage long-term interest rates.</li>
             <li>In April 2025, RBI announced plans to purchase ₹80,000 crore of G-Secs across four ₹20,000 crore tranches (April 3, 8, 22, 29) to enhance market liquidity, showcasing its proactive stance.</li>
             <li>The first auction saw strong demand for mid-to-long dated securities, with the 8.24% GS 2033 receiving the highest allocation (₹7,660 crore), indicating market confidence.</li>
-            <li>These operations effectively support the positive yield curve slope and brilliantly demonstrate <span className={styles.bold}>RBI's proactive and adept management in maintaining orderly market conditions</span>, even as the global interest rate environment evolves.</li>
+            <li>These operations effectively support the positive yield curve slope and brilliantly demonstrate <span className={styles.bold}>RBI&apos;s proactive and adept management in maintaining orderly market conditions</span>, even as the global interest rate environment evolves.</li>
             </ul>
 
             <div className={styles.chartGrid}>
@@ -475,7 +475,7 @@ export default function IndiaontheRise() {
             India continues to shine as a magnet for Foreign Direct Investment (FDI), particularly in Services, Computer Hardware/Software,
             and Manufacturing. Demonstrating remarkable resilience, FDI flows have remained impressively stable, even amidst the backdrop of global uncertainties.
             Foreign Institutional Investor (FII) flows into equity markets, while naturally more dynamic and responsive to global sentiment and interest rate shifts (such as US Fed actions),
-            reflect India's integral role in the global financial ecosystem. This responsiveness is typical for sought-after emerging markets.
+            reflect India&apos;s integral role in the global financial ecosystem. This responsiveness is typical for sought-after emerging markets.
             The INR/USD exchange rate has experienced a gradual, managed depreciation over the long term, a common characteristic for rapidly growing economies balancing global trade,
             capital flows, and commodity prices (like oil). This managed movement often supports export competitiveness.
           </p>
@@ -531,14 +531,14 @@ export default function IndiaontheRise() {
         <section className={styles.section}>
           <h2>Risks & Considerations: Navigating the Path Forward</h2>
           <p>
-            While the Indian growth story is incredibly compelling, like all dynamic emerging economies, it's prudent to be aware of certain external factors and common growth-related considerations that could influence the journey:
+            While the Indian growth story is incredibly compelling, like all dynamic emerging economies, it&apos;s prudent to be aware of certain external factors and common growth-related considerations that could influence the journey:
           </p>
           <ul className={styles.list}>
             <li><strong>External Economic Climate:</strong> Like many globally integrated economies, shifts in major economic blocs like the US/EU could influence export and investment trajectories. This is a common consideration for nations participating actively in global trade.</li>
-            <li><strong>Global Geopolitical Landscape:</strong> International events and trade dynamics, which are outside any single nation's control, can introduce volatility, particularly in commodity markets (like oil). Navigating these global currents is a shared experience for emerging markets.</li>
-            <li><strong>Inflation Management Dynamics:</strong> Managing inflation is an ongoing focus for most high-growth economies globally. Should inflationary pressures, often influenced by international factors, persist more than anticipated, the RBI, like other central banks, is well-equipped to adjust its stance. India's proactive approach to balancing growth with price stability is a key strength.</li>
+            <li><strong>Global Geopolitical Landscape:</strong> International events and trade dynamics, which are outside any single nation&apos;s control, can introduce volatility, particularly in commodity markets (like oil). Navigating these global currents is a shared experience for emerging markets.</li>
+            <li><strong>Inflation Management Dynamics:</strong> Managing inflation is an ongoing focus for most high-growth economies globally. Should inflationary pressures, often influenced by international factors, persist more than anticipated, the RBI, like other central banks, is well-equipped to adjust its stance. India&apos;s proactive approach to balancing growth with price stability is a key strength.</li>
             <li><strong>International Monetary Policy Shifts:</strong> Decisions by major global central banks (e.g., Fed, ECB) naturally influence international capital flows. This is a standard feature of interconnected financial markets and a common factor for emerging economies attracting global investment, reflecting their integration into the world economy.</li>
-            <li><strong>Evolving Global Regulatory Standards:</strong> Across the world, there's a healthy and necessary evolution in tech and crypto regulations, with global momentum around tech regulation intensifying, particularly in <span className={styles.boldRed}>disinformation and data privacy</span> — a necessary shift in response to increasing misuse regarding exploitation of personal information and abuse, responsible AI, market integrity and ethics. India is proactively aligning with these <span className={styles.bold}>global best practices to foster sustainable innovation and build a trusted digital ecosystem</span> – a positive step that enhances long-term growth prospects in these cutting-edge sectors.</li>
+            <li><strong>Evolving Global Regulatory Standards:</strong> Across the world, there&apos;s a healthy and necessary evolution in tech and crypto regulations, with global momentum around tech regulation intensifying, particularly in <span className={styles.boldRed}>disinformation and data privacy</span> — a necessary shift in response to increasing misuse regarding exploitation of personal information and abuse, responsible AI, market integrity and ethics. India is proactively aligning with these <span className={styles.bold}>global best practices to foster sustainable innovation and build a trusted digital ecosystem</span> – a positive step that enhances long-term growth prospects in these cutting-edge sectors.</li>
           </ul>
         </section>
 
@@ -548,13 +548,13 @@ export default function IndiaontheRise() {
                 India shines as an <span className={styles.bold}>exceptionally compelling long-term investment destination</span>, powered by robust macroeconomic fundamentals, advantageous demographics, continuous structural reforms, and a vibrant, rapidly expanding digital economy. Its remarkable resilience, especially in the face of global uncertainties, powerfully underscores the strength of its domestic market and the astuteness of its policy framework.
             </p>
             <p>
-                A universe of exciting opportunities awaits across diverse sectors, particularly those benefiting from the digital transformation, infrastructure development, green energy transition, and advanced manufacturing push. India's capital markets offer the prospect of attractive returns in both INR and USD terms, and like all thriving markets, exhibit a natural dynamism influenced by both domestic energy and global trends. The fixed income market provides excellent diversification avenues, with careful attention to inflation and credit spreads offering rewarding prospects.
+                A universe of exciting opportunities awaits across diverse sectors, particularly those benefiting from the digital transformation, infrastructure development, green energy transition, and advanced manufacturing push. India&apos;s capital markets offer the prospect of attractive returns in both INR and USD terms, and like all thriving markets, exhibit a natural dynamism influenced by both domestic energy and global trends. The fixed income market provides excellent diversification avenues, with careful attention to inflation and credit spreads offering rewarding prospects.
             </p>
             <p>
                 To fully harness this potential, investors will benefit from acknowledging the external factors and common emerging market characteristics discussed. Navigating the global economic climate, geopolitical shifts, and the evolving regulatory scene (a global phenomenon) with a <span className={styles.bold}>well-informed and selective strategy will be key</span>.
             </p>
             <p>
-                Overall, the <span className={styles.bold}>powerful structural drivers fueling India's ascent are firmly in place, painting a bright future</span>. For investors with a strategic long-term vision and a sound approach to navigating dynamic markets, India stands out as a <span className={styles.bold}>premier opportunity within global market portfolios</span>. Embracing its vibrant energy and navigating its journey with insight will be key to unlocking extraordinary potential.
+                Overall, the <span className={styles.bold}>powerful structural drivers fueling India&apos;s ascent are firmly in place, painting a bright future</span>. For investors with a strategic long-term vision and a sound approach to navigating dynamic markets, India stands out as a <span className={styles.bold}>premier opportunity within global market portfolios</span>. Embracing its vibrant energy and navigating its journey with insight will be key to unlocking extraordinary potential.
             </p>
         </section>
 
