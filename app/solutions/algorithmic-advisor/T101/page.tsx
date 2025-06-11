@@ -10,7 +10,7 @@ export default function InvestmentAdvisoryGuide() {
           <h1>Investment Principles: A Guide for Discerning Investors</h1>
           <p className={styles.publishDate}>Last Updated: June 2025</p>
           <p className={styles.intro}>
-            At [Your Firm Name], we believe in empowering our clients with profound insights into the financial markets. This comprehensive guide outlines the core principles of sophisticated investment, designed for individuals and institutions seeking to grow and preserve their wealth through informed decisions.
+            At Quantwater Tech Investments, we believe in empowering our clients with profound insights into the financial markets. This comprehensive guide outlines the core principles of sophisticated investment, designed for individuals and institutions seeking to grow and preserve their wealth through informed decisions.
           </p>
         </header>
 
@@ -214,7 +214,7 @@ export default function InvestmentAdvisoryGuide() {
         <section id="client-solutions" className={styles.section}>
           <h2>Our Client-Centric Investment Solutions</h2>
           <p>
-            At [Your Firm Name], we offer a suite of tailored investment solutions designed to meet the diverse and complex needs of our esteemed clientele.
+            At Quantwater Tech Investments, we offer a suite of tailored investment solutions designed to meet the diverse and complex needs of our esteemed clientele.
           </p>
 
           <h3>For High Net Worth Individuals & Families</h3>
@@ -271,8 +271,8 @@ export default function InvestmentAdvisoryGuide() {
 
           <h3>Our Thought Leadership</h3>
           <ol className={styles.list}>
-            <li><strong>"Global Market Outlook" Report:</strong> Our quarterly analysis of macroeconomic trends and market forecasts.</li>
-            <li><strong>"Investment Perspectives" Series:</strong> Deep-dive articles on specific asset classes, sectors, or investment themes.</li>
+            <li><strong>Global Market Outlook Report:</strong> Our quarterly analysis of macroeconomic trends and market forecasts.</li>
+            <li><strong>Investment Perspectives Series:</strong> Deep-dive articles on specific asset classes, sectors, or investment themes.</li>
             <li><strong>Webinars & Client Events:</strong> Exclusive sessions with our lead strategists and portfolio managers.</li>
             <li><strong>Custom Research Briefs:</strong> Tailored analyses on request for complex client situations.</li>
           </ol>
@@ -336,7 +336,7 @@ export default function InvestmentAdvisoryGuide() {
         <section className={styles.section}>
           <h2>Concluding Insights</h2>
           <p>
-            Effective wealth management is an ongoing journey that requires expertise, diligence, and a profound understanding of global markets. At [Your Firm Name], we are committed to being your trusted partner, providing the strategic guidance and sophisticated solutions necessary to navigate complexities and achieve your financial aspirations.
+            Effective wealth management is an ongoing journey that requires expertise, diligence, and a profound understanding of global markets. At Quantwater Tech Investments, we are committed to being your trusted partner, providing the strategic guidance and sophisticated solutions necessary to navigate complexities and achieve your financial aspirations.
           </p>
           <ol className={styles.list}>
             <li><strong>Expertise:</strong> Leveraging decades of market experience and proprietary research.</li>
