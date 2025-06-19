@@ -285,7 +285,7 @@ export default function Trading101Guide() {
           <h2>Sources & Further Reading</h2>
           <p>The content in this guide has been compiled and adapted for educational purposes, drawing inspiration from publicly available information and common educational materials provided by industry leaders, including:</p>
           <ul className={styles.list}>
-            <li><strong>IG.com:</strong> For their comprehensive guides and educational content for beginner traders. (Content specifically referenced includes their "Trading for beginners&quot guide structure and key term definitions).</li>
+            <li><strong>IG.com:</strong> For their comprehensive guides and educational content for beginner traders. (Content specifically referenced includes their &quotTrading for beginners&quot guide structure and key term definitions).</li>
             <li><strong>ADSS.com:</strong> For their educational resources on CFD trading, forex, and market analysis typically offered to new traders. (General concepts around CFDs, forex characteristics, and risk management principles are informed by common industry educational material like that found on ADSS).</li>
           </ul>
           <p>For further learning, consider exploring the educational sections of reputable financial news websites and regulated brokers.</p>
