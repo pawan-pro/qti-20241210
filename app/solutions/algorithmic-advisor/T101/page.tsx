@@ -1,357 +1,299 @@
 // app/trading-101/page.js
 import styles from './page.module.css';
 
-export default function InvestmentAdvisoryGuide() {
+export default function Trading101Guide() {
   return (
     <>
       <main className={styles.articleContainer}>
         <header className={styles.articleHeader}>
-          <h1>Investment Principles: A Guide for Discerning Investors</h1>
-          <p className={styles.publishDate}>Last Updated: June 2025</p>
+          <h1>Your Beginner's Guide to Online Trading</h1>
+          <p className={styles.publishDate}>Last Updated: October 2024</p>
           <p className={styles.intro}>
-            At Quantwater Tech Investments, we believe in empowering our clients with profound insights into the financial markets. This comprehensive guide outlines the core principles of sophisticated investment, designed for individuals and institutions seeking to grow and preserve their wealth through informed decisions.
+            Welcome to the world of trading! This guide is designed for beginners looking to understand the fundamentals of trading financial markets. We'll cover essential concepts, from what trading is, to understanding different markets, key terminology, and how to get started.
           </p>
         </header>
 
         <section className={styles.section}>
           <h2>Table of Contents</h2>
           <ol className={styles.list}>
-            <li><a href="#investment-philosophy">Our Investment Philosophy</a></li>
-            <li><a href="#asset-classes">Understanding Key Asset Classes</a></li>
-            <li><a href="#core-concepts">Core Investment Concepts & Terminology</a></li>
-            <li><a href="#strategic-planning">Strategic Wealth Planning: Our Approach</a></li>
-            <li><a href="#risk-management">Advanced Risk Management Strategies</a></li>
-            <li><a href="#market-analysis">Fundamental & Quantitative Market Analysis</a></li>
-            <li><a href="#economic-drivers">Macroeconomic Drivers & Market Impact</a></li>
-            <li><a href="#client-solutions">Our Client-Centric Investment Solutions</a></li>
-            <li><a href="#insights-resources">Proprietary Research & Client Resources</a></li>
-            <li><a href="#navigating-challenges">Navigating Market Challenges</a></li>
+            <li><a href="#what-is-trading">What is Trading?</a></li>
+            <li><a href="#key-terms">5 Key Trading Terms for Beginners</a></li>
+            <li><a href="#financial-markets">Understanding Financial Markets</a></li>
+            <li><a href="#derivatives-cfds">Understanding Derivatives: CFDs</a></li>
+            <li><a href="#leverage-margin">Leverage and Margin Explained</a></li>
+            <li><a href="#long-short">Going Long vs. Going Short</a></li>
+            <li><a href="#first-trade">How to Make Your First Trade</a></li>
+            <li><a href="#risk-management">Basic Risk Management Strategies</a></li>
+            <li><a href="#learning-resources">Where to Learn More & Practice</a></li>
+            <li><a href="#choosing-platform">Choosing a Trading Platform</a></li>
+            <li><a href="#risks-benefits">Risks and Benefits for Beginner Traders</a></li>
+            <li><a href="#faq">Frequently Asked Questions (FAQs)</a></li>
+            <li><a href="#sources">Sources & Further Reading</a></li>
           </ol>
         </section>
 
-        <section id="investment-philosophy" className={styles.section}>
-          <h2>Our Investment Philosophy</h2>
+        <section id="what-is-trading" className={styles.section}>
+          <h2>What is Trading?</h2>
           <p>
-            Our approach to wealth management is rooted in a disciplined, research-driven methodology. We emphasize long-term capital appreciation, diversification, and a deep understanding of intrinsic value, rather than speculative short-term movements.
+            In simple terms, trading is the act of buying and selling financial instruments with the goal of making a profit. More specifically, it often involves speculating on the price movement of an underlying asset without necessarily owning the asset itself. You are essentially predicting whether an asset's price will rise or fall.
           </p>
+          <p>
+            You can trade a wide variety of financial markets, including stocks (shares), forex (currencies), commodities (like oil and gold), indices, and more. When you trade, you use a trading platform to access these markets and take a position. If your prediction about the price movement is correct, you make a profit; if incorrect, you incur a loss.
+          </p>
+          <p>
+            Many beginner traders start with understanding Contracts for Difference (CFDs) or spread betting, which are types of derivatives. These instruments allow you to speculate on price movements.
+          </p>
+        </section>
 
-          <h3>Key Pillars of Our Investment Philosophy</h3>
+        <section id="key-terms" className={styles.section}>
+          <h2>5 Key Trading Terms for Beginners</h2>
+          <div className={styles.tableContainer}> {/* Optional: for better table styling */}
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>Term</th>
+                  <th>Definition</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>CFD Trading</strong></td>
+                  <td>CFDs (Contracts for Difference) are derivative products that allow you to trade on the price movements of an underlying asset. You agree to exchange the difference in the asset's price from when you open your position to when you close it. You don't own the underlying asset.</td>
+                </tr>
+                <tr>
+                  <td><strong>Going Long / Going Short</strong></td>
+                  <td><strong>Going long</strong> (buying) means you speculate that a market’s price will rise. <strong>Going short</strong> (selling) means you speculate that its price will fall. Short selling carries significant risk if not managed, as prices can theoretically rise indefinitely.</td>
+                </tr>
+                <tr>
+                  <td><strong>Leverage (Trading on Margin)</strong></td>
+                  <td>Trading on margin means opening a position for a fraction of the total trade value. This is called leverage. For example, with a 20% margin, you could open a $1000 position with $200. Leverage magnifies both potential profits and potential losses.</td>
+                </tr>
+                <tr>
+                  <td><strong>Risk</strong></td>
+                  <td>Risk in trading represents the possibility of monetary loss. It's crucial to understand the risks, especially with leveraged trading where losses can exceed your initial deposit. Reputable brokers offer risk management tools.</td>
+                </tr>
+                <tr>
+                  <td><strong>Volatility</strong></td>
+                  <td>Volatility refers to periods when markets move rapidly and unpredictably, often due to news, events, or market sentiment. While it presents higher risks, it can also offer opportunities for traders with a solid plan and risk management.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="financial-markets" className={styles.section}>
+          <h2>Understanding Financial Markets</h2>
+          <p>There are many markets you can trade. Here are some popular ones for beginners:</p>
+
+          <h3>1. Share Trading (Stocks)</h3>
           <ul className={styles.list}>
-            <li><strong>Long-Term Horizon:</strong> Focusing on sustainable growth and compounding returns.</li>
-            <li><strong>Risk-Adjusted Returns:</strong> Prioritizing consistent returns while prudently managing risk.</li>
-            <li><strong>Diversification:</strong> Constructing portfolios across diverse asset classes and geographies.</li>
-            <li><strong>Fundamental Analysis:</strong> Valuing assets based on underlying economic and financial health.</li>
-            <li><strong>Dynamic Adaptation:</strong> Adjusting strategies in response to evolving market conditions and macroeconomic shifts.</li>
+            <li><strong>Definition:</strong> Speculating on the share price of publicly listed companies (e.g., Apple, Google).</li>
+            <li><strong>How it works:</strong> You predict if a company's share price will go up (go long) or down (go short).</li>
+            <li><strong>Considerations:</strong> Company performance, industry trends, and broader economic news can affect share prices.</li>
+          </ul>
+
+          <h3>2. Forex Trading (Currencies)</h3>
+          <ul className={styles.list}>
+            <li><strong>Definition:</strong> The exchange of one currency for another (e.g., EUR/USD, GBP/JPY). It's the largest and most liquid market globally.</li>
+            <li><strong>How it works:</strong> You speculate on whether one currency will strengthen or weaken against another. Forex is traded in pairs.</li>
+            <li><strong>Considerations:</strong> Interest rates, economic data (like inflation and employment), and geopolitical events heavily influence currency prices.</li>
+          </ul>
+
+          <h3>3. Index Trading</h3>
+          <ul className={styles.list}>
+            <li><strong>Definition:</strong> Speculating on the performance of a group of stocks that represent a particular stock market or sector (e.g., S&P 500, FTSE 100, DAX 40).</li>
+            <li><strong>How it works:</strong> Instead of trading individual shares, you trade the overall movement of the index.</li>
+            <li><strong>Considerations:</strong> Provides broader market exposure and can be a way to gauge overall market sentiment.</li>
+          </ul>
+
+          <h3>4. Commodities Trading</h3>
+          <ul className={styles.list}>
+            <li><strong>Definition:</strong> Speculating on the price of raw materials, such as gold, silver, oil, natural gas, or agricultural products like coffee and wheat.</li>
+            <li><strong>How it works:</strong> You predict if the price of a commodity will rise or fall.</li>
+            <li><strong>Considerations:</strong> Supply and demand, geopolitical events, weather, and global economic health can impact commodity prices. Gold is often seen as a "safe-haven" asset.</li>
           </ul>
         </section>
 
-        <section id="asset-classes" className={styles.section}>
-          <h2>Understanding Key Asset Classes</h2>
-
-          <h3>1. Equities (Stocks)</h3>
+        <section id="derivatives-cfds" className={styles.section}>
+          <h2>Understanding Derivatives: CFDs</h2>
+          <p>
+            Many traders, especially beginners, use financial instruments called 'derivatives' to speculate on price movements. A derivative's price is 'derived' from an underlying asset (like a share, currency pair, or commodity). You don't own the asset itself.
+          </p>
+          <p>
+            <strong>Contracts for Difference (CFDs)</strong> are a popular type of derivative. When you trade CFDs:
+          </p>
           <ul className={styles.list}>
-            <li><strong>Definition:</strong> Ownership shares in public or private companies.</li>
-            <li><strong>Characteristics:</strong> Potential for high growth, dividend income, but also higher volatility.</li>
-            <li><strong>Our Approach:</strong> Deep fundamental research, valuation analysis, and sector expertise.</li>
+            <li>You are entering into an agreement to exchange the difference in the price of an asset from the point the contract is opened until it is closed.</li>
+            <li>You can profit from both rising markets (by going long) and falling markets (by going short).</li>
+            <li>CFDs are leveraged products, meaning you only need to deposit a small percentage of the full trade value to open a position. This is known as trading on margin.</li>
           </ul>
-
-          <h3>2. Fixed Income (Bonds)</h3>
-          <ul className={styles.list}>
-            <li><strong>Definition:</strong> Debt instruments issued by governments or corporations.</li>
-            <li><strong>Characteristics:</strong> Capital preservation, stable income, lower volatility than equities.</li>
-            <li><strong>Our Approach:</strong> Credit analysis, interest rate forecasting, duration management.</li>
-          </ul>
-
-          <h3>3. Alternative Investments</h3>
-          <ul className={styles.list}>
-            <li><strong>Definition:</strong> Non-traditional assets like hedge funds, private equity, real estate, commodities.</li>
-            <li><strong>Characteristics:</strong> Diversification benefits, potential for uncorrelated returns, often higher illiquidity.</li>
-            <li><strong>Our Approach:</strong> Rigorous due diligence, access to exclusive opportunities, strategic allocation.</li>
-          </ul>
-
-          <h3>4. Currencies (Forex)</h3>
-          <ul className={styles.list}>
-            <li><strong>Definition:</strong> Exchange of one currency for another.</li>
-            <li><strong>Characteristics:</strong> Influenced by interest rates, economic growth, and geopolitical events.</li>
-            <li><strong>Our Approach:</strong> Macroeconomic analysis, hedging strategies for international portfolios.</li>
-          </ul>
+          <p>
+            It's important to remember that while leverage can amplify profits, it can also magnify losses, which can exceed your initial deposit.
+          </p>
         </section>
 
-        <section id="core-concepts" className={styles.section}>
-          <h2>Core Investment Concepts & Terminology</h2>
-
-          <h3>Key Investment Metrics</h3>
+        <section id="leverage-margin" className={styles.section}>
+          <h2>Leverage and Margin Explained</h2>
+          <p>
+            Leverage allows you to control a large position with a relatively small amount of capital (your margin). The margin is the deposit required to open and maintain a leveraged position.
+          </p>
           <ul className={styles.list}>
-            <li><strong>Alpha:</strong> The excess return of an investment relative to the return of a benchmark index.</li>
-            <li><strong>Beta:</strong> A measure of a stock&apos;s volatility in relation to the overall market.</li>
-            <li><strong>Dividend Yield:</strong> The ratio of a company&apos;s annual dividend per share to its stock price.</li>
-            <li><strong>P/E Ratio (Price-to-Earnings):</strong> A valuation ratio of a company&apos;s current share price compared to its per-share earnings.</li>
-            <li><strong>Diversification:</strong> Spreading investments across various assets to reduce risk.</li>
-            <li><strong>Correlation:</strong> The degree to which two securities move in relation to each other.</li>
+            <li><strong>Example:</strong> If a trading provider offers 1:20 leverage (or a 5% margin requirement) on a particular instrument, you could control a $10,000 position with just $500 in your account.</li>
+            <li><strong>Magnified Profits & Losses:</strong> Your profit or loss is calculated on the full size of your position, not just the margin you deposited. This means a small market movement can have a large impact on your trading capital, positively or negatively.</li>
+            <li><strong>Margin Calls:</strong> If the market moves against your position and your account equity falls below the required margin level, your broker may issue a "margin call," requiring you to deposit more funds or close positions to reduce your leverage.</li>
           </ul>
-
-          <h3>Execution & Order Types</h3>
-          <ul className={styles.list}>
-            <li><strong>Market Order:</strong> An order to buy or sell a security immediately at the best available current price.</li>
-            <li><strong>Limit Order:</strong> An order to buy or sell a security at a specific price or better.</li>
-            <li><strong>Stop-Loss Order:</strong> An order placed to limit an investor&apos;s loss on a position.</li>
-            <li><strong>Trailing Stop:</strong> A stop-loss order that adjusts dynamically with the price of the security.</li>
-          </ul>
+          <p>
+            Understanding how leverage and margin work is critical before trading with them. Always use leverage cautiously and ensure you understand the risks involved.
+          </p>
         </section>
 
-        <section id="strategic-planning" className={styles.section}>
-          <h2>Strategic Wealth Planning: Our Approach</h2>
-
-          <h3>Step 1: Discovery & Goal Alignment</h3>
-          <p>We begin by thoroughly understanding your financial aspirations, risk tolerance, and time horizon.</p>
+        <section id="long-short" className={styles.section}>
+          <h2>Going Long vs. Going Short</h2>
+          <p>
+            With derivative products like CFDs, you have the flexibility to trade in both directions of the market:
+          </p>
           <ul className={styles.list}>
-            <li>Personalized financial assessment</li>
-            <li>Defining short-term and long-term objectives</li>
-            <li>Comprehensive risk profiling</li>
+            <li><strong>Going Long (Buy):</strong> You open a 'buy' position if you believe the price of an asset will rise. If your prediction is correct and the price increases, you can close your position for a profit. If the price falls, you make a loss.</li>
+            <li><strong>Going Short (Sell):</strong> You open a 'sell' position if you believe the price of an asset will fall. If your prediction is correct and the price decreases, you can close your position for a profit. If the price rises, you make a loss.</li>
           </ul>
+          <p>
+            The ability to go short offers opportunities even in falling markets. However, short selling has unique risks. While the potential profit from a short position is capped (as an asset's price cannot fall below zero), the potential loss is theoretically unlimited if the price keeps rising, unless risk management tools like stop-loss orders are used.
+          </p>
+        </section>
 
-          <h3>Step 2: Portfolio Construction & Optimization</h3>
-          <p>Based on your profile, we design a bespoke portfolio tailored to your unique needs.</p>
-          <ul className={styles.list}>
-            <li>Strategic asset allocation</li>
-            <li>Selection of high-quality investment vehicles</li>
-            <li>Tax-efficient structuring</li>
-          </ul>
-
-          <h3>Step 3: Ongoing Monitoring & Rebalancing</h3>
-          <p>Markets evolve, and so should your portfolio. We provide continuous oversight.</p>
-          <ul className={styles.list}>
-            <li>Regular performance reviews</li>
-            <li>Proactive adjustments to market shifts</li>
-            <li>Rebalancing to maintain target asset allocation</li>
-          </ul>
-
-          <h3>Step 4: Comprehensive Financial Planning</h3>
-          <p>Beyond investments, we integrate wealth planning with your broader financial landscape.</p>
-          <ul className={styles.list}>
-            <li>Retirement planning</li>
-            <li>Estate planning coordination</li>
-            <li>Tax optimization strategies</li>
-            <li>Philanthropic advisory</li>
-          </ul>
+        <section id="first-trade" className={styles.section}>
+          <h2>How to Make Your First Trade</h2>
+          <p>Once you've done your research and are ready, here’s a general process:</p>
+          <ol className={styles.list}>
+            <li><strong>Open and Fund Your Account:</strong> Choose a reputable broker and open a live trading account. Complete any verification steps and deposit funds. Many brokers also offer demo accounts to practice risk-free.</li>
+            <li><strong>Market Analysis & Opportunity Selection:</strong> Use research tools, charts, and news to identify a potential trading opportunity. Decide which market you want to trade.</li>
+            <li><strong>Decide to Buy or Sell:</strong> Based on your analysis, decide if you think the market’s price will rise (buy/go long) or fall (sell/go short).</li>
+            <li><strong>Select Your Trade Size:</strong> Determine how many units or contracts you want to trade. This will affect your potential profit or loss and the margin required.</li>
+            <li><strong>Set Risk Management Orders:</strong> Consider using stop-loss orders (to limit potential losses) and take-profit orders (to secure profits at a certain level).</li>
+            <li><strong>Open and Monitor Your Position:</strong> Place your trade. Keep an eye on your open position and market movements. Be prepared to close it based on your trading plan.</li>
+          </ol>
         </section>
 
         <section id="risk-management" className={styles.section}>
-          <h2>Advanced Risk Management Strategies</h2>
+          <h2>Basic Risk Management Strategies</h2>
+          <p>Effective risk management is crucial for all traders, especially beginners. Here are some fundamental techniques:</p>
+          <ul className={styles.list}>
+            <li><strong>Use Stop-Loss Orders:</strong> A stop-loss order automatically closes your trade if the market moves against you to a predetermined price level, helping to limit potential losses.</li>
+            <li><strong>Use Take-Profit Orders:</strong> A take-profit order automatically closes your trade when it reaches a certain profit level, helping you secure gains.</li>
+            <li><strong>Only Risk What You Can Afford to Lose:</strong> Never trade with money you cannot afford to lose. Trading involves substantial risk.</li>
+            <li><strong>Position Sizing:</strong> Don't risk too much of your capital on a single trade. Many traders follow rules like risking only 1-2% of their trading capital per trade.</li>
+            <li><strong>Diversification (with caution):</strong> While diversification can spread risk, for beginners, it's often better to focus on understanding a few markets well rather than spreading too thin too quickly.</li>
+            <li><strong>Stay Informed:</strong> Keep up with market news and events that could impact your trades.</li>
+            <li><strong>Have a Trading Plan:</strong> Define your goals, risk tolerance, strategy, and rules for entering and exiting trades. Stick to your plan.</li>
+          </ul>
+        </section>
+
+        <section id="learning-resources" className={styles.section}>
+          <h2>Where to Learn More & Practice</h2>
           <p>
-            Effective risk management is paramount to preserving and growing capital, especially in volatile markets. Our strategies are designed to mitigate potential downsides while optimizing for returns.
+            The journey of learning to trade is ongoing. Many reputable brokers and financial education websites offer a wealth of resources:
           </p>
-
-          <h3>Holistic Risk Assessment</h3>
           <ul className={styles.list}>
-            <li><strong>Market Risk:</strong> Managing exposure to systemic market fluctuations.</li>
-            <li><strong>Credit Risk:</strong> Analyzing the solvency of debt issuers.</li>
-            <li><strong>Liquidity Risk:</strong> Ensuring portfolio flexibility for necessary adjustments.</li>
-            <li><strong>Concentration Risk:</strong> Avoiding excessive exposure to single assets or sectors.</li>
-            <li><strong>Geopolitical Risk:</strong> Assessing the impact of global events on investments.</li>
-          </ul>
-
-          <h3>Sophisticated Mitigation Techniques</h3>
-          <ul className={styles.list}>
-            <li><strong>Hedging Strategies:</strong> Utilizing derivatives and other instruments to offset potential losses.</li>
-            <li><strong>Active Diversification:</strong> Beyond traditional asset classes, incorporating uncorrelated investments.</li>
-            <li><strong>Stress Testing:</strong> Simulating portfolio performance under various adverse market scenarios.</li>
-            <li><strong>Dynamic Asset Allocation:</strong> Adjusting exposure based on evolving market conditions and risk appetites.</li>
+            <li><strong>Educational Courses & Articles:</strong> Look for structured courses, articles, and guides covering trading basics, technical analysis, fundamental analysis, and risk management.</li>
+            <li><strong>Webinars and Seminars:</strong> Live or recorded sessions with market experts can provide valuable insights.</li>
+            <li><strong>Demo Accounts:</strong> This is one of the most valuable tools for beginners. A demo account allows you to practice trading with virtual funds in a real market environment without risking any actual money. It's an excellent way to test strategies, get familiar with a trading platform, and build confidence.</li>
+            <li><strong>Financial News & Analysis:</strong> Reputable financial news sources provide market updates and analysis.</li>
           </ul>
         </section>
 
-        <section id="market-analysis" className={styles.section}>
-          <h2>Fundamental & Quantitative Market Analysis</h2>
-          <p>
-            Our investment decisions are underpinned by rigorous, multi-faceted analysis, combining both fundamental insights and sophisticated quantitative models.
-          </p>
-
-          <h3>Fundamental Analysis</h3>
-          <p>Focuses on a company&apos;s intrinsic value by examining economic, industry, and financial factors.</p>
+        <section id="choosing-platform" className={styles.section}>
+          <h2>Choosing a Trading Platform/Broker</h2>
+          <p>Selecting the right trading platform and broker is a key step. Consider these factors:</p>
           <ul className={styles.list}>
-            <li><strong>Financial Statement Analysis:</strong> Deep dive into balance sheets, income statements, cash flow.</li>
-            <li><strong>Industry & Sector Research:</strong> Identifying growth drivers and competitive landscapes.</li>
-            <li><strong>Management Quality Assessment:</strong> Evaluating leadership and corporate governance.</li>
-            <li><strong>Macroeconomic Context:</strong> Understanding how broader economic trends influence valuations.</li>
-          </ul>
-
-          <h3>Quantitative Analysis</h3>
-          <p>Employs mathematical and statistical models to identify patterns and predict market movements.</p>
-          <ul className={styles.list}>
-            <li><strong>Algorithmic Trading Strategies:</strong> Rule-based systems for efficient execution.</li>
-            <li><strong>Risk Factor Modeling:</strong> Identifying and quantifying key risk drivers in portfolios.</li>
-            <li><strong>Backtesting & Simulation:</strong> Validating strategies against historical data.</li>
-            <li><strong>Behavioral Finance Integration:</strong> Understanding market psychology and its impact on pricing.</li>
+            <li><strong>Regulation:</strong> Ensure the broker is regulated by a reputable financial authority in your jurisdiction or a major financial center. This provides a level of security and oversight.</li>
+            <li><strong>Trading Costs:</strong> Understand the fee structure, including spreads, commissions, and any overnight financing charges.</li>
+            <li><strong>Platform Features:</strong> Look for a user-friendly platform with good charting tools, a range of order types, and reliable execution.</li>
+            <li><strong>Market Access:</strong> Check if the broker offers the range of markets you are interested in trading.</li>
+            <li><strong>Customer Support:</strong> Good customer service can be invaluable, especially when you're starting out.</li>
+            <li><strong>Educational Resources & Demo Account:</strong> A broker that invests in educating its clients and offers a robust demo account is often a good sign.</li>
           </ul>
         </section>
 
-        <section id="economic-drivers" className={styles.section}>
-          <h2>Macroeconomic Drivers & Market Impact</h2>
-          <p>
-            Global macroeconomic forces significantly shape financial markets. Our team closely monitors these indicators to anticipate trends and inform strategic decisions.
-          </p>
-
-          <h3>Key Economic Indicators</h3>
-          <h4>Global Economic Data</h4>
-          <ul className={styles.list}>
-            <li><strong>GDP Growth:</strong> Overall economic health and expansion.</li>
-            <li><strong>Inflation Rates (CPI/PPI):</strong> Impact on purchasing power and interest rate policy.</li>
-            <li><strong>Employment Data (e.g., Non-Farm Payrolls):</strong> Consumer spending power and economic vitality.</li>
-            <li><strong>Central Bank Policy (Interest Rates, QE/QT):</strong> Cost of capital and liquidity.</li>
-            <li><strong>Trade Balances & Geopolitical Developments:</strong> Influence on currency markets and global supply chains.</li>
-          </ul>
-
-          <h3>Our Approach to Economic Intelligence</h3>
-          <ol className={styles.list}>
-            <li><strong>Dedicated Research Team:</strong> In-house economists and strategists providing proprietary insights.</li>
-            <li><strong>Global Market Surveillance:</strong> Continuous monitoring of key economic releases and policy changes worldwide.</li>
-            <li><strong>Scenario Planning:</strong> Developing investment strategies for various economic outcomes.</li>
-            <li><strong>Client Briefings:</strong> Regular updates and analyses shared with our clients to keep them informed.</li>
-          </ol>
+        <section id="risks-benefits" className={styles.section}>
+          <h2>Risks and Benefits for Beginner Traders</h2>
+          <p>It's important to weigh the potential rewards against the inherent risks before trading.</p>
+          <div className={styles.tableContainer}>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>Risks</th>
+                  <th>Benefits</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Leverage Risk:</strong> While leverage can magnify profits, it equally magnifies losses. Losses can exceed your initial deposit.</td>
+                  <td><strong>Potential for Profit:</strong> Trading offers the opportunity to profit from rising and falling markets.</td>
+                </tr>
+                <tr>
+                  <td><strong>Market Volatility:</strong> Markets can move quickly and unpredictably, leading to rapid losses if not managed.</td>
+                  <td><strong>Flexibility:</strong> Ability to trade various markets (forex, stocks, commodities) and go long or short.</td>
+                </tr>
+                <tr>
+                  <td><strong>Complexity:</strong> Understanding financial markets, analysis techniques, and trading platforms requires time and effort.</td>
+                  <td><strong>Accessibility:</strong> Online platforms have made trading more accessible to individuals.</td>
+                </tr>
+                <tr>
+                  <td><strong>Emotional Trading:</strong> Fear and greed can lead to poor decision-making. A disciplined approach is essential.</td>
+                  <td><strong>Leverage (Benefit side):</strong> Can stretch capital further, allowing control of larger positions with a smaller initial outlay (though this is also a risk).</td>
+                </tr>
+                <tr>
+                  <td><strong>No Guarantees:</strong> Past performance is not indicative of future results. Profit is not guaranteed.</td>
+                  <td><strong>Skill Development:</strong> Learning to trade develops analytical and decision-making skills.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
-        <section id="client-solutions" className={styles.section}>
-          <h2>Our Client-Centric Investment Solutions</h2>
-          <p>
-            At Quantwater Tech Investments, we offer a suite of tailored investment solutions designed to meet the diverse and complex needs of our esteemed clientele.
-          </p>
+        <section id="faq" className={styles.section}>
+          <h2>Frequently Asked Questions (FAQs)</h2>
+          <dl className={styles.list}>
+            <dt><strong>How much money do I need to start trading?</strong></dt>
+            <dd>This varies greatly depending on the broker and the type of trading. Some brokers allow you to start with a few hundred dollars. However, it's crucial to only trade with money you can afford to lose.</dd>
 
-          <h3>For High Net Worth Individuals & Families</h3>
-          <ol className={styles.list}>
-            <li><strong>Discretionary Portfolio Management</strong>
-              <ul>
-                <li>Fully managed portfolios aligned with individual risk profiles and goals.</li>
-                <li>Access to exclusive investment opportunities.</li>
-              </ul>
-            </li>
-            <li><strong>Wealth Preservation & Transfer</strong>
-              <ul>
-                <li>Strategies for intergenerational wealth transfer.</li>
-                <li>Estate planning coordination and philanthropic advisory.</li>
-              </ul>
-            </li>
-          </ol>
+            <dt><strong>Can I teach myself to trade?</strong></dt>
+            <dd>Yes, many successful traders are self-taught, utilizing online resources, books, and practice. However, it requires discipline, dedication, and continuous learning.</dd>
 
-          <h3>For Institutions & Endowments</h3>
-          <ol className={styles.list}>
-            <li><strong>Customized Institutional Portfolios</strong>
-              <ul>
-                <li>Solutions tailored to specific mandates, liquidity needs, and regulatory requirements.</li>
-                <li>Strategic asset allocation models for long-term growth.</li>
-              </ul>
-            </li>
-            <li><strong>Advisory & Consulting Services</strong>
-              <ul>
-                <li>Independent advice on investment policy, manager selection, and performance evaluation.</li>
-                <li>Guidance on complex financial structures.</li>
-              </ul>
-            </li>
-          </ol>
+            <dt><strong>Is trading gambling?</strong></dt>
+            <dd>While trading involves risk and uncertainty, it differs from gambling when approached with a strategy, analysis, and risk management. Gambling relies purely on chance, whereas informed trading aims to make decisions based on probabilities and analysis.</dd>
 
-          <h3>Specialized Strategies</h3>
-          <ol className={styles.list}>
-            <li><strong>Sustainable & Impact Investing</strong>
-              <ul>
-                <li>Portfolios integrating environmental, social, and governance (ESG) criteria.</li>
-                <li>Investments designed to generate positive social and environmental impact alongside financial returns.</li>
-              </ul>
-            </li>
-            <li><strong>Alternatives Access</strong>
-              <ul>
-                <li>Curated access to private equity, hedge funds, and real estate opportunities.</li>
-                <li>Sophisticated due diligence and monitoring.</li>
-              </ul>
-            </li>
-          </ol>
-        </section>
+            <dt><strong>What is the best market for beginners to trade?</strong></dt>
+            <dd>There's no single "best" market. Some beginners start with forex due to its liquidity and 24-hour availability, while others prefer stock indices or specific shares they are familiar with. It's often recommended to start with one or two markets and learn them well. Using a demo account can help you find what suits you.</dd>
 
-        <section id="insights-resources" className={styles.section}>
-          <h2>Proprietary Research & Client Resources</h2>
-
-          <h3>Our Thought Leadership</h3>
-          <ol className={styles.list}>
-            <li><strong>Global Market Outlook Report:</strong> Our quarterly analysis of macroeconomic trends and market forecasts.</li>
-            <li><strong>Investment Perspectives Series:</strong> Deep-dive articles on specific asset classes, sectors, or investment themes.</li>
-            <li><strong>Webinars & Client Events:</strong> Exclusive sessions with our lead strategists and portfolio managers.</li>
-            <li><strong>Custom Research Briefs:</strong> Tailored analyses on request for complex client situations.</li>
-          </ol>
-
-          <h3>Recommended External Resources</h3>
-          <ol className={styles.list}>
-            <li><strong>Bloomberg Professional Terminal:</strong> The industry standard for real-time market data and news.</li>
-            <li><strong>Financial Times / Wall Street Journal:</strong> In-depth global financial news and analysis.</li>
-            <li><strong>CFA Institute Publications:</strong> Advanced investment theory and best practices.</li>
-            <li><strong>Academic Journals (e.g., Journal of Finance):</strong> Leading-edge research in financial economics.</li>
-          </ol>
-
-          <h3>Direct Access & Support</h3>
-          <ul className={styles.list}>
-            <li><strong>Dedicated Relationship Manager:</strong> Your primary point of contact for all inquiries.</li>
-            <li><strong>Secure Client Portal:</strong> Access to portfolio statements, performance reports, and secure communication.</li>
-            <li><strong>Proprietary Analytical Tools:</strong> For visualizing portfolio metrics and insights.</li>
-          </ul>
-        </section>
-
-        <section id="navigating-challenges" className={styles.section}>
-          <h2>Navigating Market Challenges</h2>
-
-          <ol className={styles.list}>
-            <li><strong>Volatile Markets</strong>
-              <ul>
-                <li><strong>Challenge:</strong> Unpredictable price swings and heightened uncertainty.</li>
-                <li><strong>Our Approach:</strong> Emphasis on long-term conviction, strategic rebalancing, and robust risk overlays.</li>
-              </ul>
-            </li>
-            <li><strong>Inflationary Environments</strong>
-              <ul>
-                <li><strong>Challenge:</strong> Erosion of purchasing power and asset values.</li>
-                <li><strong>Our Approach:</strong> Allocation to inflation-hedging assets (e.g., real assets, commodities, TIPS) and inflation-linked strategies.</li>
-              </ul>
-            </li>
-            <li><strong>Low-Yield Environments</strong>
-              <ul>
-                <li><strong>Challenge:</strong> Difficulty generating adequate income from traditional fixed income.</li>
-                <li><strong>Our Approach:</strong> Exploring alternative income strategies, high-quality dividend stocks, and opportunistic credit.</li>
-              </ul>
-            </li>
-            <li><strong>Geopolitical Uncertainty</strong>
-              <ul>
-                <li><strong>Challenge:</strong> Non-economic factors impacting global markets.</li>
-                <li><strong>Our Approach:</strong> Diversification across geographies, active monitoring of global events, and scenario analysis.</li>
-              </ul>
-            </li>
-          </ol>
-
-          <h3>Our Commitment to You:</h3>
-          <ul className={styles.list}>
-            <li>[ ] Deep understanding of your unique financial landscape</li>
-            <li>[ ] Construction of resilient, goal-aligned portfolios</li>
-            <li>[ ] Proactive risk management and market adaptation</li>
-            <li>[ ] Transparent communication and reporting</li>
-            <li>[ ] Unwavering commitment to your long-term financial success</li>
-          </ul>
+            <dt><strong>How do I practice trading?</strong></dt>
+            <dd>The best way to practice is by using a demo account offered by most brokers. This allows you to trade with virtual money in real market conditions, so you can test strategies and get comfortable with the platform without financial risk.</dd>
+          </dl>
         </section>
 
         <section className={styles.section}>
-          <h2>Concluding Insights</h2>
+          <h2>Concluding Thoughts for Aspiring Traders</h2>
           <p>
-            Effective wealth management is an ongoing journey that requires expertise, diligence, and a profound understanding of global markets. At Quantwater Tech Investments, we are committed to being your trusted partner, providing the strategic guidance and sophisticated solutions necessary to navigate complexities and achieve your financial aspirations.
+            Embarking on your trading journey can be both exciting and challenging. Success in trading typically comes from a combination of education, practice, discipline, and robust risk management. Remember that learning is a continuous process. Start small, focus on understanding the fundamentals, and never risk more than you can afford to lose.
           </p>
-          <ol className={styles.list}>
-            <li><strong>Expertise:</strong> Leveraging decades of market experience and proprietary research.</li>
-            <li><strong>Partnership:</strong> Building enduring relationships based on trust and shared objectives.</li>
-            <li><strong>Adaptability:</strong> Evolving strategies to meet dynamic market conditions.</li>
-            <li><strong>Integrity:</strong> Upholding the highest ethical standards in all our dealings.</li>
-            <li><strong>Results:</strong> Focused on delivering consistent, risk-adjusted returns aligned with your goals.</li>
-          </ol>
           <p>
-            We invite you to connect with us to discuss how our bespoke investment advisory services can benefit you.
+            We encourage you to utilize educational resources, practice on a demo account, and develop a solid trading plan before committing real capital.
           </p>
+        </section>
+
+        <section id="sources" className={styles.section}>
+          <h2>Sources & Further Reading</h2>
+          <p>The content in this guide has been compiled and adapted for educational purposes, drawing inspiration from publicly available information and common educational materials provided by industry leaders, including:</p>
+          <ul className={styles.list}>
+            <li><strong>IG.com:</strong> For their comprehensive guides and educational content for beginner traders. (Content specifically referenced includes their "Trading for beginners" guide structure and key term definitions).</li>
+            <li><strong>ADSS.com:</strong> For their educational resources on CFD trading, forex, and market analysis typically offered to new traders. (General concepts around CFDs, forex characteristics, and risk management principles are informed by common industry educational material like that found on ADSS).</li>
+          </ul>
+          <p>For further learning, consider exploring the educational sections of reputable financial news websites and regulated brokers.</p>
         </section>
 
         <footer className={styles.articleFooter}>
           <p>
-            <strong>Disclaimer:</strong> This guide provides general information about investment principles and is not intended as financial advice tailored to any specific individual or entity. Investment involves risks, including the possible loss of principal. Past performance is not indicative of future results. Clients should consult with a qualified financial professional to discuss their specific investment objectives and risk tolerance. All information is subject to change without notice.
+            <strong>Disclaimer:</strong> This guide provides general information about trading and is not intended as financial advice tailored to any specific individual. Trading financial instruments, especially leveraged products like CFDs, involves a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Past performance is not indicative of future results. Before deciding to trade, you should carefully consider your investment objectives, level of experience, and risk appetite. Consult with an independent financial advisor if you have any doubts.
           </p>
         </footer>
       </main>
