@@ -110,7 +110,7 @@ export default function Trading101Guide() {
           <ul className={styles.list}>
             <li><strong>Definition:</strong> Speculating on the price of raw materials, such as gold, silver, oil, natural gas, or agricultural products like coffee and wheat.</li>
             <li><strong>How it works:</strong> You predict if the price of a commodity will rise or fall.</li>
-            <li><strong>Considerations:</strong> Supply and demand, geopolitical events, weather, and global economic health can impact commodity prices. Gold is often seen as a "safe-haven" asset.</li>
+            <li><strong>Considerations:</strong> Supply and demand, geopolitical events, weather, and global economic health can impact commodity prices. Gold is often seen as a &quotsafe-haven&quot asset.</li>
           </ul>
         </section>
 
@@ -140,7 +140,7 @@ export default function Trading101Guide() {
           <ul className={styles.list}>
             <li><strong>Example:</strong> If a trading provider offers 1:20 leverage (or a 5% margin requirement) on a particular instrument, you could control a $10,000 position with just $500 in your account.</li>
             <li><strong>Magnified Profits & Losses:</strong> Your profit or loss is calculated on the full size of your position, not just the margin you deposited. This means a small market movement can have a large impact on your trading capital, positively or negatively.</li>
-            <li><strong>Margin Calls:</strong> If the market moves against your position and your account equity falls below the required margin level, your broker may issue a "margin call," requiring you to deposit more funds or close positions to reduce your leverage.</li>
+            <li><strong>Margin Calls:</strong> If the market moves against your position and your account equity falls below the required margin level, your broker may issue a &quotmargin call,&quot requiring you to deposit more funds or close positions to reduce your leverage.</li>
           </ul>
           <p>
             Understanding how leverage and margin work is critical before trading with them. Always use leverage cautiously and ensure you understand the risks involved.
@@ -264,7 +264,7 @@ export default function Trading101Guide() {
             <dd>While trading involves risk and uncertainty, it differs from gambling when approached with a strategy, analysis, and risk management. Gambling relies purely on chance, whereas informed trading aims to make decisions based on probabilities and analysis.</dd>
 
             <dt><strong>What is the best market for beginners to trade?</strong></dt>
-            <dd>There&apos;s no single "best" market. Some beginners start with forex due to its liquidity and 24-hour availability, while others prefer stock indices or specific shares they are familiar with. It&apos;s often recommended to start with one or two markets and learn them well. Using a demo account can help you find what suits you.</dd>
+            <dd>There&apos;s no single &quotbest&quot market. Some beginners start with forex due to its liquidity and 24-hour availability, while others prefer stock indices or specific shares they are familiar with. It&apos;s often recommended to start with one or two markets and learn them well. Using a demo account can help you find what suits you.</dd>
 
             <dt><strong>How do I practice trading?</strong></dt>
             <dd>The best way to practice is by using a demo account offered by most brokers. This allows you to trade with virtual money in real market conditions, so you can test strategies and get comfortable with the platform without financial risk.</dd>
@@ -285,7 +285,7 @@ export default function Trading101Guide() {
           <h2>Sources & Further Reading</h2>
           <p>The content in this guide has been compiled and adapted for educational purposes, drawing inspiration from publicly available information and common educational materials provided by industry leaders, including:</p>
           <ul className={styles.list}>
-            <li><strong>IG.com:</strong> For their comprehensive guides and educational content for beginner traders. (Content specifically referenced includes their "Trading for beginners" guide structure and key term definitions).</li>
+            <li><strong>IG.com:</strong> For their comprehensive guides and educational content for beginner traders. (Content specifically referenced includes their "Trading for beginners&quot guide structure and key term definitions).</li>
             <li><strong>ADSS.com:</strong> For their educational resources on CFD trading, forex, and market analysis typically offered to new traders. (General concepts around CFDs, forex characteristics, and risk management principles are informed by common industry educational material like that found on ADSS).</li>
           </ul>
           <p>For further learning, consider exploring the educational sections of reputable financial news websites and regulated brokers.</p>
