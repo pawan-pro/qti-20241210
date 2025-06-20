@@ -110,7 +110,7 @@ export default function Trading101Guide() {
           <ul className={styles.list}>
             <li><strong>Definition:</strong> Speculating on the price of raw materials, such as gold, silver, oil, natural gas, or agricultural products like coffee and wheat. Can be traded via CFDs, futures, or ETFs.</li>
             <li><strong>How it works:</strong> You predict if the price of a commodity will rise or fall.</li>
-            <li><strong>Considerations:</strong> Supply and demand, geopolitical events, weather, and global economic health can impact commodity prices. Gold is often seen as a &quotsafe-haven&quot asset.</li>
+            <li><strong>Considerations:</strong> Supply and demand, geopolitical events, weather, and global economic health can impact commodity prices. Gold is often seen as a &quot;safe-haven&quot; asset.</li>
           </ul>
         </section>
 
