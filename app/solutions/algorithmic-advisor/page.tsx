@@ -92,10 +92,10 @@ return (
 
         <h3>2. Risk Management</h3>
         <ul className={styles.list}>
-          <li><strong>Risk per Trade:</strong> Adhering to standard trading guidelines, the risk amount per trade should generally not exceed a small percentage (e.g., 1-5%) of your trading balance. The EA may have an input for this (e.g., "RiskPercentage"), or this should be manually considered when setting position sizes if the EA calculates lot size based on fixed stop-loss pips.</li>
+          <li><strong>Risk per Trade:</strong> Adhering to standard trading guidelines, the risk amount per trade should generally not exceed a small percentage (e.g., 1-5%) of your trading balance. The EA may have an input for this (e.g., &apos;RiskPercentage&apos;), or this should be manually considered when setting position sizes if the EA calculates lot size based on fixed stop-loss pips.</li>
           <li><strong>Risk-Reward Ratio:</strong> The EA facilitates strategies aiming for a favorable risk-reward ratio (e.g., 1:3, 1:4, up to 1:6 or more). This, combined with an understanding of the win ratio from historical data or backtesting, helps determine appropriate risk levels, take-profit points, and position sizes.
             <ul>
-                <li><strong>Example from Blog:</strong> For a $100,000 trading account, risking 5% per trade (via trading volume/position sizing currently) translates to a $5,000 stop-loss. With a 1:3 risk-reward, the take-profit would be $15,000. These risk parameters guide the EA's settings.</li>
+                <li><strong>Example from Blog:</strong> For a $100,000 trading account, risking 5% per trade (via trading volume/position sizing currently) translates to a $5,000 stop-loss. With a 1:3 risk-reward, the take-profit would be $15,000. These risk parameters guide the EA&apos;s settings.</li>
             </ul>
           </li>
           <li>The guiding principle is that a win ratio of at least 50% combined with a risk-reward ratio of over 2x can lead to positive expected cash flow, helping to minimize drawdowns and preserve capital.</li>
@@ -117,7 +117,7 @@ return (
           The RiskEventTrader EA is designed for the MetaTrader 5 (MT5) platform, a popular and powerful trading platform used by millions of traders worldwide.
         </p>
         <p>
-          If you don't have MT5 installed, you can download it from the official website:
+          If you don&apos;t have MT5 installed, you can download it from the official website:
         </p>
         <a
           href="https://www.metatrader5.com/en/download"
@@ -152,10 +152,10 @@ return (
           <li>
             <strong>Compile the EA:</strong>
             <ul>
-              <li>In the MT5 Navigator window (View &gt; Navigator, or Ctrl+N), find "Expert Advisors". If <code>{suggestedFileName}</code> is not visible, right-click on "Expert Advisors" and select "Refresh".</li>
+              <li>In the MT5 Navigator window (View &gt; Navigator, or Ctrl+N), find &apos;Expert Advisors&apos;. If <code>{suggestedFileName}</code> is not visible, right-click on &apos;Expert Advisors&apos; and select &apos;Refresh&apos;.</li>
               <li>Find the <code>{suggestedFileName}</code> file in the list.</li>
-              <li>Right-click on it and select "Modify". This will open the MetaEditor with the EA's source code.</li>
-              <li>In MetaEditor, click the "Compile" button (or press F7). Check the "Errors" tab at the bottom of MetaEditor for any compilation issues. If successful, an <code>RiskEventTrader.ex5</code> file will be created in the same <code>MQL5/Experts</code> folder.</li>
+              <li>Right-click on it and select &apos;Modify&apos;. This will open the MetaEditor with the EA&apos;s source code.</li>
+              <li>In MetaEditor, click the &apos;Compile&apos; button (or press F7). Check the &apos;Errors&apos; tab at the bottom of MetaEditor for any compilation issues. If successful, an <code>RiskEventTrader.ex5</code> file will be created in the same <code>MQL5/Experts</code> folder.</li>
             </ul>
           </li>
           <li>
@@ -164,24 +164,24 @@ return (
           </li>
           <li>
             <strong>Attach EA to a Chart:</strong>
-             Drag the compiled EA (<code>RiskEventTrader.ex5</code>) from the Navigator window onto the chart of the financial instrument you want it to trade. Alternatively, right-click the EA and select "Attach to a chart".
+             Drag the compiled EA (<code>RiskEventTrader.ex5</code>) from the Navigator window onto the chart of the financial instrument you want it to trade. Alternatively, right-click the EA and select &apos;Attach to a chart&apos;.
           </li>
           <li>
             <strong>Configure EA Settings:</strong>
              A properties window will pop up.
             <ul>
-              <li>In the "Common" tab, ensure "Allow Algo Trading" is checked. You might also see options like "Allow DLL imports" if the EA requires them (check EA documentation).</li>
-              <li>In the "Inputs" tab, adjust any parameters specific to the EA as needed. These are the parameters derived from your volatility analysis (e.g., stop-loss multiplier, take-profit multiplier based on Volatility Units, position sizing rules). Review the EA's documentation or comments in the code for guidance on these parameters.</li>
+              <li>In the &apos;Common&apos; tab, ensure &apos;Allow Algo Trading&apos; is checked. You might also see options like &apos;Allow DLL imports&apos; if the EA requires them (check EA documentation).</li>
+              <li>In the &apos;Inputs&apos; tab, adjust any parameters specific to the EA as needed. These are the parameters derived from your volatility analysis (e.g., stop-loss multiplier, take-profit multiplier based on Volatility Units, position sizing rules). Review the EA&apos;s documentation or comments in the code for guidance on these parameters.</li>
             </ul>
-            Click "OK".
+            Click &apos;OK&apos;.
           </li>
           <li>
             <strong>Enable Algo Trading:</strong>
-             Ensure the main "Algo Trading" button in the MT5 toolbar is enabled (it should be green with a play icon).
+             Ensure the main &apos;Algo Trading&apos; button in the MT5 toolbar is enabled (it should be green with a play icon).
           </li>
           <li>
             <strong>Check the Journal/Experts Tab:</strong>
-             Monitor the "Experts" and "Journal" tabs at the bottom of the Terminal window (View &gt; Toolbox, or Ctrl+T) for any messages, initialization status, or errors from the EA. A smiley face (or a specific icon for the EA) on the top right of the chart indicates the EA is active. A sad face or crossed-out icon means it's not active.
+             Monitor the &apos;Experts&apos; and &apos;Journal&apos; tabs at the bottom of the Terminal window (View &gt; Toolbox, or Ctrl+T) for any messages, initialization status, or errors from the EA. A smiley face (or a specific icon for the EA) on the top right of the chart indicates the EA is active. A sad face or crossed-out icon means it&apos;s not active.
           </li>
         </ol>
       </section>
