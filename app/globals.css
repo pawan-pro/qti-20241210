@@ -1,5 +1,48 @@
 /* globals.css */
 /* General Reset */
+
+:root {
+  /* Sophisticated Grey Palette for Investment Advisory */
+  --bb-charcoal: #2c2c2c;
+  --bb-dark-grey: #404040;
+  --bb-medium-grey: #666666;
+  --bb-light-grey: #8a8a8a;
+  --bb-silver: #b8b8b8;
+  --bb-platinum: #e8e8e8;
+  --bb-pearl: #f5f5f5;
+  --bb-white: #ffffff;
+  
+  /* Accent colors for hierarchy */
+  --bb-accent-dark: #1a1a1a;
+  --bb-accent-medium: #505050;
+  --bb-accent-light: #d0d0d0;
+  
+  /* Status colors in muted tones */
+  --bb-success: #4a5d4a;
+  --bb-success-hover: #3a4d3a;
+  --bb-warning: #6b5d47;
+  --bb-info: #4a5a6b;
+
+  --bb-charcoal: #2c2c2c;
+  --bb-dark-grey: #404040;
+  --bb-medium-grey: #666666;
+  --bb-light-grey: #8a8a8a;
+  --bb-silver: #b8b8b8;
+  --bb-platinum: #e8e8e8;
+  --bb-pearl: #f5f5f5;
+  --bb-white: #ffffff;
+  
+  /* Accent colors for hierarchy */
+  --bb-accent-dark: #1a1a1a;
+  --bb-accent-medium: #505050;
+  --bb-accent-light: #d0d0d0;
+  
+  /* Status colors in muted tones */
+  --bb-success: #4a5d4a;
+  --bb-warning: #6b5d47;
+  --bb-info: #4a5a6b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +62,7 @@
 html, body {
   height: 100%;
 }
+
 
 body {
   font-family: 'Century Gothic', Arial, sans-serif;

@@ -1,100 +1,615 @@
-/* Main container */
+/* app/solutions/algorithmic-advisor/page.module.css */
+/* Bulge Bracket Investment Advisory Firm Aesthetic - Sophisticated Greys */
+
+/* --- Ensure your BB (Bulge Bracket) CSS Variables are defined in globals.css --- */
+/* Example (these should be in your globals.css :root)
+:root {
+  --bb-white: #ffffff;
+  --bb-pearl: #f8f8f8;
+  --bb-platinum: #e5e4e2;
+  --bb-silver: #c0c0c0;
+  --bb-medium-grey: #808080;
+  --bb-dark-grey: #505050;
+  --bb-charcoal: #36454f;
+  --bb-accent-light: #d0d0d0;
+  --bb-accent-dark: #4a4a4a;
+  --bb-success: #4CAF50;
+  --bb-success-hover: #45a049;
+}
+*/
+
 .mainContainer {
-  min-height: 100vh;
-  background-color: rgb(0, 0, 0); /* Black background for contrast */
-  padding: 2rem 1rem;
-  font-family: 'Century Gothic', Arial, sans-serif; /* Consistent font from global.css */
-}
-
-/* Header section */
-.headerSection {
-  max-width: 1200px;
-  margin: 0 auto 2rem;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Century Gothic', sans-serif;
-  font-size: 2rem;
-  color: rgb(207, 181, 139); /* Golden tone */
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.subtitle {
-  font-family: 'Century Gothic', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-bottom: 4rem;
-}
-
-/* Services grid */
-.servicesGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Service card */
-.serviceCard {
-  background-color: rgba(255, 255, 255, 0.05);
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 4rem 4rem;
+  font-family: 'Century Gothic', 'CenturyGothic', 'Avenir Next', 'Helvetica Neue', sans-serif;
+  line-height: 1.8;
+  background: linear-gradient(135deg, var(--bb-white) 0%, var(--bb-pearl) 100%);
+  color: var(--bb-charcoal);
   border-radius: 8px;
-  overflow: hidden;
-  text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.serviceCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Image container */
-.imageContainer {
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.12),
+    0 8px 25px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 2px solid transparent;
+  background-clip: padding-box;
   position: relative;
-  width: 100%;
-  height: 440px;
-  background-color: #615f5f;
+  overflow: hidden;
+  text-align: center; /* Note: This makes all direct children centered. Adjust if needed. */
 }
 
-/* Card content */
-.cardContent {
-  padding: 1.5rem;
+.mainContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--bb-platinum), var(--bb-silver), var(--bb-platinum));
+  border-radius: 8px;
+  padding: 2px;
+  z-index: -1;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  /* text-align: center; /* Not needed here */
 }
 
-.cardTitle {
-  font-family: 'Century Gothic', sans-serif;
-  font-size: 1.2rem;
-  color: white;
+.imageContainer{
+  
+  text-align: center; /* This centers the image within the container */
+}
+.imagecaption{
+  
+  font-weight: bold; /*bold the font*/
+}
+
+.mainContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg,
+    var(--bb-charcoal) 0%,
+    var(--bb-medium-grey) 25%,
+    var(--bb-silver) 50%,
+    var(--bb-medium-grey) 75%,
+    var(--bb-charcoal) 100%);
+  border-radius: 8px 8px 0 0;
+  z-index: 1;
+  /* text-align: center; /* Not needed here */
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: none;
+  position: relative;
+  /* text-align: center; /* Already set */
+}
+
+.pageHeader::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--bb-charcoal) 20%,
+    var(--bb-medium-grey) 50%,
+    var(--bb-charcoal) 80%,
+    transparent 100%);
+  border-radius: 2px;
+  /* text-align: center; /* Not needed here */
+}
+
+.pageHeader h1 {
+  font-size: 3rem;
+  color: var(--bb-charcoal);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  letter-spacing: -0.8px;
+  font-family: 'Century Gothic', 'CenturyGothic', 'Avenir Next', sans-serif;
+  background: linear-gradient(135deg, var(--bb-charcoal) 0%, var(--bb-medium-grey) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-align: center; /* Inherited */
+}
+
+.intro {
+  font-size: 1.25rem;
+  color: var(--bb-medium-grey);
+  max-width: 850px;
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 1.8;
+  /* text-align: center; /* Inherited */
+}
+
+/* Common styles for all content sections */
+.eaSection,
+.platformSection,
+.installationSection,
+.disclaimerSection,
+.usageSection { /* Added .usageSection here */
+  margin-bottom: 4rem;
+  padding: 3.5rem;
+  background: linear-gradient(135deg, var(--bb-white) 0%, rgba(255, 255, 255, 0.8) 100%);
+  border: 1px solid var(--bb-accent-light);
+  border-radius: 12px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.06),
+    0 4px 16px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  position: relative;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: justify; /* Changed from center to justify for content blocks */
+}
+
+.eaSection::before,
+.platformSection::before,
+.installationSection::before,
+.disclaimerSection::before,
+.usageSection::before { /* Added .usageSection::before here */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--bb-silver) 20%,
+    var(--bb-platinum) 50%,
+    var(--bb-silver) 80%,
+    transparent 100%);
+  border-radius: 12px 12px 0 0;
+}
+
+.eaSection h2,
+.platformSection h2,
+.installationSection h2,
+.disclaimerSection h2,
+.usageSection h2 { /* Added .usageSection h2 here */
+  font-size: 2.2rem;
+  color: var(--bb-charcoal);
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--bb-accent-light);
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  position: relative;
+  /* text-align: justify; /* Inherited from parent section */
+}
+
+.eaSection h2::after,
+.platformSection h2::after,
+.installationSection h2::after,
+.disclaimerSection h2::after,
+.usageSection h2::after { /* Added .usageSection h2::after here */
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--bb-charcoal);
+  border-radius: 1px;
+  /* text-align: justify; /* Not needed here */
+}
+
+/* Styles for h3 within .usageSection, consistent with section content */
+.usageSection h3 {
+  font-size: 1.7rem; /* Adjust as needed, slightly smaller than h2 */
+  color: var(--bb-charcoal);
+  margin-top: 2rem;  /* Space above h3 */
+  margin-bottom: 1.5rem; /* Space below h3 */
+  font-weight: 400; /* Slightly more weight than h2's 300, or keep 300 */
+  letter-spacing: -0.3px;
+  /* text-align: justify; /* Inherited */
+}
+
+
+.eaDetails p,
+.platformSection p,
+.installationSection p,
+.usageSection p { /* Added .usageSection p here */
+  margin-bottom: 1.8rem;
+  color: var(--bb-dark-grey);
+  font-size: 1.1rem;
+  line-height: 1.9;
+  /* text-align: justify; /* Inherited */
+}
+
+.eaDetails strong,
+.platformSection strong,
+.installationSection strong,
+.usageSection strong { /* Added .usageSection strong here */
+  color: var(--bb-charcoal);
+  font-weight: 500;
+  /* text-align: justify; /* Inherited */
+}
+
+/* Styling for lists within .usageSection */
+.usageSection .list {
+  list-style-type: none; /* Remove default bullets if using custom ones or just text */
+  padding-left: 0; /* Adjust if you want indentation */
+  margin-top: 1rem;
+  margin-bottom: 1.8rem;
+  /* text-align: justify; /* Inherited */
+}
+
+.usageSection .list li {
   margin-bottom: 1rem;
+  color: var(--bb-dark-grey);
+  font-size: 1.1rem; /* Consistent with p */
+  line-height: 1.9; /* Consistent with p */
+  padding-left: 1.5rem; /* Indent list items if using a marker */
+  position: relative;
+  /* text-align: justify; /* Inherited */
+}
+
+/* Custom bullet for .usageSection lists (optional, adjust as needed) */
+.usageSection .list li::before {
+  content: '•'; /* Standard disc bullet */
+  position: absolute;
+  left: 0;
+  top: 0.1em; /* Adjust vertical alignment */
+  color: var(--bb-medium-grey); /* Or var(--bb-charcoal) */
+  font-weight: bold;
+  font-size: 1.2em; /* Adjust bullet size */
+}
+
+.usageSection .list li ul { /* Nested lists */
+  list-style-type: none;
+  padding-left: 1.5rem; /* Further indent nested list */
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.usageSection .list li ul li::before {
+  content: '◦'; /* Open circle for sub-bullets */
+  /* Inherit other ::before styles or redefine as needed */
+  top: 0.15em; /* Adjust vertical alignment */
+  font-size: 1em;
+}
+
+
+.buttonGroup {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center; /* Center buttons if section text-align is justify */
+}
+
+.ctaLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2.5rem;
+  background: linear-gradient(135deg, var(--bb-dark-grey) 0%, var(--bb-charcoal) 100%);
+  color: var(--bb-white) !important;
+  text-decoration: none !important;
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1rem;
+  font-weight: 500;
+  border: 2px solid transparent;
+  cursor: pointer;
+  /* text-align: center; /* Already centered by justify-content on buttonGroup */
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  /* font-size: 0.95rem; /* Duplicated, using 1rem above */
+  position: relative;
+  overflow: hidden;
+  /* text-align: justify; /* Not needed for button text */
+}
+
+.ctaLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%);
+  transition: left 0.6s ease;
+  /* text-align: justify; /* Not needed here */
+}
+
+.ctaLink:hover {
+  background: linear-gradient(135deg, var(--bb-charcoal) 0%, var(--bb-accent-dark) 100%);
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.25),
+    0 6px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: var(--bb-medium-grey);
+  /* text-align: justify; /* Not needed here */
+}
+
+.ctaLink:hover::before {
+  left: 100%;
+}
+
+.downloadButton {
+  background: linear-gradient(135deg, var(--bb-success) 0%, #3a4d3a 100%);
+  border-color: var(--bb-success);
+}
+
+.downloadButton:hover {
+  background: linear-gradient(135deg, var(--bb-success-hover) 0%, #2a3d2a 100%);
+  border-color: var(--bb-success);
+}
+
+.note {
+  color: var(--bb-charcoal);
+  background: linear-gradient(135deg, var(--bb-pearl) 0%, var(--bb-platinum) 100%);
+  padding: 2rem 2.5rem;
+  border-left: none; /* Remove default border-left if using ::before for the bar */
+  border-radius: 8px;
+  margin-top: 2.5rem;
+  font-size: 1.05rem;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  position: relative;
+  text-align: justify; /* Changed from center */
+}
+
+.note::before { /* This creates the left accent bar */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0; /* Positioned at the very left */
+  bottom: 0;
+  width: 6px; /* Width of the accent bar */
+  background: linear-gradient(180deg,
+    var(--bb-charcoal) 0%,
+    var(--bb-medium-grey) 50%,
+    var(--bb-charcoal) 100%);
+  border-radius: 8px 0 0 8px; /* Rounded corners on the left side */
+  /* text-align: justify; /* Not needed here */
+}
+
+.note strong {
+  color: var(--bb-charcoal);
+  font-weight: 600;
+  /* text-align: justify; /* Inherited */
+}
+
+.stepsList {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 2rem;
+  counter-reset: step-counter;
+  /* text-align: justify; /* Inherited */
+}
+
+.stepsList li {
+  margin-bottom: 2.5rem;
+  color: var(--bb-dark-grey);
+  font-size: 1.1rem;
+  padding-left: 4.5rem;
+  position: relative;
+  counter-increment: step-counter;
+  /* text-align: justify; /* Inherited */
+}
+
+.stepsList li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, var(--bb-charcoal) 0%, var(--bb-medium-grey) 100%);
+  color: var(--bb-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--bb-white);
+  /* text-align: justify; /* Not needed here */
+}
+
+.stepsList li ul {
+  list-style-type: none;
+  padding-left: 2rem;
+  margin-top: 1.5rem;
+  position: relative;
+  /* text-align: justify; /* Inherited */
+}
+
+.stepsList li ul::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem; /* Adjusted for better alignment with custom bullet */
+  top: 0.5em; /* Align with text */
+  bottom: 0.5em; /* Align with text */
+  width: 2px;
+  background: linear-gradient(180deg, var(--bb-accent-light) 0%, var(--bb-accent-light) 80%, transparent 100%); /* Fade out at bottom */
+  border-radius: 1px;
+  /* text-align: justify; /* Not needed here */
+}
+
+.stepsList li ul li {
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+  color: var(--bb-medium-grey);
+  position: relative;
+  padding-left: 2rem; /* Space for custom bullet */
+  /* text-align: justify; /* Inherited */
+}
+
+.stepsList li ul li::before {
+  content: '●'; /* Using a standard bullet character */
+  position: absolute;
+  left: 0;
+  top: 0.1em; /* Adjust vertical alignment */
+  color: var(--bb-silver);
+  font-weight: bold;
+  /* Reset styles from parent li::before */
+  width: auto;
+  height: auto;
+  background: none;
+  border-radius: 0;
+  display: inline;
+  box-shadow: none;
+  font-size: 1.2rem;
+  border: none;
+  /* text-align: justify; /* Not needed here */
+}
+
+.disclaimerSection {
+  background: linear-gradient(135deg, var(--bb-pearl) 0%, rgba(240, 240, 240, 0.9) 100%);
+  border-color: var(--bb-silver);
+  border-width: 2px;
+  /* text-align: justify; /* Inherited */
+}
+
+.disclaimerSection p {
+  font-size: 1rem;
+  color: var(--bb-medium-grey);
+  line-height: 2;
+  /* text-align: justify; /* Inherited */
+}
+
+.disclaimerSection strong {
+  color: var(--bb-charcoal);
+  font-weight: 600;
+  /* text-align: justify; /* Inherited */
+}
+
+.pageFooter {
   text-align: center;
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: none;
+  position: relative;
+  /* text-align: center; /* Already set */
 }
 
-.cardDescription {
-  font-family: 'Century Gothic', sans-serif;
-  font-size: 0.8rem;
-  color: rgb(214, 214, 214);
-  line-height: 1.5;
-  text-align: center;
+.pageFooter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--bb-silver) 20%,
+    var(--bb-medium-grey) 50%,
+    var(--bb-silver) 80%,
+    transparent 100%);
+  border-radius: 1px;
+  /* text-align: justify; /* Not needed here */
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .servicesGrid {
-    grid-template-columns: repeat(2, 1fr);
+.pageFooter a {
+  color: var(--bb-medium-grey);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 1rem 2rem;
+  border: 2px solid var(--bb-platinum);
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  background: linear-gradient(135deg, var(--bb-white) 0%, var(--bb-pearl) 100%);
+  /* text-align: justify; /* Not appropriate for a button link */
+}
+
+.pageFooter a:hover {
+  color: var(--bb-charcoal);
+  border-color: var(--bb-medium-grey);
+  background: linear-gradient(135deg, var(--bb-pearl) 0%, var(--bb-platinum) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  /* text-align: justify; /* Not appropriate for a button link */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mainContainer {
+    margin: 2rem 1rem;
+    padding: 2.5rem 2rem;
+    border-radius: 12px; /* Consistent with other sections on mobile */
   }
-}
 
-@media (max-width: 640px) {
-  .servicesGrid {
-    grid-template-columns: 1fr;
+  .pageHeader h1 {
+    font-size: 2.4rem;
   }
 
-  .imageContainer {
-    height: 160px;
+  .intro {
+    font-size: 1.15rem;
+  }
+
+  .eaSection,
+  .platformSection,
+  .installationSection,
+  .disclaimerSection,
+  .usageSection { /* Added .usageSection */
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+  }
+
+  .eaSection h2,
+  .platformSection h2,
+  .installationSection h2,
+  .disclaimerSection h2,
+  .usageSection h2 { /* Added .usageSection h2 */
+    font-size: 1.9rem;
+  }
+
+  .usageSection h3 { /* Responsive h3 */
+    font-size: 1.5rem;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .ctaLink {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .stepsList li {
+    padding-left: 3.5rem;
+  }
+
+  .stepsList li::before {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.9rem;
   }
 }
