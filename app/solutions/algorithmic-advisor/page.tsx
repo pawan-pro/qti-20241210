@@ -198,7 +198,7 @@ return (
 
       <footer className={styles.pageFooter}>
         <p>
-          <Link href="/services">← Back to Solutions</Link>
+          <Link href="/solutions">← Back to Solutions</Link>
         </p>
       </footer>
     </main>
