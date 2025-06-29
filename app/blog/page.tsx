@@ -5,6 +5,13 @@ import styles from './page.module.css';
 
 const projects = [
   {
+    id: 'blog20250630',
+    title: 'Key Economic Events: Week Of 30th June 2025',
+    image: '/blogs/blog-cover/20250630.png',
+    link: '/blogs/20250630.html',
+    //description: 'Analyzing the economic shifts heading into Q3 2025.',
+  },
+  {
     id: 'blog20250623',
     title: 'Key Economic Events: Week Of 23rd June 2025',
     image: '/blogs/blog-cover/20250623.png',
