@@ -1,7 +1,8 @@
 /* src/app/blog/page.module.css */
 .mainContainer {
-  padding: 4rem;
-  background-color: #000;
+  padding: 4rem 2rem;
+  background-color: #f4f4f4; /* Light background for a clean look */
+  font-family: 'Century Gothic', Arial, sans-serif; /* Ensure fallback */
 }
 
 .headerSection {
@@ -10,27 +11,31 @@
 }
 
 .title {
-  font-size: 2rem;
-  color: #fff;
+  font-size: 2.5rem;
+  color: #333; /* Dark text for better readability */
   padding: 2rem;
+  font-weight: 600;
 }
 
 .subtitle {
   font-size: 1.25rem;
-  color: #ccc;
+  color: #666; /* Slightly lighter text for the subtitle */
+  font-weight: 400;
 }
 
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .serviceCard {
-  background-color: #262626;
+  background-color: #fff; /* White background for cards */
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -38,35 +43,62 @@
 
 .serviceCard:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .imageContainer {
   position: relative;
   height: 200px;
+  overflow: hidden;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover .imageContainer img {
+  transform: scale(1.05);
 }
 
 .cardContent {
-  padding: 1rem;
-  background-color: #262626;
+  padding: 1.5rem;
+  background-color: #fff;
 }
 
 .cardTitle {
-  font-size: 1rem;
-  color: #fff;
-  text-align: center;
+  font-size: 1.25rem;
+  color: #333; /* Dark text for titles */
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .cardDescription {
   font-size: 0.9rem;
-  color: #ccc;
-  text-align: center;
+  color: #666; /* Lighter text for descriptions */
+  text-align: left;
+  line-height: 1.5;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .mainContainer {
-    padding: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
   }
 
   .imageContainer {
@@ -75,8 +107,12 @@
 }
 
 @media (max-width: 480px) {
-  .servicesGrid {
-    grid-template-columns: 1fr;
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
   }
 
   .imageContainer {

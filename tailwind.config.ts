@@ -1,7 +1,9 @@
-// tailwind.config.js
-module.exports = {
+import type { Config } from 'tailwindcss'
+import typography from '@tailwindcss/typography'
+
+const config: Config = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx}', // Ensure all app content is included for tailwind scanning
+    './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -10,12 +12,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [typography],
 }
 
-module.exports = {
-  content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-  ],
-  plugins: [require('@tailwindcss/typography')],
-}
+export default config

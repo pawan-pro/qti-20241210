@@ -1,26 +1,38 @@
+// app/resources/page.js (or wherever your Resources page component is)
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './page.module.css';
+import styles from './page.module.css'; // Assuming you have styles for this page
 
 const projects = [
+  // --- NEW ENTRY ADDED BELOW ---
+
   {
-    id: 'dxy-forecast',
-    title: 'Project: Forex - $ DXY Index - 10 Year Forecast',
-    image: '/r114.jpg',
-    link: '/resources/DXY-10-Year-Outlook.pdf', // Downloadable file
+    id: 'India-on-the-Rise',
+    title: 'India on the Rise: Market Outlook & Investment Trends',
+    image: '/India-on-the-Rise.png', // ** USE YOUR THUMBNAIL IMAGE PATH **
+    link: '/India-on-the-Rise', // Link to the new Next.js page route
   },
   {
     id: 'GCC REIT Market Overview',
     title: 'GCC REIT Market Overview',
-    image: '/r211.jpg',
-    link: '/resources/GCC REIT Market Overview.pdf', // Downloadable file
+    image: '/r211.jpg', // Keep existing image path
+    link: '/resources/GCC REIT Market Overview.pdf', // Keep existing link
   },
+  {
+    id: 'dxy-forecast',
+    title: 'Project: Forex - $ DXY Index - 10 Year Forecast',
+    image: '/r114.jpg', // Keep existing image path
+    link: '/resources/DXY-10-Year-Outlook.pdf', // Keep existing link
+  },
+  
   {
     id: 'historical-calendar',
     title: 'Historical Economic Calendar',
-    image: '/r31.jpg',
-    link: '/resources/HEC.xlsx', // Downloadable file
+    image: '/r31.jpg', // Keep existing image path
+    link: '/resources/HEC.xlsx', // Keep existing link
   },
+  
+  // --- END OF NEW ENTRY ---
 ];
 
 export default function ResourcesPage() {
@@ -28,7 +40,8 @@ export default function ResourcesPage() {
     <main className={styles.mainContainer}>
       <header className={styles.headerSection}>
         <h1 className={styles.title}>Our Research & Projects</h1>
-        <h2 className={styles.subtitle}>Download and Explore Our Work</h2>
+        {/* Keep subtitle if needed */}
+        <h2 className={styles.subtitle}>Download or Explore Our Work</h2>
       </header>
 
       <section className={styles.servicesGrid}>
@@ -37,14 +50,18 @@ export default function ResourcesPage() {
             href={project.link}
             key={project.id}
             className={styles.serviceCard}
-            target={project.link.startsWith('http') ? '_blank' : '_self'} // Open external links in a new tab
+            // Target _blank only if it's an external link or a direct file download you want in a new tab
+            target={project.link.startsWith('http') || project.link.endsWith('.pdf') || project.link.endsWith('.xlsx') ? '_blank' : '_self'}
+            // Optionally add rel="noopener noreferrer" for _blank targets
+            rel={project.link.startsWith('http') || project.link.endsWith('.pdf') || project.link.endsWith('.xlsx') ? 'noopener noreferrer' : undefined}
           >
             <div className={styles.imageContainer}>
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                priority={project.id === 'dxy-forecast'} // Priority loading for the first card
+                // Adjust priority logic if needed, maybe based on index?
+                priority={project.id === 'dxy-forecast' || project.id === 'indian-market-overview'}
                 style={{ objectFit: 'cover' }}
               />
             </div>

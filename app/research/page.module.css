@@ -1,7 +1,10 @@
-/* src/app/research/page.module.css */
+/* app/resources/page.module.css (Assuming this path based on the JS file) */
 .mainContainer {
   padding: 4rem;
   background-color: #000;
+  min-height: 100vh; /* Ensure it takes at least full viewport height */
+  box-sizing: border-box; /* Include padding in width/height calculation */
+  font-family: 'Century Gothic', Arial, sans-serif; /* Consistent font from global.css */
 }
 
 .headerSection {
@@ -10,9 +13,11 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2rem; /* Reduced slightly from original example */
+  font-weight: bold;
   color: #fff;
-  padding: 2rem;
+  padding-bottom: 0.5rem; /* Adjusted padding */
+  margin-bottom: 0.5rem; /* Added margin */
 }
 
 .subtitle {
@@ -22,8 +27,11 @@
 
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* --- KEY CHANGE HERE: Explicitly set 3 columns --- */
+  grid-template-columns: repeat(3, 1fr); /* Default to 3 equal columns */
   gap: 2rem;
+  max-width: 1200px; /* Optional: Set a max-width for the grid container */
+  margin: 0 auto; /* Center the grid if max-width is set */
 }
 
 .serviceCard {
@@ -33,53 +41,84 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   text-decoration: none;
+  color: inherit; /* Ensure link color doesn't override card content color */
+  display: flex; /* Use flexbox for better internal layout */
+  flex-direction: column; /* Stack image and content vertically */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .serviceCard:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1); /* Enhanced hover shadow */
 }
 
 .imageContainer {
   position: relative;
-  height: 200px;
+  width: 100%; /* Ensure image container takes full width of card */
+  /* --- Use aspect-ratio for consistent image heights --- */
+  aspect-ratio: 16 / 9; /* Or adjust to your preferred ratio */
+  /* height: 200px; */ /* Remove fixed height, use aspect-ratio instead */
+}
+
+/* Ensure Next/Image fills the container */
+.imageContainer > span {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .cardContent {
-  padding: 1rem;
+  padding: 1.2rem; /* Slightly more padding */
   background-color: #262626;
+  flex-grow: 1; /* Allow content to fill remaining space if needed */
+  display: flex; /* Center content vertically */
+  flex-direction: column;
+  justify-content: center;
 }
 
 .cardTitle {
   font-size: 1rem;
+  font-weight: 600; /* Slightly bolder */
   color: #fff;
   text-align: center;
+  margin: 0; /* Remove default margin */
+  line-height: 1.4; /* Improve readability */
 }
 
-.cardDescription {
-  font-size: 0.9rem;
-  color: #ccc;
-  text-align: center;
-}
+/* Removed .cardDescription as it wasn't used in the HTML */
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .mainContainer {
-    padding: 2rem;
-  }
+/* --- Responsive Adjustments --- */
 
-  .imageContainer {
-    height: 150px;
-  }
-}
-
-@media (max-width: 480px) {
+/* Medium screens (e.g., tablets) - 2 columns */
+@media (max-width: 992px) { /* Adjusted breakpoint */
   .servicesGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+  }
+  .mainContainer {
+    padding: 3rem;
+  }
+}
+
+/* Small screens (e.g., large phones) - 1 column */
+@media (max-width: 600px) { /* Adjusted breakpoint */
+ .mainContainer {
+    padding: 2rem 1rem; /* More padding adjustment */
   }
 
-  .imageContainer {
-    height: 120px;
+  .servicesGrid {
+    grid-template-columns: 1fr; /* Switch to 1 column */
+    gap: 1.5rem; /* Slightly reduce gap */
   }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  /* Image height can be controlled via aspect-ratio, no need to change here unless desired */
 }

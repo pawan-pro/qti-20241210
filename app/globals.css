@@ -1,6 +1,48 @@
 /* globals.css */
-
 /* General Reset */
+
+:root {
+  /* Sophisticated Grey Palette for Investment Advisory */
+  --bb-charcoal: #2c2c2c;
+  --bb-dark-grey: #404040;
+  --bb-medium-grey: #666666;
+  --bb-light-grey: #8a8a8a;
+  --bb-silver: #b8b8b8;
+  --bb-platinum: #e8e8e8;
+  --bb-pearl: #f5f5f5;
+  --bb-white: #ffffff;
+  
+  /* Accent colors for hierarchy */
+  --bb-accent-dark: #1a1a1a;
+  --bb-accent-medium: #505050;
+  --bb-accent-light: #d0d0d0;
+  
+  /* Status colors in muted tones */
+  --bb-success: #4a5d4a;
+  --bb-success-hover: #3a4d3a;
+  --bb-warning: #6b5d47;
+  --bb-info: #4a5a6b;
+
+  --bb-charcoal: #2c2c2c;
+  --bb-dark-grey: #404040;
+  --bb-medium-grey: #666666;
+  --bb-light-grey: #8a8a8a;
+  --bb-silver: #b8b8b8;
+  --bb-platinum: #e8e8e8;
+  --bb-pearl: #f5f5f5;
+  --bb-white: #ffffff;
+  
+  /* Accent colors for hierarchy */
+  --bb-accent-dark: #1a1a1a;
+  --bb-accent-medium: #505050;
+  --bb-accent-light: #d0d0d0;
+  
+  /* Status colors in muted tones */
+  --bb-success: #4a5d4a;
+  --bb-warning: #6b5d47;
+  --bb-info: #4a5a6b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,83 +55,123 @@
   src: url('/fonts/CenturyGothic.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Body Styles */
 html, body {
-  height: 100%; /* Ensure full height */
+  height: 100%;
 }
+
 
 body {
   font-family: 'Century Gothic', Arial, sans-serif;
-  background-color: #1e1e1e; /* Dark background */
-  color: #e0e0e0; /* Light text color */
+  background-color: #1e1e1e;
+  color: #e0e0e0;
   padding: 0;
   line-height: 1.6;
+  font-size: 16px;
 }
 
-main {
-  min-height: 100%; /* Ensure the main content fills the height */
+a {
+  color: #3b82f6;
+  text-decoration: none;
 }
 
-/* Header Styles */
+a:hover {
+  text-decoration: none;
+}
+
+/* Header Styles - Fixed/sticky for all screens */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #000;
-  position: sticky;
+  padding: 0 2rem;
+  background-color: #000000;
+  color: #fff;
+  position: sticky; /* Changed to sticky instead of fixed */
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  flex-wrap: nowrap; /* Prevent wrapping by default */
+  height: 60px; /* More compact height */
+  /*border-bottom: 1px solid #333;*/
 }
 
 .firm-name {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-right: 2em; /* Add space after the firm name */
 }
 
 .nav-links {
   display: flex;
-  gap: 1.5rem; /* Space between links */
+  gap: 1.5rem;
+  margin-left: centre; /* Push navigation to the right */
 }
 
 .nav-links a {
-  text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  color: #fff;
-  transition: color 0.3s;
+  color: #d0d0d0;
+  transition: color 0.2s, border-bottom 0.2s;
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .nav-links a:hover {
-  color: #007acc;
+  color: #ffffff;
+  border-bottom: 1px solid #3b82f6;
+  text-decoration: none;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .firm-name {
-    font-size: 1.2rem; /* Slightly reduce size for smaller screens */
-  }
-
-  .nav-links {
-    flex-wrap: wrap; /* Allow wrapping for small screens */
-    justify-content: center;
-    gap: 1rem;
-  }
+/* Content spacing */
+main {
+  width: 100%;
+  padding-top: 1rem; /* Reduced since header is now sticky instead of fixed */
 }
 
-@media (max-width: 480px) {
+/* Mobile refinements - all on one line */
+@media screen and (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+
   .firm-name {
-    font-size: 1rem; /* Further reduce size for phones */
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
     text-align: center;
   }
 
   .nav-links {
-    flex-direction: row; /* Keep links horizontal on smaller screens */
-    gap: 0.5rem;
+    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
+  }
+
+  .nav-links a {
+    font-size: 0.5rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    padding: 0 1.5rem;
+  }
+  
+  .nav-links {
+    gap: 1.2rem;
   }
 }

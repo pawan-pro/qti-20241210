@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UPDATE: Title for the new week -->
+    <title>Economic Calendar: Week of April 21st, 2025</title>
+    <link rel="stylesheet" href="/global.css"> <!-- Ensure this path is correct relative to your server setup -->
+    <style>
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .firm-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007acc; /* Consider using a brand color if available */
+        }
+
+        /* Blog styles */
+        @font-face {
+            font-family: 'Century Gothic';
+            /* Ensure this path is correct relative to your server setup */
+            src: url('/fonts/CenturyGothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap; /* Good for perceived performance */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Using !important here is forceful, consider applying to body instead if possible */
+            font-family: 'Century Gothic', Arial, sans-serif !important;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+        }
+
+        body {
+            background-color: #000000;
+            color: #313131; /* Base text color, consider a lighter one for dark background */
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .blog-container {
+            padding: 33px; /* Main container padding */
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #e9e9e9ac; /* Light grey for title */
+            margin-bottom: 10px;
+        }
+
+        .blog-subtitle {
+            font-size: 1rem;
+            color: #bbb; /* Lighter grey for subtitle */
+            margin-bottom: 30px;
+        }
+
+        /* Timeline Styles */
+        .blog-timeline {
+            position: fixed;
+            left: 20px;
+            top: 100px; /* Adjust based on actual sticky header height + desired gap */
+            padding: 15px;
+            background: rgba(42, 42, 42, 0.8); /* Semi-transparent dark background */
+            border-radius: 8px;
+            backdrop-filter: blur(5px); /* Frosted glass effect (check browser support) */
+            box-shadow: 0 4px 6px rgba(3, 3, 3, 0.1);
+            width: 160px; /* Fixed width */
+            font-size: 0.7rem; /* Smaller font size for timeline */
+            max-height: calc(100vh - 120px); /* Limit height, adjust 120px based on header/footer */
+            overflow-y: auto; /* Add scrollbar if content exceeds max-height */
+            z-index: 900; /* Ensure it's above content but below header */
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 8px; /* Position relative to the .blog-timeline padding */
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #444; /* Dark line color */
+            z-index: -1; /* Place it behind the items */
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 15px 0;
+            padding: 0; /* Padding applied to link instead */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item a {
+            text-decoration: none;
+            color: inherit; /* Inherit text color from parent */
+            display: block; /* Make the link fill the item */
+            width: 100%;
+            padding: 12px 15px; /* Padding inside the link */
+            font-size: 0.7rem; /* Consistent font size */
+        }
+
+        /* Active state for timeline item */
+        .timeline-item.active {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%); /* Gold tint */
+            border: 1px solid rgba(212, 175, 55, 0.3); /* Gold border */
+        }
+        .timeline-item.active .timeline-date {
+             color: #d4af37; /* Gold color for active date */
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px); /* Slight shift on hover */
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-left: 0px; /* Explicitly reset margin */
+            font-size: 0.7rem; /* Consistent font size */
+            text-align: center; /* Center text within timeline item */
+        }
+
+        .timeline-date { /* Style for date span in timeline */
+            color: #e9e9e9ac;
+            font-weight: 600;
+            font-size: 0.8rem; /* Slightly larger date */
+            text-align: center;
+            padding-bottom: 3px;
+             transition: color 0.3s ease; /* Smooth color transition for active state */
+        }
+
+        .timeline-events {
+            font-size: 0.7rem; /* Consistent font size */
+            color: #888; /* Dim color for event count */
+            margin-top: 2px;
+            text-align: center;
+        }
+
+        /* Blog Content Styles */
+        .blog-content {
+            margin-left: 200px; /* Space for fixed timeline (width + gap) */
+            max-width: 1200px; /* Max width for readability */
+            padding-right: 33px; /* Match container padding on the right */
+            color: #ccc; /* Set a base lighter color for content text on dark background */
+        }
+
+        .event-day-group {
+            margin-bottom: 40px;
+            padding-top: 10px; /* Initial padding for anchor links (JS calculation is better) */
+        }
+
+        .event-day-group:last-child {
+            margin-bottom: 0; /* Remove bottom margin from last group */
+        }
+
+        /* Style for the date headers (H2) within the main content */
+        .event-day-group h2.timeline-date {
+            font-size: 1.5rem;
+            color: #d0a72dda; /* Gold-like color for date headers */
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #444;
+            text-align: left; /* Align header text left */
+        }
+
+        .event-card {
+            background-color: #2a2a2a; /* Dark card background */
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px; /* Padding inside card */
+            margin-bottom: 20px; /* Space between cards */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Subtle shadow */
+        }
+
+        .event-title {
+            font-size: 1.2rem; /* Event title size */
+            font-weight: bold;
+            color: #6495ED; /* Cornflower Blue for titles */
+            margin-bottom: 15px; /* Space below title */
+        }
+
+        .event-details {
+            display: grid;
+            /* Grid columns: label width, value fills remaining space */
+            grid-template-columns: 110px 1fr;
+            gap: 10px 15px; /* Row gap, Column gap */
+            margin-bottom: 15px; /* Space below details grid */
+        }
+
+        .event-label {
+            font-weight: bold;
+            color: #ccc; /* Lighter grey for labels */
+            font-size: 0.9rem;
+            text-align: right; /* Align labels to the right */
+            padding-right: 5px; /* Space between label and value */
+        }
+
+        .event-value {
+            color: #bbb; /* Lighter grey for values */
+            font-size: 0.9rem;
+            word-break: break-word; /* Prevent long text from overflowing */
+        }
+
+        /* Specific style for notes to allow justification */
+        .event-notes-value {
+            text-align: justify; /* Justify longer text blocks */
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        /* Styles for 'Learn More' / 'Historical Impact' links */
+        .historical-impact a {
+            color: #e0e0e0; /* Light text color */
+            text-decoration: none;
+            background-color: #357ae8; /* Blue background */
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 5px; /* Space between links */
+            font-size: 0.85rem;
+            display: inline-block; /* Allows padding/margin and respects wrapping */
+            margin-bottom: 3px; /* Space if links wrap to next line */
+        }
+
+        .historical-impact a:hover {
+            background-color: #2a65c8; /* Darker blue on hover */
+            color: #fff;
+        }
+
+        /* Source Card Styles */
+        .source-card {
+            background-color: #222; /* Slightly darker background */
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #e9e9e9ac; /* Light text color */
+            border: 1px solid #444;
+        }
+
+        .source-card a {
+            color: #6495ED; /* Match event title color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .source-card a:hover {
+            text-decoration: underline;
+        }
+        /* Specific style for the nested span within source-card link */
+        .source-card .historical-impact span {
+           color: rgb(168, 168, 168); /* Explicitly set color */
+        }
+
+        /* Footer Styles (If used) */
+        .source-footer {
+            background-color: #161616;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0 20px 200px; /* Align with content margin */
+            width: calc(100% - 233px); /* Adjust width considering content margin+padding */
+            max-width: 1200px; /* Match content max-width */
+            color: #bbb;
+            font-size: 0.8rem;
+        }
+
+        .source-footer a {
+            color: #4a90e2; /* Link color */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .source-footer a:hover {
+            color: #357ae8; /* Darker link color on hover */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .blog-timeline {
+                display: none; /* Hide timeline on smaller screens */
+            }
+
+            .blog-content {
+                margin-left: 0; /* Remove left margin when timeline is hidden */
+                padding-left: 20px; /* Adjust padding */
+                padding-right: 20px;
+            }
+
+            .event-details {
+                grid-template-columns: 90px 1fr; /* Adjust grid label width for smaller screens */
+            }
+
+            .event-label {
+                text-align: left; /* Align labels left on mobile for better readability */
+                padding-right: 0;
+            }
+
+            .source-footer {
+                margin-left: 0; /* Remove left margin */
+                width: calc(100% - 40px); /* Adjust width considering body padding */
+                margin-left: 20px; /* Align with adjusted content padding */
+                margin-right: 20px;
+            }
+             .header {
+                padding: 1rem; /* Reduce header padding */
+            }
+            .firm-name {
+                font-size: 1.2rem; /* Reduce firm name size */
+            }
+            .nav-links {
+                gap: 0.8rem; /* Reduce gap between nav links */
+            }
+            .nav-links a {
+                font-size: 0.9rem; /* Reduce nav link font size */
+            }
+        }
+         @media (max-width: 480px) {
+             /* Further adjustments for very small screens if needed */
+              .nav-links {
+                display: none; /* Hide text links, maybe replace with burger menu */
+            }
+             .event-details {
+                grid-template-columns: 1fr; /* Stack label and value */
+                gap: 5px 0;
+             }
+             .event-label {
+                 text-align: left;
+                 margin-bottom: 2px; /* Add slight space below label when stacked */
+                 font-size: 0.85rem;
+             }
+              .event-value {
+                 font-size: 0.85rem;
+             }
+             .event-title {
+                 font-size: 1.1rem;
+             }
+         }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/" class="firm-name">Quantwater Tech Investments</a>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/solutions">Solutions</a>
+            <a href="/research">Research</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </nav>
+        <!-- Consider adding a mobile menu button here for smaller screens -->
+    </header>
+
+    <div class="blog-container">
+        <!-- UPDATE: Timeline items for the new week -->
+        <aside class="blog-timeline">
+            <div class="timeline-line"></div>
+            <!-- Timeline Item: Apr 21 -->
+            <div class="timeline-item">
+                <a href="#day-21apr">
+                    <div class="timeline-info">
+                        <span class="timeline-date">21 Apr</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+            <!-- Timeline Item: Apr 23 -->
+            <div class="timeline-item">
+                <a href="#day-23apr">
+                    <div class="timeline-info">
+                        <span class="timeline-date">23 Apr</span>
+                        <!-- UPDATED Count -->
+                        <span class="timeline-events">5 Events</span>
+                    </div>
+                </a>
+            </div>
+            <!-- Timeline Item: Apr 24 -->
+            <div class="timeline-item">
+                <a href="#day-24apr">
+                    <div class="timeline-info">
+                        <span class="timeline-date">24 Apr</span>
+                        <span class="timeline-events">3 Events</span>
+                    </div>
+                </a>
+            </div>
+            <!-- Timeline Item: Apr 25 -->
+            <div class="timeline-item">
+                <a href="#day-25apr">
+                    <div class="timeline-info">
+                        <span class="timeline-date">25 Apr</span>
+                        <!-- UPDATED Count -->
+                        <span class="timeline-events">3 Events</span>
+                    </div>
+                </a>
+            </div>
+            <!-- Timeline Item: May 07 (Kept from previous week) -->
+            <div class="timeline-item">
+                <a href="#day-07may">
+                    <div class="timeline-info">
+                        <span class="timeline-date">07 May</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <main class="blog-content">
+            <!-- UPDATE: Title and Subtitle for the new week -->
+            <div class="blog-title">Key Economic Events: Week Of 21st April 2025</div>
+            <div class="blog-subtitle">Release Date: 20th April 2025</div> <!-- Assuming release day before -->
+
+            <!-- Day Group: 21 April -->
+            <section class="event-day-group" id="day-21apr">
+                <h2 class="timeline-date">21 April 2025</h2>
+                <article class="event-card">
+                    <h3 class="event-title">Global - Easter Monday, Family Day, Tiradentes Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">21-Apr-25, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Global</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Financial markets in many countries (including UK, Eurozone, Australia, New Zealand, Canada, Brazil) will be closed for Easter Monday, Family Day (parts of Canada), or Tiradentes Day (Brazil). Expect significantly reduced liquidity in associated currency pairs (EUR, GBP, AUD, NZD, CAD, BRL) and no major data releases from these regions. US markets are typically open.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Easter_Monday" target="_blank" rel="noopener noreferrer">Easter Monday</a>
+                            <a href="https://en.wikipedia.org/wiki/Family_Day_(Canada)" target="_blank" rel="noopener noreferrer">Family Day</a>
+                            <a href="https://en.wikipedia.org/wiki/Tiradentes_Day" target="_blank" rel="noopener noreferrer">Tiradentes Day</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Day Group: 23 April -->
+            <section class="event-day-group" id="day-23apr">
+                <h2 class="timeline-date">23 April 2025</h2>
+                <!-- ADDED Tesla Earnings Report -->
+                <article class="event-card">
+                    <h3 class="event-title">USD - Tesla Earnings Report</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">23-Apr-25, Wed, 01:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <!-- Actual/Forecast/Previous not provided -->
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Tesla Inc. reports its quarterly earnings, typically after US market close on the preceding day. Market focus will be on vehicle deliveries, profitability, margins, forward guidance, and updates on new projects (e.g., Cybertruck, FSD). Significant volatility in TSLA stock and related indices (like Nasdaq) is possible around the release.</span>
+                        <!-- Learn More links omitted as source notes were internal -->
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">Nasdaq 100</a> <!-- UPDATE PDF Link -->
+                        </span>
+                    </div>
+                </article>
+                <!-- Existing Events for Apr 23 -->
+                <article class="event-card">
+                    <h3 class="event-title">USD - Manufacturing PMI (Apr) P</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">23-Apr-25, Wed, 19:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <!-- Forecast/Previous not provided in input, omitting -->
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The preliminary ('P') Manufacturing Purchasing Managers' Index (PMI) measures the activity level of purchasing managers in the manufacturing sector. A reading above 50 indicates expansion in the sector; below 50 indicates contraction. It's a key indicator of economic health. Stronger than forecast is generally bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">USDJPY</a> <!-- UPDATE PDF Link -->
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">EURUSD</a> <!-- UPDATE PDF Link -->
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Services PMI (Apr) P</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">23-Apr-25, Wed, 19:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <!-- Forecast/Previous not provided in input, omitting -->
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The preliminary ('P') Services Purchasing Managers' Index (PMI) measures the activity level of purchasing managers in the services sector. A reading above 50 indicates expansion; below 50 indicates contraction. As the service sector dominates the US economy, this is a significant indicator. Stronger than forecast is generally bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">USDJPY</a> <!-- UPDATE PDF Link -->
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">EURUSD</a> <!-- UPDATE PDF Link -->
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - New Home Sales (Mar)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">23-Apr-25, Wed, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <!-- Forecast/Previous not provided in input, omitting -->
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">New Home Sales measures the annualized number of new single-family homes that were sold during the previous month. It's a leading indicator of economic health as home sales trigger wide-reaching ripple effects (e.g., construction, furnishing). Stronger than forecast is generally bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">USDJPY</a> <!-- UPDATE PDF Link -->
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">EURUSD</a> <!-- UPDATE PDF Link -->
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Crude Oil Inventories</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">23-Apr-25, Wed, 20:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <!-- Forecast/Previous not provided in input, omitting -->
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Energy Information Administration's (EIA) Crude Oil Inventories measures the weekly change in the number of barrels of commercial crude oil held by US firms. Inventory levels influence oil prices, which can impact inflation and related currencies (like CAD). A larger build than expected is typically bearish for oil prices.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">USOILRoll</a> <!-- UPDATE PDF Link -->
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Day Group: 24 April -->
+            <section class="event-day-group" id="day-24apr">
+                <h2 class="timeline-date">24 April 2025</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Durable Goods Orders (MoM) (Mar) P</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">24-Apr-25, Thur, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <!-- Forecast/Previous not provided in input, omitting -->
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The preliminary ('P') Durable Goods Orders measures the change in the total value of new orders for long-lasting manufactured goods. Core Durable Goods Orders (excluding transportation) is often watched more closely. It's a leading indicator of production. Stronger than forecast is generally bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">USDJPY</a> <!-- UPDATE PDF Link -->
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">EURUSD</a> <!-- UPDATE PDF Link -->
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Initial Jobless Claims</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">24-Apr-25, Thur, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <!-- Forecast/Previous not provided in input, omitting -->
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Initial Jobless Claims measures the number of individuals who filed for unemployment insurance for the first time during the past week. It's the earliest US economic data, providing a timely gauge of the labor market. Lower than forecast is generally bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">USDJPY</a> <!-- UPDATE PDF Link -->
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">EURUSD</a> <!-- UPDATE PDF Link -->
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Existing Home Sales (Mar)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">24-Apr-25, Thur, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <!-- Forecast/Previous not provided in input, omitting -->
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Existing Home Sales measures the annualized number of existing residential buildings that were sold during the previous month. This data accounts for a larger portion of the housing market than New Home Sales. It indicates housing market health and consumer confidence. Stronger than forecast is generally bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">USDJPY</a> <!-- UPDATE PDF Link -->
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">EURUSD</a> <!-- UPDATE PDF Link -->
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Day Group: 25 April -->
+            <section class="event-day-group" id="day-25apr">
+                <h2 class="timeline-date">25 April 2025</h2>
+                 <!-- ADDED Alphabet Earnings Report -->
+                 <article class="event-card">
+                    <h3 class="event-title">USD - Alphabet Earnings Report</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">25-Apr-25, Fri, 01:30 IST</span> <!-- Used Fri based on image -->
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <!-- Actual/Forecast/Previous not provided -->
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Alphabet Inc. (Google's parent company) reports its quarterly earnings, typically after US market close on the preceding day. Key focus areas include advertising revenue (Search, YouTube), cloud growth (GCP), AI developments, regulatory scrutiny, and overall profitability. Significant volatility in GOOGL/GOOG stock and tech indices is possible.</span>
+                        <!-- Learn More links omitted as source notes were internal -->
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://drive.google.com/file/d/1e4_-ceZMMhC-vvrj5lSEeI_mBBXMfpK9/view?usp=share_link" target="_blank" rel="noopener noreferrer">Nasdaq 100</a> <!-- UPDATE PDF Link -->
+                        </span>
+                    </div>
+                </article>
+                <!-- Existing Events for Apr 25 -->
+                <article class="event-card">
+                    <h3 class="event-title">AUD - Australia - ANZAC Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">25-Apr-25, Fri, All Day</span> <!-- Kept Fri -->
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">AUD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Australian financial markets will be closed in observance of ANZAC Day, a national day of remembrance. Expect no local data releases and potentially reduced liquidity in AUD currency pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Anzac_Day" target="_blank" rel="noopener noreferrer">Legacy Reference</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">NZD - New Zealand - ANZAC Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">25-Apr-25, Fri, All Day</span> <!-- Kept Fri -->
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">NZD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">New Zealand financial markets will be closed in observance of ANZAC Day, a national day of remembrance. Expect no local data releases and potentially reduced liquidity in NZD currency pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Anzac_Day" target="_blank" rel="noopener noreferrer">Legacy Reference</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Day Group: 07 May (Kept from previous week) -->
+            <section class="event-day-group" id="day-07may">
+                <h2 class="timeline-date">07 May 2025</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Fed Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">07-May-25, Wed, 23:30 IST</span> <!-- Note: Check exact time post-DST changes -->
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">4.35%</span> <!-- Placeholder/Example - Check actual expectations -->
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">4.37%</span> <!-- Placeholder/Example - Check previous actual range -->
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Federal Open Market Committee (FOMC) announces its decision on the target range for the federal funds rate. Market expectations (e.g., via CME FedWatch Tool) and the accompanying statement/press conference are crucial for determining market impact and future policy direction.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener noreferrer">CME FedWatch Tool</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <!-- UPDATE: Source Card with new timestamp -->
+            <div class="source-card">
+                Source: Bloomberg, News Articles, Company Research. Notes as of 19th April 2025, 3 PM IST. <br> <!-- Updated timestamp -->
+                For historical data and resources, please visit:
+                <span class="historical-impact"> <!-- Re-using class for consistency -->
+                    <!-- User requested not to change this link/text -->
+                    <a href="https://quantwater.tech/research" target="_blank" rel="noopener noreferrer"><span style="color: rgb(255, 254, 254);">quantwater.tech/resources</span></a>
+                </span>
+            </div>
+        </main> <!-- End blog-content -->
+    </div> <!-- End blog-container -->
+
+    <!-- Footer (Optional, if needed outside blog-content) -->
+    <!--
+    <footer class="source-footer">
+        Disclaimer: Information provided is for informational purposes only and does not constitute financial advice. Market conditions are subject to change.
+        <a href="/terms">Terms</a> | <a href="/privacy">Privacy Policy</a>
+    </footer>
+    -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header');
+            const timelineLinks = document.querySelectorAll('.blog-timeline .timeline-item a');
+            const sections = document.querySelectorAll('.event-day-group');
+            const timelineItems = document.querySelectorAll('.blog-timeline .timeline-item');
+
+            // --- Helper Function: Calculate Scroll Offset ---
+            function getScrollOffset() {
+                const headerHeight = header?.offsetHeight || 60; // Get header height or default
+                const extraPadding = 20; // Extra space below the sticky header
+                return headerHeight + extraPadding;
+            }
+
+            // --- Helper Function: Format Date to DDmon (e.g., 21apr) ---
+            function formatDateToIdSuffix(date) {
+                const day = date.getDate();
+                const month = date.toLocaleDateString('en-US', { month: 'short' }).toLowerCase();
+                return `${day}${month}`; // e.g., 21apr, 7may
+            }
+
+            // --- Helper Function: Scroll To Element ---
+            function scrollToElement(element, behavior = 'smooth') {
+                 if (!element) return;
+                 try {
+                    const offset = getScrollOffset();
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: behavior
+                    });
+                 } catch (error) {
+                     console.error("Error scrolling to element:", error, element);
+                 }
+            }
+
+            // --- Helper Function: Activate Timeline Item ---
+            function setActiveTimelineItem(targetId) {
+                timelineItems.forEach(item => item.classList.remove('active'));
+                if (targetId) {
+                    // Find the link whose href matches the targetId
+                    const targetLink = document.querySelector(`.blog-timeline .timeline-item a[href="${targetId}"]`);
+                    if (targetLink) {
+                        targetLink.closest('.timeline-item').classList.add('active');
+                    }
+                }
+            }
+
+
+            // --- Initial Load: Scroll to Today or First Available Date ---
+            function scrollToInitialSection() {
+                const today = new Date();
+                const todayIdSuffix = formatDateToIdSuffix(today);
+                let targetId = `#day-${todayIdSuffix}`; // e.g., #day-21apr
+                let targetElement = document.querySelector(targetId);
+
+                // Fallback: If today's section doesn't exist, find the first section
+                if (!targetElement && sections.length > 0) {
+                    targetElement = sections[0]; // Get the first event-day-group
+                    targetId = `#${targetElement.id}`; // Get its ID
+                    console.log(`Today's section (${targetId}) not found. Falling back to first section: #${targetElement.id}`);
+                }
+
+                if (targetElement) {
+                    // Scroll immediately on load, no smooth animation needed here
+                    scrollToElement(targetElement, 'auto');
+                    // Highlight the corresponding timeline item
+                    setActiveTimelineItem(targetId);
+                } else {
+                    console.log("No event sections found to scroll to.");
+                }
+            }
+
+            // Run the initial scroll logic
+            scrollToInitialSection();
+
+
+            // --- Smooth Scroll on Timeline Link Click (Existing Logic) ---
+            timelineLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href'); // Get '#day-...'
+                    try {
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            scrollToElement(targetElement, 'smooth'); // Use smooth scroll for clicks
+                            // Instantly update active state on click for better UX
+                            setActiveTimelineItem(targetId);
+                        } else {
+                             console.warn(`Target element not found for selector: ${targetId}`);
+                        }
+                    } catch (error) {
+                        console.error(`Invalid selector or DOM error for ${targetId}:`, error);
+                    }
+                });
+            });
+
+            // --- Highlight Timeline Item Based on Scroll Position (Throttled - Existing Logic) ---
+            let scrollTimeout; // Variable to hold timeout ID for throttling
+
+            function handleScroll() {
+                const offset = getScrollOffset();
+                let currentSectionId = '';
+
+                // Find the section currently in view (topmost part is past the offset)
+                sections.forEach(section => {
+                    if (section) {
+                        const sectionTop = section.offsetTop - offset;
+                        // Check if section top is above the offset point OR
+                        // if it's the first section and we are near the top of the page
+                        if (window.pageYOffset >= sectionTop - 5) { // Added a small buffer (-5)
+                            currentSectionId = section.getAttribute('id');
+                        }
+                    }
+                });
+
+                 // If scrolled near the top before the first section, maybe deactivate all
+                 if (window.pageYOffset < (sections[0]?.offsetTop - offset - 5 || 0)) {
+                     currentSectionId = ''; // Deactivate if above the first section
+                 }
+
+
+                // Update active class on timeline items based on the found section ID
+                setActiveTimelineItem(currentSectionId ? `#${currentSectionId}` : null);
+            }
+
+            // Throttle the scroll handler
+            window.addEventListener('scroll', () => {
+                if (!scrollTimeout) {
+                    scrollTimeout = setTimeout(() => {
+                        handleScroll();
+                        scrollTimeout = null; // Reset timeout ID
+                    }, 150);
+                }
+            }, { passive: true });
+
+             // Initial check in case the page loads scrolled (though scrollToInitialSection handles the very start)
+             // We might delay this slightly to ensure initial scroll is finished if needed,
+             // but setActiveTimelineItem in scrollToInitialSection should handle the initial state.
+             // handleScroll(); // Can call this too, but might be redundant with the explicit setActiveTimelineItem above.
+
+        });
+    </script>
+</body>
+</html>
