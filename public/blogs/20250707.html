@@ -713,7 +713,6 @@
             // Ensure sections are sorted by their offsetTop, just in case DOM order isn't guaranteed (though it usually is)
             sections.sort((a, b) => a.offsetTop - b.offsetTop);
 
-
             // --- Helper Function: Calculate Scroll Offset ---
             function getScrollOffset() {
                 const headerHeight = header?.offsetHeight || 60; // Get header height or default
@@ -761,7 +760,6 @@
                 }
             }
 
-
             // --- Initial Load: Scroll to Today or First Available Date ---
             function scrollToInitialSection() {
                 const today = new Date();
@@ -788,7 +786,6 @@
 
             // Run the initial scroll logic
             scrollToInitialSection();
-
 
             // --- Smooth Scroll on Timeline Link Click (Existing Logic) ---
             timelineLinks.forEach(link => {
@@ -856,3 +853,4 @@
 </body>
 
 </html>
+
