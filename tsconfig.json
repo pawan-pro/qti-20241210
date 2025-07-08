@@ -1,26 +1,36 @@
 {
-    "compilerOptions": {
-      "target": "es5",                          // Compatible with older browsers
-      "lib": ["dom", "dom.iterable", "esnext"],
-      "allowJs": true,
-      "skipLibCheck": true,
-      "strict": true,
-      "forceConsistentCasingInFileNames": true,
-      "noEmit": true,
-      "esModuleInterop": true,
-      "module": "esnext",
-      "moduleResolution": "node",
-      "resolveJsonModule": true,
-      "isolatedModules": true,
-      "jsx": "preserve",                        // REQUIRED for Next.js to preserve JSX
-      "incremental": true
-    },
-    "include": [
-      "next-env.d.ts",
-      "**/*.ts",
-      "**/*.tsx"
+  "compilerOptions": {
+    "target": "es5", // Compatible with older browsers
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
-    "exclude": [
-      "node_modules"
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve", // REQUIRED for Next.js to preserve JSX
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
     ]
-  }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
