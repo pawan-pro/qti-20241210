@@ -22,7 +22,7 @@ const projects = [
     id: 'dxy-forecast',
     title: 'Project: Forex - $ DXY Index - 10 Year Forecast',
     image: '/r114.jpg', // Keep existing image path
-    link: '/resources/DXY-10-Year-Outlook.pdf', // Keep existing link
+    link: '/resources/DXY-10 Year Outlook.pdf', // Keep existing link
   },
   
   {
