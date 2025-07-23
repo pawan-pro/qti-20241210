@@ -139,3 +139,9 @@ A reading that is higher than forecast is generally negative (bearish) for the U
 
 Learn More: USDJPY | EURUSD"
 07-May-25	 Wed 	23:30	USD	3	Fed Interest Rate Decision		4.36%	4.37%	[]
+24-Jul-25	Thur	1:30	USD	3	USD - Alphabet Earnings Result	2.19		1.44	"Earnings Per Share (EPS) reveals a company's profit per outstanding share of stock. It's a widely used metric to estimate corporate value. A higher EPS indicates better profitability. Investors closely monitor whether the actual result surpasses or falls short of the forecast, as this can cause significant price volatility.
+
+Learn More: UT100Roll | Alphabet"
+25-Jul-25	Thur	1:30	USD	3	USD - Tesla Earnings Result		0.40	0.42	"Earnings Per Share (EPS) reveals a company's profit per outstanding share of stock. It's a widely used metric to estimate corporate value. A higher EPS indicates better profitability. Investors closely monitor whether the actual result surpasses or falls short of the forecast, as this can cause significant price volatility.
+
+Learn More: UT100Roll | Tesla"
