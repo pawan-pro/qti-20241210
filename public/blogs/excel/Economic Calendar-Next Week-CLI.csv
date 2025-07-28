@@ -1,67 +1,130 @@
-﻿,,x,Date,Day,Time (IST),Cur.,Imp.,Event,Actual,Forecast,Previous,Notes,,,,
-,,,21-Jul-25, Mon ,All Day,JPY,3,Japan - Marine Day,,,,"[]
-
-Learn More: []",,,,
-,,,22-Jul-25, Tue ,18:00,USD,3,USD - Fed Chair Powell Speaks,,,,"Federal Reserve Chair Jerome Powell (Feb. 2018 – Feb. 2026) is to speak. As head of the Fed, which controls short term interest rates, he has more influence over the U.S. dollar's value than any other person. Traders closely watch his speeches as they are often used to drop hints regarding future monetary policy.
-
-Learn More: USDJPY | EURUSD",,,,
-t,,,23-Jul-25, Wed ,19:30,USD,3,USD - Existing Home Sales (Jun),,,4.03M,"
-
-Existing Home Sales measures the change in the annualised number of existing residential buildings that were sold during the prior month. This report helps to gauge the strength of the U.S. housing market and is an important indicator of overall economic strength.
+﻿Date,Day,Time (IST),Cur.,Imp.,Event,Actual,Forecast,Previous,Notes
+29-Jul-25, Tue ,19:30,USD,3,USD - CB Consumer confidence (Jul),,, 93.00 ,"-Conference Board (CB) Consumer Confidence measures the level of confidence consumers have in the economy. When consumers are optimistic, they tend to spend more which increases consumption and overall economic growth.
 
 A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
-Learn More: USDJPY |EURUSD",,,,
-,,,23-Jul-25, Wed ,20:00,USD,3,USD - Crude Oil Inventories,,,-3.859M,"
+Learn more: USDJPY | EURUSD"
+29-Jul-25, Tue ,19:30,USD,3,USD - JOLTS Job Openings (Jun),,, 7.769M ,"-A survey done by the US Bureau of Labor Statistics to help measure job vacancies. It collects data from employers about their businesses' employment, job openings, recruitment, hires and separations.
+JOLTS defines Job Openings as all positions that are open (not filled) on the last business day of the month. A job is ""open"" only if it meets all three of the following conditions:
+1. A specific position exists and there is work available for that position.
+2. The job could start within 30 days, whether or not the establishment finds a suitable candidate during that time.
+3. There is active recruiting for workers from outside the establishment location that has the opening.
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
-The Energy Information Administration's (EIA) Crude Oil Inventories measures the weekly change in the number of barrels of commercial crude oil held by US firms. The level of inventories influences the price of petroleum products, which can have an impact on inflation.
+Learn more: USDJPY | EURUSD"
+30-Jul-25, Wed ,13:30,EUR,3,EUR - German GDP (QoQ) (Q2) P,,,0.40%,"-Gross Domestic Product (GDP) is the broadest measure of economic activity and is a key indicator of economic health. The quarterly percent changes in GDP show the growth rate of the economy as a whole.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.
+
+Learn more: EURJPY | EURUSD"
+30-Jul-25, Wed ,17:45,USD,3,USD - ADP Nonfarm employment Change (Jul),,,-33K,"-ADP is performs payroll services for its clients. The ADP National Employment Report is a measure of the monthly change in non-farm, private employment, based on the payroll data of approximately 400,000 U.S. business clients. The release, two days ahead of government data, is used as a predictor of the government's Labour Market Report.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+
+Learn more: USDJPY | EURUSD"
+30-Jul-25, Wed ,13:30,EUR,3,USD - GDP (QoQ) (Q2) P,,,-0.50%,"-Gross Domestic Product (GDP) measures the annualised change in the inflation-adjusted value of all goods and services produced by the economy. It is the broadest measure of economic activity and the primary indicator of the economy's health.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+
+Learn more: USDJPY | EURUSD"
+30-Jul-25, Wed ,19:15,CAD,3,CAD - BoC Interest Rate Decision,,,2.75%,"-The Bank of Canada (BOC) publishes its decision on where to set the benchmark interest rate. As short term interest rates are an important determinant of currency valuation, traders watch interest rate changes closely.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the CAD, while a weaker than forecast reading is generally negative (bearish) for the CAD.
+
+Learn more: CADJPY | USDCAD"
+30-Jul-25, Wed ,20:00,USD,3,USD - Crude Oil Inventories,,,-3.169M,"-The Energy Information Administration's (EIA) Crude Oil Inventories measures the weekly change in the number of barrels of commercial crude oil held by US firms. The level of inventories influences the price of petroleum products, which can have an impact on inflation.
 
 If the increase in crude inventories is more than expected, it implies weaker demand and is bearish for crude prices. The same can be said if a decline in inventories is less than expected.
 If the increase in crude is less than expected, it implies greater demand and is bullish for crude prices. The same can be said if a decline in inventories is more than expected.
 
-Learn More: USOILRoll",,,,
-,,,24-Jul-25, Thur ,17:45,EUR,3,EUR - Deposit Facility Rate (Jul),,,2.00%,"
+Learn more: USDJPY | EURUSD"
+30-Jul-25, Wed ,23:30,USD,3,USD - FOMC Statement,,,,"-The U.S. Federal Reserve's Federal Open Market Committee (FOMC) statement is the primary tool the panel uses to communicate with investors about monetary policy. It contains the outcome of the vote on interest rates, discusses the economic outlook and offers clues on the outcome of future votes.
 
-The deposit facility is the rate which banks may use to make overnight deposits with the Eurosystem.
+A more dovish than expected statement could be taken as negative/bearish for the USD, while a more hawkish than expected statement could be taken as positive/bullish for the USD.
 
-Learn More: EURUSD | USDJPY",,,,
-,,,24-Jul-25, Thur ,17:45,EUR,3,EUR - ECB Interest Interest Rate Decision (Jul),,,2.15%,"
+Learn more: USDJPY | EURUSD"
+30-Jul-25, Wed ,23:30,USD,3,USD - Fed Inerest Rate Decision,,4.50%,4.50%,"-Federal Open Market Committee (FOMC) members vote on where to set the target interest rate. Traders watch interest rate changes closely as relative short term interest rates are a primary factor in currency valuation.
 
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
-The European Central Bank publishes its decision on where to set the benchmark interest rate. As short term interest rates are an important determinant of currency valuation, traders watch interest rate changes closely.
+Learn more: USDJPY | EURUSD"
+31-Jul-25, Thur ,0:00,USD,3,USD - FOMC Press Conference,,,,"-[]
 
+Learn more: USDJPY | EURUSD"
+31-Jul-25, Thur ,7:00,CNY,3,CNY - Manufacturing PMI (Jul),,, 49.70 ,"-China Manufacturing Purchasing Managers Index (PMI) provides an early indication each month of economic activities in the Chinese manufacturing sector. It is compiled by China Federation of Logistics & Purchasing (CFLP) and China Logistics Information Centre (CLIC), based on data collected by the National Bureau of Statistics (NBS).Li & Fung Research Centre is responsible for drafting and disseminating the English PMI report. Every month questionnaires are sent to over 700 manufacturing enterprises all over China. The data presented here is compiled from the enterprises responses about their purchasing activities and supply situations. The PMI should be compared to other economic data sources when used in decision-making.
+A reading that is stronger than forecast is generally supportive (bullish) for the CNY , while a weaker than forecast reading is generally negative (bearish) for the CNY.
 
+Learn more: USDCNH | USDCNY"
+31-Jul-25, Wed ,8:30,JPY,3,JPY - BoJ Interest Rate Decision,,, 0.01 ,"-Bank of Japan (BOJ) policy board publishes its decision about where to set the target overnight rate. As short term interest rates are an important determinant of currency valuation, traders watch interest rate changes closely. A reading that is stronger than forecast is generally supportive (bullish) for the JPY, while a weaker than forecast reading is generally negative (bearish) for the JPY.
+
+Learn more: USDJPY | EURJPY"
+31-Jul-25, Thur ,17:30,EUR,3,EUR - German CPI (MoM) (Jul) P,,,0.00%,"-The Consumer Price Index (CPI) measures the change in the prices of goods and services from the perspective of the consumer. As Germany has the largest output of any country in the euro-zone, the European Central bank pays very close attention to this figure in its role of maintaining price stability.
 
 A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.
 
-Learn More: EURUSD | USDJPY",,,,
-,,,24-Jul-25, Thur ,18:00,USD,3,USD - Initial Jobless Claims,,,,"
-Initial Jobless Claims measures the number of people who filed for unemployment insurance for the first time during the past week. This is the most timely U.S. economic data, but the market impact varies from week to week.
+Learn more: EURJPY | EURUSD"
+31-Jul-25, Thur ,18:00,USD,3,USD - Core PCE Price Index (MoM) (Jun),,,0.20%,"-The Core Personal Consumption Expenditure (PCE) Price Index measures the changes in the price of goods and services purchased by consumers for the purpose of consumption, excluding food and energy. Unlike the fixed-weight CPI, PCE is chain-weighted and thus adjusts to changing consumer behaviour. Core PCE is the Fed's preferred inflation measure and thus receives greater attention.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+
+Learn more: USDJPY | EURUSD"
+31-Jul-25, Thur ,18:00,USD,3,USD - Core PCE Price Index (YoY) (Jun),,,2.70%,"-The Core PCE price Index is the less volatile measure of the PCE price index which excludes the more volatile and seasonal food and energy prices. The impact on the currency may go both ways, a rise in inflation may lead to a rise in interest rates and a rise in local currency, on the other hand, during recession, a rise in inflation may lead to a deepened recession and therefore a fall in local currency.
+
+Learn more: USDJPY | EURUSD"
+31-Jul-25, Thur ,18:00,USD,3,USD - Initial Jobless Claims,,,217K,"-Initial Jobless Claims measures the number of people who filed for unemployment insurance for the first time during the past week. This is the most timely U.S. economic data, but the market impact varies from week to week.
 A reading that is higher than forecast is generally negative (bearish) for the USD, while a lower than forecast reading is generally supportive (bullish) for the USD.
 
-Learn More: EURUSD | USDJPY",,,,
-,,,24-Jul-25, Thur ,18:15,EUR,3,EUR - ECB Press Conference,,,,"The European Central Bank (ECB) press conference is held monthly, about 45 minutes after the Minimum Bid Rate is announced. The conference is approximately an hour long and has two parts. Firstly, a prepared statement is read, then the conference is open to press questions. The press conference examines the factors which affected the ECB's interest rate decision and deals with the overall economic outlook and inflation. Most importantly, it provides clues regarding future monetary policy. High levels of volatility can frequently be observed during the press conference as press questions lead to unscripted answers.
-
-Learn More: EURUSD | USDJPY",,,,
-,,x,24-Jul-25, Thur ,19:15,USD ,3,USD - Manufacturing PMI (Jul) P,,, 52.90 ,"The Manufacturing Purchasing Managers' Index (PMI) is a diffusion index incorporating survey results provided by manufacturing firms throughout the country. A reading above fifty suggests the manufacturing sector is expanding, while a reading below fifty suggests the manufacturing sector is in contraction. Policymakers and traders watch these surveys closely as purchasing managers usually have early access to data about their company’s performance, rather than waiting for the hard data to emerge. While manufacturing accounts for a far smaller percentage of economic output than services, it is far more cyclical and is therefore a useful indicator of where in the economic cycle the economy is currently situated. A reading that is stronger than forecast is generally supportive (bullish) for the USD while a weaker than forecast reading is generally negative (bearish) for the USD.
-
-Learn More: USDJPY | EURUSD",,,,
-,,,24-Jul-25, Thur ,19:15,USD ,3,USD - Services PMI (Jul) P,,, 52.90 ,"
-The Service PMI release is published monthly by Markit Economics. The data are based on surveys of over 400 executives in private sector service companies. The surveys cover transport and communication, financial intermediaries, business and personal services, computing & IT, hotels and restaurants. 
-An index level of 50 denotes no change since the previous month, while a level above 50 signals an improvement, and below 50 indicates a deterioration. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
-
-Learn More: USDJPY | EURUSD",,,,
-,,,24-Jul-25, Thur ,19:30,USD ,3,USD - New Home Sales (Jun),,, 623K ,"
-New Home Sales measures the annualised number of new single-family homes that were sold during the prior month. When it's released ahead of Existing Home Sales, this report tends to have more impact because the two reports are highly correlated.
+Learn more: USDJPY | EURUSD"
+31-Jul-25, Thur ,19:15,USD,3,USD - Chicago PMI (Jul),,, 40.40 ,"-The Chicago Purchasing Managers' Index (PMI) is a diffusion index incorporating survey results provided by manufacturing firms around the Chicago area. A reading above fifty suggests the manufacturing sector is expanding, while a reading below fifty suggests the manufacturing sector is in contraction. The Chicago PMI can be of some assistance in forecasting the ISM manufacturing PMI.
 
 A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
-Learn More: USDJPY | EURUSD",,,,
-,,,25-Jul-25, Fri ,18:00,USD ,3,USD - Durable Goods Orders (MoM) (Jun) P,,,16.40%,"
-Durable Goods Orders reports the change in the total value of new orders for long lasting manufactured goods, including transportation items.
+Learn more: USDJPY | EURUSD"
+01-Aug-25, Fri ,All Day,USD,3,CHF - Switzerland - National Day,,,,"-[]
+
+Learn more: []"
+01-Aug-25, Fri ,14:30,EUR,3,EUR - CPI (YoY) (Jul) P,,,2.00%,"-The Consumer Price Index (CPI) measures the change in the prices of goods and services contained in a basket of consumer items. The Central bank pays very close attention to this figure in its role of maintaining price stability.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.
+
+Learn more: USDJPY | EURUSD"
+01-Aug-25, Fri ,18:00,USD,3,USD - Average Hourly Earnings (MoM) (Jul),,,0.20%,"-Average Hourly Earnings measures the change in the amount of money businesses pay for labour, excluding the agricultural sector.
 
 A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
-Learn More: USDJPY | EURUSD",,,,
-,,,30-Jul-25, Wed ,23:30,USD,3,Fed Interest Rate Decision,,4.36%,4.38%,[],,,,
-,,,"Source: Bloomberg, News Articles, Company Research. Notes as of 19th July June 2025 6 PM.",,,,,,,,,,,,,
+Learn more: USDJPY | EURUSD"
+01-Aug-25, Fri ,18:00,USD,3,USD - Nonfarm Payrolls (Jul),,,147K,"-Nonfarm Payrolls measures the change in the number of people employed during the prior month, excluding workers in the farming industry. Given that full employment is one of the Federal Reserves mandates, it is very closely watched.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+
+Learn more: USDJPY | EURUSD"
+01-Aug-25, Fri ,18:00,USD,3,USD - Unemployment Rate (Jul),,,4.10%,"-The Unemployment Rate measures the percentage of the total work force that is not working, yet actively seeking employment.
+
+A reading that is higher than forecast is generally negative (bearish) for the USD, while a lower than forecast reading is generally supportive (bullish) for the USD.
+
+Learn more: USDJPY | EURUSD"
+01-Aug-25, Fri ,19:15,USD,3,USD - Manufacturing PMI (Jul),,, 52.90 ,"-The Manufacturing Purchasing Managers' Index (PMI) is a diffusion index incorporating survey results provided by manufacturing firms throughout the country. A reading above fifty suggests the manufacturing sector is expanding, while a reading below fifty suggests the manufacturing sector is in contraction. Policymakers and traders watch these surveys closely as purchasing managers usually have early access to data about their company’s performance, rather than waiting for the hard data to emerge. While manufacturing accounts for a far smaller percentage of economic output than services, it is far more cyclical and is therefore a useful indicator of where in the economic cycle the economy is currently situated. A reading that is stronger than forecast is generally supportive (bullish) for the USD while a weaker than forecast reading is generally negative (bearish) for the USD.
+
+Learn more: USDJPY | EURUSD"
+01-Aug-25, Fri ,19:30,USD,3,USD - ISM Manufacturing PMI (Jul),,, 49.00 ,"-The Institute of Supply Management (ISM) Manufacturing Purchasing Managers Index (PMI) Report on Business is based on data compiled from monthly replies to questions asked of purchasing and supply executives in over 400 industrial companies across the United States. For each of the indicators measured (New Orders, Backlog of Orders, New Export Orders, Imports, Production, Supplier Deliveries, Inventories, Customers Inventories, Employment, and Prices), a diffusion index is calculated by adding the percent of positive responses plus one-half of those responding the same (considered positive). The resulting single index number is then seasonally adjusted.
+
+The PMI is a composite index based on the seasonally adjusted diffusion indices for five of the indicators with differing weights: New Orders --30% Production --25% Employment --20% Supplier Deliveries --15% and Inventories -- 10%.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+
+Learn more: USDJPY | EURUSD"
+01-Aug-25, Fri ,19:30,USD,3,USD - ISM Manufacturing Prices (Jul),,, 69.70 ,"-The Institute of Supply Management (ISM) Manufacturing Purchasing Managers Index (PMI) Report on Business is based on data compiled from monthly replies to questions asked of purchasing and supply executives in over 400 industrial companies. For each of the indicators measured (New Orders, Backlog of Orders, New Export Orders, Imports, Production, Supplier Deliveries, Inventories, Customers Inventories, Employment, and Prices), this report shows the percentage reporting each response, the net difference between the number of responses in the positive economic direction and the negative economic direction and the diffusion index. Responses are raw data and are never changed.
+
+The diffusion index includes the percent of positive responses plus one-half of those responding the same (considered positive). The resulting single index number is then seasonally adjusted to allow for the effects of repetitive intra-year variations resulting primarily from normal differences in weather conditions, various institutional arrangements, and differences attributable to non-moveable holidays. All seasonal adjustment factors are supplied by the U.S. Department of Commerce and are subject annually to relatively minor changes when conditions warrant them.
+
+The PMI is a composite index based on the seasonally adjusted diffusion indices for five of the indicators with varying weights: New Orders --30% Production --25% Employment --20% Supplier Deliveries --15% and Inventories -- 10%.
+
+The Prices Paid subcategory is a diffusion index calculated by adding the percent of responses indicating they paid more for inputs plus one-half of those responding that they paid the same for inputs. The resulting single index number is then seasonally adjusted.
+
+The Prices Paid diffusion index is one of a number of indicators pointing to the degree of inflationary pressures in the economy.
+
+A higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD.
+
+Learn more: USDJPY | EURUSD"
+18-Jun-25, Wed ,23:30,USD,3,Fed Interest Rate Decision,,4.37%,4.36%,[]
+"Source: Bloomberg, News Articles, Company Research. Notes as of 25th July June 2025 5 PM.",,,,,,,,,
