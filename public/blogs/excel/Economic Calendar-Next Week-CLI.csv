@@ -1,61 +1,77 @@
 ﻿Date,Day,Time (IST),Cur.,Imp.,Event,Actual,Forecast,Previous,Notes
-04-Aug-25, Mon ,All Day,GBP,3,GBP - United Kingdom - Bank Holiday,,,,"-[]
+11-Aug-25, Mon ,All Day,USD,3,JPY - Mountain Day,,,,"-[]
 
 Learn more: Legacy Reference"
-04-Aug-25, Mon ,All Day,CAD,3,CAD - Canada - Civic Holiday ,,,,"-[]
+12-Aug-25, Tue ,10:00,AUD,3,RBA - Interest Rate Decision (Aug),,,3.85%,"-The Reserve Bank of Australia (RBA) reports its decision on where to set the benchmark interest rate. As short term interest rates are an important determinant of currency valuation, traders watch interest rate changes closely.
 
-Learn more: Legacy Reference"
-05-Aug-25, Tue ,19:15,USD,3,USD - Services PMI (Jul),,, 55.20 ,"-The Service PMI release is published monthly by Markit Economics. The data are based on surveys of over 400 executives in private sector service companies. The surveys cover transport and communication, financial intermediaries, business and personal services, computing & IT, hotels and restaurants. 
-An index level of 50 denotes no change since the previous month, while a level above 50 signals an improvement, and below 50 indicates a deterioration. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+A reading that is stronger than forecast is generally supportive (bullish) for the AUD, while a weaker than forecast reading is generally negative (bearish) for the AUD.
 
-Learn more: USDJPY | EURUSD"
-05-Aug-25, Tue ,19:30,USD,3,USD - ISM Non-Manufacturing PMI (Jul),,, 50.80 ,"-The Institute of Supply Management (ISM) Non-Manufacturing Purchasing Managers' Index (PMI) (also known as the ISM Services PMI) report on Business, is based on data compiled from monthly replies to questions asked of more than 370 purchasing and supply executives in over 62 different industries.
+Learn more:AUDJPY | AUDUSD"
+12-Aug-25, Tue ,18:00,USD,3,USD - Core CPI (MoM) (Jul),,,0.20%,"-The Core Consumer Price Index (CPI) measures the changes in the price of goods and services, excluding food and energy. The Central bank pays very close attention to this figure in its role of maintaining price stability. Because the Fed believes that core inflation is a better gauge of underlying price pressures, it is more closely watched than overall inflation which tends to be more volatile.
 
-The NMI is a composite index based on the diffusion indexes for four of the indicators with equal weights: Business Activity (seasonally adjusted), New Orders (seasonally adjusted), Employment (seasonally adjusted) and Supplier Deliveries.
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
-A reading above 50 percent indicates the non-manufacturing sector economy is generally expanding; below 50 percent indicates the non-manufacturing sector is generally contracting. Given the large proportion of the US economy engaged in the services sector, this report offers insights into the health of the overall US economy.
+Learn more:USDJPY | EURUSD"
+12-Aug-25, Tue ,18:00,USD,3,USD - CPI (MoM) (Jul),,,0.30%,"-The Consumer Price Index (CPI) measures the change in the prices of goods and services contained in a basket of consumer items. The Central bank pays very close attention to this figure in its role of maintaining price stability.
 
 A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
 Learn more: USDJPY | EURUSD"
-05-Aug-25, Tue ,19:30,USD,3,USD - ISM Non-Manufacturing Prices (Jul),,, 67.50 ,"-The Institute of Supply Management (ISM) Non-Manufacturing Purchasing Managers' Index (PMI) (also known as the ISM Services PMI) report on Business, is based on data compiled from monthly replies to questions asked of more than 370 purchasing and supply executives in over 62 different industries.
-
-The Prices Paid subcategory is a diffusion index calculated by adding the percent of responses indicating they paid more for inputs plus one-half of those responding that they paid the same for inputs. The resulting single index number is then seasonally adjusted.
-
-The Prices Paid diffusion index is one of a number of indicators pointing to the degree of inflationary pressures in the economy.
+12-Aug-25, Tue ,18:00,USD,3,USD - CPI (YoY) (Jul),,,2.70%,"-The Consumer Price Index (CPI) measures the change in the prices of goods and services contained in a basket of consumer items. The Central bank pays very close attention to this figure in its role of maintaining price stability.
 
 A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
 Learn more: USDJPY | EURUSD"
-06-Aug-25, Wed ,20:00,USD,3,USD - Crude Oil Inventories,,,7.698M,"-The Energy Information Administration's (EIA) Crude Oil Inventories measures the weekly change in the number of barrels of commercial crude oil held by US firms. The level of inventories influences the price of petroleum products, which can have an impact on inflation.
+13-Aug-25, Wed ,11:30,EUR,3,EUR - German CPI (MoM) (Jul),,,0.30%,"-The Consumer Price Index (CPI) measures the change in the prices of goods and services from the perspective of the consumer. As Germany has the largest output of any country in the euro-zone, the European Central bank pays very close attention to this figure in its role of maintaining price stability.
 
-If the increase in crude inventories is more than expected, it implies weaker demand and is bearish for crude prices. The same can be said if a decline in inventories is less than expected.
-If the increase in crude is less than expected, it implies greater demand and is bullish for crude prices. The same can be said if a decline in inventories is more than expected.
+A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.
 
-Learn more: USOILRoll"
-06-Aug-25, Wed ,22:30,USD,3,USD - 10-Year Note Auction,,,4.362%,"-The figures displayed in the calendar represent the yield on the Treasury Note auctioned.
+Learn more: EURJPY | EURUSD"
+14-Aug-25, Thur ,11:30,GBP,3,GBP - GDP (MoM) (Jun),,,-0.10%,"-Gross Domestic Product (GDP) measures the annualized change in the inflation-adjusted value of all goods and services produced by the economy. It is the broadest measure of economic activity and the primary indicator of the economy's health. A higher than expected reading should be taken as positive/bullish for the GBP, while a lower than expected reading should be taken as negative/bearish for the GBP.
 
-U.S. Treasury Notes have maturities of two to ten years. Governments issue treasuries to borrow money to cover the gap between the amount they receive in taxes and the amount they spend to refinance existing debt and/or to raise capital. The rate on a Treasury Note represents the return an investor will receive by holding the note for its entire duration. All bidders receive the same rate at the highest accepted bid.
-
-Yield fluctuations should be monitored closely as an indicator of the government debt situation. Investors compare the average rate at auction to the rate at previous auctions of the same security.
-
-Learn more: USDJPY | EURUSD"
-07-Aug-25, Thur ,16:30,GBP,3,GBP - BoE Interest Rate Decision (Aug),,,4.25%,"-Bank of England (BOE) monetary policy committee members vote on where to set the Bank Rate. Traders watch interest rate changes closely because short term interest rates are the primary factor in currency valuation.
+Learn more: GBPJPY | GBPUSD"
+14-Aug-25, Thur ,11:30,GBP,3,GBP - GDP (QoQ) (Q2) P,,,0.70%,"-Gross Domestic Product (GDP) gauges the inflation-adjusted value of all goods and services produced within the economy. It is the most comprehensive measure of economic activity and an important indicator of economic health.
 
 A reading that is stronger than forecast is generally supportive (bullish) for the GBP, while a weaker than forecast reading is generally negative (bearish) for the GBP.
 
 Learn more: GBPJPY | GBPUSD"
-07-Aug-25, Thur ,18:00,USD,3,USD - Initial Jobless Claims,,,,"-
-Initial Jobless Claims measures the number of people who filed for unemployment insurance for the first time during the past week. This is the most timely U.S. economic data, but the market impact varies from week to week.
+14-Aug-25, Thur ,11:30,GBP,3,GBP - GDP (YoY) (Q2) P,,,1.30%,"-Gross Domestic Product (GDP) gauges the inflation-adjusted value of all goods and services produced within the economy. It is the most comprehensive measure of economic activity and an important indicator of economic health.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the GBP, while a weaker than forecast reading is generally negative (bearish) for the GBP.
+
+Learn more: GBPJPY | GBPUSD"
+14-Aug-25, Thur ,18:00,USD,3,USD - Initial Jobless Claims,,,,"-Initial Jobless Claims measures the number of people who filed for unemployment insurance for the first time during the past week. This is the most timely U.S. economic data, but the market impact varies from week to week.
 A reading that is higher than forecast is generally negative (bearish) for the USD, while a lower than forecast reading is generally supportive (bullish) for the USD.
 
-Learn more: USDJPY | EURUSD"
-07-Aug-25, Wed ,22:30,USD,3,USD - 30-Year Note Auction,,,4.889%,"-The figures displayed in the calendar represent the yield on the Treasury Bond auctioned.
+Learn more: GBPJPY | GBPUSD"
+14-Aug-25, Thur ,18:00,USD,3,USD - PPI (MoM) (Jul),,,0.000%,"-The Producer Price Index (PPI) measures a change in input prices of raw, semi-finished or finished goods and services. If input costs rise, some will be absorbed by the producer and some passed on to the consumer. Conversely, if input costs fall, some of the decline will be enjoyed as wider profit margins by the producer and some will be passed on to the consumer in the form of lower prices. Because PPI impacts consumer prices, it is watched by central bankers as part of fulfilling their mandate of price stability.
 
-U.S. Treasury Bonds have maturities from ten up to 30 years. Governments issue treasuries to borrow money to cover the gap between the amount they receive in taxes and the amount they spend to refinance existing debt and/or to raise capital. The rate on a Treasury Bond represents the return an investor will receive by holding the bond for its entire duration. All bidders receive the same rate at the highest accepted bid.
-
-Yield fluctuations should be monitored closely as an indicator of the government debt situation. Investors compare the average rate at auction to the rate at previous auctions of the same security.
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
 Learn more: USDJPY | EURUSD"
-17-Sep-25, Wed ,23:30,USD,3,Fed Interest Rate Decision,,4.17%,4.38%,[]
-"Source: Bloomberg, News Articles, Company Research. Notes as of 03rd August 2025 9 PM.",,,,,,,,,
+15-Aug-25, Fri ,All Day,EUR,3,Italy - Assumption Day,,,,"-[]
+
+Learn more: Legacy Reference"
+15-Aug-25, Fri ,All Day,INR,3,India - Independence Day,,,,"-[]
+
+Learn more: Legacy Reference"
+15-Aug-25, Fri ,All Day,KRW,3,South Korea - Liberation Day,,,,"-[]
+
+Learn more: Legacy Reference"
+15-Aug-25, Fri ,5:20,JPY,3,JPY - GDP (QoQ) (Q2) P,,,0.000%,"-Gross Domestic Product (GDP) measures the change in the inflation-adjusted value of all goods and services produced by the economy. It is the broadest measure of economic activity and the primary indicator of the economy's health.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the JPY, while a weaker than forecast reading is generally negative (bearish) for the JPY.
+
+Learn More: USDJPY | EURJPY"
+15-Aug-25, Fri ,18:00,USD,3,USD - Core Retail Sales (MoM) (Jul),,,0.500%,"-Core Retail Sales measures the change in the total value of sales at the retail level in the U.S., excluding automobiles. It is an important indicator of consumer spending which accounts for a large percentage of US GDP.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+
+Learn More: USDJPY | EURUSD"
+15-Aug-25, Fri ,18:00,USD,3,USD - Retail Sales (MoM) (Jul),,,0.600%,"-Retail Sales gauges the change in the aggregate value of sales at the retail level across the country. It is an important indicator of consumer spending accounting for the majority of overall economic activity.
+
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD..
+
+Learn More: USDJPY | EURUSD"
+17-Sep-25, Wed ,23:30,USD,3,Fed Interest Rate Decision,,4.15%,4.38%,[]
+"Source: Bloomberg, News Articles, Company Research. Notes as of 9th August 2025 5 PM.",,,,,,,,,
