@@ -1,0 +1,396 @@
+﻿Event,RBA - Interest Rate Decision (Aug),,,Asset
+Actual:,,,,C:AUDJPY
+Forecast:,,,,AUDJPY.sd
+Previous:,3.85%,,,
+Time (GMT):,4:30,,,
+Release Date,Actual,Forecast,Previous,Time
+08-Jul-25,3.85%,3.60%,3.85%,4:30
+20-May-25,3.85%,3.85%,4.10%,4:30
+01-Apr-25,4.10%,4.10%,4.10%,3:30
+18-Feb-25,4.10%,4.10%,4.35%,3:30
+10-Dec-24,4.35%,4.35%,4.35%,3:30
+05-Nov-24,4.35%,4.35%,4.35%,3:30
+Event,USD - Core CPI (MoM) (Jul),,,Asset
+Actual:,,,,C:USDJPY
+Forecast:, -   ,,,USDJPY.sd
+Previous:,0.20%,,,
+Time (GMT):,12:30,,,
+Release Date,Actual,Forecast,Previous,Time
+15-Jul-25,0.20%,0.30%,0.10%,12:30
+11-Jun-25,0.10%,0.30%,0.20%,12:30
+13-May-25,0.20%,0.30%,0.10%,12:30
+10-Apr-25,0.10%,0.30%,0.20%,12:30
+12-Mar-25,0.20%,0.30%,0.40%,12:30
+12-Feb-25,0.40%,0.30%,0.20%,13:30
+Event,USD - CPI (MoM) (Jul),,,Asset
+Actual:,,,,C:USDJPY
+Forecast:, -   ,,,USDJPY.sd
+Previous:,0.30%,,,
+Time (GMT):,12:30,,,
+Release Date,Actual,Forecast,Previous,Time
+15-Jul-25,0.30%,0.30%,0.10%,12:30
+11-Jun-25,0.10%,0.20%,0.20%,12:30
+13-May-25,0.20%,0.30%,-0.10%,12:30
+10-Apr-25,-0.10%,0.10%,0.20%,12:30
+12-Mar-25,0.20%,0.30%,0.50%,12:30
+12-Feb-25,0.50%,0.30%,0.40%,13:30
+Event,USD - CPI (YoY) (Jul),,,Asset
+Actual:,,,,C:USDJPY
+Forecast:, -   ,,,USDJPY.sd
+Previous:,2.70%,,,
+Time (GMT):,12:30,,,
+Release Date,Actual,Forecast,Previous,Time
+15-Jul-25,2.70%,2.60%,2.40%,12:30
+11-Jun-25,2.40%,2.50%,2.30%,12:30
+13-May-25,2.30%,2.40%,2.40%,12:30
+10-Apr-25,2.40%,2.50%,2.80%,12:30
+12-Mar-25,2.80%,2.90%,3.00%,12:30
+12-Feb-25,3.00%,2.90%,2.90%,13:30
+Event,EUR - German CPI (MoM) (Jul),,,Asset
+Actual:,,,,C:EURJPY
+Forecast:, -   ,,,EURJPY.sd
+Previous:,0.30%,,,
+Time (GMT):,6:00,,,
+Release Date,Actual,Forecast,Previous,Time
+31-Jul-25,0.30%,0.20%,0.00%,6:00
+10-Jul-25,0.00%,0.00%,0.10%,12:00
+30-Jun-25,0.00%,0.20%,0.10%,6:00
+13-Jun-25,0.10%,0.10%,0.40%,12:00
+30-May-25,0.10%,0.10%,0.40%,6:00
+14-May-25,0.40%,0.40%,0.30%,12:00
+Event,GBP - GDP (MoM) (Jun),,,Asset
+Actual:,,,,C:GBPJPY
+Forecast:, -   ,,,GBPJPY.sd
+Previous:,-0.10%,,,
+Time (GMT):,6:00,,,
+Release Date,Actual,Forecast,Previous,Time
+11-Jul-25,-0.10%,0.10%,-0.30%,6:00
+12-Jun-25,-0.30%,-0.10%,0.20%,6:00
+15-May-25,0.20%,0.00%,0.50%,6:00
+11-Apr-25,0.50%,0.10%,0.00%,6:00
+14-Mar-25,-0.10%,0.10%,0.40%,6:00
+13-Feb-25,0.40%,0.10%,0.10%,7:00
+Event,GBP - GDP (QoQ) (Q2) P,,,Asset
+Actual:,,,,C:GBPJPY
+Forecast:, -   ,,,GBPJPY.sd
+Previous:,0.70%,,,
+Time (GMT):,6:00,,,
+Release Date,Actual,Forecast,Previous,Time
+30-Jun-25,0.70%,0.70%,0.10%,6:00
+15-May-25,0.70%,0.60%,0.10%,6:00
+28-Mar-25,0.10%,0.10%,0.00%,6:00
+13-Feb-25,0.10%,-0.10%,0.00%,7:00
+23-Dec-24,0.00%,0.10%,0.40%,7:00
+15-Nov-24,0.10%,0.20%,0.50%,7:00
+Event,GBP - GDP (YoY) (Q2) P,,,Asset
+Actual:,,,,C:GBPJPY
+Forecast:, -   ,,,GBPJPY.sd
+Previous:,1.30%,,,
+Time (GMT):,6:00,,,
+Release Date,Actual,Forecast,Previous,Time
+30-Jun-25,1.30%,1.30%,1.50%,6:00
+15-May-25,1.30%,1.20%,1.50%,6:00
+28-Mar-25,1.50%,1.40%,0.90%,6:00
+13-Feb-25,1.40%,1.10%,1.00%,7:00
+23-Dec-24,0.90%,1.00%,0.70%,7:00
+15-Nov-24,1.00%,0.10%,0.70%,7:00
+Event,USD - Initial Jobless Claims,,,Asset
+Actual:,,,,C:USDJPY
+Forecast:,,,,USDJPY.sd
+Previous:,,,,
+Time (GMT):,12:30,,,
+Release Date,Actual,Forecast,Previous,Time
+07-Aug-25,0,221,218,12:30
+31-Jul-25,218,222,217,12:30
+24-Jul-25,217,227,221,12:30
+17-Jul-25,221,233,228,12:30
+10-Jul-25,227,236,232,12:30
+03-Jul-25,233,240,237,12:30
+Event,USD - PPI (MoM) (Jul),,,Asset
+Actual:,,,,C:USDJPY
+Forecast:, -   ,,,USDJPY.sd
+Previous:,0.00%,,,
+Time (GMT):,12:30,,,
+Release Date,Actual,Forecast,Previous,Time
+16-Jul-25,0.00%,0.20%,0.30%,12:30
+12-Jun-25,0.10%,0.20%,-0.20%,12:30
+15-May-25,-0.50%,0.20%,0.00%,12:30
+11-Apr-25,-0.40%,0.20%,0.10%,12:30
+13-Mar-25,0.00%,0.30%,0.60%,12:30
+13-Feb-25,0.40%,0.30%,0.50%,12:30
+Event,Italy - Assumption Day,,,Asset
+Actual:,,,,C:USDJPY
+Forecast:, -   ,,,USDJPY.sd
+Previous:,0.00%,,,
+Time (GMT):,#VALUE!,,,
+Release Date,Actual,Forecast,Previous,Time
+18-Jun-25,0.00%,0.00%,0.00%,18:30
+07-May-25,0.00%,0.00%,0.00%,18:30
+19-Mar-25,0.00%,0.00%,0.00%,18:30
+29-Jan-25,0.00%,0.00%,0.00%,18:30
+18-Dec-24,0.00%,0.00%,0.00%,19:30
+07-Nov-24,0.00%,0.00%,0.00%,19:30
+Event,India - Independence Day,,,Asset
+Actual:,,,,C:USDJPY
+Forecast:, -   ,,,USDJPY.sd
+Previous:,0.00%,,,
+Time (GMT):,#VALUE!,,,
+Release Date,Actual,Forecast,Previous,Time
+30-Jun-25,4970.00%,4960.00%,4950.00%,1:30
+31-May-25,4950.00%,4950.00%,4900.00%,1:30
+30-Apr-25,4900.00%,4970.00%,5050.00%,1:30
+31-Mar-25,5050.00%,5040.00%,5020.00%,1:30
+01-Mar-25,5020.00%,5000.00%,4910.00%,1:30
+01-Mar-25,5020.00%,5000.00%,4910.00%,1:30
+Event,South Korea - Liberation Day,,,Asset
+Actual:,,,,C:USDJPY
+Forecast:, -   ,,,USDJPY.sd
+Previous:,0.00%,,,
+Time (GMT):,#VALUE!,,,
+Release Date,Actual,Forecast,Previous,Time
+17-Jun-25,0.50%,0.50%,0.50%,3:00
+01-May-25,0.50%,0.50%,0.50%,3:00
+19-Mar-25,0.50%,0.50%,0.50%,3:00
+24-Jan-25,0.50%,0.50%,0.25%,2:30
+19-Dec-24,0.25%,0.25%,0.25%,3:20
+31-Oct-24,0.25%,0.25%,0.25%,2:55
+Event,JPY - GDP (QoQ) (Q2) P,,,Asset
+Actual:,,,,C:USDJPY
+Forecast:, -   ,,,USDJPY.sd
+Previous:,0.00%,,,
+Time (GMT):,23:50,,,
+Release Date,Actual,Forecast,Previous,Time
+08-Jun-25,0.00%,-0.20%,0.60%,23:50
+15-May-25,-0.20%,-0.10%,0.60%,23:50
+10-Mar-25,0.60%,0.70%,0.30%,23:50
+16-Feb-25,0.70%,0.30%,0.40%,23:50
+08-Dec-24,0.30%,0.20%,0.50%,23:50
+14-Nov-24,0.20%,0.20%,0.50%,23:50
+Event,USD - Core Retail Sales (MoM) (Jul),,,Asset
+Actual:,,,,C:USDJPY
+Forecast:, -   ,,,USDJPY.sd
+Previous:,0.50%,,,
+Time (GMT):,12:30,,,
+Release Date,Actual,Forecast,Previous,Time
+17-Jul-25,0.50%,0.30%,-0.20%,12:30
+17-Jun-25,-0.30%,0.20%,0.00%,12:30
+15-May-25,0.10%,0.30%,0.80%,12:30
+16-Apr-25,0.50%,0.40%,0.70%,12:30
+17-Mar-25,0.30%,0.30%,-0.60%,12:30
+14-Feb-25,-0.40%,0.30%,0.70%,13:30
+Event,USD - Retail Sales (MoM) (Jul),,,Asset
+Actual:,,,,C:USDJPY
+Forecast:, -   ,,,USDJPY.sd
+Previous:,0.60%,,,
+Time (GMT):,12:30,,,
+Release Date,Actual,Forecast,Previous,Time
+17-Jul-25,0.60%,0.10%,-0.90%,12:30
+17-Jun-25,-0.90%,-0.50%,-0.10%,12:30
+15-May-25,0.10%,0.00%,1.70%,12:30
+16-Apr-25,1.40%,1.30%,0.20%,12:30
+17-Mar-25,0.20%,0.60%,-1.20%,12:30
+14-Feb-25,-0.90%,-0.20%,0.70%,13:30
+Event,JPY - Mountain Day,,,Asset
+Actual:,,,,C:USDCNY
+Forecast:,,,,USDCNY.sd
+Previous:, -   ,,,
+Time (GMT):,#VALUE!,,,
+Release Date,Actual,Forecast,Previous,Time
+00-Jan-00, -   , -   , -   ,14:00
+00-Jan-00, -   , -   , -   ,14:00
+00-Jan-00, -   , -   , -   ,14:00
+00-Jan-00, -   , -   , -   ,14:00
+00-Jan-00, -   , -   , -   ,15:00
+00-Jan-00, -   , -   , -   ,15:00
+Event,RBA - Interest Rate Decision (Aug) 2,,,Asset
+Actual:,,,,C:AUDUSD
+Forecast:,,,,AUDUSD.sd
+Previous:,3.85%,,,
+Time (GMT):,4:30,,,
+Release Date,Actual,Forecast,Previous,Time
+08-Jul-25,3.85%,3.60%,3.85%,4:30
+20-May-25,3.85%,3.85%,4.10%,4:30
+01-Apr-25,4.10%,4.10%,4.10%,3:30
+18-Feb-25,4.10%,4.10%,4.35%,3:30
+10-Dec-24,4.35%,4.35%,4.35%,3:30
+05-Nov-24,4.35%,4.35%,4.35%,3:30
+Event,USD - Core CPI (MoM) (Jul) 2,,,Asset
+Actual:,,,,C:EURUSD
+Forecast:, -   ,,,EURUSD.sd
+Previous:,0.20%,,,
+Time (GMT):,12:30,,,
+Release Date,Actual,Forecast,Previous,Time
+15-Jul-25,0.20%,0.30%,0.10%,12:30
+11-Jun-25,0.10%,0.30%,0.20%,12:30
+13-May-25,0.20%,0.30%,0.10%,12:30
+10-Apr-25,0.10%,0.30%,0.20%,12:30
+12-Mar-25,0.20%,0.30%,0.40%,12:30
+12-Feb-25,0.40%,0.30%,0.20%,13:30
+Event,USD - CPI (MoM) (Jul) 2,,,Asset
+Actual:,,,,C:EURUSD
+Forecast:, -   ,,,EURUSD.sd
+Previous:,0.30%,,,
+Time (GMT):,12:30,,,
+Release Date,Actual,Forecast,Previous,Time
+15-Jul-25,0.30%,0.30%,0.10%,12:30
+11-Jun-25,0.10%,0.20%,0.20%,12:30
+13-May-25,0.20%,0.30%,-0.10%,12:30
+10-Apr-25,-0.10%,0.10%,0.20%,12:30
+12-Mar-25,0.20%,0.30%,0.50%,12:30
+12-Feb-25,0.50%,0.30%,0.40%,13:30
+Event,USD - CPI (YoY) (Jul) 2,,,Asset
+Actual:,,,,C:EURUSD
+Forecast:, -   ,,,EURUSD.sd
+Previous:,2.70%,,,
+Time (GMT):,12:30,,,
+Release Date,Actual,Forecast,Previous,Time
+15-Jul-25,2.70%,2.60%,2.40%,12:30
+11-Jun-25,2.40%,2.50%,2.30%,12:30
+13-May-25,2.30%,2.40%,2.40%,12:30
+10-Apr-25,2.40%,2.50%,2.80%,12:30
+12-Mar-25,2.80%,2.90%,3.00%,12:30
+12-Feb-25,3.00%,2.90%,2.90%,13:30
+Event,EUR - German CPI (MoM) (Jul) 2,,,Asset
+Actual:,,,,C:EURUSD
+Forecast:, -   ,,,EURUSD.sd
+Previous:,0.30%,,,
+Time (GMT):,6:00,,,
+Release Date,Actual,Forecast,Previous,Time
+31-Jul-25,0.30%,0.20%,0.00%,6:00
+10-Jul-25,0.00%,0.00%,0.10%,12:00
+30-Jun-25,0.00%,0.20%,0.10%,6:00
+13-Jun-25,0.10%,0.10%,0.40%,12:00
+30-May-25,0.10%,0.10%,0.40%,6:00
+14-May-25,0.40%,0.40%,0.30%,12:00
+Event,GBP - GDP (MoM) (Jun) 2,,,Asset
+Actual:,,,,C:GBPUSD
+Forecast:, -   ,,,GBPUSD.sd
+Previous:,-0.10%,,,
+Time (GMT):,6:00,,,
+Release Date,Actual,Forecast,Previous,Time
+11-Jul-25,-0.10%,0.10%,-0.30%,6:00
+12-Jun-25,-0.30%,-0.10%,0.20%,6:00
+15-May-25,0.20%,0.00%,0.50%,6:00
+11-Apr-25,0.50%,0.10%,0.00%,6:00
+14-Mar-25,-0.10%,0.10%,0.40%,6:00
+13-Feb-25,0.40%,0.10%,0.10%,7:00
+Event,GBP - GDP (QoQ) (Q2) P 2,,,Asset
+Actual:,,,,C:GBPUSD
+Forecast:, -   ,,,GBPUSD.sd
+Previous:,0.70%,,,
+Time (GMT):,6:00,,,
+Release Date,Actual,Forecast,Previous,Time
+30-Jun-25,0.70%,0.70%,0.10%,6:00
+15-May-25,0.70%,0.60%,0.10%,6:00
+28-Mar-25,0.10%,0.10%,0.00%,6:00
+13-Feb-25,0.10%,-0.10%,0.00%,7:00
+23-Dec-24,0.00%,0.10%,0.40%,7:00
+15-Nov-24,0.10%,0.20%,0.50%,7:00
+Event,GBP - GDP (YoY) (Q2) P 2,,,Asset
+Actual:,,,,C:GBPUSD
+Forecast:, -   ,,,GBPUSD.sd
+Previous:,1.30%,,,
+Time (GMT):,6:00,,,
+Release Date,Actual,Forecast,Previous,Time
+30-Jun-25,1.30%,1.30%,1.50%,6:00
+15-May-25,1.30%,1.20%,1.50%,6:00
+28-Mar-25,1.50%,1.40%,0.90%,6:00
+13-Feb-25,1.40%,1.10%,1.00%,7:00
+23-Dec-24,0.90%,1.00%,0.70%,7:00
+15-Nov-24,1.00%,0.10%,0.70%,7:00
+Event,USD - Initial Jobless Claims 2,,,Asset
+Actual:,,,,C:EURUSD
+Forecast:,,,,EURUSD.sd
+Previous:,,,,
+Time (GMT):,12:30,,,
+Release Date,Actual,Forecast,Previous,Time
+07-Aug-25,0,221,218,12:30
+31-Jul-25,218,222,217,12:30
+24-Jul-25,217,227,221,12:30
+17-Jul-25,221,233,228,12:30
+10-Jul-25,227,236,232,12:30
+03-Jul-25,233,240,237,12:30
+Event,USD - PPI (MoM) (Jul) 2,,,Asset
+Actual:,,,,C:EURUSD
+Forecast:, -   ,,,EURUSD.sd
+Previous:,0.00%,,,
+Time (GMT):,12:30,,,
+Release Date,Actual,Forecast,Previous,Time
+16-Jul-25,0.00%,0.20%,0.30%,12:30
+12-Jun-25,0.10%,0.20%,-0.20%,12:30
+15-May-25,-0.50%,0.20%,0.00%,12:30
+11-Apr-25,-0.40%,0.20%,0.10%,12:30
+13-Mar-25,0.00%,0.30%,0.60%,12:30
+13-Feb-25,0.40%,0.30%,0.50%,12:30
+Event,Italy - Assumption Day,,,Asset
+Actual:,,,,C:USDJPY
+Forecast:, -   ,,,USDJPY.sd
+Previous:,0.00%,,,
+Time (GMT):,#VALUE!,,,
+Release Date,Actual,Forecast,Previous,Time
+18-Jun-25,0.00%,0.00%,0.00%,18:30
+07-May-25,0.00%,0.00%,0.00%,18:30
+19-Mar-25,0.00%,0.00%,0.00%,18:30
+29-Jan-25,0.00%,0.00%,0.00%,18:30
+18-Dec-24,0.00%,0.00%,0.00%,19:30
+07-Nov-24,0.00%,0.00%,0.00%,19:30
+Event,India - Independence Day,,,Asset
+Actual:,,,,C:USDJPY
+Forecast:, -   ,,,USDJPY.sd
+Previous:,0.00%,,,
+Time (GMT):,#VALUE!,,,
+Release Date,Actual,Forecast,Previous,Time
+30-Jun-25,4970.00%,4960.00%,4950.00%,1:30
+31-May-25,4950.00%,4950.00%,4900.00%,1:30
+30-Apr-25,4900.00%,4970.00%,5050.00%,1:30
+31-Mar-25,5050.00%,5040.00%,5020.00%,1:30
+01-Mar-25,5020.00%,5000.00%,4910.00%,1:30
+01-Mar-25,5020.00%,5000.00%,4910.00%,1:30
+Event,South Korea - Liberation Day,,,Asset
+Actual:,,,,C:USDJPY
+Forecast:, -   ,,,USDJPY.sd
+Previous:,0.00%,,,
+Time (GMT):,#VALUE!,,,
+Release Date,Actual,Forecast,Previous,Time
+17-Jun-25,0.50%,0.50%,0.50%,3:00
+01-May-25,0.50%,0.50%,0.50%,3:00
+19-Mar-25,0.50%,0.50%,0.50%,3:00
+24-Jan-25,0.50%,0.50%,0.25%,2:30
+19-Dec-24,0.25%,0.25%,0.25%,3:20
+31-Oct-24,0.25%,0.25%,0.25%,2:55
+Event,JPY - GDP (QoQ) (Q2) P 2,,,Asset
+Actual:,,,,C:EURJPY
+Forecast:, -   ,,,EURJPY.sd
+Previous:,0.00%,,,
+Time (GMT):,23:50,,,
+Release Date,Actual,Forecast,Previous,Time
+08-Jun-25,0.00%,-0.20%,0.60%,23:50
+15-May-25,-0.20%,-0.10%,0.60%,23:50
+10-Mar-25,0.60%,0.70%,0.30%,23:50
+16-Feb-25,0.70%,0.30%,0.40%,23:50
+08-Dec-24,0.30%,0.20%,0.50%,23:50
+14-Nov-24,0.20%,0.20%,0.50%,23:50
+Event,USD - Core Retail Sales (MoM) (Jul) 2,,,Asset
+Actual:,,,,C:EURUSD
+Forecast:, -   ,,,EURUSD.sd
+Previous:,0.50%,,,
+Time (GMT):,12:30,,,
+Release Date,Actual,Forecast,Previous,Time
+17-Jul-25,0.50%,0.30%,-0.20%,12:30
+17-Jun-25,-0.30%,0.20%,0.00%,12:30
+15-May-25,0.10%,0.30%,0.80%,12:30
+16-Apr-25,0.50%,0.40%,0.70%,12:30
+17-Mar-25,0.30%,0.30%,-0.60%,12:30
+14-Feb-25,-0.40%,0.30%,0.70%,13:30
+Event,USD - Retail Sales (MoM) (Jul) 2,,,Asset
+Actual:,,,,C:EURUSD
+Forecast:, -   ,,,EURUSD.sd
+Previous:,0.60%,,,
+Time (GMT):,12:30,,,
+Release Date,Actual,Forecast,Previous,Time
+17-Jul-25,0.60%,0.10%,-0.90%,12:30
+17-Jun-25,-0.90%,-0.50%,-0.10%,12:30
+15-May-25,0.10%,0.00%,1.70%,12:30
+16-Apr-25,1.40%,1.30%,0.20%,12:30
+17-Mar-25,0.20%,0.60%,-1.20%,12:30
+14-Feb-25,-0.90%,-0.20%,0.70%,13:30
