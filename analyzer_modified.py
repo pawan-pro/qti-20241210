@@ -132,55 +132,89 @@ def calculate_atr(df, period=14):
     return df
 
 def parse_excel_input(excel_input):
-    excel_input = excel_input.replace('^I', '\t')
+    """
+    Parses the quasi-CSV input data. It's more like a report format than a CSV.
+    This function is designed to be robust against empty lines and formatting variations.
+    """
     lines = excel_input.strip().split('\n')
     events = []
+    event_details = {}  # Using a dict to store details per event name
+
+    current_event_name = None
+
+    for line in lines:
+        if not line.strip():
+            continue
+
+        # The file is comma-separated
+        parts = line.split(',')
+
+        if line.startswith('Event,'):
+            if len(parts) > 1:
+                current_event_name = parts[1].strip()
+                if current_event_name not in event_details:
+                    events.append({'name': current_event_name})
+                    event_details[current_event_name] = {
+                        'name': current_event_name,
+                        'symbols': {},
+                        'time_gmt': None,
+                        'history': []
+                    }
+        elif current_event_name: # Only process if we are under an event
+            if line.startswith('Actual:'):
+                if len(parts) > 1:
+                    event_details[current_event_name]['symbols']['polygon'] = parts[-1].strip()
+            elif line.startswith('Forecast:'):
+                if len(parts) > 1:
+                    event_details[current_event_name]['symbols']['mt5'] = parts[-1].strip()
+            elif line.startswith('Time (GMT):'):
+                if len(parts) > 1:
+                    event_details[current_event_name]['time_gmt'] = parts[1].strip()
+            elif re.match(r'\d{2}-\w{3}-\d{2}', line):
+                if len(parts) >= 5:
+                    date_str = parts[0].strip()
+                    actual = parts[1].strip().replace('%', '') or "NA"
+                    forecast = parts[2].strip().replace('%', '') or "NA"
+                    previous = parts[3].strip().replace('%', '') or "NA"
+                    time_str = parts[4].strip()
+
+                    event_details[current_event_name]['history'].append({
+                        'date': date_str,
+                        'actual': actual,
+                        'forecast': forecast,
+                        'previous': previous,
+                        'time': time_str
+                    })
+
+    # Now, we need to transform this into the format the rest of the script expects.
     date_time_inputs = {}
     event_data_list = {}
     event_symbols = {}
 
-    current_event_name = ""
-    current_event_time = ""
+    for event_name, details in event_details.items():
+        event_symbols[event_name] = details.get('symbols', {})
+        for record in details.get('history', []):
+            try:
+                date = datetime.strptime(record['date'], '%d-%b-%y').strftime('%Y-%m-%d')
+                if date not in event_data_list:
+                    event_data_list[date] = []
 
-    for line in lines:
-        if line.startswith('Event'):
-            parts = line.split('\t')
-            current_event_name = parts[1].strip()
-            events.append({'name': current_event_name})
-        elif line.startswith('Actual:'):
-            parts = line.split('\t')
-            symbol = parts[-1].strip()
-            event_symbols[current_event_name] = {"polygon": symbol}
-        elif line.startswith('Forecast:'):
-            parts = line.split('\t')
-            mt5_symbol = parts[-1].strip()
-            event_symbols[current_event_name]["mt5"] = mt5_symbol
-        elif line.startswith('Time (GMT):'):
-            parts = line.split('\t')
-            current_event_time = parts[1].strip()
-        elif re.match(r'\d{2}-\w{3}-\d{2}', line):
-            parts = line.split('\t')
-            date_str = parts[0].strip()
-            date = datetime.strptime(date_str, '%d-%b-%y').strftime('%Y-%m-%d')
-            actual = parts[1].strip().replace('%', '')
-            forecast = parts[2].strip().replace('%', '') or "NA"
-            previous = parts[3].strip().replace('%', '') or "NA"
-            time_str = parts[4].strip()
+                event_data_list[date].append({
+                    "name": event_name,
+                    "actual": record['actual'],
+                    "forecast": record['forecast'],
+                    "previous": record['previous'],
+                    "time": record['time']
+                })
 
-            if date not in date_time_inputs:
-                date_time_inputs[date] = {
-                    "date": date,
-                    "event": current_event_time + "3:00",
-                }
-                event_data_list[date] = []
-
-            event_data_list[date].append({
-                "name": current_event_name,
-                "actual": actual,
-                "forecast": forecast,
-                "previous": previous,
-                "time": time_str
-            })
+                if date not in date_time_inputs:
+                     date_time_inputs[date] = {
+                        "date": date,
+                        "event": details.get('time_gmt', '12:00') + "3:00", # Fallback time
+                    }
+            except (ValueError, KeyError):
+                print(f"Warning: Could not parse record for event {event_name} on date {record.get('date', 'N/A')}. Skipping.")
+                continue
 
     return date_time_inputs, event_data_list, events, event_symbols
 
