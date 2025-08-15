@@ -29,17 +29,19 @@ def generate_market_size_projection(output_dir, color):
     save_plot("market_size_projection.png", output_dir)
 
 def generate_private_sector_gdp(output_dir, color):
-    """Chart 2: Private Sector GDP Contribution (Donut Chart)"""
+    """Chart 2: Private Sector GDP Contribution (Pie Chart)"""
     plt.figure(figsize=(8, 8))
-    labels = ['2030 Target', '']
+    labels = ['Private Sector Target', 'Other']
     sizes = [35, 65]
     colors = [color, '#d3d3d3']
-    plt.pie(sizes, labels=None, colors=colors, autopct=None, startangle=90, wedgeprops=dict(width=0.4, edgecolor='w'))
-    plt.text(0, 0, '35%', ha='center', va='center', fontsize=40, weight='bold', color=color)
-    setup_plot("Growing Private Sector Share of Healthcare GDP")
+    explode = (0.05, 0) # Explode the first slice slightly
+
+    plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=90,
+            pctdistance=0.85, explode=explode, textprops={'fontsize': 14, 'weight': 'bold'})
+
+    setup_plot("Growing Private Sector Share of Healthcare GDP (2030 Target)")
     plt.ylabel('') # remove default ylabel
-    plt.legend(labels=['Private Sector (35%)', 'Other (65%)'], loc="upper right", bbox_to_anchor=(1.2, 0.9))
-    plt.text(0.5, -0.1, 'Shift from 25% Current Share', ha='center', va='center', transform=plt.gca().transAxes, fontsize=12)
+    plt.text(0.5, 0.05, 'Target Share: 35%\n(Up from 25% currently)', ha='center', va='center', transform=plt.gca().transAxes, fontsize=12, bbox=dict(boxstyle="round,pad=0.3", fc='yellow', ec='black', lw=1, alpha=0.7))
     save_plot("private_sector_gdp.png", output_dir)
 
 def generate_hospital_bed_gap(output_dir, color):

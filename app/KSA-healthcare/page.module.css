@@ -91,14 +91,14 @@
     align-items: center;
 }
 
-.chart-column-group {
+.chart-row {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
-    align-items: center;
 }
 
-.chart-half {
-    max-width: calc(50% - 10px);
+.chart-large-half {
+    max-width: 48%;
 }
 
 .summary-table {

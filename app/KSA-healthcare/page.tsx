@@ -57,14 +57,10 @@ export default function KsaHealthcarePage() {
                 <img src="/images/ksa-report/medical_tourism_growth.png" alt="Medical Tourism Revenue Projections" className={styles.chart} />
 
                 <h3>5.3: Pharmaceutical and Insurance Markets</h3>
-                <div className={styles['two-column-grid']}>
-                    <div className={styles['text-column']}>
-                        <p>The pharmaceutical market presents a robust opportunity, projected to grow to <strong>$11.5 billion by 2032</strong>. This is driven by a focus on local manufacturing and distribution partnerships. Simultaneously, the health insurance market is expanding rapidly, with a forecasted value of <strong>$12.5 billion by 2033</strong>, growing at a CAGR of 5.14%. The government's plan for state-funded insurance for all citizens by 2026 will further accelerate demand for private healthcare services.</p>
-                    </div>
-                    <div className={styles['chart-column-group']}>
-                        <img src="/images/ksa-report/pharma_market_growth.png" alt="Pharmaceutical Market Forecast" className={`${styles.chart} ${styles['chart-half']}`} />
-                        <img src="/images/ksa-report/insurance_market_growth.png" alt="Health Insurance Market Expansion" className={`${styles.chart} ${styles['chart-half']}`} />
-                    </div>
+                <p>The pharmaceutical market presents a robust opportunity, projected to grow to <strong>$11.5 billion by 2032</strong>. This is driven by a focus on local manufacturing and distribution partnerships. Simultaneously, the health insurance market is expanding rapidly, with a forecasted value of <strong>$12.5 billion by 2033</strong>, growing at a CAGR of 5.14%. The government's plan for state-funded insurance for all citizens by 2026 will further accelerate demand for private healthcare services.</p>
+                <div className={styles['chart-row']}>
+                    <img src="/images/ksa-report/pharma_market_growth.png" alt="Pharmaceutical Market Forecast" className={`${styles.chart} ${styles['chart-large-half']}`} />
+                    <img src="/images/ksa-report/insurance_market_growth.png" alt="Health Insurance Market Expansion" className={`${styles.chart} ${styles['chart-large-half']}`} />
                 </div>
             </section>
 
