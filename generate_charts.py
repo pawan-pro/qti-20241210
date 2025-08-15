@@ -118,7 +118,7 @@ def main():
     os.makedirs(output_dir, exist_ok=True)
 
     plt.style.use('seaborn-v0_8-whitegrid')
-    primary_color = '#0A487F'
+    primary_color = '#595959'
 
     generate_market_size_projection(output_dir, primary_color)
     generate_private_sector_gdp(output_dir, primary_color)

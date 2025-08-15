@@ -1,6 +1,13 @@
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../public/fonts/CenturyGothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* General Body and Typography */
 body {
-    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Century Gothic', 'Helvetica Neue', Arial, sans-serif;
     background-color: #FFFFFF;
     color: #333333;
     line-height: 1.7;
@@ -43,7 +50,7 @@ section h2 {
     margin-top: 40px; /* Provides separation */
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #0A487F;
+    border-bottom: 2px solid #595959;
 }
 
 section h3 {
@@ -57,11 +64,12 @@ section h3 {
 p {
     font-size: 1.1em;
     margin-bottom: 1.5em;
+    text-align: justify;
 }
 
 strong {
     font-weight: 700;
-    color: #0A487F;
+    color: #595959;
 }
 
 hr {
@@ -115,7 +123,7 @@ hr {
 }
 
 .summary-table thead th {
-    background-color: #0A487F;
+    background-color: #595959;
     color: #FFFFFF;
     font-weight: 700;
     text-transform: uppercase;
