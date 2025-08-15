@@ -1,59 +1,54 @@
 @font-face {
     font-family: 'Century Gothic';
-    src: url('../public/fonts/CenturyGothic.woff2') format('woff2');
+    src: url('/fonts/CenturyGothic.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
-/* General Body and Typography */
-body {
+/* This container is a wrapper but doesn't apply styles itself, */
+/* it's just for the page component to hook into. */
+/* We apply styles to the elements directly within the page. */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
     font-family: 'Century Gothic', 'Helvetica Neue', Arial, sans-serif;
     background-color: #FFFFFF;
     color: #333333;
     line-height: 1.7;
-    margin: 0;
-    padding: 20px 0;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Headers and Hierarchy */
-header {
+.container header {
     text-align: center;
     margin-bottom: 40px;
     padding-bottom: 20px;
     border-bottom: 1px solid #e0e0e0;
 }
 
-h1 {
+.container h1 {
     font-size: 2.8em;
     font-weight: 700;
     color: #000000;
     margin-bottom: 0.2em;
 }
 
-h2 {
+.container h2 {
     font-size: 1.2em;
     font-weight: 400;
     color: #555;
 }
 
-/* Section Titles */
-section h2 {
+.container section h2 {
     font-size: 2.2em;
     font-weight: 700;
     color: #000000;
-    margin-top: 40px; /* Provides separation */
+    margin-top: 40px;
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid #595959;
 }
 
-section h3 {
+.container section h3 {
     font-size: 1.6em;
     font-weight: 700;
     color: #333;
@@ -61,25 +56,24 @@ section h3 {
     margin-bottom: 15px;
 }
 
-p {
+.container p {
     font-size: 1.1em;
     margin-bottom: 1.5em;
     text-align: justify;
 }
 
-strong {
+.container strong {
     font-weight: 700;
     color: #595959;
 }
 
-hr {
+.container hr {
     border: 0;
     height: 1px;
     background-color: #e0e0e0;
     margin: 60px 0;
 }
 
-/* Chart Styling */
 .chart {
     display: block;
     margin: 40px auto;
@@ -90,7 +84,6 @@ hr {
     border-radius: 8px;
 }
 
-/* Two-Column Grid Layout */
 .two-column-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -108,7 +101,6 @@ hr {
     max-width: calc(50% - 10px);
 }
 
-/* Summary Table Styling */
 .summary-table {
     width: 100%;
     border-collapse: collapse;
@@ -137,7 +129,6 @@ hr {
     background-color: #E9EEF2;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .two-column-grid {
         grid-template-columns: 1fr;
@@ -145,10 +136,10 @@ hr {
     .chart {
         max-width: 100%;
     }
-    h1 {
+    .container h1 {
         font-size: 2em;
     }
-    section h2 {
+    .container section h2 {
         font-size: 1.8em;
     }
 }

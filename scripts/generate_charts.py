@@ -114,7 +114,7 @@ def generate_saudization_targets(output_dir, color):
 
 def main():
     """Main function to generate all charts."""
-    output_dir = 'images/report'
+    output_dir = 'public/images/ksa-report'
     os.makedirs(output_dir, exist_ok=True)
 
     plt.style.use('seaborn-v0_8-whitegrid')
