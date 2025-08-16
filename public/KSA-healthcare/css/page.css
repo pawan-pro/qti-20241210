@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../../fonts/CenturyGothic.woff2') format('woff2');
+}
+
 body {
     font-family: 'Century Gothic', sans-serif;
     color: #495057; /* Dark grey for text */
