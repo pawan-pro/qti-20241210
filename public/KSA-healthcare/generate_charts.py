@@ -140,12 +140,11 @@ plt.tight_layout()
 plt.savefig(os.path.join(output_dir, 'saudization_targets.png'), dpi=300)
 plt.close(fig8)
 
-# --- Chart 9: Non-Oil GDP Share ---
+# --- Chart 9: Non-Oil GDP Share (2D Donut Chart) ---
 fig9, ax9 = plt.subplots(figsize=(7, 7))
 labels = 'Non-Oil Sector', 'Oil Sector'
 sizes = [52, 48]
-explode = (0.1, 0)
-ax9.pie(sizes, explode=explode, labels=labels, autopct='%1.f%%', shadow=True, startangle=140, colors=[main_color, secondary_color])
+ax9.pie(sizes, labels=labels, autopct='%1.f%%', startangle=140, colors=[main_color, secondary_color], wedgeprops=dict(width=0.4, edgecolor='w'))
 ax9.set_title('Non-Oil Sector Share of Real GDP (Q1 2025)', fontsize=16)
 ax9.axis('equal')
 plt.tight_layout()

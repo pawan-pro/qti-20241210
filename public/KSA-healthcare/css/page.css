@@ -98,3 +98,59 @@ strong {
 .summary-table tbody tr:nth-child(even) {
     background-color: #f8f9fa; /* Zebra striping */
 }
+
+    /* Styling for the new Key Players section */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95em; /* Slightly smaller for density */
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #dee2e6;
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.data-table thead {
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: bold;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.table-note {
+    font-size: 0.9em;
+    color: #6c757d;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #dee2e6;
+    margin: 40px 0;
+}
+
+.player-profile ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.player-profile ul li {
+    margin-bottom: 8px;
+}
+
+#private-players h4 {
+    text-transform: none; /* Override uppercase style for sub-headings here */
+    letter-spacing: normal;
+    font-style: italic;
+    color: #495057;
+}
