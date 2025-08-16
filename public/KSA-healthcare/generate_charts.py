@@ -4,10 +4,14 @@ import numpy as np
 import os
 
 # Ensure the output directory exists
-output_dir = "images/report"
+output_dir = "/Users/pawan/Documents/GitHub/qti/public/KSA-healthcare/images/report"
 os.makedirs(output_dir, exist_ok=True)
 
-# --- Chart Styling ---
+# --- Chart Styling & FONT CONFIGURATION ---
+# Using Gill Sans, a professional font available on macOS
+plt.rcParams['font.family'] = 'sans-serif'
+plt.rcParams['font.sans-serif'] = ['Gill Sans']
+
 plt.style.use('seaborn-v0_8-whitegrid')
 main_color = '#6c757d'
 secondary_color = '#495057'
@@ -125,16 +129,25 @@ plt.tight_layout()
 plt.savefig(os.path.join(output_dir, 'saudization_targets.png'), dpi=300)
 plt.close(fig8)
 
-# --- Chart 9: Non-Oil GDP Share (2D Donut Chart) ---
-fig9, ax9 = plt.subplots(figsize=(7, 7))
+# --- Chart 9: Non-Oil GDP Share (2D Pie Chart) ---
+# >>>>>>>>>>>> CHANGE 1: Figure size is now less tall <<<<<<<<<<<<<<
+fig9, ax9 = plt.subplots(figsize=(3, 2.8)) # Was (3, 3)
+
 labels = 'Non-Oil Sector', 'Oil Sector'
 sizes = [52, 48]
-ax9.pie(sizes, labels=labels, autopct='%1.f%%', startangle=140, colors=[main_color, secondary_color], wedgeprops=dict(width=0.4, edgecolor='w'))
-ax9.set_title('Non-Oil Sector Share of Real GDP (Q1 2025)', fontsize=16)
+colors = ['#6c757d', '#495057']
+
+ax9.pie(sizes, labels=labels, autopct='%1.f%%', startangle=140, colors=colors, textprops={'fontsize': 8})
+fig9.suptitle('Non-Oil Sector Share of Real GDP (Q1 2025)', fontsize=9, y=0.95) # Slightly adjusted y
 ax9.axis('equal')
-plt.tight_layout()
+
+# >>>>>>>>>>>> CHANGE 2: Replaced tight_layout with precise margin control <<<<<<<<<<<<<<
+# This command gives us exact control over the whitespace around the plot.
+plt.subplots_adjust(left=0.05, right=0.95, bottom=0.05, top=0.85)
+
 plt.savefig(os.path.join(output_dir, 'non_oil_gdp_share.png'), dpi=300)
 plt.close(fig9)
+print("Generated: non_oil_gdp_share.png (with reduced bottom margin)")
 
 # --- Chart 10: Unemployment Rate Decline ---
 fig10, ax10 = plt.subplots(figsize=(8, 6))
@@ -166,4 +179,4 @@ plt.tight_layout()
 plt.savefig(os.path.join(output_dir, 'population_projection.png'), dpi=300)
 plt.close(fig11)
 
-print("All 11 charts have been generated successfully in the KSA-healthcare/images/report/ directory.")
+print("All charts have been regenerated with the Gill Sans font and centered title fix.")
