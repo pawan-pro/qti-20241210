@@ -30,21 +30,6 @@ plt.tight_layout()
 plt.savefig(os.path.join(output_dir, 'market_size_projection.png'), dpi=300)
 plt.close(fig1)
 
-# --- Chart 2: Private Sector GDP Contribution ---
-fig2, ax2 = plt.subplots(figsize=(7, 7))
-labels = ['Current Private Share', 'Rest of Healthcare GDP', '2030 Target Private Share', 'Rest of Healthcare GDP']
-sizes_current = [25, 75]
-sizes_target = [35, 65]
-colors = ['#ff9999', '#66b3ff']
-explode = (0.1, 0)
-ax2.pie(sizes_target, labels=['2030 Target (35%)', ''], colors=[main_color, '#dcdcdc'], autopct='%1.1f%%', startangle=90, wedgeprops=dict(width=0.3, edgecolor='w'))
-ax2.pie(sizes_current, labels=['Current (25%)', ''], colors=[secondary_color, '#f0f0f0'], autopct='%1.1f%%', startangle=90, radius=0.7, wedgeprops=dict(width=0.3, edgecolor='w'))
-ax2.set_title('Growing Private Sector Share of Healthcare GDP', fontsize=16)
-ax2.axis('equal')
-plt.tight_layout()
-plt.savefig(os.path.join(output_dir, 'private_sector_gdp.png'), dpi=300)
-plt.close(fig2)
-
 # --- Chart 3: Hospital Bed Gap ---
 fig3, ax3 = plt.subplots(figsize=(8, 6))
 locations = ['KSA', 'G20 Emerging Avg']

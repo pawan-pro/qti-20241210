@@ -61,7 +61,7 @@ strong {
 
 .chart {
     display: block;
-    max-width: 85%;
+    max-width: 70%; /* Changed from 85% */
     margin: 40px auto;
     border: 1px solid #e9ecef;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
