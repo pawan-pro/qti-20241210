@@ -126,3 +126,57 @@
     font-size: 1.5rem;
   }
 }
+
+/* Styling for the Key Challenges Infographic */
+.challengesContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a; /* Dark gray background */
+    border: 1px solid #444;    /* Subtle border */
+    border-radius: 8px;
+    padding: 2rem 3rem;
+    margin-top: 2rem;
+    font-family: sans-serif;   /* Or your project's font */
+    color: #e0e0e0;             /* Off-white text for readability */
+    position: relative;
+}
+
+.challengeMetric {
+    text-align: left;
+}
+
+.metricRight {
+    text-align: right;
+}
+
+.metricValue {
+    font-size: 1.5rem; /* e.g., 24px */
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.metricLabel {
+    font-size: 0.875rem; /* e.g., 14px */
+    color: #999999;
+    margin-top: 0.25rem;
+}
+
+.challengeTitle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #888;
+    font-size: 0.75rem; /* e.g., 12px */
+    white-space: nowrap;
+}
+
+/* Optional vertical divider line */
+.divider {
+    width: 1px;
+    height: 50px; /* Adjust height as needed */
+    background-color: #444;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

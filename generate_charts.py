@@ -107,40 +107,8 @@ def create_comparative_cagr_chart():
     plt.close(fig)
     print("Chart 3: Comparative CAGR chart created.")
 
-def create_challenges_infographic():
-    """Chart 4: Key Challenges (Info-Graphic Style)"""
-    fig, ax = plt.subplots(figsize=(8, 4))
-
-    # Hide all axes and spines
-    ax.set_xticks([])
-    ax.set_yticks([])
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
-    ax.spines['bottom'].set_visible(False)
-    ax.spines['left'].set_visible(False)
-
-    # Overcapacity text
-    ax.text(0.25, 0.6, '50-60M Tons', fontsize=24, fontweight='bold', ha='center', va='center', color=TEXT_COLOR)
-    ax.text(0.25, 0.4, 'Excess Production Capacity', fontsize=12, ha='center', va='center', color=TEXT_COLOR, wrap=True)
-
-    # Separator
-    ax.plot([0.5, 0.5], [0.2, 0.8], color=GRID_COLOR, linestyle='-', linewidth=2)
-
-    # Utilization text
-    ax.text(0.75, 0.6, '<70%', fontsize=24, fontweight='bold', ha='center', va='center', color=TEXT_COLOR)
-    ax.text(0.75, 0.4, 'Capacity Utilization Rate', fontsize=12, ha='center', va='center', color=TEXT_COLOR, wrap=True)
-
-    fig.suptitle('Key Challenges: Overcapacity vs. Utilization', fontsize=16, color=TEXT_COLOR)
-
-    plt.tight_layout(rect=[0, 0, 1, 0.95])
-    plt.savefig(os.path.join(OUTPUT_DIR, 'gcc_key_challenges.png'), dpi=DPI, bbox_inches='tight')
-    plt.close(fig)
-    print("Chart 4: Key challenges infographic created.")
-
-
 if __name__ == "__main__":
     create_market_share_chart()
     create_projected_growth_chart()
     create_comparative_cagr_chart()
-    create_challenges_infographic()
     print(f"All charts saved to '{OUTPUT_DIR}' directory.")
