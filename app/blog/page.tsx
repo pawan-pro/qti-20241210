@@ -5,11 +5,53 @@ import styles from './page.module.css';
 
 const projects = [
   {
+    id: 'blog20250818',
+    title: 'Key Economic Events: Week Of 18th August 2025',
+    image: '/blogs/blog-cover/20250818.png',
+    link: '/blogs/20250818.html',
+    //description: 'Exploring the impact of geopolitical events on global markets.',
+  },
+  {
+    id: 'blog20250811',
+    title: 'Key Economic Events: Week Of 11th August 2025',
+    image: '/blogs/blog-cover/20250811.png',
+    link: '/blogs/20250811.html',
+    //description: 'Exploring the impact of geopolitical events on global markets.',
+  },
+  {
+    id: 'blog20250804',
+    title: 'Key Economic Events: Week Of 4th August 2025',
+    image: '/blogs/blog-cover/20250804.png',
+    link: '/blogs/20250804.html',
+    //description: 'Exploring the impact of geopolitical events on global markets.',
+  },
+  {
+    id: 'blog20250728',
+    title: 'Key Economic Events: Week Of 28th July 2025',
+    image: '/blogs/blog-cover/20250728.png',
+    link: '/blogs/20250728.html',
+    //description: 'Exploring the impact of geopolitical events on global markets.',
+  },
+  {
+    id: 'blog20250721',
+    title: 'Key Economic Events: Week Of 21st July 2025',
+    image: '/blogs/blog-cover/20250721.png',
+    link: '/blogs/20250721.html',
+    //description: 'Exploring the impact of geopolitical events on global markets.',
+  },
+  {
+    id: 'blog20250714',
+    title: 'Key Economic Events: Week Of 14th July 2025',
+    image: '/blogs/blog-cover/20250714.png',
+    link: '/blogs/20250714.html',
+    //description: 'Analyzing the impact of central bank decisions on equity and bond markets.',
+  },
+  {
     id: 'blog20250707',
     title: 'Key Economic Events: Week Of 7th July 2025',
     image: '/blogs/blog-cover/20250707.png',
     link: '/blogs/20250707.html',
-    //description: 'Analyzing the economic shifts heading into Q3 2025.',
+
   },
   {
     id: 'blog20250630',

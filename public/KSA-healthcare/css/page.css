@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../../fonts/CenturyGothic.woff2') format('woff2');
+}
+
+body {
+    font-family: 'Century Gothic', sans-serif;
+    color: #495057; /* Dark grey for text */
+    background-color: #f8f9fa;
+    line-height: 1.8;
+}
+
+.report-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.8em;
+    color: #343a40; /* Very dark grey for main title */
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #343a40;
+    border-bottom: 2px solid #6c757d; /* Grey underline for section titles */
+    padding-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #495057;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 1.1em;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.1em;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+strong {
+    color: #343a40;
+}
+
+.chart {
+    display: block;
+    max-width: 70%; /* Changed from 85% */
+    margin: 40px auto;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.two-column-layout {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.two-column-layout .column {
+    flex: 1;
+}
+
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-size: 1em;
+}
+
+.summary-table th, .summary-table td {
+    border: 1px solid #dee2e6;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.summary-table thead {
+    background-color: #e9ecef; /* Light grey for header */
+    color: #495057;
+}
+
+.summary-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Zebra striping */
+}
+
+    /* Styling for the new Key Players section */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95em; /* Slightly smaller for density */
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #dee2e6;
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.data-table thead {
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: bold;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.table-note {
+    font-size: 0.9em;
+    color: #6c757d;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #dee2e6;
+    margin: 40px 0;
+}
+
+.player-profile ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.player-profile ul li {
+    margin-bottom: 8px;
+}
+
+#private-players h4 {
+    text-transform: none; /* Override uppercase style for sub-headings here */
+    letter-spacing: normal;
+    font-style: italic;
+    color: #495057;
+}
