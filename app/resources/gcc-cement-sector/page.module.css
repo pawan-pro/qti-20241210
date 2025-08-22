@@ -168,7 +168,7 @@
     transform: translateX(-50%);
     color: #888;
     font-size: 0.75rem; /* e.g., 12px */
-    white-space: nowrap;
+    white-space: wrap;
 }
 
 /* Optional vertical divider line */

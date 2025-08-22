@@ -81,7 +81,7 @@ export default function GccCementSectorPage() {
           </p>
           <ul className={styles.list}>
             <li><strong>The Drive to Decarbonize:</strong> In line with global commitments, such as the Global Cement and Concrete Association&apos;s (GCCA) pledge for net-zero concrete by 2050, regional players are under intense pressure to reduce their environmental footprint. Key initiatives include investment in alternative fuels, the development of low-carbon cement products, and the adoption of circular economy principles.</li>
-            <li><strong>Structural Overcapacity:</strong> The region currently holds an estimated 50-60 million tons of excess production capacity, leading to capacity utilization rates below 70%. This imbalance exerts significant downward pressure on prices and compresses profit margins, making operational excellence and cost optimization critical for survival and success.</li>
+            <li><strong>Structural Overcapacity:</strong> The region currently holds an estimated 50-60 million tons of excess production capacity, leading to capacity utilization rates below 70%. This imbalance exerts significant downward pressure on prices and compresses profit margins, making operational excellence and cost optimization critical for survival and success. Firms that successfully navigate this challenge to boost their utilization rates are positioned to achieve significant top-line growth, stronger bottom-line profitability, and ultimately, exceptional returns on investment.</li>
           </ul>
           {/* START: Key Challenges Infographic */}
           <div className={styles.challengesContainer}>
@@ -90,13 +90,13 @@ export default function GccCementSectorPage() {
                   <div className={styles.metricLabel}>Excess Production Capacity</div>
               </div>
               <div className={styles.divider}></div>
-              <div className={styles.challengeTitle}>Key Challenges: Overcapacity vs. Utilization</div>
+              <div className={styles.challengeTitle}>Key Challenges: Need for operational excellence</div>
               <div className={`${styles.challengeMetric} ${styles.metricRight}`}>
-                  <div className={styles.metricValue}>&lt;70%</div>
-                  <div className={styles.metricLabel}>Capacity Utilization Rate</div>
+                  <div className={styles.metricValue}>Compressed Margins</div>
+                  <div className={styles.metricLabel}>Profitability Pressure</div>
               </div>
           </div>
-          {/* END: Key Challenges Infographic */}
+          {/* END: Key Challenges Infographic */} 
         </section>
 
         <section className={styles.section}>
