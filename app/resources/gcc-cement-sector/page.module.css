@@ -1,0 +1,128 @@
+/* --- Main Container & Layout --- */
+.mainContainer {
+  background-color: #121212; /* A slightly softer black than the body */
+  color: #e0e0e0;
+  padding-bottom: 4rem;
+}
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* --- Header Section --- */
+.header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #b8b8b8; /* Silver grey for subtitle */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- Content Sections --- */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e8e8e8; /* Platinum for section titles */
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #404040;
+}
+
+.intro {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #d0d0d0;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #c0c0c0; /* Lighter grey for readability */
+}
+
+/* --- List Styling --- */
+.list {
+  list-style-position: inside;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+  color: #c0c0c0;
+}
+
+.list li strong {
+  color: #e0e0e0;
+  font-weight: bold;
+}
+
+/* --- Chart & Image Styling --- */
+.chartContainer {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #1e1e1e; /* Match chart background */
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+/* --- Call to Action Section --- */
+.ctaSection {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  margin-top: 3rem;
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.ctaText {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #e8e8e8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}
