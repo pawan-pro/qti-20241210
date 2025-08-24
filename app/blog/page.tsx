@@ -5,6 +5,13 @@ import styles from './page.module.css';
 
 const projects = [
   {
+    id: 'blog20250825',
+    title: 'Key Economic Events: Week Of 25th August 2025',
+    image: '/blogs/blog-cover/20250825.png',
+    link: '/blogs/20250825.html',
+    //description: 'Exploring the impact of geopolitical events on global markets.',
+  },
+  {
     id: 'blog20250818',
     title: 'Key Economic Events: Week Of 18th August 2025',
     image: '/blogs/blog-cover/20250818.png',

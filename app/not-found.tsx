@@ -20,9 +20,12 @@ export default function NotFound() {
     ];
 
     // Randomly select an image
+
     const randomIndex = Math.floor(Math.random() * images.length);
     setRandomImage(images[randomIndex]);
   }, []);
+
+  
 
   return (
     <div className={styles.container}>
