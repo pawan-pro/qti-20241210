@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar: Week of September 15th, 2025</title>
+    <link rel="stylesheet" href="/global.css">
+    <style>
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .firm-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007acc;
+        }
+
+        /* Blog styles */
+        @font-face {
+            font-family: 'Century Gothic';
+            src: url('/fonts/CenturyGothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Century Gothic', Arial, sans-serif !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000000;
+            color: #313131;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .blog-container {
+            padding: 33px;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #e9e9e9ac;
+            margin-bottom: 10px;
+        }
+
+        .blog-subtitle {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        /* Timeline Styles */
+        .blog-timeline {
+            position: fixed;
+            /* Adjusted left position for alignment */
+            left: 33px;
+            top: 100px;
+            padding: 15px;
+            background: rgba(42, 42, 42, 0.8);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(3, 3, 3, 0.1);
+            width: 160px;
+            font-size: 0.7rem;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            z-index: 900;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 15px 0;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 0.7rem;
+        }
+
+        /* Updated active state to use grey shades and slight shift */
+        .timeline-item.active {
+            /* Ensure background and border are grey for the active state */
+            background: linear-gradient(135deg, rgba(176, 176, 176, 0.15) 0%, rgba(100, 100, 100, 0.05) 100%);
+            border: 1px solid rgba(161, 161, 161, 0.3);
+            transform: translateX(10px);
+            /* Shift to the right */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+        }
+
+        /* Updated active date color to a lighter grey */
+        .timeline-item.active .timeline-date {
+            color: #6495ED;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-left: 0px;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        .timeline-date {
+            color: #e9e9e9ac;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-align: center;
+            padding-bottom: 3px;
+            transition: color 0.3s ease;
+        }
+
+        .timeline-events {
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+        /* Blog Content Styles */
+        .blog-content {
+            /* Adjusted margin-left to account for the wider timeline */
+            margin-left: 210px;
+            max-width: 1200px;
+            padding-right: 33px;
+            color: #ccc;
+        }
+
+        .event-day-group {
+            margin-bottom: 40px;
+            padding-top: 10px; /* Provides space above the H2 title within the section */
+        }
+
+        .event-day-group:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Updated day group header color to a consistent grey */
+        .event-day-group h2.timeline-date {
+            font-size: 1.5rem;
+            color: #cacacada;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #444;
+            text-align: left;
+        }
+
+        .event-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6495ED;
+            margin-bottom: 15px;
+        }
+
+        .event-details {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 10px 15px;
+            margin-bottom: 15px;
+        }
+
+        .event-label {
+            font-weight: bold;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-align: right;
+            padding-right: 5px;
+
+        }
+
+        .event-value {
+            color: #bbb;
+            font-size: 0.9rem;
+            word-break: break-word;
+        }
+
+        .event-notes-value {
+            text-align: justify;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        .historical-impact a {
+            color: #e0e0e0;
+            text-decoration: none;
+            background-color: #357ae8;
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 5px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 3px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .forecast a {
+            color: #e0e0e0;
+            text-decoration: none;
+            background-color: #357ae8;
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 5px;  
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 3px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .forecast a:hover {
+            background-color: #2a65c8;
+            color: #fff;
+        }
+        .historical-impact a:hover {
+            background-color: #2a65c8;
+            color: #fff;
+        }
+
+        .source-card {
+            background-color: #222;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #e9e9e9ac;
+            border: 1px solid #444;
+        }
+
+        .source-card a {
+            color: #6495ED;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .source-card a:hover {
+            text-decoration: underline;
+        }
+
+        .source-card .historical-impact span {
+            color: rgb(168, 168, 168);
+        }
+        
+        .past-blogs {
+            margin-top: 40px;
+        }
+        
+        .past-blogs h3 {
+            font-size: 1.2rem;
+            color: #cacacada;
+            margin-bottom: 15px;
+        }
+        
+        .past-blogs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .past-blogs li {
+            margin-bottom: 10px;
+        }
+        
+        .past-blogs a {
+            color: #6495ED;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        .past-blogs a:hover {
+            text-decoration: underline;
+        }
+
+        .source-footer {
+            background-color: #161616;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            /* Adjusted margin-left to account for the wider timeline */
+            margin: 20px 0 20px 210px;
+            width: calc(100% - 243px);
+            /* Adjusted width */
+            max-width: 1200px;
+            color: #bbb;
+            font-size: 0.8rem;
+        }
+
+        .source-footer a {
+            color: #4a90e2;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .source-footer a:hover {
+            color: #357ae8;
+        }
+
+        @media (max-width: 768px) {
+            .blog-timeline {
+                display: none;
+            }
+
+            .blog-content {
+                margin-left: 0;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .event-details {
+                grid-template-columns: 90px 1fr;
+            }
+
+            .event-label {
+                text-align: left;
+                padding-right: 0;
+            }
+
+            .source-footer {
+                margin-left: 0;
+                width: calc(100% - 40px);
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .header {
+                padding: 1rem;
+            }
+
+            .firm-name {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                gap: 0.8rem;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                display: none;
+            }
+
+            .event-details {
+                grid-template-columns: 1fr;
+                gap: 5px 0;
+            }
+
+            .event-label {
+                text-align: left;
+                margin-bottom: 2px;
+                font-size: 0.85rem;
+            }
+
+            .event-value {
+                font-size: 0.85rem;
+            }
+
+            .event-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/" class="firm-name">Quantwater Tech Investments</a>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/solutions">Solutions</a>
+            <a href="/research">Research</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="blog-container">
+        <aside class="blog-timeline">
+            <div class="timeline-item">
+                <a href="#day-15sep">
+                    <div class="timeline-info">
+                        <span class="timeline-date">15 Sep</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-16sep">
+                    <div class="timeline-info">
+                        <span class="timeline-date">16 Sep</span>
+                        <span class="timeline-events">3 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-17sep">
+                    <div class="timeline-info">
+                        <span class="timeline-date">17 Sep</span>
+                        <span class="timeline-events">7 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-18sep">
+                    <div class="timeline-info">
+                        <span class="timeline-date">18 Sep</span>
+                        <span class="timeline-events">4 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-19sep">
+                    <div class="timeline-info">
+                        <span class="timeline-date">19 Sep</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-29oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">29 Oct</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <main class="blog-content">
+            <div class="blog-title">Key Economic Events: Week Of 15th September 2025</div>
+            <div class="blog-subtitle">Release Date: 15th September 2025</div>
+
+            <section class="event-day-group" id="day-15sep">
+                <h2 class="timeline-date">15 September 2025</h2>
+                <article class="event-card">
+                    <h3 class="event-title">JPY - Japan - Respect for the Aged Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">15-Sep-25, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">JPY</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Respect for the Aged Day (known in Japanese as Keiro no Hi) is a national holiday in Japan held annually on the third Monday of September. It honors the elderly, celebrates their longevity and recognizes their contributions to society. It's part of the Silver Week, which includes several holidays in September. The holiday often results in reduced business activity in Japan as many people take time off to spend with elderly family members. This can affect economic data releases and market liquidity during the week.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Respect_for_the_Aged_Day" target="_blank" rel="noopener noreferrer">Legacy Reference</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-16sep">
+                <h2 class="timeline-date">16 September 2025</h2>
+                <article class="event-card">
+                    <h3 class="event-title">MXN - Mexico - Independent Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">16-Sep-25, Tues, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">MXN</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Independence Day (Día de la Independencia) is Mexico's most important national holiday, commemorating the start of the Mexican War of Independence from Spain in 1810. The day is marked by patriotic celebrations across Mexico, including military parades, fireworks, and cultural events. Government offices, banks, and many businesses are closed. The holiday can affect peso liquidity in financial markets and may impact trade flows between Mexico and its partners, particularly the United States.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Mexican_Independence_Day" target="_blank" rel="noopener noreferrer">Legacy Reference</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Core Retail Sales (MoM) (Aug)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">16-Sep-25, Tues, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.30%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.30%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Core Retail Sales measures the change in the total value of sales at the retail level in the U.S., excluding automobiles. It is an important indicator of consumer spending which accounts for a large percentage of US GDP. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD. This data point provides insight into underlying consumer demand trends, excluding the volatile automotive sector, which can be significantly impacted by seasonal factors and incentives.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Retail Sales (MoM) (Aug)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">16-Sep-25, Tues, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.50%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.50%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Retail Sales gauges the change in the aggregate value of sales at the retail level across the country. It is an important indicator of consumer spending accounting for the majority of overall economic activity. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD. This broad measure of consumer spending is a key input into GDP calculations and provides early insight into the health of the U.S. economy. The data can be volatile due to seasonal adjustments and can significantly impact market sentiment about the Federal Reserve's monetary policy path.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-17sep">
+                <h2 class="timeline-date">17 September 2025</h2>
+                <article class="event-card">
+                    <h3 class="event-title">GBP - CPI (YoY) (Aug)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">17-Sep-25, Wed, 11:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">GBP</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">3.800%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.800%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Consumer Price Index (CPI) measures the change in the prices of goods and services contained in a basket of consumer items. The Central bank pays very close attention to this figure in its role of maintaining price stability. A reading that is stronger than forecast is generally supportive (bullish) for the GBP, while a weaker than forecast reading is generally negative (bearish) for the GBP. The Bank of England closely monitors inflation trends as they guide monetary policy decisions. With the BoE's next policy meeting scheduled for September 18, this inflation data will be a crucial input for policymakers as they assess the need for further interest rate adjustments.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">GBPJPY</a>
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">GBPUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">EUR - CPI (YoY) (Aug)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">17-Sep-25, Wed, 14:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">2.000%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Consumer Price Index (CPI) measures the change in the prices of goods and services contained in a basket of consumer items. The Central bank pays very close attention to this figure in its role of maintaining price stability. A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR. With the European Central Bank's policy meeting scheduled for the same day, this inflation data will be instrumental in shaping market expectations for the ECB's decision on interest rates and monetary policy stance. Market participants will be particularly attentive to underlying inflation pressures amid ongoing concerns about global trade tensions.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a>
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">CAD - BoC Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">17-Sep-25, Wed, 19:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">CAD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">2.750%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Bank of Canada (BOC) publishes its decision on where to set the benchmark interest rate. As short term interest rates are an important determinant of currency valuation, traders watch interest rate changes closely. A reading that is stronger than forecast is generally supportive (bullish) for the CAD, while a weaker than forecast reading is generally negative (bearish) for the CAD. The Bank of Canada's monetary policy decisions are influenced by domestic economic conditions, inflation trends, and global economic developments. With the Federal Reserve expected to make a rate decision shortly after, market participants will be watching for any divergence in monetary policy stance between the two central banks, which could significantly impact the USD/CAD exchange rate.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">CADJPY</a>
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">USDCAD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Crude Oil Inventories</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">17-Sep-25, Wed, 20:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.939M</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Energy Information Administration's (EIA) Crude Oil Inventories measures the weekly change in the number of barrels of commercial crude oil held by US firms. The level of inventories influences the price of petroleum products, which can have an impact on inflation. If the increase in crude inventories is more than expected, it implies weaker demand and is bearish for crude prices. The same can be said if a decline in inventories is less than expected. If the increase in crude is less than expected, it implies greater demand and is bullish for crude prices. The same can be said if a decline in inventories is more than expected. This report is closely watched by energy traders and can have significant impacts on oil prices and related energy sector equities.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">USOILRoll</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - FOMC Economic Projections</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">17-Sep-25, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The U.S. Federal Reserve's Federal Open Market Committee (FOMC) statement is the primary tool the panel uses to communicate with investors about monetary policy. It contains the outcome of the vote on interest rates, discusses the economic outlook and offers clues on the outcome of future votes. A more dovish than expected statement could be taken as negative/bearish for the USD, while a more hawkish than expected statement could be taken as positive/bullish for the USD. The economic projections include the Summary of Economic Projections (SEP), which provides FOMC members' forecasts for GDP growth, unemployment, and inflation, offering valuable insight into the committee's longer-term outlook.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - FOMC Statement</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">17-Sep-25, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The U.S. Federal Reserve's Federal Open Market Committee (FOMC) statement is the primary tool the panel uses to communicate with investors about monetary policy. It contains the outcome of the vote on interest rates, discusses the economic outlook and offers clues on the outcome of future votes. A more dovish than expected statement could be taken as negative/bearish for the USD, while a more hawkish than expected statement could be taken as positive/bullish for the USD. The statement is parsed by market participants for any changes in language that might signal shifts in the Fed's policy stance or future intentions.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Fed Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">17-Sep-25, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">4.500%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Federal Open Market Committee (FOMC) members vote on where to set the target interest rate. Traders watch interest rate changes closely as relative short term interest rates are a primary factor in currency valuation. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD. Markets have been pricing in a rate cut following recent weaker-than-expected economic data, including the August nonfarm payrolls report. The decision will be accompanied by updated economic projections and a press conference, which will provide further insight into the Fed's policy outlook.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener noreferrer">CME FedWatch Tool</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-18sep">
+                <h2 class="timeline-date">18 September 2025</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - FOMC Press Conference</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">18-Sep-25, Thur, 00:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Federal Reserve Chair speaks after the FOMC interest rate decision. This is one of the most important events for USD as it provides insights on the Fed's outlook, policy trajectory, and economic conditions. Volatility often increases during the Q&A session. The press conference offers the Chair an opportunity to clarify the committee's decision and provide additional context on economic assessments. Market participants closely analyze the Chair's language for any hints about future policy moves, making this event a key driver of market sentiment and USD exchange rate movements.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">GBP - BoE Interest Rate Decision (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">18-Sep-25, Thur, 16:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">GBP</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">4.000%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Bank of England (BOE) monetary policy committee members vote on where to set the Bank Rate. Traders watch interest rate changes closely because short term interest rates are the primary factor in currency valuation. A reading that is stronger than forecast is generally supportive (bullish) for the GBP, while a weaker than forecast reading is generally negative (bearish) for the GBP. The decision follows closely after the release of UK CPI data and will be influenced by the latest inflation readings and economic outlook. Market participants will be looking for any signals about the direction of future policy moves, especially in relation to the Fed's anticipated rate decision.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">GBPJPY</a>
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">GBPUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Initial Jobless Claims</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">18-Sep-25, Thur, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">263K</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Initial Jobless Claims measures the number of people who filed for unemployment insurance for the first time during the past week. This is the most timely U.S. economic data, but the market impact varies from week to week. A reading that is higher than forecast is generally negative (bearish) for the USD, while a lower than forecast reading is generally supportive (bullish) for the USD. This data point provides a real-time indicator of labor market conditions and can influence expectations for the Federal Reserve's monetary policy path, particularly following the recent FOMC decision.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Philadelphia Fed Manufacturing Index (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">18-Sep-25, Thur, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-0.3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Philadelphia Federal Reserve Manufacturing Index measures the relative level of business conditions amongst manufacturers in the Federal reserve district. A level above zero on the index indicates improving conditions; below indicates worsening conditions. The data is compiled from a survey of about 250 manufacturers in the Philadelphia Federal Reserve district. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD. This regional manufacturing index provides early insight into the health of the U.S. manufacturing sector and can influence market sentiment about the broader economic outlook.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-19sep">
+                <h2 class="timeline-date">19 September 2025</h2>
+                <article class="event-card">
+                    <h3 class="event-title">JPY - BoJ Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">19-Sep-25, Fri, 08:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">JPY</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.500%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Bank of Japan (BOJ) policy board publishes its decision about where to set the target overnight rate. As short term interest rates are an important determinant of currency valuation, traders watch interest rate changes closely. A reading that is stronger than forecast is generally supportive (bullish) for the JPY, while a weaker than forecast reading is generally negative (bearish) for the JPY. The BOJ's monetary policy stance continues to differ significantly from other major central banks, with negative interest rates and yield curve control measures still in place. Market participants will be watching for any adjustments to these policies as Japan's economy continues to recover from the pandemic's effects.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a>
+                            <a href="/blogs/blog-pdf/20250915.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-29oct">
+                <h2 class="timeline-date">29 October 2025</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Fed Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Oct-25, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">3.90%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">4.38%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Federal Open Market Committee (FOMC) members vote on where to set the target interest rate. Traders watch interest rate changes closely as relative short term interest rates are a primary factor in currency valuation. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD. This decision will be closely watched by markets as it will provide further insight into the Federal Reserve's policy direction and economic outlook. The decision comes amid ongoing concerns about global economic conditions and domestic labor market dynamics.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener noreferrer">CME FedWatch Tool</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="past-blogs">
+                <h3>Past Economic Calendars</h3>
+                <ul>
+                    <li><a href="20250908.html">Week of September 8th, 2025</a></li>
+                    <li><a href="20250901.html">Week of August 31st, 2025</a></li>
+                    <li><a href="20250825.html">Week of August 25th, 2025</a></li>
+                    <li><a href="20250818.html">Week of August 18th, 2025</a></li>
+                    <li><a href="20250811.html">Week of August 11th, 2025</a></li>
+                </ul>
+            </section>
+
+            <!-- Source Card -->
+            <div class="source-card">
+                Source: Bloomberg, ADSS, Dow Jones Wire Service, Reuters, News Articles, Company Research. Notes as of 14th September 2025, 10 PM. <br>
+                For historical data and resources, please visit:
+                <span class="historical-impact">
+                    <a href="https://quantwatertech.netlify.app/research" target="_blank" rel="noopener noreferrer"><span
+                            style="color: rgb(255, 254, 254);">quantwater.tech/resources</span></a>
+                </span>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header');
+            const timelineLinks = document.querySelectorAll('.blog-timeline .timeline-item a');
+            const sections = Array.from(document.querySelectorAll('.event-day-group')); // Convert to Array for easier sorting if needed
+            const timelineItems = document.querySelectorAll('.blog-timeline .timeline-item');
+
+            // Ensure sections are sorted by their offsetTop, just in case DOM order isn't guaranteed (though it usually is)
+            sections.sort((a, b) => a.offsetTop - b.offsetTop);
+
+            // --- Helper Function: Calculate Scroll Offset ---
+            function getScrollOffset() {
+                const headerHeight = header?.offsetHeight || 60; // Get header height or default
+                const extraPadding = 20; // Extra space below the sticky header
+                return headerHeight + extraPadding;
+            }
+
+            // --- Helper Function: Format Date to DDmon (e.g., 21apr) ---
+            function formatDateToIdSuffix(date) {
+                const day = date.getDate();
+                const month = date.toLocaleDateString('en-US', {
+                    month: 'short'
+                }).toLowerCase();
+                // Pad day with leading zero if less than 10
+                const formattedDay = day < 10 ? '0' + day : day;
+                return `${formattedDay}${month}`; // e.g., 02jun, 18jun
+            }
+
+            // --- Helper Function: Scroll To Element ---
+            function scrollToElement(element, behavior = 'smooth') {
+                if (!element) return;
+                try {
+                    const offset = getScrollOffset();
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: behavior
+                    });
+                } catch (error) {
+                    console.error("Error scrolling to element:", error, element);
+                }
+            }
+
+            // --- Helper Function: Activate Timeline Item ---
+            function setActiveTimelineItem(targetId) {
+                timelineItems.forEach(item => item.classList.remove('active'));
+                if (targetId) {
+                    // Find the link whose href matches the targetId
+                    const targetLink = document.querySelector(`.blog-timeline .timeline-item a[href="${targetId}"]`);
+                    if (targetLink) {
+                        targetLink.closest('.timeline-item').classList.add('active');
+                    }
+                }
+            }
+
+            // --- Initial Load: Scroll to Today or First Available Date ---
+            function scrollToInitialSection() {
+                const today = new Date();
+                const todayIdSuffix = formatDateToIdSuffix(today);
+                let targetId = `#day-${todayIdSuffix}`; // e.g., #day-02jun
+                let targetElement = document.querySelector(targetId);
+
+                // If today's section doesn't exist, find the first section in the current document
+                if (!targetElement && sections.length > 0) {
+                    targetElement = sections[0]; // Get the first event-day-group
+                    targetId = `#${targetElement.id}`; // Get its ID
+                    console.log(`Today's section (${targetId}) not found. Falling back to first section: #${targetElement.id}`);
+                }
+
+                if (targetElement) {
+                    // Scroll immediately on load, no smooth animation needed here
+                    scrollToElement(targetElement, 'auto');
+                    // Highlight the corresponding timeline item directly
+                    setActiveTimelineItem(targetId);
+                } else {
+                    console.log("No event sections found to scroll to.");
+                }
+            }
+
+            // Run the initial scroll logic
+            scrollToInitialSection();
+
+            // --- Smooth Scroll on Timeline Link Click (Existing Logic) ---
+            timelineLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href'); // Get '#day-...'
+                    try {
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            scrollToElement(targetElement, 'smooth'); // Use smooth scroll for clicks
+                            // Instantly update active state on click for better UX
+                            setActiveTimelineItem(targetId);
+                        } else {
+                            console.warn(`Target element not found for selector: ${targetId}`);
+                        }
+                    } catch (error)
+                        {
+                        console.error(`Invalid selector or DOM error for ${targetId}:`, error);
+                    }
+                });
+            });
+            
+            // --- Highlight Timeline Item Based on Scroll Position (Throttled - Revised Logic) ---
+            let scrollTimeout; 
+
+            function handleScroll() {
+                const offset = getScrollOffset();
+                let newActiveSectionId = ''; 
+                // This is the Y document coordinate that is currently aligned with the visual "offset line"
+                // (e.g., 80px below the viewport top).
+                const viewportOffsetLine_DocY = window.pageYOffset + offset; 
+
+                // Find the last section whose top is at or "above" (smaller Y value or equal) this line.
+                for (let i = 0; i < sections.length; i++) {
+                    const section = sections[i];
+                    if (section) { // Ensure section exists
+                        const sectionTop_DocY = section.offsetTop;
+                        
+                        if (sectionTop_DocY <= viewportOffsetLine_DocY) {
+                            newActiveSectionId = section.getAttribute('id');
+                        } else {
+                            // Since sections are sorted by offsetTop, if this section's top is
+                            // "below" (larger Y value) the offset line, then all subsequent sections
+                            // will also be. So, the previously found newActiveSectionId (from the loop) is the correct one.
+                            break; 
+                        }
+                    }
+                }
+                setActiveTimelineItem(newActiveSectionId ? `#${newActiveSectionId}` : null);
+            }
+
+            // Throttle the scroll handler
+            window.addEventListener('scroll', () => {
+                if (!scrollTimeout) {
+                    scrollTimeout = setTimeout(() => {
+                        handleScroll();
+                        scrollTimeout = null; // Reset timeout ID
+                    }, 150); 
+                }
+            }, {
+                passive: true
+            });
+        });
+    </script>
+</body>
+
+</html>
