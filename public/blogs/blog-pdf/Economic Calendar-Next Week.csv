@@ -2,10 +2,10 @@ Date,Day,Time (IST),Cur.,Imp.,Event,Actual,Forecast,Previous,Notes,,,
 23-Sep-25, Tue ,All Day,JPY ,3,Japan - Autumn Equinox,,,,"[]
 
 Learn More: Learn More",,,
-23-Sep-25, Tue ,19:15,USD,3,USD - S&P Global Manufacturing PMI (Sep) P,,, 53.00 ,"The Manufacturing Purchasing Managers' Index (PMI) measures the activity level of purchasing managers in the manufacturing sector. A reading above 50 indicates expansion in the sector; below 50 indicates contraction. Traders watch these surveys closely as purchasing managers usually have early access to data about their company’s performance, which can be a leading indicator of overall economic performance. A higher than expected reading should be taken as positive/bullish for the USD while a lower than expected reading should be taken as negative/bearish for the USD.
+23-Sep-25, Tue ,19:15,USD,3,USD - S&P Global Manufacturing PMI (Sep) P,,,53,"The Manufacturing Purchasing Managers' Index (PMI) measures the activity level of purchasing managers in the manufacturing sector. A reading above 50 indicates expansion in the sector; below 50 indicates contraction. Traders watch these surveys closely as purchasing managers usually have early access to data about their company’s performance, which can be a leading indicator of overall economic performance. A higher than expected reading should be taken as positive/bullish for the USD while a lower than expected reading should be taken as negative/bearish for the USD.
 
 Learn More: USDJPY | EURUSD",,,
-23-Sep-25, Tue ,19:15,USD,3,USD - S&P Global Services PMI (Sep) P,,, 54.50 ,"The Service PMI release is published monthly by Markit Economics. The data are based on surveys of over 400 executives in private sector service companies. The surveys cover transport and communication, financial intermediaries, business and personal services, computing & IT, hotels and restaurants. 
+23-Sep-25, Tue ,19:15,USD,3,USD - S&P Global Services PMI (Sep) P,,,54.5,"The Service PMI release is published monthly by Markit Economics. The data are based on surveys of over 400 executives in private sector service companies. The surveys cover transport and communication, financial intermediaries, business and personal services, computing & IT, hotels and restaurants. 
 An index level of 50 denotes no change since the previous month, while a level above 50 signals an improvement, and below 50 indicates a deterioration. A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
 
 Learn More: USDJPY | EURUSD",,,
@@ -17,17 +17,17 @@ Learn More: Legacy Reference",,,
 A higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD.
 
 Learn More: USDJPY | EURUSD",,,
-25-Sep-25, Thur ,13:00,CHF,3,CHF - SNB Interest Rate Decision (Q3),,,0.000%,"Swiss National Bank (SNB) governing board members come to a consensus on where to set the target range for the rate. Traders watch interest rate changes closely as short term interest rates are the primary factor in currency valuation.
+25-Sep-25, Thur ,13:00,CHF,3,CHF - SNB Interest Rate Decision (Q3),,,0.00%,"Swiss National Bank (SNB) governing board members come to a consensus on where to set the target range for the rate. Traders watch interest rate changes closely as short term interest rates are the primary factor in currency valuation.
 
 A higher than expected rate is positive/bullish for the CHF, while a lower than expected rate is negative/bearish for the CHF.
 
 Learn More: USDCHF | CHFJPY",,,21:00
-25-Sep-25, Thur ,18:00,USD,3,USD - Durable Goods Orders (MoM) (Aug) P,,,-2.800%,"Durable Goods Orders measures the change in the total value of new orders for long lasting manufactured goods, including transportation items.
+25-Sep-25, Thur ,18:00,USD,3,USD - Durable Goods Orders (MoM) (Aug) P,,,-2.80%,"Durable Goods Orders measures the change in the total value of new orders for long lasting manufactured goods, including transportation items.
 
 A higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD.
 
 Learn More: USDJPY | EURUSD",,,
-25-Sep-25, Thur ,18:00,USD,3,USD - GDP (QoQ) (Q2),,3.300%,-0.500%,"Gross Domestic Product (GDP) measures the annualized change in the inflation-adjusted value of all goods and services produced by the economy. It is the broadest measure of economic activity and the primary indicator of the economy's health.
+25-Sep-25, Thur ,18:00,USD,3,USD - GDP (QoQ) (Q2),,3.30%,-0.50%,"Gross Domestic Product (GDP) measures the annualized change in the inflation-adjusted value of all goods and services produced by the economy. It is the broadest measure of economic activity and the primary indicator of the economy's health.
 Usual Effect: Actual > Forecast = Good for currency
 Frequency: Released monthly. There are 3 versions of GDP released a month apart - Advance, second release and Final. Both the advance the second release are tagged as preliminary in the economic calendar.
 
@@ -42,15 +42,15 @@ Learn More: USDJPY | EURUSD",,,21:00
 A higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD.
 
 Learn More: USDJPY | EURUSD",,,21:00
-26-Sep-25, Thur ,18:00,USD,3,USD - PCE Price Index (MoM) (Aug),,,0.300%,"The Core PCE price Index is the less volatile measure of the PCE price index which excludes the more volatile and seasonal food and energy prices. The impact on the currency may go both ways, a rise in inflation may lead to a rise in interest rates and a rise in local currency, on the other hand, during recession, a rise in inflation may lead to a deepened recession and therefore a fall in local currency.
+26-Sep-25, Thur ,18:00,USD,3,USD - PCE Price Index (MoM) (Aug),,,0.30%,"The Core PCE price Index is the less volatile measure of the PCE price index which excludes the more volatile and seasonal food and energy prices. The impact on the currency may go both ways, a rise in inflation may lead to a rise in interest rates and a rise in local currency, on the other hand, during recession, a rise in inflation may lead to a deepened recession and therefore a fall in local currency.
 
 Learn More: USDJPY | EURUSD",,,21:00
-27-Sep-25, Fri ,18:00,USD,3,USD - Core PCE Price Index (YoY) (Aug),,,2.900%,"The Core Personal Consumption Expenditure (PCE) Price Index measures the changes in the price of goods and services purchased by consumers for the purpose of consumption, excluding food and energy. Prices are weighted according to total expenditure per item. It measures price change from the perspective of the consumer. It is a key way to measure changes in purchasing trends and inflation.
+27-Sep-25, Fri ,18:00,USD,3,USD - Core PCE Price Index (YoY) (Aug),,,2.90%,"The Core Personal Consumption Expenditure (PCE) Price Index measures the changes in the price of goods and services purchased by consumers for the purpose of consumption, excluding food and energy. Prices are weighted according to total expenditure per item. It measures price change from the perspective of the consumer. It is a key way to measure changes in purchasing trends and inflation.
 
 A higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD.
 
 Learn More: USDJPY | EURUSD",,,21:00
-29-Oct-25, Wed ,23:30,USD,3,Fed Interest Rate Decision,,3.900%,4.375%,[],,,21:00
+29-Oct-25, Wed ,23:30,USD,3,Fed Interest Rate Decision,,3.90%,4.38%,[],,,21:00
 "Source: S&P Global, WSJ, Company Research. Notes as of 20th Spetmber 2025 7 PM.",,,,,,,,,,,,21:00
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
