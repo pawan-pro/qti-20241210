@@ -1,8 +1,8 @@
 hello. please refer to 
 
-@public/blogs/20250929.html , 
-@public/blogs/20250922.html and 
-create 20251005.html. 
+@public/blogs/202501005.html , 
+@public/blogs/20250929.html and 
+create 20251012.html. 
 
 Please keep the format same. please update the content, referencing 
 
@@ -10,7 +10,7 @@ Please keep the format same. please update the content, referencing
 
 events and notes. please keep the last event as the next Fed interest rate decision, taking the last event from 
 
-@public/blogs/20250929.html as an example. 
+@public/blogs/20251005.html as an example. 
 
 the relevant data is in 
 
@@ -24,6 +24,6 @@ into the notes of the economic calendar, as applicable, if not empty.
 
 Please refer to Bloomberg Economic Calendar as link button wherever there is not forecast available for an econmic event (not holiday), as done in the previous html code 
 
-@public/blogs/20250929.html 
+@public/blogs/20251005.html 
 
 for example. Please update the @app/blog/page.tsx as applicable   
