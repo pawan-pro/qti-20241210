@@ -6,7 +6,7 @@ import styles from './page.module.css';
 const projects = [
   {
     id: 'blog20251012',
-    title: 'Key Economic Events: Week Of 12th October 2025',
+    title: 'Key Economic Events: Week Of 13th October 2025',
     image: '/blogs/blog-cover/20251012.png',
     link: '/blogs/20251012.html',
     //description: 'Exploring the impact of geopolitical events on global markets.',
