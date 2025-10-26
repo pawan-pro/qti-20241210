@@ -7,7 +7,7 @@ const projects = [
   {
     id: 'blog20251027',
     title: 'Key Economic Events: Week Of 27th October 2025',
-    image: '/blogs/blog-cover/20251020.png',
+    image: '/blogs/blog-cover/20251027.png',
     link: '/blogs/20251027.html',
     //description: 'Exploring the impact of geopolitical events on global markets.',
   },
