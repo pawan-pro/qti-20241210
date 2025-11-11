@@ -5,6 +5,7 @@ hello. please refer to
 and create
 "next blog": 20251109.html. 
 
+
 Please keep the format same. please update the content, referencing 
 
 "@/Users/pawan/Documents/GitHub/qti/public/blogs/reference material/Economic Calendar-next-week-CLI.csv"
