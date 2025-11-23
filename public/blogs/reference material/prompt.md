@@ -1,14 +1,14 @@
 hello. please refer to 
 
-"previous blog-1": "/Users/pawan/Desktop/qti/qti-20241210/public/blogs/20251109.html" , 
-"previous blog-2": "/Users/pawan/Desktop/qti/qti-20241210/public/blogs/20251103.html" and 
+"previous blog-1": @public/blogs/20251109.html , 
+"previous blog-2": @public/blogs/20251103.html and 
 and create
-"next blog": 20251117.html. 
+"next blog": 20251124.html. 
 
 
 Please keep the format same. please update the content, referencing 
 
-"/Users/pawan/Desktop/qti/qti-20241210/public/blogs/reference material/Economic Calendar-next-week-CLI.csv"
+"@/Users/pawan/Documents/GitHub/qti/public/blogs/reference material/Economic Calendar-next-week-CLI.csv"
 
 events and notes. please keep the last event as the next Fed interest rate decision, taking the last event from 
 
@@ -16,11 +16,11 @@ events and notes. please keep the last event as the next Fed interest rate decis
 
 the relevant data is in 
 
-"/Users/pawan/Desktop/qti/qti-20241210/public/blogs/reference material/Economic Calendar-next-week-CLI.csv"
+"@/Users/pawan/Documents/GitHub/qti/public/blogs/reference material/Economic Calendar-next-week-CLI.csv"
 
 PLease integerate the notes from 
 
-/Users/pawan/Desktop/qti/qti-20241210/public/blogs/reference material/note.txt 
+@public/blogs/reference\ material/note.txt 
 
 into the notes of the economic calendar, as applicable, if not empty. 
 

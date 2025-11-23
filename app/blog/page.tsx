@@ -5,6 +5,13 @@ import styles from './page.module.css';
 
 const projects = [
   {
+    id: 'blog20251124',
+    title: 'Key Economic Events: Week Of 24th November 2025',
+    image: '/blogs/blog-cover/20251124.png',
+    link: '/blogs/20251124.html',
+    //description: 'Exploring the impact of geopolitical events on global markets.',
+  },
+  {
     id: 'blog20251117',
     title: 'Key Economic Events: Week Of 17th November 2025',
     image: '/blogs/blog-cover/20251117.png',
@@ -262,7 +269,7 @@ const projects = [
     image: '/blogs/blog-cover/20250310.png',
     link: '/blogs/20250310.html',
     description: 'Key Economic Events',
-  },   
+  },
   {
     id: 'blog20250303',
     title: 'Key Economic Events: Week Of 03rd Mar 2025',
@@ -361,7 +368,7 @@ const projects = [
     link: '/blogs/20241202.html',
     //description: 'Evaluating the market impact of global economic indicators.',
   },
-  
+
   {
     id: 'blog5',
     title: 'Key Economic Events: Week Of 12th November 2024',
