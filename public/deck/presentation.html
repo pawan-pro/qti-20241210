@@ -1,96 +1,588 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<title>Mubama Quant Interview - Pawan Jatale</title>
-
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
-
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.min.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h1>Mubama Quant Interview</h1>
-					<h3>Candidate: Pawan Jatale</h3>
-					<p>
-						<small>Quantitative Developer Position</small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Agenda</h2>
-					<ul>
-						<li>Introduction & Background</li>
-						<li>Relevant Experience</li>
-						<li>Technical Skills</li>
-						<li>Why Mubama?</li>
-						<li>Q&A</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>About Me</h2>
-					<p>Experienced Quantitative Developer with a strong background in:</p>
-					<ul>
-						<li>Systematic Trading Systems</li>
-						<li>Machine Learning & Optimization</li>
-						<li>High-Performance Computing (C++/Python)</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Key Projects</h2>
-					<section>
-						<h3>Helios System</h3>
-						<p>Developed a high-frequency trading platform handling massive data throughput with low latency.</p>
-					</section>
-					<section>
-						<h3>Macro Regime Modeling</h3>
-						<p>Implemented dynamic factor rotation strategies using advanced statistical methods.</p>
-					</section>
-				</section>
-
-				<section>
-					<h2>Technical Stack</h2>
-					<ul>
-						<li><strong>Languages:</strong> C++, Python, SQL, JavaScript</li>
-						<li><strong>Tools:</strong> Docker, Kubernetes, AWS, Git</li>
-						<li><strong>Protocols:</strong> FIX, WebSocket, REST/gRPC</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Why Mubama?</h2>
-					<p>Excited to contribute to a world-class quantitative team and solve complex financial challenges.</p>
-				</section>
-
-				<section>
-					<h2>Thank You</h2>
-				</section>
-			</div>
-		</div>
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dynamic Factor Rotation: Institutional Deck</title>
+    <!-- Core Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    
+    <!-- FIX: Added GSAP Library for the pipeline animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        :root {
+            --bg-gradient: radial-gradient(circle at center, #484848 0%, #2b2b2b 60%, #1a1a1a 100%);
+            --text-main: #e0f2fe;
+            --text-muted: #94a3b8;
+            --blue-bright: #38bdf8;
+            --blue-mid: #0284c7;
+            --accent-gold: #fbbf24;
+            --font-main: 'Century Gothic', 'Avant Garde', 'CenturyGothic', 'AppleGothic', sans-serif;
+        }
+        body {
+            background: var(--bg-gradient);
+            font-family: var(--font-main) !important;
+            color: var(--text-main);
+        }
+        .reveal { font-family: var(--font-main) !important; }
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+            font-family: var(--font-main) !important;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .reveal h1 { font-size: 2.5em !important; color: #ffffff; }
+        .reveal h2 { font-size: 2.0em !important; color: #ffffff; margin-bottom: 20px !important; }
+        .reveal h3 { 
+            font-size: 1.4em !important; 
+            color: var(--blue-bright) !important; 
+            font-weight: 400; 
+            margin-bottom: 30px !important; 
+        }
+        
+        .reveal p, .reveal li, .reveal span { 
+            font-family: var(--font-main) !important;
+            font-size: 0.80em !important; 
+            line-height: 1.5 !important; 
+            color: var(--text-main); 
+        }
+        
+        strong { color: #fff; font-weight: 700; }
+        #logo-container {
+            position: absolute;
+            top: 20px; left: 30px; right: 30px;
+            z-index: 1000;
+            display: flex; 
+            justify-content: space-between;
+            pointer-events: none;
+        }
+        .logo-wrapper {
+            background: rgba(255,255,255,0.95);
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .logo-img { height: 45px; width: auto; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        .two-col { display: flex; gap: 30px; }
+        .col { flex: 1; }
+        .reveal table { font-size: 0.7em; width: 100%; border-collapse: collapse; }
+        .reveal th { 
+            color: var(--blue-bright); 
+            border-bottom: 2px solid var(--blue-mid); 
+            padding: 12px; 
+            text-align: center; 
+            font-weight: bold;
+            font-family: var(--font-main) !important;
+        }
+        .reveal td { 
+            border-bottom: 1px solid rgba(255,255,255,0.1); 
+            padding: 12px; 
+            text-align: center; 
+            color: var(--text-main);
+        }
+        .hl-gold { color: var(--accent-gold); font-weight: bold; }
+        .hl-blue { color: var(--blue-bright); font-weight: bold; }
+        .small-text { font-size: 0.65em !important; color: var(--text-muted) !important; }
+        .helios-container {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            margin-top: 20px;
+        }
+        .helios-svg {
+            filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.1));
+        }
+        .stage-box {
+            rx: 6;
+            filter: url(#shadow);
+            transition: all 0.3s ease;
+        }
+        .stage-box:hover {
+            filter: url(#glow);
+        }
+        .component {
+            font-size: 11px;
+            font-weight: 600;
+            fill: white;
+            pointer-events: none;
+        }
+        .stage-label {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            fill: rgba(255, 255, 255, 0.7);
+        }
+        .connection-line {
+            stroke-width: 2;
+            fill: none;
+            stroke-dasharray: 8,4;
+            opacity: 0.6;
+        }
+        .data-flow { stroke: #38bdf8; filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.6)); }
+        .feature-flow { stroke: #2dd4bf; filter: drop-shadow(0 0 4px rgba(45, 212, 191, 0.6)); }
+        .signal-flow { stroke: #facc15; filter: drop-shadow(0 0 4px rgba(250, 204, 21, 0.6)); }
+        .execution-flow { stroke: #4ade80; filter: drop-shadow(0 0 4px rgba(74, 222, 128, 0.6)); }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        .animate-pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        .pipeline-legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            font-size: 0.65em !important;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .legend-dot {
+            width: 12px;
+            height: 3px;
+            border-radius: 1px;
+        }
+        
+        pre code {
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+<div id="logo-container">
+    <div class="logo-wrapper">
+        <img class="logo-img" src="mubama_logo.png" alt="Mubama" onerror="this.style.display='none';">
+    </div>
+    <div class="logo-wrapper">
+        <img class="logo-img" src="quantwater_logo.png" alt="Quantwater" onerror="this.style.display='none';">
+    </div>
+</div>
+<div class="reveal">
+    <div class="slides">
+        <!-- Slide 1: Title -->
+        <section>
+            <h6 style="color: var(--blue-bright); letter-spacing: 4px; font-size: 0.7em; margin-bottom:20px;">Systematic Strategies</h6>
+            <h1>Dynamic Factor Rotation</h1>
+            <h3 style="color: #ffffff; font-size: 1.3em !important; margin-top: 20px !important;">Regime-Based Asset Allocation System</h3>
+            
+            <div style="margin-top: 60px; display: flex; justify-content: center; gap: 60px; font-size: 0.9em; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 25px;">
+                <span><strong>Market:</strong> Global (US/India)</span>
+                <span><strong>Method:</strong> Regime Switching</span>
+                <span><strong>Status:</strong> Production</span>
+            </div>
+        </section>
+        <!-- Slide 2: Executive Summary -->
+        <section>
+            <h3>Executive Summary</h3>
+            <div class="glass-card">
+                <div class="two-col">
+                    <div class="col">
+                        <h4 style="font-size: 1.1em; color: var(--blue-bright); border-bottom: 1px solid #555; padding-bottom: 10px;">The Challenge</h4>
+                        <ul>
+                            <li><strong>Static Failure:</strong> 60/40 models fail during correlation spikes (e.g., 2022 Inflation).</li>
+                            <li><strong>Latency:</strong> Reactive rotation strategies sell <em>after</em> the drawdown.</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4 style="font-size: 1.1em; color: var(--accent-gold); border-bottom: 1px solid #555; padding-bottom: 10px;">The Alpha</h4>
+                        <ul>
+                            <li><strong>Predictive:</strong> Ensemble ML predicts <em>next-week</em> macro regime.</li>
+                            <li><strong>India:</strong> Sharpe <span class="hl-blue">1.15</span> vs 0.89 (Benchmark).</li>
+                            <li><strong>US:</strong> Sharpe <span class="hl-blue">1.07</span> vs 0.77 (SPY).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="small-text" style="margin-top: 30px; text-align: center; font-style: italic;">
+                "Rotating from Aggressive to Defensive <strong>before</strong> the volatility spike."
+            </p>
+        </section>
+        <!-- Slide 3: Logic -->
+        <section>
+            <h3>Regime-Based Logic</h3>
+            <p>Asset allocation filters dynamically based on the ML-Predicted Regime.</p>
+            <div class="two-col" style="margin-top: 30px;">
+                <div class="col">
+                    <div class="glass-card" style="padding: 20px;">
+                        <span class="hl-blue" style="font-size: 1.1em;">Regime 0: Expansion</span>
+                        <hr style="border-color: #444; margin: 10px 0;">
+                        <p class="small-text">Low Volatility, High Growth.</p>
+                        <strong>Target:</strong> Momentum, Value.
+                    </div>
+                    <div class="glass-card" style="padding: 20px;">
+                        <span style="color: #93c5fd; font-size: 1.1em; font-weight:bold;">Regime 1: Slowdown</span>
+                        <hr style="border-color: #444; margin: 10px 0;">
+                        <p class="small-text">Rising Yields, Sticky Inflation.</p>
+                        <strong>Target:</strong> Quality, Min Vol.
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="glass-card" style="padding: 20px; border: 1px solid var(--accent-gold);">
+                        <span class="hl-gold" style="font-size: 1.1em;">Regime 2: Contraction</span>
+                        <hr style="border-color: #444; margin: 10px 0;">
+                        <p class="small-text">High VIX, Systemic Stress.</p>
+                        <strong>Target:</strong> <span class="hl-gold">CASH / LiquidBees</span>.
+                        <br><br>
+                        <em class="small-text">"In Regime 2, correlations go to 1. We exit."</em>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Slide 4: Engineering -->
+        <section>
+            <h3>Bias-Free Engineering</h3>
+            <div class="glass-card">
+                <p>Most backtests fail due to look-ahead bias in normalization.</p>
+                <ul>
+                    <li style="margin-bottom: 20px;">
+                        <strong class="hl-blue">Expanding Window Z-Scores:</strong> <br>
+                        Statistics are calculated using only data available up to time <em>t</em>. We never normalize using the future mean.
+                    </li>
+                    <li>
+                        <strong class="hl-blue">Publication Lags:</strong> <br>
+                        Macro data (CPI, GDP) is explicitly lagged by 1 month in the feature set to match real-world release schedules.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Slide 5: ML Training -->
+        <section>
+            <h3>Step 1: Regime Identification</h3>
+            <p>Unsupervised learning defines the "Ground Truth" for training.</p>
+            <div class="glass-card" style="padding: 0;">
+                <table>
+                    <tr>
+                        <td style="text-align: left; border-right: 1px solid #444; width: 30%;"><strong>Input</strong></td>
+                        <td style="text-align: left;">70+ Macro Indicators (Yield Curves, VIX Term Structure, IIP).</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; border-right: 1px solid #444;"><strong>PCA</strong></td>
+                        <td style="text-align: left;">Dimensionality Reduction. First 3 PCs explain ~78% variance.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; border-right: 1px solid #444;"><strong>Clustering</strong></td>
+                        <td style="text-align: left;">K-Means (<em>k</em>=3) creates labels: Expansion, Slowdown, Contraction.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!-- Slide 6: Forecasting -->
+        <section>
+            <h3>Step 2: Supervised Forecasting</h3>
+            <p>Predicting regime <em>y(t+1)</em> using data <em>X(t)</em>.</p>
+            <div class="two-col">
+                <div class="col glass-card">
+                    <h5 class="hl-blue">US Strategy</h5>
+                    <ul class="small-text" style="margin-top: 15px;">
+                        <li><strong>Model:</strong> XGBoost Classifier.</li>
+                        <li><strong>Validation:</strong> Walk-Forward Split.</li>
+                        <li><strong>Key Feature:</strong> VIX Term Structure.</li>
+                    </ul>
+                </div>
+                <div class="col glass-card">
+                    <h5 class="hl-blue">India Strategy</h5>
+                    <ul class="small-text" style="margin-top: 15px;">
+                        <li><strong>Model:</strong> Random Forest.</li>
+                        <li><strong>Validation:</strong> Time-Series Split.</li>
+                        <li><strong>Key Feature:</strong> USD/INR & G-Sec Yields.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Slide 7: Results -->
+        <section>
+            <h3>Backtest Performance (2022-2025)</h3>
+            <div class="glass-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>India Strategy</th>
+                            <th>NIFTYBEES</th>
+                            <th>US Strategy</th>
+                            <th>SPY</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight:bold; color:#fff;">CAGR</td>
+                            <td class="hl-blue">11.91%</td>
+                            <td>10.55%</td>
+                            <td class="hl-blue">17.75%</td>
+                            <td>13.39%</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold; color:#fff;">Volatility</td>
+                            <td class="hl-blue">10.37%</td>
+                            <td>11.81%</td>
+                            <td class="hl-blue">16.65%</td>
+                            <td>17.34%</td>
+                        </tr>
+                        <tr style="background: rgba(56, 189, 248, 0.15);">
+                            <td style="font-weight:bold; color:var(--accent-gold);">Sharpe Ratio</td>
+                            <td class="hl-gold">1.15</td>
+                            <td>0.89</td>
+                            <td class="hl-gold">1.07</td>
+                            <td>0.77</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold; color:#fff;">Max DD</td>
+                            <td>-16.32%</td>
+                            <td>-15.23%</td>
+                            <td>-33.10%</td>
+                            <td>-33.72%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- Slide 8: HELIOS PIPELINE (INTEGRATED) -->
+        <section>
+            <h3>System Architecture: HELIOS Pipeline</h3>
+            <p class="small-text">End-to-end data flow from ingestion to execution with sub-2ms latency.</p>
+            
+            <div class="helios-container">
+                <svg class="helios-svg" width="100%" height="100%" viewBox="0 0 1400 500">
+                    <defs>
+                        <filter id="shadow">
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+                            <feOffset dx="0" dy="2" result="offsetblur"/>
+                            <feComponentTransfer>
+                                <feFuncA type="linear" slope="0.3"/>
+                            </feComponentTransfer>
+                            <feMerge>
+                                <feMergeNode/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                        <marker id="arrow-data" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#38bdf8"/>
+                        </marker>
+                        <marker id="arrow-feature" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#2dd4bf"/>
+                        </marker>
+                        <marker id="arrow-signal" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#facc15"/>
+                        </marker>
+                        <marker id="arrow-exec" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#4ade80"/>
+                        </marker>
+                    </defs>
+                    <!-- Data Ingestion Stage -->
+                    <g class="stage">
+                        <rect class="stage-box" x="20" y="180" width="180" height="140" fill="#1e3a8a" stroke="#38bdf8" stroke-width="2"/>
+                        <text class="stage-label" x="110" y="205" text-anchor="middle">DATA</text>
+                        <text class="component" x="110" y="230" text-anchor="middle">FRED / NSE</text>
+                        <text class="component" x="110" y="250" text-anchor="middle">Raw CSV</text>
+                        <text class="component" x="110" y="270" text-anchor="middle">Clean DF</text>
+                        <text class="stage-label" x="110" y="300" text-anchor="middle" font-size="10" opacity="0.6">Async Pipeline</text>
+                    </g>
+                    <!-- Feature Engineering Stage -->
+                    <g class="stage">
+                        <rect class="stage-box" x="280" y="180" width="180" height="140" fill="#0f766e" stroke="#2dd4bf" stroke-width="2"/>
+                        <text class="stage-label" x="370" y="205" text-anchor="middle">FEATURES</text>
+                        <text class="component" x="370" y="230" text-anchor="middle">Stationarity</text>
+                        <text class="component" x="370" y="250" text-anchor="middle">Z-Scores</text>
+                        <text class="component" x="370" y="270" text-anchor="middle">Lagged (1M)</text>
+                        <text class="stage-label" x="370" y="300" text-anchor="middle" font-size="10" opacity="0.6">70+ Indicators</text>
+                    </g>
+                    <!-- ML Inference Stage -->
+                    <g class="stage">
+                        <rect class="stage-box" x="540" y="180" width="180" height="140" fill="#713f12" stroke="#facc15" stroke-width="2"/>
+                        <text class="stage-label" x="630" y="205" text-anchor="middle">INFERENCE</text>
+                        <text class="component" x="630" y="230" text-anchor="middle">PCA Reduction</text>
+                        <text class="component" x="630" y="250" text-anchor="middle">XGBoost/RF</text>
+                        <text class="component" x="630" y="270" text-anchor="middle">Predict Regime</text>
+                        <text class="stage-label" x="630" y="300" text-anchor="middle" font-size="10" opacity="0.6">Walk-Forward CV</text>
+                    </g>
+                    <!-- Execution Stage -->
+                    <g class="stage">
+                        <rect class="stage-box" x="800" y="180" width="180" height="140" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+                        <text class="stage-label" x="890" y="205" text-anchor="middle">EXECUTION</text>
+                        <text class="component" x="890" y="230" text-anchor="middle">Portfolio Map</text>
+                        <text class="component" x="890" y="250" text-anchor="middle">Risk Controls</text>
+                        <text class="component" x="890" y="270" text-anchor="middle">Order Router</text>
+                        <text class="stage-label" x="890" y="300" text-anchor="middle" font-size="10" opacity="0.6">FIX 4.4 / DMA</text>
+                    </g>
+                    <!-- Regime Decision Diamond -->
+                    <g class="stage">
+                        <path d="M 1060 250 L 1140 180 L 1220 250 L 1140 320 Z" fill="#713f12" stroke="#facc15" stroke-width="2"/>
+                        <text class="component" x="1140" y="255" text-anchor="middle">REGIME</text>
+                        <text class="component" x="1140" y="270" text-anchor="middle">0/1/2</text>
+                    </g>
+                    <!-- Portfolio Output -->
+                    <g class="stage">
+                        <rect class="stage-box" x="1280" y="180" width="100" height="140" fill="#1e3a8a" stroke="#38bdf8" stroke-width="2" opacity="0.7"/>
+                        <text class="stage-label" x="1330" y="210" text-anchor="middle">TRADE</text>
+                        <text class="component" x="1330" y="235" text-anchor="middle">Weights</text>
+                        <text class="component" x="1330" y="260" text-anchor="middle">Execute</text>
+                    </g>
+                    <!-- Connection Lines with Animations -->
+                    <line class="connection-line data-flow animate-pulse" x1="200" y1="250" x2="280" y2="250" marker-end="url(#arrow-data)"/>
+                    <line class="connection-line feature-flow animate-pulse" x1="460" y1="250" x2="540" y2="250" marker-end="url(#arrow-feature)"/>
+                    <line class="connection-line signal-flow animate-pulse" x1="720" y1="250" x2="800" y2="250" marker-end="url(#arrow-signal)"/>
+                    <line class="connection-line execution-flow animate-pulse" x1="980" y1="250" x2="1060" y2="250" marker-end="url(#arrow-exec)"/>
+                    <line class="connection-line execution-flow animate-pulse" x1="1220" y1="250" x2="1280" y2="250" marker-end="url(#arrow-exec)"/>
+                    <!-- Feedback Loop -->
+                    <path class="connection-line signal-flow" d="M 630 320 Q 630 420 370 420 Q 110 420 110 320" stroke-dasharray="4,4" marker-end="url(#arrow-feature)" opacity="0.4"/>
+                    <text class="component" x="370" y="445" text-anchor="middle" opacity="0.5" font-size="9">Retraining Loop</text>
+                </svg>
+            </div>
+            <div class="pipeline-legend">
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: #38bdf8;"></div>
+                    <span>Data Ingestion</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: #2dd4bf;"></div>
+                    <span>Feature Engineering</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: #facc15;"></div>
+                    <span>ML Inference</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: #4ade80;"></div>
+                    <span>Execution</span>
+                </div>
+            </div>
+        </section>
+        <!-- Slide 9: Code -->
+        <section>
+            <h3>Production Inference Logic</h3>
+            <p>Core Python implementation extracted from Week 10.</p>
+            <pre><code class="python" data-trim data-line-numbers="1-14">
+def _get_predicted_regime(self, date: pd.Timestamp) -> int:
+    # 1. Point-in-Time Lookup (asof)
+    # features_df is already Lagged and Z-Scored via Pipeline
+    feature_features = self.features_df.asof(date)
+    
+    # 2. Fail-Safe: Default to Cash (Regime 2) if data missing
+    if feature_features is None or feature_features.isnull().all():
+        return 2 
+    # 3. Inference (Low Latency)
+    feature_vector = feature_features.values.reshape(1, -1)
+    # self.prediction_model is the pre-trained XGBoost artifact
+    predicted_regime = self.prediction_model.predict(feature_vector)[0]
+    
+    return int(predicted_regime)
+            </code></pre>
+        </section>
+        <!-- INSERT THIS: Slide 10 FIX Protocol -->
+        <section>
+            <h3>FIX Protocol Engineering</h3>
+            <div class="glass-card">
+                <h4 style="color: var(--accent-gold); font-size: 0.9em;">The PrimeXM Challenge</h4>
+                <div style="text-align: left; font-size: 0.85em; margin-top: 20px;">
+                    <p><strong>Scenario:</strong> Standard FIX 4.4 <code>35=D</code> logic fails on Hedging accounts (opens new legs instead of closing).</p>
+                    <hr style="border-color: #444; opacity: 0.5;">
+                    <p><strong class="hl-blue">My Implementation:</strong></p>
+                    <ul style="margin-top: 10px; line-height: 1.6;">
+                        <li><strong>Custom Tags:</strong> Implemented PrimeXM specific tags to reference <code>TicketID</code> for deterministic closing.</li>
+                        <li><strong>Session Management:</strong> Automated logic for Tag <code>141=Y</code> (ResetSeqNum) to handle weekly broker resets without manual intervention.</li>
+                        <li><strong>Latency:</strong> Pre-allocated FIX strings in C++ to avoid heap allocation during tick spikes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Slide 11: Execution -->
+        <section>
+            <h3>Execution & Risk Layer</h3>
+            <div class="two-col">
+                <div class="col">
+                    <h5 class="hl-blue">Risk Protocols (V3)</h5>
+                    <ul class="small-text" style="margin-top: 15px;">
+                        <li><strong>Intraday Stop-Loss:</strong> <br>If Portfolio Value drops > 5% from open, force rotation to Defensive Asset immediately.</li>
+                        <li><strong>Intelligent Re-entry:</strong> <br>Do not buy the dip blindly. Re-enter only if ML Model predicts "Expansion" (Regime 0).</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h5 class="hl-blue">Connectivity</h5>
+                    <ul class="small-text" style="margin-top: 15px;">
+                        <li><strong>FIX 4.4:</strong> <br>Standardized messaging for Direct Market Access (DMA).</li>
+                        <li><strong>Netting:</strong> <br>Aggregating rebalance orders internally to minimize spread costs.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Slide 12: Roadmap -->
+        <section>
+            <h3>Scaling Roadmap</h3>
+            <div class="glass-card">
+                <ul>
+                    <li><strong>Phase 1 (Done):</strong> Validated W9/W10 Notebooks. Achieved positive Alpha.</li>
+                    <li><strong>Phase 2 (Q2 2026):</strong> Porting signal logic to C++ Execution Wrapper for low-latency order routing.</li>
+                    <li><strong>Phase 3 (Institutional):</strong> Integrating real-time API feed from Bloomberg / Reuters to udpate inferencing in real-time.</li>
+                </ul>
+            </div>
+        </section>
+        <!-- Slide 13: End -->
+        <section>
+            <h2>Thank You</h2>
+            <div style="margin-top: 40px; border: 1px solid var(--blue-bright); padding: 20px; border-radius: 8px; background: rgba(56, 189, 248, 0.05);">
+                <p><strong class="hl-blue">Strategy:</strong> Multi-Regime Factor Rotation</p>
+                <p><strong class="hl-blue">Stack:</strong> Python (Research) &rarr; C++ (Execution)</p>
+                <p><strong class="hl-blue">Alpha:</strong> Predicting Macro Regimes</p>
+            </div>
+            <p style="margin-top: 40px;" class="small-text">Pawan | Quantwater Tech Investments</p>
+        </section>
+    </div>
+</div>
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/highlight/highlight.min.js"></script>
+<script>
+    // Initialize Reveal.js
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        transition: 'fade', 
+        width: 1200,
+        height: 800,
+        margin: 0.1, 
+        minScale: 0.2,
+        maxScale: 1.5,
+        plugins: [ RevealHighlight ]
+    });
+    // Animate pipeline stages on slide enter
+    Reveal.on('slidechanged', event => {
+        if (event.currentSlide.querySelector('.pipeline-stage')) {
+            const stages = event.currentSlide.querySelectorAll('.pipeline-stage');
+            stages.forEach((stage, index) => {
+                gsap.from(stage, {
+                    opacity: 0,
+                    scale: 0.8,
+                    duration: 0.6,
+                    delay: index * 0.1,
+                    ease: 'back.out'
+                });
+            });
+        }
+    });
+</script>
+</body>
 </html>
