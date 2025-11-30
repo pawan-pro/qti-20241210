@@ -1,23 +1,18 @@
 Date,Day,Time (IST),Cur.,Imp.,Event,Actual,Forecast,Previous,Notes
-24-Nov-25, Mon ,All Day,,,Holiday - Japan - Labor Day,,,,
-25-Nov-25, Tue ,12:30,EUR,3,German GDP (QoQ) (Q3),,,0.00%,"Gross Domestic Product (GDP) is the broadest measure of economic activity and is a key indicator of economic health. The quarterly percent changes in GDP show the growth rate of the economy as a whole; a higher than expected reading should be taken as positive/bullish for the EUR, while a lower than expected reading should be taken as negative/bearish for the EUR.
-
-Learn More: EURJPY | EURUSD"
-25-Nov-25, Tue ,20:30,USD,3,CB Consumer Confidence (Nov),,,94.60,"Conference Board (CB) Consumer Confidence measures the level of consumer confidence in economic activity. It is a leading indicator as it can predict consumer spending, which plays a major role in overall economic activity. Higher readings point to higher consumer optimism; a higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD.
-
-Learn More: USDJPY | EURUSD"
-26-Nov-25, Wed ,06:30,NZD,3,RBNZ Interest Rate Decision,,,2.50%,"The Reserve Bank of New Zealand (RBNZ) sets the official cash rate based on their assessment of the economy; interest rate decisions affect the New Zealand dollar as higher rates typically support the currency while lower rates weaken it; a higher than expected rate should be taken as positive/bullish for the NZD, while a lower than expected rate should be taken as negative/bearish for the NZD.
-
-Learn More: NZDJPY | NZDUSD"
-26-Nov-25,Wed,19:00,USD,3,GDP (QoQ) (Q3),,,3.00%,"Gross Domestic Product (GDP) measures the quarterly change in the inflation-adjusted value of all goods and services produced by the economy; it is the broadest measure of economic activity and the primary indicator of the economy's health; a higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD.
-
-Learn More: USDJPY | EURUSD"
-27-Nov-25,Thu,All Day,,,Holiday - United States - Thanksgiving Day,,,,
-28-Nov-25,Fri,,,,Holiday - United States - Thanksgiving Day - Early close at 13:00,,,,
-28-Nov-25,Fri,18:30,EUR,3,German CPI (MoM) (Nov),,,0.30%,"The German Consumer Price Index (CPI) measures the changes in the price of goods and services purchased by consumers; it is the most important indicator of inflation and changes in purchasing trends; a higher than expected reading should be taken as positive/bullish for the EUR, while a lower than expected reading should be taken as negative/bearish for the EUR.
-
-Learn More: EURJPY | EURUSD"
-28-Nov-25,Fri,20:15,USD,3,Chicago PMI (Nov),,,43.80,"The Chicago Purchasing Managers' Index (PMI) is a composite index based on five indicators: new orders, inventory levels, production, supplier deliveries, and employment environment; readings above 50 indicate expansion of the manufacturing sector while readings below 50 indicate contraction; a higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD.
-
-Learn More: USDJPY | EURUSD"
-10-Dec-25, Wed ,23:30,USD,3,Fed Interest Rate Decision,,3.70%,3.88%,[]
+30-Nov-25,Sun,07:00,CNY,3,Manufacturing PMI (Nov),,49.6,49,"The Chinese Manufacturing Purchasing Managers Index (PMI) provides an early indication each month of economic activities in the Chinese manufacturing sector. It is compiled by China Federation of Logistics & Purchasing (CFLP) and China Logistics Information Centre (CLIC). A higher than expected reading should be taken as positive/bullish for the CNY, while a lower than expected reading should be taken as negative/bearish for the CNY."
+01-Dec-25,Mon,20:15,USD,3,S&P Global Manufacturing PMI (Nov),,51.9,52.5,The S&P Global Manufacturing Purchasing Managers Index measures the month-on-month change in the number of employees in the manufacturing sector. A higher than expected reading should be taken as positive (bullish) for the USD; a lower than expected reading as negative (bearish).
+01-Dec-25,Mon,20:30,USD,3,ISM Manufacturing PMI (Nov),,,48.7,"The ISM Manufacturing Purchasing Managers Index (PMI) measures the health of manufacturing sector based on economic indicators: new orders, inventory and production. A reading above 50 is generally seen as positive for the USD, while a reading below 50 is seen as negative for the USD."
+01-Dec-25,Mon,20:30,USD,3,ISM Manufacturing Prices (Nov),,,58,The ISM Manufacturing Prices Index measures the month-on-month change in the price of raw materials and supplier prices paid by manufacturers. Rising prices are generally bearish for the USD while falling prices are generally bullish.
+02-Dec-25,Tue,06:30,USD,3,Fed Chair Powell Speaks,,,,High-profile speeches by Federal Reserve officials are often used by investors to get a sense of the economic outlook and the intentions of the central bank. Market expectations have to be taken into account.
+02-Dec-25,Tue,15:30,EUR,3,CPI (YoY) (Nov),,,2.10%,The Consumer Price Index (CPI) measures the changes in price paid by consumers for goods and services. A higher than expected reading should be taken as positive/bullish for the EUR; a lower than expected reading should be taken as negative/bearish for the EUR.
+02-Dec-25,Tue,20:30,USD,3,JOLTS Job Openings (Sep),,,7.227M,The Job Openings and Labor Turnover Survey (JOLTS) shows the number of open jobs in the US. Investors and traders follow this labor market indicator closely to gauge employment and economic conditions.
+03-Dec-25,Wed,18:45,USD,3,ADP Nonfarm Employment Change (Nov),,,42K,The Automated Data Processing (ADP) Employment Change measures the month-on-month change in the number of employees in the non-farm private sector. It is an important leading indicator for the official government employment figures.
+03-Dec-25,Wed,20:15,USD,3,S&P Global Services PMI (Nov),,55,54.8,"The S&P Global Services PMI is based on a survey of 400 private service companies. It measures the health of the service sector through economic indicators such as new orders, output, and employment. A reading above 50 indicates growth while below 50 indicates contraction."
+03-Dec-25,Wed,20:30,USD,3,ISM Non-Manufacturing PMI (Nov),,,52.4,"The ISM Non-Manufacturing Purchasing Managers Index (PMI) measures the health of the non-manufacturing sector (services) based on economic indicators: new orders, activity, and employment. A reading above 50 indicates expansion while below 50 indicates contraction."
+03-Dec-25,Wed,20:30,USD,3,ISM Non-Manufacturing Prices (Nov),,,70,The ISM Non-Manufacturing Prices Index measures the month-on-month change in the price of raw materials and supplier prices paid by non-manufacturing (service) businesses. Rising prices are generally bearish for the USD.
+04-Dec-25,Wed,21:00,USD,3,Crude Oil Inventories,,,2.774M,-Learn More: USOILRol
+04-Dec-25,Thu,19:00,USD,3,Initial Jobless Claims,,,216K,Initial Jobless Claims represents the number of Americans who have filed for unemployment benefits for the first time. High readings generally indicate a weak labor market while low readings indicate a strong labor market.
+05-Dec-25,Fri,20:30,USD,3,Core PCE Price Index (MoM) (Sep),,,0.20%,"The Core PCE Price Index measures the changes in the price of goods and services purchased by consumers, excluding food and energy. A higher than expected reading should be taken as inflationary and bearish for the USD; a lower than expected reading should be taken as disinflationary and bullish for the USD."
+05-Dec-25,Fri,20:30,USD,3,Core PCE Price Index (YoY) (Sep),,,2.90%,"The Core PCE Price Index measures the annualized changes in the price of goods and services purchased by consumers, excluding food and energy. A higher reading indicates inflation while a lower reading indicates deflation."
+10-Dec-25, Wed ,23:30,USD,3,Fed Interest Rate Decision,,3.67%,3.88%,[]
+"Source: Investing.com, Firm Research",,,,,,,,,
