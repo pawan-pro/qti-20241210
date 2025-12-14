@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@apollo/client": "^3.12.9",
     "autoprefixer": "^10.4.21",
     "next": "^16.0.7",
     "react": "^19.0.0",
