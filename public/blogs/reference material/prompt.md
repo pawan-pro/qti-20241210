@@ -1,9 +1,9 @@
 hello. please refer to 
 
-"previous blog-1": @public/blogs/20251208.html , 
-"previous blog-2": @public/blogs/20251201.html and 
+"previous blog-1": @public/blogs/20251229.html , 
+"previous blog-2": @public/blogs/20251222.html and 
 and create
-"next blog": 20251215.html. 
+"next blog": 20260105.html. 
 
 
 Please keep the format same. please update the content, referencing 

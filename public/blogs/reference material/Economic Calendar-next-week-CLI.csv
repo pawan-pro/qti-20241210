@@ -1,182 +1,19 @@
 Date,Day,Time (IST),Cur.,Imp.,Event,Actual,Forecast,Previous,Notes
-16-Dec-25,Tue,All Day,SAR,3,South Africa - Day of Reconciliation,,,,[]
-16-Dec-25,Tue,19:00,USD,3,Average Hourly Earnings (MoM) (Nov),,,0.20%,"Average Hourly Earnings measures the change in the price businesses pay for labor, not including the agricultural sector; higher than expected reading should be taken as positive/bullish for USD"
-16-Dec-25,Tue,19:00,USD,3,Core Retail Sales (MoM) (Oct),,,0.003,Core Retail Sales measures the change in the total value of sales of retail goods excluding cars and gas; higher than expected reading should be taken as positive/bullish for USD
-16-Dec-25,Tue,19:00,USD,3,Nonfarm Payrolls (Nov),,,119K,"Nonfarm Payrolls measures the change in the number of people employed during the previous month, excluding the farming industry. Job creation is the foremost indicator of consumer spending, which accounts for the majority of economic activity.
-
-A higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD."
-16-Dec-25,Tue,19:00,USD,3,Retail Sales (MoM) (Oct),,,0.20%,Retail Sales measures the change in the total value of sales of retail goods; higher than expected reading should be taken as positive/bullish for USD
-16-Dec-25,Tue,19:00,USD,3,Unemployment Rate (Nov),,,4.40%,Unemployment Rate is the percentage of the population that is actively looking for employment; lower than expected reading should be taken as positive/bullish for USD
-16-Dec-25,Tue,20:15,USD,3,S&P Global Manufacturing PMI (Dec),,,5200.00%,S&P Global Manufacturing PMI measures the economic health of the manufacturing sector; higher reading indicates expansion
-16-Dec-25,Tue,20:15,USD,3,S&P Global Services PMI (Dec),,,5410.00%,S&P Global Services PMI measures the economic health of the services sector; higher reading indicates expansion
-17-Dec-25,Wed,12:30,GBP,3,GBP - CPI (YoY) (Nov),,,0.036,"CPI (YoY) measures the yearly change in inflation; higher reading indicates higher inflation, typically bullish for GBP"
-17-Dec-25,Wed,15:30,EUR,3,EUR - CPI (YoY) (Nov),,,2.20%,CPI (YoY) measures the yearly change in inflation for Eurozone; higher reading may support EUR
-17-Dec-25,Wed,21:00,USD,3,Crude Oil Inventories,,,-1.812M,"The Energy Information Administration's (EIA) Crude Oil Inventories measures the weekly change in the number of barrels of commercial crude oil held by US firms. The level of inventories influences the price of petroleum products, which can have an impact on inflation.
-
-If the increase in crude inventories is more than expected, it implies weaker demand and is bearish for crude prices. The same can be said if a decline in inventories is less than expected.
-If the increase in crude is less than expected, it implies greater demand and is bullish for crude prices. The same can be said if a decline in inventories is more than expected."
-18-Dec-25,Thu,17:30,GBP,3,BoE Interest Rate Decision (Dec),,,4.00%,BoE Interest Rate Decision shows the central bank's monetary policy stance; higher rates typically support GBP
-18-Dec-25,Thu,18:45,EUR,3,Deposit Facility Rate (Dec),,,0.02,Deposit Facility Rate is ECB's rate on overnight deposits; changes may affect EUR
-18-Dec-25,Thu,18:45,EUR,3,ECB Interest Rate Decision (Dec),,,0.0215,ECB Interest Rate Decision sets monetary policy for Eurozone; higher rates typically support EUR
-18-Dec-25,Thu,19:00,USD,3,Core CPI (MoM) (Nov),,,0.002,Core CPI (MoM) measures monthly core inflation; higher than expected reading is bearish for USD
-18-Dec-25,Thu,19:00,USD,3,CPI (MoM) (Nov),,,0.003,CPI (MoM) measures monthly inflation; higher reading can increase fed rate expectations
-18-Dec-25,Thu,19:00,USD,3,CPI (YoY) (Nov),,,3.00%,CPI (YoY) measures yearly inflation; higher reading may increase rate hike expectations
-18-Dec-25,Thu,19:00,USD,3,Initial Jobless Claims,,,,Initial Jobless Claims measures new unemployment claims; lower reading indicates job market strength
-18-Dec-25,Thu,19:00,USD,3,Philadelphia Fed Manufacturing Index (Dec),,,1.7,Philadelphia Fed Index measures manufacturing activity; positive reading indicates expansion
-19-Dec-25,Thu,19:15,USD,3,ECB Press Conference,,,,"The European Central Bank (ECB) press conference is held monthly, about 45 minutes after the Minimum Bid Rate is announced. The conference is approximately an hour long and has two parts. Firstly, a prepared statement is read, then the conference is open to press questions. The press conference examines the factors which affected the ECB's interest rate decision and deals with the overall economic outlook and inflation. Most importantly, it provides clues regarding future monetary policy. High levels of volatility can frequently be observed during the press conference as press questions lead to unscripted answers."
-19-Dec-25,Fri,8:30,JPY,3,BoJ Interest Rate Decision,,,0.005,BoJ Interest Rate Decision determines monetary policy for Japan; higher rates typically support JPY
-19-Dec-25,Sat,19:00,USD,3,Core PCE Price Index (MoM) (Oct),,,0.002,Core PCE measures monthly core inflation excluding food/energy; higher reading may pressure USD
-19-Dec-25,Sat,19:00,USD,3,Core PCE Price Index (YoY) (Oct),,,0.028,Core PCE (YoY) measures yearly core inflation; higher reading may support rate hike expectations
-19-Dec-25,Sat,20:30,USD,3,Existing Home Sales (Nov),,,4.10M,Existing Home Sales measures the number of previously owned homes sold; higher reading indicates housing market strength
-28-Jan-26, Wed ,23:30,USD,3,Fed Interest Rate Decision,,3.57%,3.63%,[]
-"Source: Investing.com, Firm Research",,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-46050,Wed,0.979166667,USD,3,Fed Interest Rate Decision,,0.0357,0.0363,[]
+04-Jan-26,Sun,All Day,,Holiday,Russia - New Year's Day,,,,
+05-Jan-26,Mon,20:30,USD,3,ISM Manufacturing PMI (Dec),,,48.2,Measures manufacturing sector activity; reading above 50 indicates expansion
+05-Jan-26,Mon,20:30,USD,3,ISM Manufacturing Prices (Dec),,,58.5,Measures price pressures in manufacturing sector
+06-Jan-26,Tue,18:30,EUR,3,German CPI (MoM) (Dec),,,-0.20%,Consumer Price Index month-on-month change for Germany
+06-Jan-26,Tue,20:15,USD,3,S&P Global Services PMI (Dec),,,52.9,Services sector activity and economic health indicator
+07-Jan-26,Wed,All Day,,Holiday,Russia - Christmas,,,,
+07-Jan-26,Wed,15:30,EUR,3,CPI (YoY) (Dec),,,2.10%,Year-on-year inflation rate for Eurozone
+07-Jan-26,Wed,18:45,USD,3,ADP Nonfarm Employment Change (Dec),,,-32K,Private sector employment change indicator
+07-Jan-26,Wed,20:30,USD,3,ISM Non-Manufacturing PMI (Dec),,,52.6,Services sector economic activity
+07-Jan-26,Wed,20:30,USD,3,ISM Non-Manufacturing Prices (Dec),,,65.4,Services sector price pressures
+07-Jan-26,Wed,20:30,USD,3,JOLTS Job Openings (Nov),,,7.670M,Job openings in the U.S. labor market
+07-Jan-26,Wed,21:00,USD,3,Crude Oil Inventories,,,-1.934M,
+08-Jan-26,Thur,19:00,USD,3,Initial Jobless Claims,,216K,216K,
+09-Jan-26,Fri,19:00,USD,3,Average Hourly Earnings (MoM) (Dec),,,0.10%,Month-on-month wage growth indicator
+09-Jan-26,Fri,19:00,USD,3,Nonfarm Payrolls (Dec),,,64K,Total employment change in non-farm sector
+09-Jan-26,Fri,19:00,USD,3,Unemployment Rate (Dec),,,4.60%,Percentage of unemployed in labor force
+28-Jan-26,Wed,23:30,USD,3,Fed Interest Rate Decision,,3.58%,3.63%,[]
 "Source: Investing.com, Firm Research",,,,,,,,,
