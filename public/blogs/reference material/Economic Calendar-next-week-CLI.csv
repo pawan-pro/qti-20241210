@@ -1,9 +1,19 @@
 Date,Day,Time (IST),Cur.,Imp.,Event,Actual,Forecast,Previous,Notes
-22-Dec-25,Mon,12:30,GBP,3,GDP (QoQ) (Q3),,,0.10%,"Gross Domestic Product (GDP) measures the quaterly change in the inflation-adjusted value of all goods and services produced by the economy; it is the broadest measure of economic activity and the primary indicator of the economy's health. A higher than expected reading should be taken as positive/bullish for the GBP, while a lower than expected reading should be taken as negative/bearish for the GBP."
-22-Dec-25,Mon,12:30,GBP,3,GDP (YoY) (Q3),,,1.30%,"Gross Domestic Product (GDP) measures the annualized change in the inflation-adjusted value of all goods and services produced by the economy; it is the broadest measure of economic activity and the primary indicator of the economy's health. A higher than expected reading should be taken as positive/bullish for the GBP, while a lower than expected reading should be taken as negative/bearish for the GBP."
-23-Dec-25,Tue,19:00,USD,3,Durable Goods Orders (MoM) (Oct),,,3.00%,"Durable Goods Orders measures the change in the total value of new orders for long lasting manufactured goods, including transportation items. A higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD."
-23-Dec-25,Tue,19:00,USD,3,GDP (QoQ) (Q3),,,3.80%,"Gross Domestic Product (GDP) measures the annualized change in the inflation-adjusted value of all goods and services produced by the economy. It is the broadest measure of economic activity and the primary indicator of the economy's health. Usual Effect: Actual > Forecast = Good for currency. Frequency: Released monthly. There are 3 versions of GDP released a month apart - Advance, second release and Final. Both the advance the second release are tagged as preliminary in the economic calendar."
-23-Dec-25,Tue,20:30,USD,3,CB Consumer Confidence (Dec),,,88.7,"Conference Board (CB) Consumer Confidence measures the level of consumer confidence in economic activity. It is a leading indicator as it can predict consumer spending, which plays a major role in overall economic activity. Higher readings point to higher consumer optimism. A higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD."
-24-Dec-25,Wed,19:00,USD,3,Durable Goods Orders (MoM) (Oct),,,0.50%,"Durable Goods Orders measures the change in the total value of new orders for long lasting manufactured goods, including transportation items. A higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD."
-28-Jan-26,Wed,23:30,USD,3,Fed Interest Rate Decision,,3.56%,3.63%,[]
+04-Jan-26,Sun,All Day,,Holiday,Russia - New Year's Day,,,,
+05-Jan-26,Mon,20:30,USD,3,ISM Manufacturing PMI (Dec),,,48.2,Measures manufacturing sector activity; reading above 50 indicates expansion
+05-Jan-26,Mon,20:30,USD,3,ISM Manufacturing Prices (Dec),,,58.5,Measures price pressures in manufacturing sector
+06-Jan-26,Tue,18:30,EUR,3,German CPI (MoM) (Dec),,,-0.20%,Consumer Price Index month-on-month change for Germany
+06-Jan-26,Tue,20:15,USD,3,S&P Global Services PMI (Dec),,,52.9,Services sector activity and economic health indicator
+07-Jan-26,Wed,All Day,,Holiday,Russia - Christmas,,,,
+07-Jan-26,Wed,15:30,EUR,3,CPI (YoY) (Dec),,,2.10%,Year-on-year inflation rate for Eurozone
+07-Jan-26,Wed,18:45,USD,3,ADP Nonfarm Employment Change (Dec),,,-32K,Private sector employment change indicator
+07-Jan-26,Wed,20:30,USD,3,ISM Non-Manufacturing PMI (Dec),,,52.6,Services sector economic activity
+07-Jan-26,Wed,20:30,USD,3,ISM Non-Manufacturing Prices (Dec),,,65.4,Services sector price pressures
+07-Jan-26,Wed,20:30,USD,3,JOLTS Job Openings (Nov),,,7.670M,Job openings in the U.S. labor market
+07-Jan-26,Wed,21:00,USD,3,Crude Oil Inventories,,,-1.934M,
+08-Jan-26,Thur,19:00,USD,3,Initial Jobless Claims,,216K,216K,
+09-Jan-26,Fri,19:00,USD,3,Average Hourly Earnings (MoM) (Dec),,,0.10%,Month-on-month wage growth indicator
+09-Jan-26,Fri,19:00,USD,3,Nonfarm Payrolls (Dec),,,64K,Total employment change in non-farm sector
+09-Jan-26,Fri,19:00,USD,3,Unemployment Rate (Dec),,,4.60%,Percentage of unemployed in labor force
+28-Jan-26,Wed,23:30,USD,3,Fed Interest Rate Decision,,3.58%,3.63%,[]
 "Source: Investing.com, Firm Research",,,,,,,,,
