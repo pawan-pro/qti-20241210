@@ -505,18 +505,13 @@
                         <span class="event-label">Date:</span>
                         <span class="event-value">12-Jan-26, Mon, All Day</span>
                         <span class="event-label">Currency:</span>
-                        <span class="event-value"></span>
+                        <span class="event-value">JPY</span>
                         <span class="event-label">Importance:</span>
-                        <span class="event-value">0</span>
-                        <span class="event-label">Forecast:</span>
-                        <span class="event-value"></span>
-                        <span class="event-label">Previous:</span>
-                        <span class="event-value"></span>
+                        <span class="event-value">3</span>
                         <span class="event-label">Notes:</span>
                         <span class="event-notes-value">Japan national holiday</span>
                         <span class="event-label">Learn More:</span>
-                        <span class="event-value historical-impact">
-                        </span>
+                        <span class="event-value historical-impact"> <a href="https://en.wikipedia.org/wiki/Coming_of_Age_Day">Coming of Age Day</a></span>
                     </div>
                 </article>
                 <article class="event-card">
@@ -861,11 +856,29 @@ A higher than expected reading should be taken as negative/bearish for the USD, 
                 </article>
             </section>
 
-            <!-- Next Fed Interest Rate Decision -->
-            <section class="event-day-group">
-                <div class="source-card" style="margin-top: 30px; background-color: #2a2a2a;">
-                    <strong>Upcoming Major Event:</strong> The next Fed Interest Rate Decision is scheduled on January 28th, 2026. Previous decision was 3.63% with the current rate at 3.61%.
-                </div>
+                        <section class="event-day-group">
+                <h2 class="timeline-date">Next Fed Interest Rate Decision</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Fed Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-Jan-26, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">3.61%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.63%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Federal Reserve sets interest rates at regularly scheduled meetings. Interest rates directly affect the cost of borrowing and can impact currency values, inflation, and economic growth. Changes in interest rates can significantly impact financial markets and the broader economy.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener noreferrer">CME FedWatch Tool</a>
+                        </span>
+                    </div>
+                </article>
             </section>
 
             <section class="past-blogs">
@@ -878,10 +891,42 @@ A higher than expected reading should be taken as negative/bearish for the USD, 
         </main>
     </div>
 
-    <footer class="source-footer">
-        <p>Source: <a href="https://www.investing.com/economic-calendar/" target="_blank" rel="noopener noreferrer">Investing.com</a>, Firm Research</p>
-        <p>Note: Forecast values with links indicate data not available. Links direct to Bloomberg Economic Calendar for more information.</p>
-    </footer>
+            <!-- Source Card -->
+            <div class="source-card">
+                Source: Investing.com, Firm Research. Notes as of 5th January 2026, 8 PM.<br>
+                For historical data and resources, please visit:
+                <span class="historical-impact">
+                    <a href="https://quantwatertech.netlify.app/research" target="_blank" rel="noopener noreferrer"><span style="color: rgb(255, 254, 255);">quantwater.tech/resources</span></a>
+                </span>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Function to highlight the active section in the timeline
+        function updateTimeline() {
+            const sections = document.querySelectorAll('.event-day-group');
+            const timelineItems = document.querySelectorAll('.timeline-item');
+
+            let index = 0;
+            for (const section of sections) {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    timelineItems[index].classList.add('active');
+                } else {
+                    timelineItems[index].classList.remove('active');
+                }
+                index++;
+            }
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', updateTimeline);
+
+        // Initialize on load
+        window.addEventListener('load', updateTimeline);
+    </script>
 </body>
 
+</html>
 </html>
