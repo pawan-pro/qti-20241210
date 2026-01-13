@@ -7,7 +7,7 @@ const projects = [
   {
     id: 'blog20260112',
     title: 'Key Economic Events: Week Of 12th January 2026',
-    image: '/blogs/blog-cover/20260105.png', // Using existing image as placeholder
+    image: '/blogs/blog-cover/20260112.png', // Using existing image as placeholder
     link: '/blogs/20260112.html',
   },
   {
