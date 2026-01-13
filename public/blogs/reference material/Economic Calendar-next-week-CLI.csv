@@ -1,19 +1,45 @@
 Date,Day,Time (IST),Cur.,Imp.,Event,Actual,Forecast,Previous,Notes
-04-Jan-26,Sun,All Day,,Holiday,Russia - New Year's Day,,,,
-05-Jan-26,Mon,20:30,USD,3,ISM Manufacturing PMI (Dec),,,48.2,Measures manufacturing sector activity; reading above 50 indicates expansion
-05-Jan-26,Mon,20:30,USD,3,ISM Manufacturing Prices (Dec),,,58.5,Measures price pressures in manufacturing sector
-06-Jan-26,Tue,18:30,EUR,3,German CPI (MoM) (Dec),,,-0.20%,Consumer Price Index month-on-month change for Germany
-06-Jan-26,Tue,20:15,USD,3,S&P Global Services PMI (Dec),,,52.9,Services sector activity and economic health indicator
-07-Jan-26,Wed,All Day,,Holiday,Russia - Christmas,,,,
-07-Jan-26,Wed,15:30,EUR,3,CPI (YoY) (Dec),,,2.10%,Year-on-year inflation rate for Eurozone
-07-Jan-26,Wed,18:45,USD,3,ADP Nonfarm Employment Change (Dec),,,-32K,Private sector employment change indicator
-07-Jan-26,Wed,20:30,USD,3,ISM Non-Manufacturing PMI (Dec),,,52.6,Services sector economic activity
-07-Jan-26,Wed,20:30,USD,3,ISM Non-Manufacturing Prices (Dec),,,65.4,Services sector price pressures
-07-Jan-26,Wed,20:30,USD,3,JOLTS Job Openings (Nov),,,7.670M,Job openings in the U.S. labor market
-07-Jan-26,Wed,21:00,USD,3,Crude Oil Inventories,,,-1.934M,
-08-Jan-26,Thur,19:00,USD,3,Initial Jobless Claims,,216K,216K,
-09-Jan-26,Fri,19:00,USD,3,Average Hourly Earnings (MoM) (Dec),,,0.10%,Month-on-month wage growth indicator
-09-Jan-26,Fri,19:00,USD,3,Nonfarm Payrolls (Dec),,,64K,Total employment change in non-farm sector
-09-Jan-26,Fri,19:00,USD,3,Unemployment Rate (Dec),,,4.60%,Percentage of unemployed in labor force
-28-Jan-26,Wed,23:30,USD,3,Fed Interest Rate Decision,,3.58%,3.63%,[]
+12-Jan-26,Mon,All Day,,,Holiday - Japan - Coming of Age (Adults') Day,,,,Japan national holiday
+12-Jan-26,Mon,23:30,USD,3,10-Year Note Auction,,,4.18%,"The figures displayed in the calendar represent the yield on the Treasury Note auctioned.
+
+U.S. Treasury Notes have maturities of two to ten years. Governments issue treasuries to borrow money to cover the gap between the amount they receive in taxes and the amount they spend to refinance existing debt and/or to raise capital. The rate on a Treasury Note represents the return an investor will receive by holding the note for its entire duration. All bidders receive the same rate at the highest accepted bid.
+
+Yield fluctuations should be monitored closely as an indicator of the government debt situation. Investors compare the average rate at auction to the rate at previous auctions of the same security."
+13-Jan-26,Tue,19:00,USD,3,CPI (MoM) (Dec),,0.30%,0.30%,Measures monthly change in core consumer prices excluding volatile food and energy; higher reading bullish for USD
+13-Jan-26,Tue,19:00,USD,3,CPI (YoY) (Dec),,2.70%,2.70%,Measures annual change in consumer prices; critical for assessing inflation trends and currency impact
+13-Jan-26,Tue,19:00,USD,3,Core CPI (MoM) (Dec),,0.30%,0.20%,Measures monthly change in core consumer prices excluding volatile food and energy; higher reading bullish for USD
+13-Jan-26,Tue,20:30,USD,3,New Home Sales (Oct),,715K,800K,Measures new residential home sales; reflects housing market health and economic activity
+13-Jan-26,Tue,23:30,USD,3,30-Year Bond Auction,,,4.77%,"The figures displayed in the calendar represent the yield on the Treasury Bond auctioned.
+
+U.S. Treasury Bonds have maturities from ten up to 30 years. Governments issue treasuries to borrow money to cover the gap between the amount they receive in taxes and the amount they spend to refinance existing debt and/or to raise capital. The rate on a Treasury Bond represents the return an investor will receive by holding the bond for its entire duration. All bidders receive the same rate at the highest accepted bid.
+
+Yield fluctuations should be monitored closely as an indicator of the government debt situation. Investors compare the average rate at auction to the rate at previous auctions of the same security."
+14-Jan-26,Wed,19:00,USD,3,PPI (MoM) (Nov),,,0.30%,Producer Price Index measures wholesale inflation; early indicator of consumer price pressures
+14-Jan-26,Wed,19:00,USD,3,Retail Sales (MoM) (Nov),,0.40%,0.00%,Measures monthly retail sales excluding autos; indicator of consumer spending excluding volatile auto sales
+14-Jan-26,Wed,19:00,USD,3,Core Retail Sales (MoM) (Nov),,0.40%,0.40%,Measures monthly retail sales; broader indicator of consumer spending and economic activity
+14-Jan-26,Wed,20:30,USD,3,Existing Home Sales (Dec),,4.24M,4.13M,Measures existing home sales; reflects housing market conditions and economic health
+14-Jan-26,Wed,21:00,USD,3,Crude Oil Inventories,,,-3.832M,"The Energy Information Administration's (EIA) Crude Oil Inventories measures the weekly change in the number of barrels of commercial crude oil held by US firms. The level of inventories influences the price of petroleum products, which can have an impact on inflation.
+
+If the increase in crude inventories is more than expected, it implies weaker demand and is bearish for crude prices. The same can be said if a decline in inventories is less than expected.
+If the increase in crude is less than expected, it implies greater demand and is bullish for crude prices. The same can be said if a decline in inventories is more than expected."
+15-Jan-26,Thur,12:30,GBP,3,GDP (MoM) (Nov),,0.00%,-0.10%,Monthly GDP measures economic activity; key indicator of UK economic health; affects GBP volatility
+15-Jan-26,Thur,19:00,USD,3,Philadelphia Fed Manufacturing Index (Jan),,-2.9,-8.8,Regional manufacturing sentiment indicator; precedes national manufacturing data; affects USD
+15-Jan-26,Thur,19:00,USD,3,Initial Jobless Claims,,210K,208K,"Initial Jobless Claims measures the number of individuals who filed for unemployment insurance for the first time during the past week. This is the earliest U.S. economic data, but the market impact varies from week to week.
+
+A higher than expected reading should be taken as negative/bearish for the USD, while a lower than expected reading should be taken as positive/bullish for the USD."
+15-Jan-26,Thur,19:15,USD,3,S&P Global Manufacturing PMI (Jan),,,52.2,Purchasing Managers Index for manufacturing; above 50 indicates expansion; affects USD
+16-Jan-26,Fri,12:30,EUR,3,German CPI (MoM) (Dec),,0.00%,0.00%,Monthly CPI measure for Germany; key eurozone inflation indicator; affects EUR movements
+,,,,,,,,,
+13-Jan-26,Tue,0:30,USD,3,CPI (YoY) (Aug),2.90%,2.90%,2.70%,
+13-Jan-26,Tue,0:30,USD,3,CPI (YoY) (Jul),2.70%,2.80%,2.70%,
+13-Jan-26,Tue,0:30,USD,3,CPI (YoY) (Jun),2.70%,2.60%,2.40%,
+14-Jan-26,Wed,0:30,USD,3,Core Retail Sales (MoM) (Nov),,,0.40%,
+14-Jan-26,Wed,0:30,USD,3,PPI (MoM) (Nov),,,0.30%,
+14-Jan-26,Wed,0:30,USD,3,Retail Sales (MoM) (Nov),,,0.00%,
+14-Jan-26,Wed,2:00,USD,3,Existing Home Sales (Dec),,,4.13M,
+15-Jan-26,Thu,18:00,GBP,3,GDP (MoM) (Nov),,,−0.1%,
+15-Jan-26,Thu,0:30,USD,3,Philadelphia Fed Manufacturing Index (Jan),,,−10.2,
+15-Jan-26,Thu,0:45,USD,3,S&P Global Manufacturing PMI (Jan),,,5220.00%,
+16-Jan-26,Fri,18:00,EUR,3,German CPI (MoM) (Dec),,,−0.2%,
+28-Jan-26,Wed,23:30,USD,3,Fed Interest Rate Decision,,3.61%,3.63%,[]
 "Source: Investing.com, Firm Research",,,,,,,,,
