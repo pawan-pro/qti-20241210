@@ -881,6 +881,13 @@ A higher than expected reading should be taken as negative/bearish for the USD, 
                 </article>
             </section>
 
+            <!-- Next Fed Interest Rate Decision -->
+            <section class="event-day-group">
+                <div class="source-card" style="margin-top: 30px; background-color: #2a2a2a;">
+                    <strong>Upcoming Major Event:</strong> The next Fed Interest Rate Decision is scheduled on January 28th, 2026. Previous decision was 3.63% with the current rate at 3.61%.
+                </div>
+            </section>
+
             <section class="past-blogs">
                 <h3>Previous Economic Calendars</h3>
                 <ul>
@@ -891,42 +898,10 @@ A higher than expected reading should be taken as negative/bearish for the USD, 
         </main>
     </div>
 
-            <!-- Source Card -->
-            <div class="source-card">
-                Source: Investing.com, Firm Research. Notes as of 5th January 2026, 8 PM.<br>
-                For historical data and resources, please visit:
-                <span class="historical-impact">
-                    <a href="https://quantwatertech.netlify.app/research" target="_blank" rel="noopener noreferrer"><span style="color: rgb(255, 254, 255);">quantwater.tech/resources</span></a>
-                </span>
-            </div>
-        </main>
-    </div>
-
-    <script>
-        // Function to highlight the active section in the timeline
-        function updateTimeline() {
-            const sections = document.querySelectorAll('.event-day-group');
-            const timelineItems = document.querySelectorAll('.timeline-item');
-
-            let index = 0;
-            for (const section of sections) {
-                const rect = section.getBoundingClientRect();
-                if (rect.top <= 100 && rect.bottom >= 100) {
-                    timelineItems[index].classList.add('active');
-                } else {
-                    timelineItems[index].classList.remove('active');
-                }
-                index++;
-            }
-        }
-
-        // Add scroll event listener
-        window.addEventListener('scroll', updateTimeline);
-
-        // Initialize on load
-        window.addEventListener('load', updateTimeline);
-    </script>
+    <footer class="source-footer">
+        <p>Source: <a href="https://www.investing.com/economic-calendar/" target="_blank" rel="noopener noreferrer">Investing.com</a>, Firm Research</p>
+        <p>Note: Forecast values with links indicate data not available. Links direct to Bloomberg Economic Calendar for more information.</p>
+    </footer>
 </body>
 
-</html>
 </html>
