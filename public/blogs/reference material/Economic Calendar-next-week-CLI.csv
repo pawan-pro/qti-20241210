@@ -1,16 +1,18 @@
 Date,Day,Time (IST),Cur.,Imp.,Event,Actual,Forecast,Previous,Notes
-19-Jan-26,Monday,All Day,USD,3,"Martin Luther King, Jr. Day",,,-,
-19-Jan-26,Monday,7:30,CNY,3,GDP (YoY) (Q4),,4.80%,-,
-19-Jan-26,Monday,15:30,EUR,3,EUR - CPI (YoY) (Dec),,2.00%,-,
-19-Jan-26,Monday,20:15,CAD,3,BoC Interest Rate Decision,,2.25%,-,
-21-Jan-26,Wednesday,12:30,GBP,3,GBP - CPI (YoY) (Dec),,3.20%,-,
-21-Jan-26,Wednesday,19:00,USD,3,U.S. President Trump Speaks,,3.20%,-,
-22-Jan-26,Thursday,19:00,USD,3,GDP (QoQ) (Q3),,3.80%,-,
-22-Jan-26,Thursday,19:00,USD,3,Initial Jobless Claims,,-,-,
-22-Jan-26,Thursday,20:30,USD,3,Core PCE Price Index (MoM) (Nov),,0.20%,-,
-22-Jan-26,Thursday,20:30,USD,3,Core PCE Price Index (YoY) (Nov),,2.80%,-,
-22-Jan-26,Thursday,22:30,USD,3,Crude Oil Inventories,,2.80%,-,
-23-Jan-26,Friday,8:30,JPY,3,BoJ Interest Rate Decision,,5250.00%,0.0075,
-23-Jan-26,Friday,20:15,USD,3,S&P Global Services PMI (Jan),,5250.00%,-,
-23-Jan-26,Friday,20:15,USD,3,S&P Global Manufacturing PMI (Jan),,5180.00%,,
-28-Jan-26,Wed ,23:30,USD,3,Fed Interest Rate Decision,,3.61%,3.63%,[]
+26-Jan-26,Mon,All Day,,,Holiday - Australia - Australia Day,,,,High-importance market holiday for Australia; closures can reduce liquidity and impact price discovery in AUD and local assets.[page:1]
+26-Jan-26,Mon,All Day,,,Holiday - India - Republic Day,,,,High-importance market holiday for India; trading volumes in INR assets and Indian markets may be significantly lower.[page:1]
+26-Jan-26,Mon,19:00,USD,3,Durable Goods Orders (MoM) (Nov),,,-2.20%,Measures monthly change in new orders placed with manufacturers for durable goods; a higher than expected reading is generally considered supportive for the USD and signals stronger investment demand.[page:1]
+27-Jan-26,Mon,19:00,USD,3,U.S. President Trump Speaks,,,-2.20%,
+27-Jan-26,Tue,20:30,USD,3,CB Consumer Confidence (Jan),,,89.1,Conference Board index of consumer confidence based on households' assessment of current and future economic conditions; higher readings suggest stronger consumer spending prospects and can be viewed as USD-positive risk sentiment.[page:1]
+28-Jan-26,Mon,19:00,USD,3,U.S. President Trump Speaks - W,,,,
+28-Jan-26,Wed,20:15,CAD,3,BoC Interest Rate Decision,,,2.25%,Bank of Canada policy rate decision; changes or guidance shifts can significantly affect CAD
+29-Jan-26,Thu,0:30,USD,3,Fed Interest Rate Decision,,3.75%,3.75%,Federal Reserve target rate announcement; deviations from expectations or changes in forward guidance are typically the most important scheduled driver of USD and global risk sentiment that week.[page:1]
+29-Jan-26,Thu,0:30,USD,3,FOMC Statement,,,,
+29-Jan-26,Thu,1:00,USD,3,FOMC Press Conference,,,0.00%,
+29-Jan-26,Thu,19:00,USD,3,Initial Jobless Claims,,,0.00%,"Weekly number of individuals filing for unemployment insurance for the first time; persistent declines are seen as labor-market strength and can support the USD, while sustained increases may weigh on growth expectations.[page:1]"
+30-Jan-26,Fri,14:30,EUR,3,German GDP (QoQ) (Q4),,,0.20%,Quarterly change in inflation-adjusted value of goods and services produced in Germany; stronger growth tends to be supportive for the EUR and Eurozone risk assets.[page:1]
+30-Jan-26,Fri,18:30,EUR,3,German CPI (MoM) (Jan),,,43.5,Measures monthly change in consumer prices in Germany; higher inflation prints generally increase ECB tightening expectations and can support the EUR.[page:1]
+30-Jan-26,Fri,19:00,USD,3,PPI (MoM) (Dec),,,50.1,Producer Price Index tracking wholesale price changes; sustained upside surprises can feed into consumer inflation expectations and influence Fed policy expectations.[page:1]
+30-Jan-26,Fri,20:15,USD,3,Chicago PMI (Jan),,,,"Regional manufacturing activity index for the Chicago area; readings below 50 indicate contraction, with large moves often affecting expectations for US growth and ISM data.[page:1]"
+31-Jan-26,Sat,7:00,CNY,3,Manufacturing PMI (Jan),,,,"Official Chinese Manufacturing Purchasing Managers' Index, with readings above 50 indicating expansion; surprises can move CNH, industrial commodities, and global risk sentiment.[page:1]"
+18-Mar-26,Wed ,23:30,USD,3,Fed Interest Rate Decision,,3.58%,3.66%,[]
