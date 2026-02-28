@@ -7,7 +7,7 @@ const projects = [
   {
     id: 'blog20260302',
     title: 'Key Economic Events: Week Of 2nd March 2026',
-    image: '/blogs/blog-cover/20260302.png',
+    image: 'blogs/blog-cover/20260302.png',
     link: '/blogs/20260302.html',
   },
   {
