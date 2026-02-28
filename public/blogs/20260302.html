@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar: Week of March 2nd, 2026</title>
+    <link rel="stylesheet" href="/global.css">
+    <style>
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .firm-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007acc;
+        }
+
+        /* Blog styles */
+        @font-face {
+            font-family: 'Century Gothic';
+            src: url('/fonts/CenturyGothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Century Gothic', Arial, sans-serif !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000000;
+            color: #313131;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .blog-container {
+            padding: 33px;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #e9e9e9ac;
+            margin-bottom: 10px;
+        }
+
+        .blog-subtitle {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        /* Timeline styles */
+        .blog-timeline {
+            position: fixed;
+            left: 33px;
+            top: 100px;
+            padding: 15px;
+            background: rgba(42, 42, 42, 0.8);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(3, 3, 3, 0.1);
+            width: 160px;
+            font-size: 0.7rem;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            z-index: 900;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 15px 0;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 0.7rem;
+        }
+
+        .timeline-item.active {
+            background: linear-gradient(135deg, rgba(176, 176, 176, 0.15) 0%, rgba(100, 100, 100, 0.05) 100%);
+            border: 1px solid rgba(161, 161, 161, 0.3);
+            transform: translateX(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .timeline-item.active .timeline-date {
+            color: #6495ED;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-left: 0px;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        .timeline-date {
+            color: #e9e9e9ac;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-align: center;
+            padding-bottom: 3px;
+            transition: color 0.3s ease;
+        }
+
+        .timeline-events {
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+        /* Blog Content Styles */
+        .blog-content {
+            margin-left: 210px;
+            max-width: 1200px;
+            padding-right: 33px;
+            color: #ccc;
+        }
+
+        .event-day-group {
+            margin-bottom: 40px;
+            padding-top: 10px;
+        }
+
+        .event-day-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .event-day-group h2.timeline-date {
+            font-size: 1.5rem;
+            color: #cacacada;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #444;
+            text-align: left;
+        }
+
+        .event-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6495ED;
+            margin-bottom: 15px;
+        }
+
+        .event-details {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 10px 15px;
+            margin-bottom: 15px;
+        }
+
+        .event-label {
+            font-weight: bold;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-align: right;
+            padding-right: 5px;
+
+        }
+
+        .event-value {
+            color: #bbb;
+            font-size: 0.9rem;
+            word-break: break-word;
+        }
+
+        .event-notes-value {
+            text-align: justify;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        .historical-impact a {
+            color: #e0e0e0;
+            text-decoration: none;
+            background-color: #357ae8;
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 5px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 3px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .forecast a {
+            color: #e0e0e0;
+            text-decoration: none;
+            background-color: #357ae8;
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 5px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 3px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .forecast a:hover {
+            background-color: #2a65c8;
+            color: #fff;
+        }
+
+        .historical-impact a:hover {
+            background-color: #2a65c8;
+            color: #fff;
+        }
+
+        .source-card {
+            background-color: #222;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #e9e9e9ac;
+            border: 1px solid #444;
+        }
+
+        .source-card a {
+            color: #6495ED;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .source-card a:hover {
+            text-decoration: underline;
+        }
+
+        .source-card .historical-impact span {
+            color: rgb(168, 168, 168);
+        }
+
+        .past-blogs {
+            margin-top: 40px;
+        }
+
+        .past-blogs h3 {
+            font-size: 1.2rem;
+            color: #cacacada;
+            margin-bottom: 15px;
+        }
+
+        .past-blogs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .past-blogs li {
+            margin-bottom: 10px;
+        }
+
+        .past-blogs a {
+            color: #6495ED;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .past-blogs a:hover {
+            text-decoration: underline;
+        }
+
+        .source-footer {
+            background-color: #161616;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0 20px 210px;
+            width: calc(100% - 243px);
+            max-width: 1200px;
+            color: #bbb;
+            font-size: 0.8rem;
+        }
+
+        .source-footer a {
+            color: #4a90e2;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .source-footer a:hover {
+            color: #357ae8;
+        }
+
+        @media (max-width: 768px) {
+            .blog-timeline {
+                display: none;
+            }
+
+            .blog-content {
+                margin-left: 0;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .event-details {
+                grid-template-columns: 90px 1fr;
+            }
+
+            .event-label {
+                text-align: left;
+                padding-right: 0;
+            }
+
+            .source-footer {
+                margin-left: 0;
+                width: calc(100% - 40px);
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .header {
+                padding: 1rem;
+            }
+
+            .firm-name {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                gap: 0.8rem;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                display: none;
+            }
+
+            .event-details {
+                grid-template-columns: 1fr;
+                gap: 5px 0;
+            }
+
+            .event-label {
+                text-align: left;
+                margin-bottom: 2px;
+                font-size: 0.85rem;
+            }
+
+            .event-value {
+                font-size: 0.85rem;
+            }
+
+            .event-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/" class="firm-name">Quantwater Tech Investments</a>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/solutions">Solutions</a>
+            <a href="/research">Research</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="blog-container">
+        <aside class="blog-timeline">
+            <div class="timeline-item">
+                <a href="#day-02mar">
+                    <div class="timeline-info">
+                        <span class="timeline-date">02 Mar</span>
+                        <span class="timeline-events">3 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-03mar">
+                    <div class="timeline-info">
+                        <span class="timeline-date">03 Mar</span>
+                        <span class="timeline-events">2 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-04mar">
+                    <div class="timeline-info">
+                        <span class="timeline-date">04 Mar</span>
+                        <span class="timeline-events">6 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-06mar">
+                    <div class="timeline-info">
+                        <span class="timeline-date">06 Mar</span>
+                        <span class="timeline-events">3 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-08mar">
+                    <div class="timeline-info">
+                        <span class="timeline-date">08 Mar</span>
+                        <span class="timeline-events">1 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-18mar">
+                    <div class="timeline-info">
+                        <span class="timeline-date">18 Mar</span>
+                        <span class="timeline-events">1 Events</span>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <main class="blog-content">
+            <div class="blog-title">Key Economic Events: Week Of 2nd March 2026</div>
+            <div class="blog-subtitle">Release Date: 2nd March 2026</div>
+
+            <div class="source-card" style="margin-bottom: 20px; background-color: #2a2a2a;">
+                <strong>What to Expect in Markets This Week:</strong> This week features key economic data releases including US ISM Manufacturing PMI, S&P Global PMI readings, Eurozone CPI, Chinese Manufacturing PMI, US ADP Nonfarm Employment Change, ISM Non-Manufacturing PMI, and the highly anticipated US Nonfarm Payrolls report. Multiple holidays across India and Russia will affect market liquidity. The next Fed Interest Rate Decision is scheduled for March 18th, 2026.
+            </div>
+
+            <section class="event-day-group" id="day-02mar">
+                <h2 class="timeline-date">02 March 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - S&P Global Manufacturing PMI (Feb)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">02-Mar-26, Mon, 20:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">51.2</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The S&P Global Manufacturing PMI measures the performance of the manufacturing sector based on five key indicators: new orders, output, employment, suppliers' delivery times, and inventories. A reading above 50 indicates expansion, while below 50 signals contraction. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - ISM Manufacturing PMI (Feb)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">02-Mar-26, Mon, 20:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">52.6</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The ISM Manufacturing PMI is a diffusion index based on a survey of purchasing managers in the manufacturing sector. A reading above 50 indicates expansion in the manufacturing sector, while below 50 signals contraction. This is a key leading indicator of economic health. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - ISM Manufacturing Prices (Feb)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">02-Mar-26, Mon, 20:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">59</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The ISM Manufacturing Prices Index measures the change in prices of raw materials purchased by manufacturing firms. A higher reading indicates rising input costs, which can signal inflationary pressures. A reading above 50 indicates rising prices. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-03mar">
+                <h2 class="timeline-date">03 March 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">India - Holi</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">03-Mar-26, Tue, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Holi is a popular ancient Hindu festival, also known as the "Festival of Colors." It celebrates the arrival of spring and the triumph of good over evil. Financial markets in India are typically closed on this day, leading to lower liquidity for INR pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Holi" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">EUR - CPI (YoY) (Feb)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">03-Mar-26, Tue, 15:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">1.90%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Consumer Price Index (CPI) measures changes in the price level of a basket of goods and services consumed by households. Higher CPI readings indicate rising inflation and may strengthen the EUR as it could prompt the ECB to consider tighter monetary policy. A higher than expected reading is bullish for the EUR.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-04mar">
+                <h2 class="timeline-date">04 March 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">CNY - Manufacturing PMI (Feb)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">04-Mar-26, Wed, 07:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">CNY</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">49.3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Manufacturing PMI measures the performance of China's manufacturing sector based on a survey of purchasing managers. A reading above 50 indicates expansion, while below 50 signals contraction. This is a key indicator of China's economic health and can impact global markets. A higher than expected reading is bullish for the CNY.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - ADP Nonfarm Employment Change (Feb)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">04-Mar-26, Wed, 18:45 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">22K</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The ADP Nonfarm Employment Change measures the change in the number of employed people in the US, excluding the farming industry. It is a key leading indicator of the official Nonfarm Payrolls report and provides insight into the health of the labor market. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - S&P Global Services PMI (Feb)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">04-Mar-26, Wed, 20:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">52.3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The S&P Global Services PMI measures the performance of the services sector based on five key indicators: business activity, new orders, employment, suppliers' delivery times, and inventories. A reading above 50 indicates expansion, while below 50 signals contraction. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - ISM Non-Manufacturing Prices (Feb)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">04-Mar-26, Wed, 20:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">66.6</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The ISM Non-Manufacturing Prices Index measures the change in prices of raw materials purchased by non-manufacturing firms. A higher reading indicates rising input costs, which can signal inflationary pressures in the services sector. A reading above 50 indicates rising prices. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - ISM Non-Manufacturing PMI (Feb)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">04-Mar-26, Wed, 20:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">53.8</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The ISM Non-Manufacturing PMI is a diffusion index based on a survey of purchasing managers in the services sector. A reading above 50 indicates expansion in the non-manufacturing sector, while below 50 signals contraction. This is a key leading indicator of economic health, as the services sector represents a large portion of the US economy. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-06mar">
+                <h2 class="timeline-date">06 March 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Nonfarm Payrolls (Feb)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Mar-26, Fri, 19:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">130K</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Nonfarm Payrolls measures the change in the number of employed people, excluding the farming industry. It is one of the most important economic indicators for the US, providing insight into the health of the labor market. A higher than expected reading is bullish for the USD, while a lower reading is bearish.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Unemployment Rate (Feb)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Mar-26, Fri, 19:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">4.30%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Unemployment Rate measures the percentage of the total workforce that is unemployed and actively seeking employment. A lower unemployment rate indicates a stronger labor market and economic growth. A lower than expected reading is bullish for the USD, while a higher reading is bearish.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Average Hourly Earnings (MoM) (Feb)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Mar-26, Fri, 19:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.40%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Average Hourly Earnings measures the change in the hourly wages earned by workers. It is a key indicator of inflation and consumer spending power. Higher wage growth can lead to increased consumer spending and inflation. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-08mar">
+                <h2 class="timeline-date">08 March 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">Russia - Women's Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">08-Mar-26, Sun, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">International Women's Day is a public holiday in Russia honoring women and their contributions to society. Financial markets are typically closed on this day, leading to lower liquidity for RUB pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/International_Women%27s_Day" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-18mar">
+                <h2 class="timeline-date">18 March 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Fed Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">18-Mar-26, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast">3.61%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.63%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Federal Reserve Interest Rate Decision is one of the most important economic events for the USD. The Federal Open Market Committee (FOMC) announces its decision on the target federal funds rate, which influences borrowing costs, inflation, and economic growth. A rate hike is bullish for the USD, while a rate cut is bearish.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260302.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <div class="source-footer">
+                <strong>Source:</strong> <a href="https://www.investing.com/economic-calendar/" target="_blank" rel="noopener noreferrer">Investing.com</a>, Firm Research.
+                <br><br>
+                <strong>Disclaimer:</strong> The information provided in this economic calendar is for educational and informational purposes only. It should not be considered as financial advice or a recommendation to engage in any trading activity. Always conduct your own research and consult with a qualified financial advisor before making any investment decisions.
+            </div>
+
+            <section class="past-blogs">
+                <h3>Past Economic Calendars:</h3>
+                <ul>
+                    <li><a href="/blogs/20260222.html">Key Economic Events: Week Of 22nd February 2026</a></li>
+                    <li><a href="/blogs/20260215.html">Key Economic Events: Week Of 15th February 2026</a></li>
+                    <li><a href="/blogs/20260209.html">Key Economic Events: Week Of 9th February 2026</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Smooth scroll and active state for timeline
+        document.querySelectorAll('.timeline-item a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active state on scroll
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('.event-day-group');
+            const timelineItems = document.querySelectorAll('.timeline-item');
+
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 100) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            timelineItems.forEach(item => {
+                item.classList.remove('active');
+                const link = item.querySelector('a');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
