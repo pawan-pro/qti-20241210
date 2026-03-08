@@ -7,7 +7,7 @@ const projects = [
   {
     id: 'blog20260309',
     title: 'Key Economic Events: Week Of 9th March 2026',
-    image: '/blogs/blog-cover/20260302.png',
+    image: '/blogs/blog-cover/20260309.png',
     link: '/blogs/20260309.html',
     //description: 'Analyzing the key economic data releases including Japan GDP, US CPI, Core PCE, and the upcoming Fed Interest Rate Decision.',
   },
