@@ -1,9 +1,11 @@
 hello. please refer to 
 
-"previous blog-1": @public/blogs/20260222.html , 
-"previous blog-2": @public/blogs/20260215.html and 
+"previous blog-1": @public/blogs/20260302.html , 
+"previous blog-2": @public/blogs/20260222.html and 
 and create
-"next blog": 20260302.html. 
+"next blog": 20260314.html. (for the week of 20260316) (blog pdf /Users/pawan/qti/public/blogs/blog-pdf/20260314.pdf
+blog image: /Users/pawan/qti/public/blogs/blog-cover/20260314.png )
+
 
 
 Please keep the format same. please update the content, referencing 
