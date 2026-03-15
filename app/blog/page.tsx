@@ -5,6 +5,13 @@ import styles from './page.module.css';
 
 const projects = [
   {
+    id: 'blog20260314',
+    title: 'Key Economic Events: Week Of 16th March 2026',
+    image: '/blogs/blog-cover/20260314.png',
+    link: '/blogs/20260314.html',
+    //description: 'Analyzing the key economic data releases including multiple central bank rate decisions, FOMC projections, and Fed Chair Powell speech.',
+  },
+  {
     id: 'blog20260309',
     title: 'Key Economic Events: Week Of 9th March 2026',
     image: '/blogs/blog-cover/20260309.png',
