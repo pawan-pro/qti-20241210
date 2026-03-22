@@ -5,6 +5,13 @@ import styles from './page.module.css';
 
 const projects = [
   {
+    id: 'blog20260323',
+    title: 'Key Economic Events: Week Of 23rd March 2026',
+    image: '/blogs/blog-cover/20260323.png',
+    link: '/blogs/20260323.html',
+    //description: 'Analyzing the key economic data releases including US S&P Global PMI, UK CPI, and Initial Jobless Claims.',
+  },
+  {
     id: 'blog20260314',
     title: 'Key Economic Events: Week Of 16th March 2026',
     image: '/blogs/blog-cover/20260314.png',
