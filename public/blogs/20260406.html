@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar: Week of April 6th, 2026</title>
+    <link rel="stylesheet" href="/global.css">
+    <style>
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .firm-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007acc;
+        }
+
+        /* Blog styles */
+        @font-face {
+            font-family: 'Century Gothic';
+            src: url('/fonts/CenturyGothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Century Gothic', Arial, sans-serif !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000000;
+            color: #313131;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .blog-container {
+            padding: 33px;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #e9e9e9ac;
+            margin-bottom: 10px;
+        }
+
+        .blog-subtitle {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        /* Timeline styles */
+        .blog-timeline {
+            position: fixed;
+            left: 33px;
+            top: 100px;
+            padding: 15px;
+            background: rgba(42, 42, 42, 0.8);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(3, 3, 3, 0.1);
+            width: 160px;
+            font-size: 0.7rem;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            z-index: 900;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 15px 0;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 0.7rem;
+        }
+
+        .timeline-item.active {
+            background: linear-gradient(135deg, rgba(176, 176, 176, 0.15) 0%, rgba(100, 100, 100, 0.05) 100%);
+            border: 1px solid rgba(161, 161, 161, 0.3);
+            transform: translateX(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .timeline-item.active .timeline-date {
+            color: #6495ED;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-left: 0px;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        .timeline-date {
+            color: #e9e9e9ac;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-align: center;
+            padding-bottom: 3px;
+            transition: color 0.3s ease;
+        }
+
+        .timeline-events {
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+        /* Blog Content Styles */
+        .blog-content {
+            margin-left: 210px;
+            max-width: 1200px;
+            padding-right: 33px;
+            color: #ccc;
+        }
+
+        .event-day-group {
+            margin-bottom: 40px;
+            padding-top: 10px;
+        }
+
+        .event-day-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .event-day-group h2.timeline-date {
+            font-size: 1.5rem;
+            color: #cacacada;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #444;
+            text-align: left;
+        }
+
+        .event-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6495ED;
+            margin-bottom: 15px;
+        }
+
+        .event-details {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 10px 15px;
+            margin-bottom: 15px;
+        }
+
+        .event-label {
+            font-weight: bold;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-align: right;
+            padding-right: 5px;
+
+        }
+
+        .event-value {
+            color: #bbb;
+            font-size: 0.9rem;
+            word-break: break-word;
+        }
+
+        .event-notes-value {
+            text-align: justify;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        .historical-impact a {
+            color: #e0e0e0;
+            text-decoration: none;
+            background-color: #357ae8;
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 5px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 3px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .forecast a {
+            color: #e0e0e0;
+            text-decoration: none;
+            background-color: #357ae8;
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 5px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 3px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .forecast a:hover {
+            background-color: #2a65c8;
+            color: #fff;
+        }
+
+        .historical-impact a:hover {
+            background-color: #2a65c8;
+            color: #fff;
+        }
+
+        .source-card {
+            background-color: #222;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #e9e9e9ac;
+            border: 1px solid #444;
+        }
+
+        .source-card a {
+            color: #6495ED;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .source-card a:hover {
+            text-decoration: underline;
+        }
+
+        .source-card .historical-impact span {
+            color: rgb(168, 168, 168);
+        }
+
+        .past-blogs {
+            margin-top: 40px;
+        }
+
+        .past-blogs h3 {
+            font-size: 1.2rem;
+            color: #cacacada;
+            margin-bottom: 15px;
+        }
+
+        .past-blogs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .past-blogs li {
+            margin-bottom: 10px;
+        }
+
+        .past-blogs a {
+            color: #6495ED;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .past-blogs a:hover {
+            text-decoration: underline;
+        }
+
+        .source-footer {
+            background-color: #161616;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0 20px 210px;
+            width: calc(100% - 243px);
+            max-width: 1200px;
+            color: #bbb;
+            font-size: 0.8rem;
+        }
+
+        .source-footer a {
+            color: #4a90e2;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .source-footer a:hover {
+            color: #357ae8;
+        }
+
+        @media (max-width: 768px) {
+            .blog-timeline {
+                display: none;
+            }
+
+            .blog-content {
+                margin-left: 0;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .event-details {
+                grid-template-columns: 90px 1fr;
+            }
+
+            .event-label {
+                text-align: left;
+                padding-right: 0;
+            }
+
+            .source-footer {
+                margin-left: 0;
+                width: calc(100% - 40px);
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .header {
+                padding: 1rem;
+            }
+
+            .firm-name {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                gap: 0.8rem;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                display: none;
+            }
+
+            .event-details {
+                grid-template-columns: 1fr;
+                gap: 5px 0;
+            }
+
+            .event-label {
+                text-align: left;
+                margin-bottom: 2px;
+                font-size: 0.85rem;
+            }
+
+            .event-value {
+                font-size: 0.85rem;
+            }
+
+            .event-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/" class="firm-name">Quantwater Tech Investments</a>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/solutions">Solutions</a>
+            <a href="/research">Research</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="blog-container">
+        <aside class="blog-timeline">
+            <div class="timeline-item">
+                <a href="#day-06apr">
+                    <div class="timeline-info">
+                        <span class="timeline-date">06 Apr</span>
+                        <span class="timeline-events">12 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-07apr">
+                    <div class="timeline-info">
+                        <span class="timeline-date">07 Apr</span>
+                        <span class="timeline-events">1 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-08apr">
+                    <div class="timeline-info">
+                        <span class="timeline-date">08 Apr</span>
+                        <span class="timeline-events">1 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-09apr">
+                    <div class="timeline-info">
+                        <span class="timeline-date">09 Apr</span>
+                        <span class="timeline-events">4 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-10apr">
+                    <div class="timeline-info">
+                        <span class="timeline-date">10 Apr</span>
+                        <span class="timeline-events">4 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-29apr">
+                    <div class="timeline-info">
+                        <span class="timeline-date">29 Apr</span>
+                        <span class="timeline-events">1 Events</span>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <main class="blog-content">
+            <div class="blog-title">Key Economic Events: Week Of 6th April 2026</div>
+            <div class="blog-subtitle">Release Date: 6th April 2026</div>
+
+            <div class="source-card" style="margin-bottom: 20px; background-color: #2a2a2a;">
+                <strong>What to Expect in Markets This Week:</strong> This week features key economic data releases including US ISM Non-Manufacturing PMI and Prices, RBNZ Interest Rate Decision, US Core PCE Price Index, GDP, German CPI, and US CPI data. Multiple markets are closed for Easter and Ching Ming Festival holidays. The next Fed Interest Rate Decision is scheduled for April 29th, 2026.
+            </div>
+
+            <section class="event-day-group" id="day-06apr">
+                <h2 class="timeline-date">06 April 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">China - Ching Ming Festival</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Apr-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Ching Ming Festival (Tomb-Sweeping Day) is a traditional Chinese holiday for families to sweep tombs and honor ancestors. Financial markets in China mainland are typically closed on this day, leading to lower liquidity for CNY pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Qingming_Festival" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">France - Easter</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Apr-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Easter is a Christian holiday celebrating the resurrection of Jesus Christ. Financial markets in France are typically closed or operating on a reduced schedule on this day, leading to lower liquidity for EUR pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Easter" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">Germany - Easter</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Apr-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Easter is a Christian holiday celebrating the resurrection of Jesus Christ. Financial markets in Germany are typically closed or operating on a reduced schedule on this day, leading to lower liquidity for EUR pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Easter" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">Hong Kong - Ching Ming Festival</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Apr-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Ching Ming Festival (Tomb-Sweeping Day) is a traditional Chinese holiday for families to sweep tombs and honor ancestors. Financial markets in Hong Kong are typically closed on this day, leading to lower liquidity for HKD pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Qingming_Festival" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">Italy - Easter</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Apr-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Easter is a Christian holiday celebrating the resurrection of Jesus Christ. Financial markets in Italy are typically closed or operating on a reduced schedule on this day, leading to lower liquidity for EUR pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Easter" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">New Zealand - Easter</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Apr-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Easter is a Christian holiday celebrating the resurrection of Jesus Christ. Financial markets in New Zealand are typically closed or operating on a reduced schedule on this day, leading to lower liquidity for NZD pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Easter" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">South Africa - Family Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Apr-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Family Day is a public holiday in South Africa. Financial markets are typically closed or operating on a reduced schedule on this day, leading to lower liquidity for ZAR pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Public_holidays_in_South_Africa" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">Spain - Easter Monday</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Apr-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Easter Monday is a Christian holiday following Easter Sunday. Financial markets in Spain are typically closed or operating on a reduced schedule on this day, leading to lower liquidity for EUR pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Easter_Monday" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">Switzerland - Easter</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Apr-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Easter is a Christian holiday celebrating the resurrection of Jesus Christ. Financial markets in Switzerland are typically closed or operating on a reduced schedule on this day, leading to lower liquidity for CHF pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Easter" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">United Kingdom - Easter</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Apr-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Easter is a Christian holiday celebrating the resurrection of Jesus Christ. Financial markets in the United Kingdom are typically closed or operating on a reduced schedule on this day, leading to lower liquidity for GBP pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Easter" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - ISM Non-Manufacturing Prices (Mar)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Apr-26, Mon, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">63</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The ISM Non-Manufacturing Prices index measures the prices paid by service sector businesses for inputs. It is a key indicator of inflationary pressures in the services sector. Higher readings indicate stronger inflation pressures. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - ISM Non-Manufacturing PMI (Mar)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">06-Apr-26, Mon, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">56.1</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The ISM Non-Manufacturing PMI measures the level of general business conditions in the services sector. A reading above 50 indicates expansion, while below 50 signals contraction. The services sector represents a large portion of the US economy. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-07apr">
+                <h2 class="timeline-date">07 April 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">Hong Kong - Easter</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">07-Apr-26, Tue, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Easter is a Christian holiday celebrating the resurrection of Jesus Christ. Financial markets in Hong Kong are typically closed on this day, leading to lower liquidity for HKD pairs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Easter" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-08apr">
+                <h2 class="timeline-date">08 April 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">NZD - RBNZ Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">08-Apr-26, Wed, 07:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">NZD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">2.25%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Reserve Bank of New Zealand (RBNZ) Interest Rate Decision is one of the most important economic events for the NZD. The RBNZ announces its decision on the official cash rate, which influences borrowing costs, inflation, and economic growth. A rate hike is bullish for the NZD, while a rate cut is bearish.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-09apr">
+                <h2 class="timeline-date">09 April 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Core PCE Price Index (MoM) (Feb)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">09-Apr-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.40%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Core PCE Price Index measures the change in the price of goods and services purchased by consumers, excluding food and energy. It is the Federal Reserve's preferred measure of underlying inflation. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Core PCE Price Index (YoY) (Feb)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">09-Apr-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">3.10%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Core PCE Price Index (YoY) measures the year-on-year change in the price of goods and services purchased by consumers, excluding food and energy. It is the Federal Reserve's preferred measure of underlying inflation. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - GDP (QoQ) (Q4)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">09-Apr-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.70%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Gross Domestic Product (GDP) measures the total value of goods and services produced by the economy. It is a key indicator of economic health. A higher than expected reading is bullish for the USD, while a lower reading is bearish.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-10apr">
+                <h2 class="timeline-date">10 April 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">EUR - German CPI (MoM) (Mar)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">10-Apr-26, Fri, 11:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.20%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Consumer Price Index (CPI) measures changes in the price level of a basket of goods and services consumed by households. Higher CPI readings indicate rising inflation and may strengthen the EUR as it could prompt the ECB to consider tighter monetary policy. A higher than expected reading is bullish for the EUR.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - CPI (MoM) (Mar)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">10-Apr-26, Fri, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.30%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Consumer Price Index (CPI) measures changes in the price level of a basket of goods and services consumed by households. It is a key indicator of inflation. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Core CPI (MoM) (Mar)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">10-Apr-26, Fri, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.20%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Core CPI measures the change in the price of goods and services purchased by consumers, excluding food and energy. It is a key indicator of underlying inflation. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - CPI (YoY) (Mar)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">10-Apr-26, Fri, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">2.40%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Consumer Price Index (YoY) measures the year-on-year change in the price of a basket of goods and services consumed by households. It is a key indicator of inflation. A higher than expected reading is bullish for the USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-29apr">
+                <h2 class="timeline-date">29 April 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Fed Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Apr-26, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener noreferrer">CME FedWatch Tool</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.63%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Federal Reserve Interest Rate Decision is one of the most important economic events for the USD. The Federal Open Market Committee (FOMC) announces its decision on the target federal funds rate, which influences borrowing costs, inflation, and economic growth. A rate hike is bullish for the USD, while a rate cut is bearish.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260406.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <div class="source-footer">
+                <span>Data sourced from </span><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Bloomberg Economic Calendar</a>
+            </div>
+
+            <section class="past-blogs">
+                <h3>Past Blog Posts</h3>
+                <ul>
+                    <li><a href="/blogs/20260330.html">Key Economic Events: Week Of 30th March 2026</a></li>
+                    <li><a href="/blogs/20260323.html">Key Economic Events: Week Of 23rd March 2026</a></li>
+                    <li><a href="/blogs/20260314.html">Key Economic Events: Week Of 16th March 2026</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Timeline scroll highlighting
+        document.addEventListener('DOMContentLoaded', () => {
+            const daySections = document.querySelectorAll('.event-day-group');
+            const timelineItems = document.querySelectorAll('.timeline-item');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-100px 0px -60% 0px',
+                threshold: 0,
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const targetId = entry.target.getAttribute('id');
+                        timelineItems.forEach((item) => {
+                            item.classList.remove('active');
+                            const link = item.querySelector('a');
+                            if (link && link.getAttribute('href') === `#${targetId}`) {
+                                item.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            daySections.forEach((section) => observer.observe(section));
+
+            // Smooth scroll on timeline click
+            timelineItems.forEach((item) => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const link = item.querySelector('a');
+                    if (link) {
+                        const targetId = link.getAttribute('href');
+                        const targetSection = document.querySelector(targetId);
+                        if (targetSection) {
+                            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
