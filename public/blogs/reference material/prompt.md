@@ -39,9 +39,17 @@ IMPORTANT: After creating the blog HTML file, you MUST also:
 This is critical - these binary files are NOT automatically tracked by git and must be explicitly added every week.
 
 ASSET MAPPING RULES FOR "Learn More" LINKS:
+Use high beta FX pairs relevant to the event currency:
 - USD events: USDJPY & EURUSD
 - China (CNY) events: USDCNY & USDCNH
 - Euro (EUR) events: EURJPY & EURUSD
 - UK (GBP) events: GBPJPY & GBPUSD
+- Japan (JPY) events: USDJPY & EURJPY
+- New Zealand (NZD) events: NZDUSD & NZDJPY
+- Australia (AUD) events: AUDUSD & AUDJPY
+- Switzerland (CHF) events: USDCHF & CHFJPY
+- Canada (CAD) events: USDCAD & CADJPY
 - Holiday events: Keep Wikipedia Legacy link
-- All other events (NZD, JPY, AUD, etc.): Use USDJPY & EURUSD as default
+- India (INR) events: USDINR & EURINR (if applicable)
+- South Africa (ZAR) events: USDZAR & ZARJPY (if applicable)
+- General rule: Use the currency pair against USD and JPY for maximum liquidity relevance
