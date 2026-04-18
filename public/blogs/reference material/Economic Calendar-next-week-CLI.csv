@@ -1,23 +1,9 @@
 Date	Day	Time (IST)	Cur.	Imp.	Event	Actual	Forecast	Previous	Notes
-06-Apr-26	Mon	All Day	CN	3	China - Ching Ming Festival				Public holiday; China mainland financial markets closed.[page:1]
-06-Apr-26	Mon	All Day	FR	3	France - Easter				Public holiday; French markets closed or limited trading.[page:1]
-06-Apr-26	Mon	All Day	DE	3	Germany - Easter				Public holiday; German markets closed or limited trading.[page:1]
-06-Apr-26	Mon	All Day	HK	3	Hong Kong - Ching Ming Festival				Public holiday; Hong Kong markets closed.[page:1]
-06-Apr-26	Mon	All Day	IT	3	Italy - Easter				Public holiday; Italian markets closed or limited trading.[page:1]
-06-Apr-26	Mon	All Day	NZ	3	New Zealand - Easter				Public holiday; New Zealand markets closed or limited trading.[page:1]
-06-Apr-26	Mon	All Day	ZA	3	South Africa - Family Day				Public holiday; South African markets closed or limited trading.[page:1]
-06-Apr-26	Mon	All Day	ES	3	Spain - Easter Monday				Public holiday; Spanish markets closed or limited trading.[page:1]
-06-Apr-26	Mon	All Day	CH	3	Switzerland - Easter				Public holiday; Swiss markets closed or limited trading.[page:1]
-06-Apr-26	Mon	All Day	UK	3	United Kingdom - Easter				Public holiday; UK markets closed or operating on reduced schedule.[page:1]
-06-Apr-26	Mon	19:30	USD	3	ISM Non-Manufacturing Prices (Mar)			63	Prices paid component of the ISM services survey; higher readings indicate stronger inflation pressures in the services sector.[page:1]
-06-Apr-26	Mon	19:30	USD	3	ISM Non-Manufacturing PMI (Mar)			56.1	Headline index for the US services sector; above 50 signals expansion, below 50 contraction.[page:1]
-07-Apr-26	Tue	All Day	HK	3	Hong Kong - Easter				Public holiday; Hong Kong markets closed.[page:1]
-08-Apr-26	Wed	7:30	NZD	3	RBNZ Interest Rate Decision			2.25%	Official cash rate decision by the Reserve Bank of New Zealand; key driver of NZD funding costs and monetary policy stance.[page:1]
-09-Apr-26	Thu	18:00	USD	3	Core PCE Price Index (MoM) (Feb)			0.40%	Fed's preferred underlying inflation gauge, month‑on‑month; excludes food and energy.[page:1]
-09-Apr-26	Thu	18:00	USD	3	Core PCE Price Index (YoY) (Feb)			3.10%	Year‑on‑year change in core PCE; key input for US inflation and policy expectations.[page:1]
-09-Apr-26	Thu	18:00	USD	3	GDP (QoQ) (Q4)			0.70%	Quarter‑on‑quarter change in real US gross domestic product; primary measure of overall economic growth.[page:1]
-10-Apr-26	Fri	11:30	EUR	3	German CPI (MoM) (Mar)			0.20%	Monthly change in German consumer prices; important for eurozone inflation outlook.[page:1]
-10-Apr-26	Fri	18:00	USD	3	CPI (MoM) (Mar)			0.30%	Headline US consumer price index, month‑on‑month; key inflation indicator watched across markets.[page:1]
-10-Apr-26	Fri	18:00	USD	3	Core CPI (MoM) (Mar)			0.20%	US CPI excluding food and energy, month‑on‑month; tracks underlying inflation trend.[page:1]
-10-Apr-26	Fri	18:00	USD	3	CPI (YoY) (Mar)			2.40%	Year‑on‑year change in US headline CPI; major determinant of real rates and policy expectations.[page:1]
+21-Apr-26	Tue	All Day	BR	Holiday	Brazil - Tiradentes Day				
+21-Apr-26	Tue	18:00	US	3	Retail Sales (MoM) (Mar)			0.60%	
+21-Apr-26	Tue	18:00	US	3	Core Retail Sales (MoM) (Mar)			0.50%	
+22-Apr-26	Wed	11:30	UK	3	CPI (YoY) (Mar)			3.00%	
+23-Apr-26	Thur	18:00	US	3	Initial Jobless Claims				
+23-Apr-26	Thur	19:15	US	3	S&P Global Services PMI (Apr)			49.8	
+23-Apr-26	Thur	19:15	US	3	S&P Global Manufacturing PMI (Apr)			52.3	
 29-Apr-26	 Wed 	23:30	USD	3	Fed Interest Rate Decision		3.63%	3.63%	
