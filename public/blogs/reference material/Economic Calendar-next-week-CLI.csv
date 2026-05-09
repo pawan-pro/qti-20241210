@@ -1,36 +1,21 @@
-Date	Day	Time (IST)	Cur.	Imp.	Event	Actual	Forecast	Previous	Notes
-27-Apr-26	 Mon 	All Day	ZA	Holiday	South Africa - Freedom Day				
-28-Apr-26	 Tue 	8:30	JP	3	BoJ Interest Rate Decision			0.75%	
-28-Apr-26	 Tue 	19:30	US	3	CB Consumer Confidence (Apr)			91.8	
-29-Apr-26	 Wed 	All Day	JP	Holiday	Japan - Showa Day				
-29-Apr-26	 Wed 	17:30	DE	3	German CPI (MoM) (Apr)			1.10%	
-29-Apr-26	 Wed 	18:00	US	3	Durable Goods Orders (MoM) (Mar)			-1.30%	
-29-Apr-26	 Wed 	19:15	CA	3	BoC Interest Rate Decision			2.25%	
-29-Apr-26	 Wed 	23:30	US	3	Fed Interest Rate Decision			3.75%	
-29-Apr-26	 Thu 	0:00	US	3	FOMC Press Conference				
-30-Apr-26	 Thu 	7:00	CN	3	Manufacturing PMI (Apr)			50.4	
-30-Apr-26	 Thu 	13:30	DE	3	German GDP (QoQ) (Q1)			0.30%	
-30-Apr-26	 Thu 	14:30	EU	3	CPI (YoY) (Apr)			2.60%	
-30-Apr-26	 Thu 	16:30	UK	3	BoE Interest Rate Decision (Apr)			3.75%	
-30-Apr-26	 Thu 	17:45	EU	3	ECB Interest Rate Decision (Apr)			2.15%	
-30-Apr-26	 Thu 	17:45	EU	3	Deposit Facility Rate (Apr)			2.00%	
-30-Apr-26	 Thu 	18:00	US	3	GDP (QoQ) (Q1)			0.50%	
-30-Apr-26	 Thu 	18:00	US	3	Core PCE Price Index (YoY) (Mar)			3.00%	
-30-Apr-26	 Thu 	18:00	US	3	Core PCE Price Index (MoM) (Mar)			0.40%	
-30-Apr-26	 Thu 	19:15	US	3	Chicago PMI (Apr)			52.8	
-01-May-26	 Fri 	All Day	BR	Holiday	Brazil - Workers Day				
-01-May-26	 Fri 	All Day	CN	Holiday	China - Labor Day				
-01-May-26	 Fri 	All Day	FR	Holiday	France - Labor Day				
-01-May-26	 Fri 	All Day	DE	Holiday	Germany - Labor Day				
-01-May-26	 Fri 	All Day	HK	Holiday	Hong Kong - Labor Day				
-01-May-26	 Fri 	All Day	IN	Holiday	India - Maharashtra Day				
-01-May-26	 Fri 	All Day	IT	Holiday	Italy - Labor Day				
-01-May-26	 Fri 	All Day	RU	Holiday	Russia - Labor Day				
-01-May-26	 Fri 	All Day	SG	Holiday	Singapore - Labor Day				
-01-May-26	 Fri 	All Day	ZA	Holiday	South Africa - Labor Day				
-01-May-26	 Fri 	All Day	ES	Holiday	Spain - Labor Day				
-01-May-26	 Fri 	All Day	CH	Holiday	Switzerland - Labor Day				
-01-May-26	 Fri 	19:15	US	3	S&P Global Manufacturing PMI (Apr)			52.3	
-01-May-26	 Fri 	19:30	US	3	ISM Manufacturing PMI (Apr)			52.7	
-01-May-26	 Fri 	19:30	US	3	ISM Manufacturing Prices (Apr)			78.3	
-17-Jun-26	 Wed 	23:30	USD	3	Fed Interest Rate Decision		3.62%	3.63%	[]
+Date	Day	Time (IST)	Cur.	Imp.	Event	Actual	Forecast	Previous
+11-May-26	Mon	19:30	US	3	Existing Home Sales (Apr)			3.98M
+12-May-26	Tue	11:30	DE	3	German CPI (MoM) (Apr)			0.60%
+12-May-26	Tue	18:00	US	3	CPI (MoM) (Apr)			0.90%
+12-May-26	Tue	18:00	US	3	CPI (YoY) (Apr)			3.30%
+12-May-26	Tue	18:00	US	3	Core CPI (MoM) (Apr)			0.20%
+13-May-26	Wed	All Day	SE	-	Holiday - Sweden Ascension Day (Early Close 13:00)			
+13-May-26	Wed	18:00	US	3	PPI (MoM) (Apr)			0.50%
+14-May-26	Thu	All Day	FI	-	Holiday - Finland Ascension Day			
+14-May-26	Thu	All Day	NO	-	Holiday - Norway Ascension Day			
+14-May-26	Thu	All Day	SE	-	Holiday - Sweden Ascension Day			
+14-May-26	Thu	All Day	CH	-	Holiday - Switzerland Ascension Day			
+14-May-26	Thu	11:30	UK	3	GDP (YoY) (Q1)			1.00%
+14-May-26	Thu	11:30	UK	3	Manufacturing Production (MoM) (Mar)			-0.10%
+14-May-26	Thu	11:30	UK	3	Monthly GDP 3M/3M Change (Mar)			0.50%
+14-May-26	Thu	11:30	UK	3	GDP (MoM) (Mar)			0.50%
+14-May-26	Thu	11:30	UK	3	GDP (QoQ) (Q1)			0.10%
+14-May-26	Thu	18:00	US	3	Retail Sales (MoM) (Apr)			1.70%
+14-May-26	Thu	18:00	US	3	Core Retail Sales (MoM) (Apr)			1.90%
+14-May-26	Thu	18:00	US	3	Initial Jobless Claims			
+17-Jun-26	 Wed 	23:30	USD	3	Fed Interest Rate Decision		3.62%	3.63%
