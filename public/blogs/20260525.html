@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar: Week of May 25th, 2026</title>
+    <link rel="stylesheet" href="/global.css">
+    <style>
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .firm-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007acc;
+        }
+
+        /* Blog styles */
+        @font-face {
+            font-family: 'Century Gothic';
+            src: url('/fonts/CenturyGothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Century Gothic', Arial, sans-serif !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000000;
+            color: #313131;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .blog-container {
+            padding: 33px;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #e9e9e9ac;
+            margin-bottom: 10px;
+        }
+
+        .blog-subtitle {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        /* Timeline styles */
+        .blog-timeline {
+            position: fixed;
+            left: 33px;
+            top: 100px;
+            padding: 15px;
+            background: rgba(42, 42, 42, 0.8);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(3, 3, 3, 0.1);
+            width: 160px;
+            font-size: 0.7rem;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            z-index: 900;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 15px 0;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 0.7rem;
+        }
+
+        .timeline-item.active {
+            background: linear-gradient(135deg, rgba(176, 176, 176, 0.15) 0%, rgba(100, 100, 100, 0.05) 100%);
+            border: 1px solid rgba(161, 161, 161, 0.3);
+            transform: translateX(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .timeline-item.active .timeline-date {
+            color: #6495ED;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-left: 0px;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        .timeline-date {
+            color: #e9e9e9ac;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-align: center;
+            padding-bottom: 3px;
+            transition: color 0.3s ease;
+        }
+
+        .timeline-events {
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+        /* Blog Content Styles */
+        .blog-content {
+            margin-left: 210px;
+            max-width: 1200px;
+            padding-right: 33px;
+            color: #ccc;
+        }
+
+        .event-day-group {
+            margin-bottom: 40px;
+            padding-top: 10px;
+        }
+
+        .event-day-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .event-day-group h2.timeline-date {
+            font-size: 1.5rem;
+            color: #cacacada;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #444;
+            text-align: left;
+        }
+
+        .event-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6495ED;
+            margin-bottom: 15px;
+        }
+
+        .event-details {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 10px 15px;
+            margin-bottom: 15px;
+        }
+
+        .event-label {
+            font-weight: bold;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-align: right;
+            padding-right: 5px;
+
+        }
+
+        .event-value {
+            color: #bbb;
+            font-size: 0.9rem;
+            word-break: break-word;
+        }
+
+        .event-notes-value {
+            text-align: justify;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        .historical-impact a {
+            color: #e0e0e0;
+            text-decoration: none;
+            background-color: #357ae8;
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 5px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 3px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .forecast a {
+            color: #e0e0e0;
+            text-decoration: none;
+            background-color: #357ae8;
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 5px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 3px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .forecast a:hover {
+            background-color: #2a65c8;
+            color: #fff;
+        }
+
+        .historical-impact a:hover {
+            background-color: #2a65c8;
+            color: #fff;
+        }
+
+        .source-card {
+            background-color: #222;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #e9e9e9ac;
+            border: 1px solid #444;
+        }
+
+        .source-card a {
+            color: #6495ED;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .source-card a:hover {
+            text-decoration: underline;
+        }
+
+        .source-card .historical-impact span {
+            color: rgb(168, 168, 168);
+        }
+
+        .past-blogs {
+            margin-top: 40px;
+        }
+
+        .past-blogs h3 {
+            font-size: 1.2rem;
+            color: #cacacada;
+            margin-bottom: 15px;
+        }
+
+        .past-blogs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .past-blogs li {
+            margin-bottom: 10px;
+        }
+
+        .past-blogs a {
+            color: #6495ED;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .past-blogs a:hover {
+            text-decoration: underline;
+        }
+
+        .source-footer {
+            background-color: #161616;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0 20px 210px;
+            width: calc(100% - 243px);
+            max-width: 1200px;
+            color: #bbb;
+            font-size: 0.8rem;
+        }
+
+        .source-footer a {
+            color: #4a90e2;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .source-footer a:hover {
+            color: #357ae8;
+        }
+
+        @media (max-width: 768px) {
+            .blog-timeline {
+                display: none;
+            }
+
+            .blog-content {
+                margin-left: 0;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .event-details {
+                grid-template-columns: 90px 1fr;
+            }
+
+            .event-label {
+                text-align: left;
+                padding-right: 0;
+            }
+
+            .source-footer {
+                margin-left: 0;
+                width: calc(100% - 40px);
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .header {
+                padding: 1rem;
+            }
+
+            .firm-name {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                gap: 0.8rem;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                display: none;
+            }
+
+            .event-details {
+                grid-template-columns: 1fr;
+                gap: 5px 0;
+            }
+
+            .event-label {
+                text-align: left;
+                margin-bottom: 2px;
+                font-size: 0.85rem;
+            }
+
+            .event-value {
+                font-size: 0.85rem;
+            }
+
+            .event-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/" class="firm-name">Quantwater Tech Investments</a>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/solutions">Solutions</a>
+            <a href="/research">Research</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="blog-container">
+        <aside class="blog-timeline">
+            <div class="timeline-item">
+                <a href="#day-25may">
+                    <div class="timeline-info">
+                        <span class="timeline-date">25 May</span>
+                        <span class="timeline-events">6 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-26may">
+                    <div class="timeline-info">
+                        <span class="timeline-date">26 May</span>
+                        <span class="timeline-events">1 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-27may">
+                    <div class="timeline-info">
+                        <span class="timeline-date">27 May</span>
+                        <span class="timeline-events">2 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-28may">
+                    <div class="timeline-info">
+                        <span class="timeline-date">28 May</span>
+                        <span class="timeline-events">7 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-29may">
+                    <div class="timeline-info">
+                        <span class="timeline-date">29 May</span>
+                        <span class="timeline-events">2 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-31may">
+                    <div class="timeline-info">
+                        <span class="timeline-date">31 May</span>
+                        <span class="timeline-events">1 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-17jun">
+                    <div class="timeline-info">
+                        <span class="timeline-date">17 Jun</span>
+                        <span class="timeline-events">1 Events</span>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <main class="blog-content">
+            <div class="blog-title">Key Economic Events: Week Of 25th May 2026</div>
+            <div class="blog-subtitle">Release Date: 25th May 2026</div>
+
+            <div class="source-card" style="margin-bottom: 20px; background-color: #2a2a2a;">
+                <strong>What to Expect in Markets This Week:</strong> This week opens with holiday closures across Hong Kong, Norway, South Korea, Switzerland, the UK and the U.S., then shifts to U.S. consumer confidence, the RBNZ policy decision, U.S. Core PCE, GDP, durable goods, jobless claims, housing data, German CPI, Chicago PMI and China Manufacturing PMI. The next Fed Interest Rate Decision on 17 June 2026 remains the final forward-looking USD policy marker in this calendar sequence.
+            </div>
+
+            <section class="event-day-group" id="day-25may">
+                <h2 class="timeline-date">25 May 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">HK - Holiday - Buddha's Birthday</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">25-May-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Buddha's Birthday is a Hong Kong public holiday. Local exchange closures can thin HKD and China-linked market liquidity, leaving regional assets more reactive to offshore risk sentiment.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Buddha%27s_Birthday" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">NO - Holiday - Pentecost</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">25-May-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Pentecost is observed as a public holiday in Norway. Reduced local participation can limit NOK liquidity and make Nordic crosses more sensitive to broader European risk and energy-market moves.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Pentecost" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">KR - Holiday - Vesak Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">25-May-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Vesak Day is a South Korean public holiday. Local market closures can reduce KRW liquidity and shift attention toward regional equity sentiment and offshore USD flows.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Vesak" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">CH - Holiday - Whit Monday</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">25-May-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Whit Monday is observed in Switzerland. Lower Swiss market participation can thin CHF liquidity and make USDCHF and CHF crosses more reactive to external risk sentiment.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Whit_Monday" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">UK - Holiday - Spring Bank Holiday</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">25-May-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Spring Bank Holiday closes UK markets and can reduce GBP liquidity during London hours. Sterling crosses may be more sensitive to offshore flows and U.S. market conditions.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Spring_Bank_Holiday" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Holiday - Memorial Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">25-May-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Memorial Day is a U.S. public holiday. Reduced U.S. market participation can lower USD liquidity, compress data reaction windows and leave FX markets more sensitive to overseas catalysts.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Memorial_Day" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-26may">
+                <h2 class="timeline-date">26 May 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - CB Consumer Confidence (May)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">26-May-26, Tue, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">92.8</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Conference Board Consumer Confidence measures household sentiment about current conditions and the outlook. A stronger reading can support USD through resilient consumption expectations, while weakness can weigh on growth-sensitive rate pricing.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-27may">
+                <h2 class="timeline-date">27 May 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">SG - Holiday - Eid al-Adha</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">27-May-26, Wed, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Eid al-Adha is observed as a Singapore public holiday. Local market closures can reduce SGD liquidity and make regional FX more dependent on offshore USD and China-related flows.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Eid_al-Adha" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">NZD - RBNZ Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">27-May-26, Wed, 7:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">NZD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">2.25%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Reserve Bank of New Zealand rate decision is the week's main NZD policy event. Guidance on inflation, growth and the future rate path can drive NZDUSD and NZDJPY through shifts in yield differentials.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">NZDUSD</a> <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">NZDJPY</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-28may">
+                <h2 class="timeline-date">28 May 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">IN - Holiday - Bakri Id</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-May-26, Thu, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">Holiday</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Bakri Id is observed as an Indian public holiday. Reduced local market participation can limit INR liquidity and shift attention to offshore USDINR pricing and broader emerging-market sentiment.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="https://en.wikipedia.org/wiki/Eid_al-Adha" target="_blank" rel="noopener noreferrer">Legacy</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Core PCE Price Index (MoM) (Apr)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-May-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.30%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Core PCE month-over-month is the Federal Reserve's preferred underlying inflation gauge. A hotter print can support USD by delaying rate-cut expectations, while a softer reading can pressure yields and the dollar.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Core PCE Price Index (YoY) (Apr)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-May-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.20%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Core PCE year-over-year shows the trend in U.S. inflation excluding food and energy. Persistent annual inflation can keep Fed policy expectations restrictive, while faster disinflation can weigh on USD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - GDP (QoQ) (Q1)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-May-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">2.00%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">U.S. GDP quarter-over-quarter is the broadest read on economic growth. A stronger Q1 reading can support USD through firmer growth and yield expectations, while a downside surprise can soften risk appetite and rate pricing.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Durable Goods Orders (MoM) (Apr) P</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-May-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.80%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Preliminary Durable Goods Orders track demand for long-lasting manufactured products. Stronger orders can point to resilient business investment and support USD, while weakness can signal softer industrial momentum.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Initial Jobless Claims</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-May-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">209K</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Initial Jobless Claims measures first-time unemployment insurance filings and is a timely labor-market signal. Lower claims can support USD by reinforcing labor resilience, while higher claims can weigh on yields.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - New Home Sales (Apr)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-May-26, Thu, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">682K</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">New Home Sales tracks signed sales of newly built homes and gives a read on housing demand. A stronger release can support USD through firm domestic demand, while weakness can highlight rate-sensitive stress.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-29may">
+                <h2 class="timeline-date">29 May 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">EUR - German CPI (MoM) (May)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-May-26, Fri, 17:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.60%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">German CPI month-over-month is a key early inflation signal for the euro area. Upside surprises can support EUR by keeping European Central Bank expectations firm, while softer inflation can pressure the currency.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Chicago PMI (May)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-May-26, Fri, 19:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">49.2</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Chicago PMI measures business conditions across manufacturing and non-manufacturing firms in the Chicago region. A move above 50 would signal expansion and can support USD, while continued contraction can weigh on sentiment.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-31may">
+                <h2 class="timeline-date">31 May 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">CNY - Manufacturing PMI (May)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">31-May-26, Sun, 7:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">CNY</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">50.3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">China Manufacturing PMI is a key signal for factory activity and regional demand. A stronger reading can support China-sensitive FX and risk sentiment, while weakness can pressure CNH and broader Asia exposure.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">USDCNY</a> <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">USDCNH</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-17jun">
+                <h2 class="timeline-date">17 June 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Fed Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">17-Jun-26, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener noreferrer">CME FedWatch Tool</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.63%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Federal Reserve Interest Rate Decision remains the key medium-term USD catalyst. The 17 June 2026 meeting will reset expectations for policy guidance, the rate path and near-term risk sentiment. This appears as the next Fed decision in this calendar sequence.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact">
+                            <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260525.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a>
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <div class="source-footer">
+                <span>Data sourced from </span><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Bloomberg Economic Calendar</a>
+            </div>
+
+            <section class="past-blogs">
+                <h3>Past Blog Posts</h3>
+                <ul>
+                    <li><a href="/blogs/20260518.html">Key Economic Events: Week Of 18th May 2026</a></li>
+                    <li><a href="/blogs/20260510.html">Key Economic Events: Week Of 10th May 2026</a></li>
+                    <li><a href="/blogs/20260504.html">Key Economic Events: Week Of 4th May 2026</a></li>
+                    <li><a href="/blogs/20260426.html">Key Economic Events: Week Of 26th April 2026</a></li>
+                    <li><a href="/blogs/20260420.html">Key Economic Events: Week Of 20th April 2026</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Timeline scroll spy
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const sections = document.querySelectorAll('.event-day-group');
+
+        function updateActiveTimelineItem() {
+            let currentSection = null;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                    currentSection = section;
+                }
+            });
+
+            timelineItems.forEach(item => {
+                item.classList.remove('active');
+                if (currentSection) {
+                    const link = item.querySelector('a');
+                    if (link && link.getAttribute('href') === `#${currentSection.id}`) {
+                        item.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveTimelineItem);
+        window.addEventListener('load', updateActiveTimelineItem);
+    </script>
+</body>
+
+</html>
