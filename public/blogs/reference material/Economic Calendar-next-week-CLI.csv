@@ -1,21 +1,16 @@
 Date	Day	Time (IST)	Cur.	Imp.	Event	Actual	Forecast	Previous
-11-May-26	Mon	19:30	US	3	Existing Home Sales (Apr)			3.98M
-12-May-26	Tue	11:30	DE	3	German CPI (MoM) (Apr)			0.60%
-12-May-26	Tue	18:00	US	3	CPI (MoM) (Apr)			0.90%
-12-May-26	Tue	18:00	US	3	CPI (YoY) (Apr)			3.30%
-12-May-26	Tue	18:00	US	3	Core CPI (MoM) (Apr)			0.20%
-13-May-26	Wed	All Day	SE	-	Holiday - Sweden Ascension Day (Early Close 13:00)			
-13-May-26	Wed	18:00	US	3	PPI (MoM) (Apr)			0.50%
-14-May-26	Thu	All Day	FI	-	Holiday - Finland Ascension Day			
-14-May-26	Thu	All Day	NO	-	Holiday - Norway Ascension Day			
-14-May-26	Thu	All Day	SE	-	Holiday - Sweden Ascension Day			
-14-May-26	Thu	All Day	CH	-	Holiday - Switzerland Ascension Day			
-14-May-26	Thu	11:30	UK	3	GDP (YoY) (Q1)			1.00%
-14-May-26	Thu	11:30	UK	3	Manufacturing Production (MoM) (Mar)			-0.10%
-14-May-26	Thu	11:30	UK	3	Monthly GDP 3M/3M Change (Mar)			0.50%
-14-May-26	Thu	11:30	UK	3	GDP (MoM) (Mar)			0.50%
-14-May-26	Thu	11:30	UK	3	GDP (QoQ) (Q1)			0.10%
-14-May-26	Thu	18:00	US	3	Retail Sales (MoM) (Apr)			1.70%
-14-May-26	Thu	18:00	US	3	Core Retail Sales (MoM) (Apr)			1.90%
-14-May-26	Thu	18:00	US	3	Initial Jobless Claims			
-17-Jun-26	 Wed 	23:30	USD	3	Fed Interest Rate Decision		3.62%	3.63%
+08-Jun-26	Mon	All Day	AU	3	Holiday - King's Birthday	-	-	-
+08-Jun-26	Mon	5:20	JP	3	GDP (QoQ) (Q1)	-	0.50%	0.50%
+09-Jun-26	Tue	19:30	US	3	Existing Home Sales (May)	-	-	4.02M
+10-Jun-26	Wed	18:00	US	3	CPI (MoM) (May)	-	-	0.60%
+10-Jun-26	Wed	18:00	US	3	Core CPI (MoM) (May)	-	-	0.40%
+10-Jun-26	Wed	18:00	US	3	CPI (YoY) (May)	-	-	3.80%
+10-Jun-26	Wed	19:15	CA	3	BoC Interest Rate Decision	-	-	2.25%
+11-Jun-26	Thu	17:45	EU	3	Deposit Facility Rate (Jun)	-	-	2.00%
+11-Jun-26	Thu	17:45	EU	3	ECB Interest Rate Decision (Jun)	-	-	2.15%
+11-Jun-26	Thu	18:00	US	3	PPI (MoM) (May)	-	-	1.40%
+12-Jun-26	Fri	11:30	DE	3	German CPI (MoM) (May)	-	-	-0.20%
+12-Jun-26	Fri	11:30	UK	3	Manufacturing Production (MoM) (Apr)	-	-	1.20%
+12-Jun-26	Fri	11:30	UK	3	Monthly GDP 3M/3M Change (Apr)	-	-	0.60%
+12-Jun-26	Fri	11:30	UK	3	GDP (MoM) (Apr)	-	-	0.30%
+17-Jun-26	 Wed 	23:30	USD	3	Fed Interest Rate Decision		3.63%	3.63%

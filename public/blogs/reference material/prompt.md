@@ -1,10 +1,10 @@
 hello. please refer to
 
-"previous blog-1": @public/blogs/20260504.html ,
-"previous blog-2": @public/blogs/20260426.html and
+"previous blog-1": @public/blogs/20260601.html ,
+"previous blog-2": @public/blogs/20260525.html and
 and create
-"next blog": 20260510.html. (for the week of 20260510) (blog pdf /Users/pawan/qti/public/blogs/blog-pdf/20260510.pdf
-blog image: /Users/pawan/qti/public/blogs/blog-cover/20260510.png )
+"next blog": 20260607.html. (for the week of 20260607) (blog pdf /Users/pawan/qti/public/blogs/blog-pdf/20260607.pdf
+blog image: /Users/pawan/qti/public/blogs/blog-cover/20260607.png )
 
 
 
