@@ -5,6 +5,12 @@ import styles from './page.module.css';
 
 const projects = [
   {
+    id: 'blog20260705',
+    title: 'Key Economic Events: Week Of 5th July 2026',
+    image: '/blogs/blog-cover/20260705.png',
+    link: '/blogs/20260705.html',
+  },
+  {
     id: 'blog20260629',
     title: 'Key Economic Events: Week Of 29th June 2026',
     image: '/blogs/blog-cover/20260629.png',
