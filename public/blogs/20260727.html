@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar: Week of July 27th, 2026</title>
+    <link rel="stylesheet" href="/global.css">
+    <style>
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .firm-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007acc;
+        }
+
+        /* Blog styles */
+        @font-face {
+            font-family: 'Century Gothic';
+            src: url('/fonts/CenturyGothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Century Gothic', Arial, sans-serif !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000000;
+            color: #313131;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .blog-container {
+            padding: 33px;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #e9e9e9ac;
+            margin-bottom: 10px;
+        }
+
+        .blog-subtitle {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        /* Timeline styles */
+        .blog-timeline {
+            position: fixed;
+            left: 33px;
+            top: 100px;
+            padding: 15px;
+            background: rgba(42, 42, 42, 0.8);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(3, 3, 3, 0.1);
+            width: 160px;
+            font-size: 0.7rem;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            z-index: 900;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 15px 0;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+        }
+
+        .timeline-item.active {
+            background: linear-gradient(135deg, rgba(176, 176, 176, 0.15) 0%, rgba(100, 100, 100, 0.05) 100%);
+            border: 1px solid rgba(161, 161, 161, 0.3);
+            transform: translateX(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-item.active .timeline-date {
+            color: #6495ED;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: center;
+        }
+
+        .timeline-date {
+            color: #e9e9e9ac;
+            font-weight: 600;
+            font-size: 0.8rem;
+            padding-bottom: 3px;
+        }
+
+        .timeline-events {
+            font-size: 0.7rem;
+            color: #888;
+        }
+
+        /* Blog content styles */
+        .blog-content {
+            margin-left: 210px;
+            max-width: 1200px;
+            padding-right: 33px;
+            color: #ccc;
+        }
+
+        .event-day-group {
+            margin-bottom: 40px;
+            padding-top: 10px;
+        }
+
+        .event-day-group h2.timeline-date {
+            font-size: 1.5rem;
+            color: #cacacada;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #444;
+            text-align: left;
+        }
+
+        .event-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6495ED;
+            margin-bottom: 15px;
+        }
+
+        .event-details {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 10px 15px;
+            margin-bottom: 15px;
+        }
+
+        .event-label {
+            font-weight: bold;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-align: right;
+            padding-right: 5px;
+        }
+
+        .event-value {
+            color: #bbb;
+            font-size: 0.9rem;
+            word-break: break-word;
+        }
+
+        .event-notes-value {
+            text-align: justify;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        .historical-impact a,
+        .forecast a {
+            color: #e0e0e0;
+            text-decoration: none;
+            background-color: #357ae8;
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 5px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 3px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .historical-impact a:hover,
+        .forecast a:hover {
+            background-color: #2a65c8;
+            color: #fff;
+        }
+
+        .source-footer {
+            background-color: #161616;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #bbb;
+            font-size: 0.8rem;
+        }
+
+        .source-footer a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .past-blogs {
+            margin-top: 40px;
+        }
+
+        .past-blogs h3 {
+            font-size: 1.2rem;
+            color: #cacacada;
+            margin-bottom: 15px;
+        }
+
+        .past-blogs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .past-blogs li {
+            margin-bottom: 10px;
+        }
+
+        .past-blogs a {
+            color: #6495ED;
+            text-decoration: none;
+        }
+
+        .past-blogs a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .blog-timeline {
+                display: none;
+            }
+
+            .blog-content {
+                margin-left: 0;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .event-details {
+                grid-template-columns: 90px 1fr;
+            }
+
+            .event-label {
+                text-align: left;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/" class="firm-name">Quantwater Tech Investments</a>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/solutions">Solutions</a>
+            <a href="/research">Research</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="blog-container">
+        <aside class="blog-timeline">
+            <div class="timeline-item">
+                <a href="#day-28jul">
+                    <div class="timeline-info">
+                        <span class="timeline-date">28 Jul</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-29jul">
+                    <div class="timeline-info">
+                        <span class="timeline-date">29 Jul</span>
+                        <span class="timeline-events">2 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-30jul">
+                    <div class="timeline-info">
+                        <span class="timeline-date">30 Jul</span>
+                        <span class="timeline-events">7 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-31jul">
+                    <div class="timeline-info">
+                        <span class="timeline-date">31 Jul</span>
+                        <span class="timeline-events">2 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-16sep">
+                    <div class="timeline-info">
+                        <span class="timeline-date">16 Sep</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <main class="blog-content">
+            <div class="blog-title">Key Economic Events: Week Of 27th July 2026</div>
+            <div class="blog-subtitle">Release Date: 27th July 2026</div>
+
+            <section class="event-day-group" id="day-28jul">
+                <h2 class="timeline-date">28 July 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">US - CB Consumer Confidence (Jul)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-Jul-26, Tue, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">2</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">91.2</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Conference Board Consumer Confidence index tracks household views of current conditions and the outlook. A stronger reading can support USD through firmer spending and growth expectations, while a weaker result may weigh on yields and risk sentiment.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-29jul">
+                <h2 class="timeline-date">29 July 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">US - Fed Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Jul-26, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener noreferrer">CME FedWatch Tool</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.75%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Federal Reserve rate decision is the week's central market catalyst. The decision and guidance can rapidly reprice the expected policy path, moving USD, Treasury yields, equities and global risk sentiment.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - FOMC Statement</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Jul-26, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The FOMC statement explains the Federal Reserve's assessment of inflation, employment and economic activity. Changes in wording or the balance of risks can be as market-moving as the rate decision itself.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-30jul">
+                <h2 class="timeline-date">30 July 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">US - FOMC Press Conference</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Jul-26, Thu, 0:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The FOMC press conference provides Chair Powell's interpretation of the decision and the likely policy path. Guidance on inflation, labour conditions and future moves can produce substantial USD and cross-asset volatility.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">DE - German GDP (QoQ) (Q2)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Jul-26, Thu, 11:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">2</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.30%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">German quarterly GDP is an important gauge of momentum in the euro area's largest economy. Stronger growth can support EUR and regional yields, while contraction would reinforce concerns about the European outlook.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">UK - BoE Interest Rate Decision (Jul)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Jul-26, Thu, 16:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">GBP</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.75%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Bank of England rate decision sets the near-term policy tone for GBP. A hawkish outcome can lift sterling and gilt yields, while a cut or dovish guidance would strengthen expectations for easier policy.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">GBPJPY</a> <a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">GBPUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">DE - German CPI (MoM) (Jul)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Jul-26, Thu, 17:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">2</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-0.30%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">German monthly CPI is an early signal for euro-area inflation. An upside surprise can support EUR through firmer ECB rate expectations, while softer prices would reinforce the case for easier policy.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Core PCE Price Index (MoM) (Jun)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Jul-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.30%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Core PCE is the Federal Reserve's preferred underlying inflation measure. A stronger monthly reading can support USD and yields, while a softer print would make future policy easing easier to price.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Core PCE Price Index (YoY) (Jun)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Jul-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.40%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Annual core PCE shows the broader trend in underlying U.S. inflation. Persistent inflation can keep the Fed cautious and support USD, while renewed disinflation would reduce pressure for restrictive policy.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - GDP (QoQ) (Q2)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Jul-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">2.10%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">U.S. quarterly GDP is the broadest measure of economic growth. An upside surprise can support USD through stronger activity and rate expectations, while weaker growth may pull yields lower and raise slowdown concerns.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-31jul">
+                <h2 class="timeline-date">31 July 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">CN - Manufacturing PMI (Jul)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">31-Jul-26, Fri, 7:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">CNY</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">50.3</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">China's manufacturing PMI is a key signal for factory activity, commodities and regional demand. A reading above 50 indicates expansion and can support CNY and risk sentiment, while weakness would increase focus on policy support.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">USDCNY</a> <a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">USDCNH</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">EU - CPI (YoY) (Jul)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">31-Jul-26, Fri, 14:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">2.80%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Euro-area annual CPI is a major input to ECB policy expectations. Firmer inflation can support EUR and regional yields, while a softer result would strengthen expectations for easier financial conditions.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-16sep">
+                <h2 class="timeline-date">16 September 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Fed Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">16-Sep-26, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener noreferrer">CME FedWatch Tool</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.63%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The 16 September 2026 Federal Reserve decision is the next scheduled policy meeting after this week. It remains the key medium-term USD catalyst and will reset expectations for the rate path, forward guidance and global risk sentiment.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260727.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <div class="source-footer">
+                <span>Data sourced from </span><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Bloomberg Economic Calendar</a> and Firm Research.
+            </div>
+
+            <section class="past-blogs">
+                <h3>Past Blog Posts</h3>
+                <ul>
+                    <li><a href="/blogs/20260720.html">Key Economic Events: Week Of 20th July 2026</a></li>
+                    <li><a href="/blogs/20260712.html">Key Economic Events: Week Of 12th July 2026</a></li>
+                    <li><a href="/blogs/20260705.html">Key Economic Events: Week Of 5th July 2026</a></li>
+                    <li><a href="/blogs/20260629.html">Key Economic Events: Week Of 29th June 2026</a></li>
+                    <li><a href="/blogs/20260621.html">Key Economic Events: Week Of 21st June 2026</a></li>
+                    <li><a href="/blogs/20260615.html">Key Economic Events: Week Of 15th June 2026</a></li>
+                    <li><a href="/blogs/20260607.html">Key Economic Events: Week Of 7th June 2026</a></li>
+                    <li><a href="/blogs/20260601.html">Key Economic Events: Week Of 1st June 2026</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const sections = document.querySelectorAll('.event-day-group');
+
+        function updateActiveTimelineItem() {
+            let currentSection = null;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                    currentSection = section;
+                }
+            });
+
+            timelineItems.forEach(item => {
+                item.classList.remove('active');
+                if (currentSection) {
+                    const link = item.querySelector('a');
+                    if (link && link.getAttribute('href') === `#${currentSection.id}`) {
+                        item.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveTimelineItem);
+        window.addEventListener('load', updateActiveTimelineItem);
+    </script>
+</body>
+
+</html>
