@@ -1,16 +1,22 @@
-Date	Day	Time (IST)	Cur.	Imp.	Event	Actual	Forecast	Previous
-08-Jun-26	Mon	All Day	AU	3	Holiday - King's Birthday	-	-	-
-08-Jun-26	Mon	5:20	JP	3	GDP (QoQ) (Q1)	-	0.50%	0.50%
-09-Jun-26	Tue	19:30	US	3	Existing Home Sales (May)	-	-	4.02M
-10-Jun-26	Wed	18:00	US	3	CPI (MoM) (May)	-	-	0.60%
-10-Jun-26	Wed	18:00	US	3	Core CPI (MoM) (May)	-	-	0.40%
-10-Jun-26	Wed	18:00	US	3	CPI (YoY) (May)	-	-	3.80%
-10-Jun-26	Wed	19:15	CA	3	BoC Interest Rate Decision	-	-	2.25%
-11-Jun-26	Thu	17:45	EU	3	Deposit Facility Rate (Jun)	-	-	2.00%
-11-Jun-26	Thu	17:45	EU	3	ECB Interest Rate Decision (Jun)	-	-	2.15%
-11-Jun-26	Thu	18:00	US	3	PPI (MoM) (May)	-	-	1.40%
-12-Jun-26	Fri	11:30	DE	3	German CPI (MoM) (May)	-	-	-0.20%
-12-Jun-26	Fri	11:30	UK	3	Manufacturing Production (MoM) (Apr)	-	-	1.20%
-12-Jun-26	Fri	11:30	UK	3	Monthly GDP 3M/3M Change (Apr)	-	-	0.60%
-12-Jun-26	Fri	11:30	UK	3	GDP (MoM) (Apr)	-	-	0.30%
-17-Jun-26	 Wed 	23:30	USD	3	Fed Interest Rate Decision		3.63%	3.63%
+Date	Day	Time (IST)	Cur.	Imp.	Event	Actual	Forecast	Previous	Notes
+31-Aug-26	Mon	All Day	UK	Holiday	United Kingdom - Summer Bank Holiday	-	-	-	-
+31-Aug-26	Mon	7:00	CN	-	Manufacturing PMI (Aug)	-	49.5	49.2	-
+31-Aug-26	Mon	17:30	DE	-	German CPI (MoM) (Aug)	-	0.30%	0.80%	-
+31-Aug-26	Mon	19:15	US	-	Chicago PMI (Aug)	-	57.8	57.6	-
+01-Sep-26	Tue	14:30	EU	-	CPI (YoY) (Aug)	-	3.30%	2.90%	-
+01-Sep-26	Tue	19:15	US	-	S&P Global Manufacturing PMI (Aug)	-	53.2	53.2	-
+01-Sep-26	Tue	19:30	US	-	ISM Manufacturing Prices (Aug)	-	71.2	71.1	-
+01-Sep-26	Tue	19:30	US	-	ISM Manufacturing PMI (Aug)	-	55.2	55.6	-
+01-Sep-26	Tue	19:30	US	-	JOLTS Job Openings (Jul)	-	7.330M	7.359M	-
+02-Sep-26	Wed	7:30	NZ	-	RBNZ Interest Rate Decision	-	2.75%	2.50%	-
+02-Sep-26	Wed	17:45	US	-	ADP Nonfarm Employment Change (Aug)	-	47K	44K	-
+02-Sep-26	Wed	19:15	CA	-	BoC Interest Rate Decision	-	2.25%	2.25%	-
+02-Sep-26	Wed	20:00	US	-	Crude Oil Inventories	-	-	0.095M	-
+03-Sep-26	Thu	18:00	US	-	Initial Jobless Claims	-	205K	203K	-
+03-Sep-26	Thu	19:15	US	-	S&P Global Services PMI (Aug)	-	56.8	56.8	-
+03-Sep-26	Thu	19:30	US	-	ISM Non-Manufacturing Prices (Aug)	-	70.3	-	-
+03-Sep-26	Thu	19:30	US	-	ISM Non-Manufacturing PMI (Aug)	-	54.1	54.1	-
+04-Sep-26	Fri	18:00	US	-	Average Hourly Earnings (MoM) (Aug)	-	0.30%	0.10%	-
+04-Sep-26	Fri	18:00	US	-	Nonfarm Payrolls (Aug)	-	58K	-23K	-
+04-Sep-26	Fri	18:00	US	-	Unemployment Rate (Aug)	-	4.10%	4.10%	-
+16-Sep-26	Wed	23:30	USD	3	Fed Interest Rate Decision			3.63%	
