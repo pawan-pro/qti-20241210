@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar: Week of September 7th, 2026</title>
+    <link rel="stylesheet" href="/global.css">
+    <style>
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .firm-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007acc;
+        }
+
+        /* Blog styles */
+        @font-face {
+            font-family: 'Century Gothic';
+            src: url('/fonts/CenturyGothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Century Gothic', Arial, sans-serif !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000000;
+            color: #313131;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .blog-container {
+            padding: 33px;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #e9e9e9ac;
+            margin-bottom: 10px;
+        }
+
+        .blog-subtitle {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        /* Timeline styles */
+        .blog-timeline {
+            position: fixed;
+            left: 33px;
+            top: 100px;
+            padding: 15px;
+            background: rgba(42, 42, 42, 0.8);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(3, 3, 3, 0.1);
+            width: 160px;
+            font-size: 0.7rem;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            z-index: 900;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 15px 0;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+        }
+
+        .timeline-item.active {
+            background: linear-gradient(135deg, rgba(176, 176, 176, 0.15) 0%, rgba(100, 100, 100, 0.05) 100%);
+            border: 1px solid rgba(161, 161, 161, 0.3);
+            transform: translateX(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-item.active .timeline-date {
+            color: #6495ED;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: center;
+        }
+
+        .timeline-date {
+            color: #e9e9e9ac;
+            font-weight: 600;
+            font-size: 0.8rem;
+            padding-bottom: 3px;
+        }
+
+        .timeline-events {
+            font-size: 0.7rem;
+            color: #888;
+        }
+
+        /* Blog content styles */
+        .blog-content {
+            margin-left: 210px;
+            max-width: 1200px;
+            padding-right: 33px;
+            color: #ccc;
+        }
+
+        .event-day-group {
+            margin-bottom: 40px;
+            padding-top: 10px;
+        }
+
+        .event-day-group h2.timeline-date {
+            font-size: 1.5rem;
+            color: #cacacada;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #444;
+            text-align: left;
+        }
+
+        .event-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6495ED;
+            margin-bottom: 15px;
+        }
+
+        .event-details {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 10px 15px;
+            margin-bottom: 15px;
+        }
+
+        .event-label {
+            font-weight: bold;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-align: right;
+            padding-right: 5px;
+        }
+
+        .event-value {
+            color: #bbb;
+            font-size: 0.9rem;
+            word-break: break-word;
+        }
+
+        .event-notes-value {
+            text-align: justify;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        .historical-impact a,
+        .forecast a {
+            color: #e0e0e0;
+            text-decoration: none;
+            background-color: #357ae8;
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 5px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 3px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .historical-impact a:hover,
+        .forecast a:hover {
+            background-color: #2a65c8;
+            color: #fff;
+        }
+
+        .source-footer {
+            background-color: #161616;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #bbb;
+            font-size: 0.8rem;
+        }
+
+        .source-footer a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .past-blogs {
+            margin-top: 40px;
+        }
+
+        .past-blogs h3 {
+            font-size: 1.2rem;
+            color: #cacacada;
+            margin-bottom: 15px;
+        }
+
+        .past-blogs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .past-blogs li {
+            margin-bottom: 10px;
+        }
+
+        .past-blogs a {
+            color: #6495ED;
+            text-decoration: none;
+        }
+
+        .past-blogs a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .blog-timeline {
+                display: none;
+            }
+
+            .blog-content {
+                margin-left: 0;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .event-details {
+                grid-template-columns: 90px 1fr;
+            }
+
+            .event-label {
+                text-align: left;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/" class="firm-name">Quantwater Tech Investments</a>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/solutions">Solutions</a>
+            <a href="/research">Research</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="blog-container">
+        <aside class="blog-timeline">
+            <div class="timeline-item">
+                <a href="#day-07sep">
+                    <div class="timeline-info">
+                        <span class="timeline-date">07 Sep</span>
+                        <span class="timeline-events">3 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-08sep">
+                    <div class="timeline-info">
+                        <span class="timeline-date">08 Sep</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-09sep">
+                    <div class="timeline-info">
+                        <span class="timeline-date">09 Sep</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-10sep">
+                    <div class="timeline-info">
+                        <span class="timeline-date">10 Sep</span>
+                        <span class="timeline-events">9 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-11sep">
+                    <div class="timeline-info">
+                        <span class="timeline-date">11 Sep</span>
+                        <span class="timeline-events">4 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-16sep">
+                    <div class="timeline-info">
+                        <span class="timeline-date">16 Sep</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <main class="blog-content">
+            <div class="blog-title">Key Economic Events: Week Of 7th September 2026</div>
+            <div class="blog-subtitle">Release Date: 7th September 2026</div>
+
+            <section class="event-day-group" id="day-07sep">
+                <h2 class="timeline-date">07 September 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">BR - Brazil Independence Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">07-Sep-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">BRL</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">1</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Brazil Independence Day closes financial markets. BRL liquidity is thinner and real moves are more driven by global risk sentiment and USD flows.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="https://en.wikipedia.org/wiki/Brazilian_independence" target="_blank" rel="noopener noreferrer">Wikipedia</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">CA - Canada Labor Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">07-Sep-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">CAD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">1</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Canada Labor Day closes financial markets. CAD liquidity is thinner and loonie moves are more driven by global risk sentiment and USD flows.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="https://en.wikipedia.org/wiki/Labour_Day_(Canada)" target="_blank" rel="noopener noreferrer">Wikipedia</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - United States Labor Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">07-Sep-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">1</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">U.S. Labor Day closes financial markets. USD liquidity is thinner and dollar moves are more driven by global risk sentiment and cross-currency flows.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="https://en.wikipedia.org/wiki/Labor_Day_(United_States)" target="_blank" rel="noopener noreferrer">Wikipedia</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-08sep">
+                <h2 class="timeline-date">08 September 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">JP - GDP (QoQ) (Q2)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">08-Sep-26, Tue, 5:20 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">JPY</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.30%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.30%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Japan's quarterly GDP is a key gauge of economic growth and shapes expectations for Bank of Japan policy. A firmer print can support JPY through improved growth and yield-differential expectations, while a miss would reinforce concerns about domestic demand and weigh on the currency.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-09sep">
+                <h2 class="timeline-date">09 September 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">US - 10-Year Note Auction</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">09-Sep-26, Wed, 22:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">2</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">4.68%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The 10-year Treasury note auction provides a read on investor demand for U.S. government debt. Strong demand can support yields and USD, while weak bidding may weigh on the dollar and signal risk aversion.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-10sep">
+                <h2 class="timeline-date">10 September 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">DE - German CPI (MoM) (Aug)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">10-Sep-26, Thu, 11:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.20%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.20%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">German monthly CPI is a key input for euro-area inflation expectations and ECB policy outlook. A firmer print can support EUR, while a slowdown would reinforce disinflation and easing bets.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">EU - Deposit Facility Rate (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">10-Sep-26, Thu, 17:45 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">2.50%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">2.25%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The ECB deposit facility rate is the primary policy rate for the euro area. A hike can support EUR through improved yield differentials, while a hold or cut may weigh on the currency and signal economic softness.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">EU - ECB Interest Rate Decision (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">10-Sep-26, Thu, 17:45 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">2.65%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">2.40%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The ECB interest rate decision sets the benchmark cost of borrowing for the euro area. A hike can support EUR through improved yield differentials, while a hold or cut may weigh on the currency and signal economic softness.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - PPI (MoM) (Aug)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">10-Sep-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.40%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.00%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Producer Price Index captures input-cost inflation at the factory gate. A firmer print can support USD through higher inflation expectations and yield pricing, while a decline would ease cost pressures and reinforce easing bets.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Initial Jobless Claims</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">10-Sep-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">205K</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">206K</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Initial jobless claims are a high-frequency labour-market signal. Lower claims can support USD through resilient growth expectations, while a material rise may pull yields and the dollar lower.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">EU - ECB Press Conference</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">10-Sep-26, Thu, 18:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The ECB press conference follows the rate decision and provides guidance on the policy outlook. Hawkish signals can support EUR through firmer rate expectations, while dovish commentary may weigh on the currency and reinforce easing bets.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Existing Home Sales (Aug)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">10-Sep-26, Thu, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">3.98M</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">4.06M</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Existing home sales provide a timely read on U.S. housing demand and interest-rate sensitivity. A stronger print can support USD through better growth sentiment, while a decline would highlight ongoing pressure from elevated financing costs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Crude Oil Inventories</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">10-Sep-26, Thu, 21:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">2</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-4.450M</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">U.S. crude inventories provide a timely read on the oil supply-demand balance. A larger draw can support oil prices and inflation expectations, while a build may weigh on crude and risk sentiment.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - 30-Year Bond Auction</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">10-Sep-26, Thu, 22:31 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">2</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">5.22%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The 30-year Treasury bond auction provides a read on long-end demand for U.S. government debt. Strong demand can support yields and USD, while weak bidding may weigh on the dollar and signal risk aversion.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-11sep">
+                <h2 class="timeline-date">11 September 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">UK - GDP (MoM) (Jul)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">11-Sep-26, Fri, 11:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">GBP</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.00%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.30%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">UK monthly GDP is a key gauge of economic growth and shapes expectations for Bank of England policy. A firmer print can support GBP through improved growth and yield-differential expectations, while a miss would reinforce concerns about domestic momentum and weigh on the currency.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">GBPJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">GBPUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - CPI (MoM) (Aug)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">11-Sep-26, Fri, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.40%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.10%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Monthly CPI captures the latest pace of consumer-price changes. An upside surprise can lift yields and support USD, while a softer print would ease inflation concerns and boost easing expectations.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - CPI (YoY) (Aug)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">11-Sep-26, Fri, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">3.40%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.40%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Annual CPI is a key gauge of inflation trends and shapes expectations for Federal Reserve policy. A firmer print can support USD through higher-for-longer rate expectations, while disinflation would reinforce the case for easing.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Core CPI (MoM) (Aug)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">11-Sep-26, Fri, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.20%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.20%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Core CPI excludes volatile food and energy prices, providing a cleaner read on underlying inflation. An upside surprise can lift yields and support USD, while a softer print would ease inflation concerns and boost easing expectations.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-16sep">
+                <h2 class="timeline-date">16 September 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Fed Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">16-Sep-26, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener noreferrer">CME FedWatch Tool</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.63%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The 16 September 2026 Federal Reserve decision is the next scheduled policy meeting after this week. It remains the key medium-term USD catalyst and will reset expectations for the rate path, guidance and global risk sentiment.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260906.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <div class="source-footer">
+                <span>Data sourced from </span><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Bloomberg Economic Calendar</a> and Firm Research.
+            </div>
+
+            <section class="past-blogs">
+                <h3>Past Blog Posts</h3>
+                <ul>
+                    <li><a href="/blogs/20260831.html">Key Economic Events: Week Of 31st August 2026</a></li>
+                    <li><a href="/blogs/20260824.html">Key Economic Events: Week Of 24th August 2026</a></li>
+                    <li><a href="/blogs/20260815.html">Key Economic Events: Week Of 15th August 2026</a></li>
+                    <li><a href="/blogs/20260810.html">Key Economic Events: Week Of 10th August 2026</a></li>
+                    <li><a href="/blogs/20260803.html">Key Economic Events: Week Of 3rd August 2026</a></li>
+                    <li><a href="/blogs/20260727.html">Key Economic Events: Week Of 27th July 2026</a></li>
+                    <li><a href="/blogs/20260720.html">Key Economic Events: Week Of 20th July 2026</a></li>
+                    <li><a href="/blogs/20260712.html">Key Economic Events: Week Of 12th July 2026</a></li>
+                    <li><a href="/blogs/20260705.html">Key Economic Events: Week Of 5th July 2026</a></li>
+                    <li><a href="/blogs/20260629.html">Key Economic Events: Week Of 29th June 2026</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const sections = document.querySelectorAll('.event-day-group');
+
+        function updateActiveTimelineItem() {
+            let currentSection = null;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                    currentSection = section;
+                }
+            });
+
+            timelineItems.forEach(item => {
+                item.classList.remove('active');
+                if (currentSection) {
+                    const link = item.querySelector('a');
+                    if (link && link.getAttribute('href') === `#${currentSection.id}`) {
+                        item.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveTimelineItem);
+        window.addEventListener('load', updateActiveTimelineItem);
+    </script>
+</body>
+
+</html>
