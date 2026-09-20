@@ -1,16 +1,16 @@
 Date	Day	Time (IST)	Cur.	Imp.	Event	Actual	Forecast	Previous	Notes
-14-Sep-26	Mon	All Day	IN	-	India - Ganesh Chaturthi	-	-	-	Holiday
-16-Sep-26	Wed	11:30	UK	-	CPI (YoY) (Aug)	-	-	2.90%	-
-16-Sep-26	Wed	18:00	US	-	Core Retail Sales (MoM) (Aug)	-	-	-0.30%	-
-16-Sep-26	Wed	18:00	US	-	Retail Sales (MoM) (Aug)	-	-	-0.60%	-
-16-Sep-26	Wed	20:00	US	-	Crude Oil Inventories	-	-	-0.391M	-
-16-Sep-26	Wed	23:30	US	-	Fed Interest Rate Decision	-	-	3.75%	-
-16-Sep-26	Wed	23:30	US	-	FOMC Economic Projections	-	-	-	-
-16-Sep-26	Wed	23:30	US	-	FOMC Statement	-	-	-	-
-17-Sep-26	Thu	0:00	US	-	FOMC Press Conference	-	-	-	-
-17-Sep-26	Thu	14:30	EU	-	CPI (YoY) (Aug) - EU	-	3.30%	3.30%	-
-17-Sep-26	Thu	16:30	UK	-	BoE Interest Rate Decision (Sep)	-	3.75%	3.75%	-
-17-Sep-26	Thu	18:00	US	-	Philadelphia Fed Manufacturing Index (Sep)	-	-	4740.00%	-
-17-Sep-26	Thu	18:00	US	-	Initial Jobless Claims	-	-	206K	-
-18-Sep-26	Fri	8:30	JP	-	BoJ Interest Rate Decision	-	1.25%	1.00%	-
-28-Oct-26	Wed	23:30	USD	3	Fed Interest Rate Decision		3.71%	3.63%	
+21-Sep-26	 All Day 	 All Day 	JP	Holiday	Japan - Respect for the Aged Day			2.90%	
+22-Sep-26	 All Day 	 All Day 	JP	Holiday	Japan - Holiday			-0.30%	
+23-Sep-26	 All Day 	 All Day 	JP	Holiday	Japan - Autumn Equinox			-0.60%	
+23-Sep-26	19:15	19:15	US	High	S&P Global Manufacturing PMI (Sep)	53.4	53.9	-0.391M	
+23-Sep-26	19:15	19:15	US	High	S&P Global Services PMI (Sep)	56	56.5	3.75%	
+23-Sep-26	20:00	20:00	US	High	Crude Oil Inventories	-0.640M		-	
+24-Sep-26	 All Day 	 All Day 	ZA	Holiday	South Africa - Heritage Day			-	
+24-Sep-26	 All Day 	 All Day 	KR	Holiday	South Korea - Chuseok - Thanksgiving Day			-	
+24-Sep-26	13:00	13:00	CH	High	SNB Interest Rate Decision (Q3)	0.00%	0.00%	3.30%	
+24-Sep-26	18:00	18:00	US	High	Initial Jobless Claims	201K	196K	3.75%	
+24-Sep-26	19:30	19:30	US	High	New Home Sales (Aug)	619K	607K	4740.00%	
+25-Sep-26	 All Day 	 All Day 	CN	Holiday	China - Mid-Autumn Festival			206K	
+25-Sep-26	 All Day 	 All Day 	KR	Holiday	South Korea - Chuseok - Thanksgiving Day			1.00%	
+25-Sep-26	18:00	18:00	US	High	Durable Goods Orders (MoM) (Aug)	-0.30%	1.10%	3.63%	
+28-Oct-26	Wed	23:30	US	High	FOMC Meeting				
