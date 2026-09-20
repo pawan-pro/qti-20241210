@@ -1,10 +1,10 @@
 hello. please refer to
 
-"previous blog-1": @public/blogs/20260824.html ,
-"previous blog-2": @public/blogs/20260815.html and
+"previous blog-1": @public/blogs/20260914.html ,
+"previous blog-2": @public/blogs/20260906.html and
 and create
-"next blog": 20260831.html. (for the week of 20260831) (blog pdf /Users/pawan/qti/public/blogs/blog-pdf/20260831.pdf
-blog image: /Users/pawan/qti/public/blogs/blog-cover/20260831.png )
+"next blog": 20260920.html. (for the week of 20260920) (blog pdf /Users/pawan/qti/public/blogs/blog-pdf/20260921.pdf
+blog image: /Users/pawan/qti/public/blogs/blog-cover/20260921.png )
 
 
 
@@ -20,11 +20,6 @@ the relevant data is in
 
 "@/Users/pawan/Documents/GitHub/qti/public/blogs/reference material/Economic Calendar-next-week-CLI.csv"
 
-PLease integerate the notes from
-
-@public/blogs/reference\ material/note.txt
-
-into the notes of the economic calendar, as applicable, if not empty.
 
 Please refer to Bloomberg Economic Calendar as link button wherever there is not forecast available for an econmic event (not holiday), as done in the previous html code
 
@@ -37,19 +32,3 @@ IMPORTANT: After creating the blog HTML file, you MUST also:
 2. Commit these files with an appropriate message
 3. Push to the remote repository
 This is critical - these binary files are NOT automatically tracked by git and must be explicitly added every week.
-
-ASSET MAPPING RULES FOR "Learn More" LINKS:
-Use high beta FX pairs relevant to the event currency:
-- USD events: USDJPY & EURUSD
-- China (CNY) events: USDCNY & USDCNH
-- Euro (EUR) events: EURJPY & EURUSD
-- UK (GBP) events: GBPJPY & GBPUSD
-- Japan (JPY) events: USDJPY & EURJPY
-- New Zealand (NZD) events: NZDUSD & NZDJPY
-- Australia (AUD) events: AUDUSD & AUDJPY
-- Switzerland (CHF) events: USDCHF & CHFJPY
-- Canada (CAD) events: USDCAD & CADJPY
-- Holiday events: Keep Wikipedia Legacy link
-- India (INR) events: USDINR & EURINR (if applicable)
-- South Africa (ZAR) events: USDZAR & ZARJPY (if applicable)
-- General rule: Use the currency pair against USD and JPY for maximum liquidity relevance
