@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar: Week of September 28th, 2026</title>
+    <link rel="stylesheet" href="/global.css">
+    <style>
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .firm-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007acc;
+        }
+
+        /* Blog styles */
+        @font-face {
+            font-family: 'Century Gothic';
+            src: url('/fonts/CenturyGothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Century Gothic', Arial, sans-serif !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000000;
+            color: #313131;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .blog-container {
+            padding: 33px;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #e9e9e9ac;
+            margin-bottom: 10px;
+        }
+
+        .blog-subtitle {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        /* Timeline styles */
+        .blog-timeline {
+            position: fixed;
+            left: 33px;
+            top: 100px;
+            padding: 15px;
+            background: rgba(42, 42, 42, 0.8);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(3, 3, 3, 0.1);
+            width: 160px;
+            font-size: 0.7rem;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            z-index: 900;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 15px 0;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+        }
+
+        .timeline-item.active {
+            background: linear-gradient(135deg, rgba(176, 176, 176, 0.15) 0%, rgba(100, 100, 100, 0.05) 100%);
+            border: 1px solid rgba(161, 161, 161, 0.3);
+            transform: translateX(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-item.active .timeline-date {
+            color: #6495ED;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: center;
+        }
+
+        .timeline-date {
+            color: #e9e9e9ac;
+            font-weight: 600;
+            font-size: 0.8rem;
+            padding-bottom: 3px;
+        }
+
+        .timeline-events {
+            font-size: 0.7rem;
+            color: #888;
+        }
+
+        /* Blog content styles */
+        .blog-content {
+            margin-left: 210px;
+            max-width: 1200px;
+            padding-right: 33px;
+            color: #ccc;
+        }
+
+        .event-day-group {
+            margin-bottom: 40px;
+            padding-top: 10px;
+        }
+
+        .event-day-group h2.timeline-date {
+            font-size: 1.5rem;
+            color: #cacacada;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #444;
+            text-align: left;
+        }
+
+        .event-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6495ED;
+            margin-bottom: 15px;
+        }
+
+        .event-details {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 10px 15px;
+            margin-bottom: 15px;
+        }
+
+        .event-label {
+            font-weight: bold;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-align: right;
+            padding-right: 5px;
+        }
+
+        .event-value {
+            color: #bbb;
+            font-size: 0.9rem;
+            word-break: break-word;
+        }
+
+        .event-notes-value {
+            text-align: justify;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        .historical-impact a,
+        .forecast a {
+            color: #e0e0e0;
+            text-decoration: none;
+            background-color: #357ae8;
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 5px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 3px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .historical-impact a:hover,
+        .forecast a:hover {
+            background-color: #2a65c8;
+            color: #fff;
+        }
+
+        .source-footer {
+            background-color: #161616;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #bbb;
+            font-size: 0.8rem;
+        }
+
+        .source-footer a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .past-blogs {
+            margin-top: 40px;
+        }
+
+        .past-blogs h3 {
+            font-size: 1.2rem;
+            color: #cacacada;
+            margin-bottom: 15px;
+        }
+
+        .past-blogs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .past-blogs li {
+            margin-bottom: 10px;
+        }
+
+        .past-blogs a {
+            color: #6495ED;
+            text-decoration: none;
+        }
+
+        .past-blogs a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .blog-timeline {
+                display: none;
+            }
+
+            .blog-content {
+                margin-left: 0;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .event-details {
+                grid-template-columns: 90px 1fr;
+            }
+
+            .event-label {
+                text-align: left;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/" class="firm-name">Quantwater Tech Investments</a>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/solutions">Solutions</a>
+            <a href="/research">Research</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="blog-container">
+        <aside class="blog-timeline">
+            <div class="timeline-item">
+                <a href="#day-29sep">
+                    <div class="timeline-info">
+                        <span class="timeline-date">29 Sep</span>
+                        <span class="timeline-events">3 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-30sep">
+                    <div class="timeline-info">
+                        <span class="timeline-date">30 Sep</span>
+                        <span class="timeline-events">10 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-1oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">1 Oct</span>
+                        <span class="timeline-events">6 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-2oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">2 Oct</span>
+                        <span class="timeline-events">6 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-28oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">28 Oct</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <main class="blog-content">
+            <div class="blog-title">Key Economic Events: Week Of 28th September 2026</div>
+            <div class="blog-subtitle">Release Date: 28th September 2026</div>
+
+            <section class="event-day-group" id="day-29sep">
+                <h2 class="timeline-date">29 September 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">AU - RBA Interest Rate Decision (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Sep-26, Tue, 10:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">AUD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Reserve Bank of Australia interest rate decision is the marquee AUD event of the week. With no consensus on the table, markets will read the statement and guidance closely: a hawkish hold can support AUD and local yields, while a cut or dovish bias would weigh on the currency.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">AUDUSD</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">AUDJPY</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - CB Consumer Confidence (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Sep-26, Tue, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Conference Board Consumer Confidence Index measures household optimism and willingness to spend, a forward signal for consumption-driven US growth. A stronger-than-expected print can support USD through improved growth expectations, while a decline would signal consumer caution and weigh on the dollar.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - JOLTS Job Openings (Aug)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Sep-26, Tue, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">JOLTS captures labour demand through unfilled job openings and is a key input into the Fed's read on labour-market balance. A resilient print can support USD by pointing to a still-tight market, while a sharp decline would reinforce cooling-labour-market narratives and rate-cut bets.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-30sep">
+                <h2 class="timeline-date">30 September 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">CN - Manufacturing PMI (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Sep-26, Wed, 7:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">CNY</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">China's official Manufacturing PMI is the first major read on factory activity in the new quarter. A move above 50 signals expansion and can support CNY, commodity-linked FX and risk sentiment, while a sub-50 print would renew concerns about domestic demand ahead of Golden Week.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDCNY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDCNH</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">UK - GDP (QoQ) (Q2)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Sep-26, Wed, 11:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">GBP</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">UK quarterly GDP is the headline measure of economic growth and a key input for Bank of England policy pricing. A stronger-than-expected print can support GBP through improved growth and rate expectations, while a contraction would weigh on sterling and reinforce easing bets.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">GBPJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">GBPUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">UK - GDP (YoY) (Q2)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Sep-26, Wed, 11:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">GBP</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The annual GDP print puts quarterly momentum into context and shapes the medium-term UK growth outlook. A firmer year-on-year reading can support GBP via growth and rate expectations, while a softer outturn would reinforce stagnation concerns and weigh on sterling.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">GBPJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">GBPUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">DE - German CPI (MoM) (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Sep-26, Wed, 17:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">2</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">German monthly CPI is an early signal for euro-area inflation, given Germany's weight in the HICP basket. An upside surprise can support EUR through firmer ECB rate expectations, while softer prices would reinforce the case for easier policy.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - ADP Nonfarm Employment Change (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Sep-26, Wed, 17:45 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">ADP's private-sector payrolls report is a precursor to Friday's Nonfarm Payrolls. A strong print can lift USD and yields into the jobs report, while a weak number would raise expectations of labour-market cooling and Fed easing.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Core PCE Price Index (YoY) (Aug)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Sep-26, Wed, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Core PCE is the Federal Reserve's preferred inflation gauge and the week's most important inflation release. A firmer-than-expected print can support USD by pushing rate-cut expectations back, while a cooler reading would reinforce easing bets and weigh on the dollar.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Core PCE Price Index (MoM) (Aug)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Sep-26, Wed, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The monthly core PCE print shows the latest month-over-month inflation momentum. An upside surprise can lift USD and Treasury yields, while a soft print would strengthen the case that disinflation is back on track.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - GDP (QoQ) (Q2)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Sep-26, Wed, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The final estimate of US quarterly GDP sets the growth backdrop heading into the fourth quarter. An upward revision can support USD through improved growth expectations, while a downgrade would highlight economic softness and support the case for lower rates.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Chicago PMI (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Sep-26, Wed, 19:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">2</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Chicago PMI is a regional proxy for national factory activity released ahead of Thursday's ISM reading. A move above 50 signals expansion and can support USD, while a deeper contraction would add to industrial-softness concerns.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Crude Oil Inventories</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Sep-26, Wed, 20:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">2</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">U.S. crude inventories provide a timely read on the oil supply-demand balance. A larger draw can support oil prices and inflation expectations, while a build may weigh on crude and risk sentiment.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-1oct">
+                <h2 class="timeline-date">1 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">CN - China - National Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">01-Oct-26, Thu, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">CNY</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">1</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">China's National Day opens the Golden Week holiday, keeping mainland financial markets closed. CNY and CNH liquidity thins noticeably, so yuan and regional moves are driven primarily by offshore flows and global risk sentiment.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="https://en.wikipedia.org/wiki/National_Day_of_the_People%27s_Republic_of_China" target="_blank" rel="noopener noreferrer">Wikipedia</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">HK - Hong Kong - National Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">01-Oct-26, Thu, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">HKD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">1</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Hong Kong observes National Day as a public holiday. Local equity and FX desks run reduced staffing, leaving HKD liquidity lighter and offshore flows more influential for regional price action.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="https://en.wikipedia.org/wiki/Public_holidays_in_Hong_Kong" target="_blank" rel="noopener noreferrer">Wikipedia</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Initial Jobless Claims</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">01-Oct-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Initial jobless claims are a high-frequency labour-market signal released ahead of Friday's payrolls report. Lower claims can support USD through resilient growth expectations, while a material rise may pull yields and the dollar lower.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - S&amp;P Global Manufacturing PMI (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">01-Oct-26, Thu, 19:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The S&amp;P Global Manufacturing PMI is a leading indicator of factory-sector health. A reading above 50 signals expansion; a stronger-than-expected print can support USD through improved growth expectations, while a miss would reinforce concerns about industrial momentum.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - ISM Manufacturing PMI (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">01-Oct-26, Thu, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The ISM Manufacturing PMI is the most closely watched US factory-activity gauge of the week. A reading above 50 signals expansion and can support USD through improved growth expectations, while a sub-50 print would reinforce industrial-softness concerns.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - ISM Manufacturing Prices (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">01-Oct-26, Thu, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">2</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The ISM prices-paid sub-index tracks input-cost pressure inside US factories and feeds into the inflation outlook. A hotter print can lift inflation expectations and USD, while a cooler reading would ease price pressures ahead of next week's CPI.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-2oct">
+                <h2 class="timeline-date">2 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">CN - China - National Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">02-Oct-26, Fri, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">CNY</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">1</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Golden Week holiday continues and mainland Chinese markets remain closed for a second day. CNY and CNH liquidity stays thin, with regional moves dominated by offshore flows and global risk appetite.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="https://en.wikipedia.org/wiki/National_Day_of_the_People%27s_Republic_of_China" target="_blank" rel="noopener noreferrer">Wikipedia</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">IN - India - Mahatma Gandhi Jayanti</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">02-Oct-26, Fri, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">INR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">1</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Mahatma Gandhi Jayanti is an Indian national holiday marking Gandhi's birthday. Financial markets are closed, leading to thinner INR liquidity; rupee moves are driven mainly by global risk sentiment and USD flows.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="https://en.wikipedia.org/wiki/Gandhi_Jayanti" target="_blank" rel="noopener noreferrer">Wikipedia</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">EU - CPI (YoY) (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">02-Oct-26, Fri, 14:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Euro-area annual CPI frames the inflation backdrop for European Central Bank policy. A firm reading above forecast can support EUR through firmer rate expectations, while cooling inflation would reinforce the case for further easing.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Nonfarm Payrolls (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">02-Oct-26, Fri, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Nonfarm Payrolls is the week's marquee US release and the clearest read on labour-market health. A stronger-than-expected print can support USD through higher-for-longer rate expectations, while a miss would reinforce cooling-labour-market narratives and Fed easing bets.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Unemployment Rate (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">02-Oct-26, Fri, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The unemployment rate is the labour-market headline the Fed watches most closely alongside payrolls. A lower rate can support USD, while a surprise rise would strengthen the case for rate cuts and weigh on the dollar.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Average Hourly Earnings (MoM) (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">02-Oct-26, Fri, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">2</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Average hourly earnings capture wage growth and the labour-side inflation outlook. A firmer print can support USD by keeping wage-pressure concerns alive, while cooling earnings would ease the inflation narrative and reinforce easing bets.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-28oct">
+                <h2 class="timeline-date">28 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Fed Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-Oct-26, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener noreferrer">CME FedWatch Tool</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.63%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The 28 October 2026 Federal Reserve decision is the next scheduled policy meeting after this week. It remains the key medium-term USD catalyst and will reset expectations for the rate path, guidance and global risk sentiment.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20260928.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <div class="source-footer">
+                <span>Data sourced from </span><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Bloomberg Economic Calendar</a> and Firm Research.
+            </div>
+
+            <section class="past-blogs">
+                <h3>Past Blog Posts</h3>
+                <ul>
+                    <li><a href="/blogs/20260920.html">Key Economic Events: Week Of 20th September 2026</a></li>
+                    <li><a href="/blogs/20260914.html">Key Economic Events: Week Of 14th September 2026</a></li>
+                    <li><a href="/blogs/20260906.html">Key Economic Events: Week Of 6th September 2026</a></li>
+                    <li><a href="/blogs/20260831.html">Key Economic Events: Week Of 31st August 2026</a></li>
+                    <li><a href="/blogs/20260824.html">Key Economic Events: Week Of 24th August 2026</a></li>
+                    <li><a href="/blogs/20260815.html">Key Economic Events: Week Of 15th August 2026</a></li>
+                    <li><a href="/blogs/20260810.html">Key Economic Events: Week Of 10th August 2026</a></li>
+                    <li><a href="/blogs/20260803.html">Key Economic Events: Week Of 3rd August 2026</a></li>
+                    <li><a href="/blogs/20260727.html">Key Economic Events: Week Of 27th July 2026</a></li>
+                    <li><a href="/blogs/20260720.html">Key Economic Events: Week Of 20th July 2026</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const sections = document.querySelectorAll('.event-day-group');
+
+        function updateActiveTimelineItem() {
+            let currentSection = null;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                    currentSection = section;
+                }
+            });
+
+            timelineItems.forEach(item => {
+                item.classList.remove('active');
+                if (currentSection) {
+                    const link = item.querySelector('a');
+                    if (link && link.getAttribute('href') === `#${currentSection.id}`) {
+                        item.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveTimelineItem);
+        window.addEventListener('load', updateActiveTimelineItem);
+    </script>
+</body>
+
+</html>

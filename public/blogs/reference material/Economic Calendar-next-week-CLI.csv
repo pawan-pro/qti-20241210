@@ -1,16 +1,27 @@
 Date	Day	Time (IST)	Cur.	Imp.	Event	Actual	Forecast	Previous	Notes
-21-Sep-26	 All Day 	 All Day 	JP	Holiday	Japan - Respect for the Aged Day			2.90%	
-22-Sep-26	 All Day 	 All Day 	JP	Holiday	Japan - Holiday			-0.30%	
-23-Sep-26	 All Day 	 All Day 	JP	Holiday	Japan - Autumn Equinox			-0.60%	
-23-Sep-26	19:15	19:15	US	High	S&P Global Manufacturing PMI (Sep)	53.4	53.9	-0.391M	
-23-Sep-26	19:15	19:15	US	High	S&P Global Services PMI (Sep)	56	56.5	3.75%	
-23-Sep-26	20:00	20:00	US	High	Crude Oil Inventories	-0.640M		-	
-24-Sep-26	 All Day 	 All Day 	ZA	Holiday	South Africa - Heritage Day			-	
-24-Sep-26	 All Day 	 All Day 	KR	Holiday	South Korea - Chuseok - Thanksgiving Day			-	
-24-Sep-26	13:00	13:00	CH	High	SNB Interest Rate Decision (Q3)	0.00%	0.00%	3.30%	
-24-Sep-26	18:00	18:00	US	High	Initial Jobless Claims	201K	196K	3.75%	
-24-Sep-26	19:30	19:30	US	High	New Home Sales (Aug)	619K	607K	4740.00%	
-25-Sep-26	 All Day 	 All Day 	CN	Holiday	China - Mid-Autumn Festival			206K	
-25-Sep-26	 All Day 	 All Day 	KR	Holiday	South Korea - Chuseok - Thanksgiving Day			1.00%	
-25-Sep-26	18:00	18:00	US	High	Durable Goods Orders (MoM) (Aug)	-0.30%	1.10%	3.63%	
-28-Oct-26	Wed	23:30	US	High	FOMC Meeting				
+29-Sep-26	 Tue 	10:00	AU	High	RBA Interest Rate Decision (Sep)				-
+29-Sep-26	 Tue 	19:30	US	High	CB Consumer Confidence (Sep)				-
+29-Sep-26	 Tue 	19:30	US	High	JOLTS Job Openings (Aug)				-
+30-Sep-26	Wed	7:00	CN	High	Manufacturing PMI (Sep)				-
+30-Sep-26	Wed	11:30	UK	High	GDP (QoQ) (Q2)				-
+30-Sep-26	Wed	11:30	UK	High	GDP (YoY) (Q2)				-
+30-Sep-26	 Wed 	17:30	DE	Medium	German CPI (MoM) (Sep)				-
+30-Sep-26	 Wed 	17:45	US	High	ADP Nonfarm Employment Change (Sep)				-
+30-Sep-26	Wed	18:00	US	High	Core PCE Price Index (YoY) (Aug)				-
+30-Sep-26	Wed	18:00	US	High	Core PCE Price Index (MoM) (Aug)				-
+30-Sep-26	Wed	18:00	US	High	GDP (QoQ) (Q2)				-
+30-Sep-26	 Wed 	19:15	US	Medium	Chicago PMI (Sep)				-
+30-Sep-26	 Wed 	20:00	US	Medium	Crude Oil Inventories				-
+01-Oct-26	Thu	All Day	CN	Holiday	China – National Day				Holiday
+1-Oct-26	Thu	All Day	HK	Holiday	Hong Kong – National Day				Holiday
+1-Oct-26	Thu	18:00	US	High	Initial Jobless Claims				-
+01-Oct-26	 Thu 	19:15	US	High	S&P Global Manufacturing PMI (Sep)				-
+01-Oct-26	 Thu 	19:30	US	High	ISM Manufacturing PMI (Sep)				-
+01-Oct-26	 Thu 	19:30	US	Medium	ISM Manufacturing Prices (Sep)				-
+02-Oct-26	 Fri 	All Day	CN	Holiday	China – National Day				Holiday
+02-Oct-26	 Fri 	All Day	IN	Holiday	India – Mahatma Gandhi Jayanti				Holiday
+02-Oct-26	 Fri 	14:30	EU	High	CPI (YoY) (Sep)				-
+02-Oct-26	 Fri 	18:00	US	High	Nonfarm Payrolls (Sep)				-
+02-Oct-26	 Fri 	18:00	US	High	Unemployment Rate (Sep)				-
+02-Oct-26	 Fri 	18:00	US	Medium	Average Hourly Earnings (MoM) (Sep)				-
+28-Oct-26	 Wed 	23:30	US	High	FOMC Meeting				
