@@ -47,9 +47,20 @@ export default function NotFound() {
         <br /><br />
         Please try another link or return to our homepage.
       </p>
-      <Link href="/" className={styles.link}>
-        Home
-      </Link>
+      <nav className={styles.navRow}>
+        <Link href="/" className={styles.link}>
+          Home
+        </Link>
+        <a href="https://quantwatertech.netlify.app/solutions" className={styles.link}>
+          Solutions
+        </a>
+        <a href="https://quantwatertech.netlify.app/research" className={styles.link}>
+          Research
+        </a>
+        <a href="https://quantwatertech.netlify.app/blog" className={styles.link}>
+          Blog
+        </a>
+      </nav>
     </div>
   );
 }
