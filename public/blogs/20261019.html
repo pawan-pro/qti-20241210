@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar: Week of October 19th, 2026</title>
+    <link rel="stylesheet" href="/global.css">
+    <style>
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .firm-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007acc;
+        }
+
+        /* Blog styles */
+        @font-face {
+            font-family: 'Century Gothic';
+            src: url('/fonts/CenturyGothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Century Gothic', Arial, sans-serif !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000000;
+            color: #313131;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .blog-container {
+            padding: 33px;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #e9e9e9ac;
+            margin-bottom: 10px;
+        }
+
+        .blog-subtitle {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        /* Timeline styles */
+        .blog-timeline {
+            position: fixed;
+            left: 33px;
+            top: 100px;
+            padding: 15px;
+            background: rgba(42, 42, 42, 0.8);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(3, 3, 3, 0.1);
+            width: 160px;
+            font-size: 0.7rem;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            z-index: 900;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 15px 0;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+        }
+
+        .timeline-item.active {
+            background: linear-gradient(135deg, rgba(176, 176, 176, 0.15) 0%, rgba(100, 100, 100, 0.05) 100%);
+            border: 1px solid rgba(161, 161, 161, 0.3);
+            transform: translateX(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-item.active .timeline-date {
+            color: #6495ED;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: center;
+        }
+
+        .timeline-date {
+            color: #e9e9e9ac;
+            font-weight: 600;
+            font-size: 0.8rem;
+            padding-bottom: 3px;
+        }
+
+        .timeline-events {
+            font-size: 0.7rem;
+            color: #888;
+        }
+
+        /* Blog content styles */
+        .blog-content {
+            margin-left: 210px;
+            max-width: 1200px;
+            padding-right: 33px;
+            color: #ccc;
+        }
+
+        .event-day-group {
+            margin-bottom: 40px;
+            padding-top: 10px;
+        }
+
+        .event-day-group h2.timeline-date {
+            font-size: 1.5rem;
+            color: #cacacada;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #444;
+            text-align: left;
+        }
+
+        .event-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6495ED;
+            margin-bottom: 15px;
+        }
+
+        .event-details {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 10px 15px;
+            margin-bottom: 15px;
+        }
+
+        .event-label {
+            font-weight: bold;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-align: right;
+            padding-right: 5px;
+        }
+
+        .event-value {
+            color: #bbb;
+            font-size: 0.9rem;
+            word-break: break-word;
+        }
+
+        .event-notes-value {
+            text-align: justify;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        .historical-impact a,
+        .forecast a {
+            color: #e0e0e0;
+            text-decoration: none;
+            background-color: #357ae8;
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 5px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 3px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .historical-impact a:hover,
+        .forecast a:hover {
+            background-color: #2a65c8;
+            color: #fff;
+        }
+
+        .source-footer {
+            background-color: #161616;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #bbb;
+            font-size: 0.8rem;
+        }
+
+        .source-footer a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .past-blogs {
+            margin-top: 40px;
+        }
+
+        .past-blogs h3 {
+            font-size: 1.2rem;
+            color: #cacacada;
+            margin-bottom: 15px;
+        }
+
+        .past-blogs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .past-blogs li {
+            margin-bottom: 10px;
+        }
+
+        .past-blogs a {
+            color: #6495ED;
+            text-decoration: none;
+        }
+
+        .past-blogs a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .blog-timeline {
+                display: none;
+            }
+
+            .blog-content {
+                margin-left: 0;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .event-details {
+                grid-template-columns: 90px 1fr;
+            }
+
+            .event-label {
+                text-align: left;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/" class="firm-name">Quantwater Tech Investments</a>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/solutions">Solutions</a>
+            <a href="/research">Research</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="blog-container">
+        <aside class="blog-timeline">
+            <div class="timeline-item">
+                <a href="#day-19oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">19 Oct</span>
+                        <span class="timeline-events">2 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-20oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">20 Oct</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-21oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">21 Oct</span>
+                        <span class="timeline-events">2 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-22oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">22 Oct</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-23oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">23 Oct</span>
+                        <span class="timeline-events">2 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-24oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">24 Oct</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-25oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">25 Oct</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-28oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">28 Oct</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <main class="blog-content">
+            <div class="blog-title">Key Economic Events: Week Of 19th October 2026</div>
+            <div class="blog-subtitle">Release Date: 19th October 2026</div>
+
+            <section class="event-day-group" id="day-19oct">
+                <h2 class="timeline-date">19 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">HK - Hong Kong - Chung Yeung Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">19-Oct-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">HKD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">1</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Chung Yeung Festival is a Hong Kong public holiday honouring ancestors, closing the HKEX and local money markets for the day. With onshore liquidity reduced, HKD and Hong Kong-listed risk are driven mainly by offshore flows, mainland China sentiment and broader Asia FX positioning into Monday's China Q3 GDP print.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="https://en.wikipedia.org/wiki/Chung_Yeung_Festival" target="_blank" rel="noopener noreferrer">Wikipedia</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">CN - GDP (YoY) (Q3)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">19-Oct-26, Mon, 7:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">CNY</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">4.40%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">4.30%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">China's quarterly GDP print opens the week's data and is a direct read on global growth, commodities and Asia FX. A print at or above the 4.40% forecast can support CNY and broader risk sentiment through expectations of further policy support, while a miss would renew concerns about domestic demand and weigh on commodity-linked currencies ahead of the 28 October FOMC.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261019.pdf" target="_blank" rel="noopener noreferrer">USDCNY</a> <a href="/blogs/blog-pdf/20261019.pdf" target="_blank" rel="noopener noreferrer">USDCNH</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-20oct">
+                <h2 class="timeline-date">20 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">IN - India - Dussehra</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">20-Oct-26, Tue, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">INR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">1</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Dussehra closes Indian financial markets for one of the country's most widely celebrated festivals. Thinner onshore INR liquidity leaves the rupee driven mainly by offshore flows, oil prices and global risk appetite, with USD/INR direction still taking its cue from US data and emerging-market flows into Wednesday's UK CPI.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="https://en.wikipedia.org/wiki/Dussehra" target="_blank" rel="noopener noreferrer">Wikipedia</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-21oct">
+                <h2 class="timeline-date">21 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">UK - CPI (YoY) (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">21-Oct-26, Wed, 11:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">GBP</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">3.40%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.10%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The UK's annual CPI print is the week's most important release for sterling and the clearest read on Bank of England rate expectations. A print above the 3.40% forecast can push rate-cut bets back and support GBP, while a cooler reading closer to the previous 3.10% would reinforce easing expectations ahead of November's policy meeting.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261019.pdf" target="_blank" rel="noopener noreferrer">GBPJPY</a> <a href="/blogs/blog-pdf/20261019.pdf" target="_blank" rel="noopener noreferrer">GBPUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Crude Oil Inventories</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">21-Oct-26, Wed, 20:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">2</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-8.557M</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">U.S. crude inventories provide a timely read on the oil supply-demand balance. A larger draw can support oil prices, energy shares and inflation expectations, while an unexpected build may weigh on crude and drag on risk sentiment heading into Thursday's jobless claims and Friday's PMIs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261019.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261019.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-22oct">
+                <h2 class="timeline-date">22 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">US - Initial Jobless Claims</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">22-Oct-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">200K</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">199K</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Initial jobless claims are the week's highest-frequency labour-market signal and a fresh check on the Fed's employment mandate. Claims at or below the 200K forecast can support USD through resilient growth expectations, while a material rise may pull yields and the dollar lower with Friday's PMIs and next week's FOMC still ahead.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261019.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261019.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-23oct">
+                <h2 class="timeline-date">23 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">US - S&amp;P Global Services PMI (Oct)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">23-Oct-26, Fri, 19:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">58</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">58.8</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The S&amp;P Global Services PMI is the week's last major read on US services activity before the 28 October FOMC. A reading above 50 signals expansion; a print at or above the 58 forecast can support USD through improved growth expectations, while a drop below the previous 58.8 would renew concerns about the dominant services sector.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261019.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261019.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - S&amp;P Global Manufacturing PMI (Oct)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">23-Oct-26, Fri, 19:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">55.5</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">55.9</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The S&amp;P Global Manufacturing PMI closes out the week's data with a read on factory activity. A print above the 55.5 forecast signals continued expansion and can support USD through firmer growth expectations, while a sharper slowdown would add to industrial-softness concerns heading into next week's Fed decision.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261019.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261019.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-24oct">
+                <h2 class="timeline-date">24 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">RU - Russia - Non Trading Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">24-Oct-26, Sat, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">RUB</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">1</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Russian markets are closed for a non-trading day, keeping onshore RUB pricing offline and liquidity in the pair minimal. Any Russia-linked risk premium therefore transmits through energy prices and European FX rather than local quotes, with trading resuming the following session.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="https://en.wikipedia.org/wiki/Public_holidays_in_Russia" target="_blank" rel="noopener noreferrer">Wikipedia</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-25oct">
+                <h2 class="timeline-date">25 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">RU - Russia - Non Trading Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">25-Oct-26, Sun, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">RUB</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">1</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Russian markets remain closed for the weekend non-trading day, so RUB is not quoted onshore and liquidity stays minimal. Energy prices and European FX continue to carry any Russia-linked risk premium into Monday's reopening, ahead of next week's data slate and the 28 October FOMC.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="https://en.wikipedia.org/wiki/Public_holidays_in_Russia" target="_blank" rel="noopener noreferrer">Wikipedia</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-28oct">
+                <h2 class="timeline-date">28 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Fed Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-Oct-26, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener noreferrer">CME FedWatch Tool</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.63%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The 28 October 2026 Federal Reserve decision is the next scheduled policy meeting after this week. It remains the key medium-term USD catalyst and will reset expectations for the rate path, guidance and global risk sentiment.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261019.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261019.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <div class="source-footer">
+                <span>Data sourced from </span><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Bloomberg Economic Calendar</a> and Firm Research.
+            </div>
+
+            <section class="past-blogs">
+                <h3>Past Blog Posts</h3>
+                <ul>
+                    <li><a href="/blogs/20261012.html">Key Economic Events: Week Of 12th October 2026</a></li>
+                    <li><a href="/blogs/20261005.html">Key Economic Events: Week Of 5th October 2026</a></li>
+                    <li><a href="/blogs/20260928.html">Key Economic Events: Week Of 28th September 2026</a></li>
+                    <li><a href="/blogs/20260920.html">Key Economic Events: Week Of 20th September 2026</a></li>
+                    <li><a href="/blogs/20260914.html">Key Economic Events: Week Of 14th September 2026</a></li>
+                    <li><a href="/blogs/20260906.html">Key Economic Events: Week Of 6th September 2026</a></li>
+                    <li><a href="/blogs/20260831.html">Key Economic Events: Week Of 31st August 2026</a></li>
+                    <li><a href="/blogs/20260824.html">Key Economic Events: Week Of 24th August 2026</a></li>
+                    <li><a href="/blogs/20260815.html">Key Economic Events: Week Of 15th August 2026</a></li>
+                    <li><a href="/blogs/20260810.html">Key Economic Events: Week Of 10th August 2026</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const sections = document.querySelectorAll('.event-day-group');
+
+        function updateActiveTimelineItem() {
+            let currentSection = null;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                    currentSection = section;
+                }
+            });
+
+            timelineItems.forEach(item => {
+                item.classList.remove('active');
+                if (currentSection) {
+                    const link = item.querySelector('a');
+                    if (link && link.getAttribute('href') === `#${currentSection.id}`) {
+                        item.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveTimelineItem);
+        window.addEventListener('load', updateActiveTimelineItem);
+    </script>
+</body>
+
+</html>
