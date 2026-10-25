@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar: Week of October 26th, 2026</title>
+    <link rel="stylesheet" href="/global.css">
+    <style>
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .firm-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007acc;
+        }
+
+        /* Blog styles */
+        @font-face {
+            font-family: 'Century Gothic';
+            src: url('/fonts/CenturyGothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Century Gothic', Arial, sans-serif !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000000;
+            color: #313131;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .blog-container {
+            padding: 33px;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #e9e9e9ac;
+            margin-bottom: 10px;
+        }
+
+        .blog-subtitle {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        /* Timeline styles */
+        .blog-timeline {
+            position: fixed;
+            left: 33px;
+            top: 100px;
+            padding: 15px;
+            background: rgba(42, 42, 42, 0.8);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(3, 3, 3, 0.1);
+            width: 160px;
+            font-size: 0.7rem;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            z-index: 900;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 15px 0;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+        }
+
+        .timeline-item.active {
+            background: linear-gradient(135deg, rgba(176, 176, 176, 0.15) 0%, rgba(100, 100, 100, 0.05) 100%);
+            border: 1px solid rgba(161, 161, 161, 0.3);
+            transform: translateX(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-item.active .timeline-date {
+            color: #6495ED;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: center;
+        }
+
+        .timeline-date {
+            color: #e9e9e9ac;
+            font-weight: 600;
+            font-size: 0.8rem;
+            padding-bottom: 3px;
+        }
+
+        .timeline-events {
+            font-size: 0.7rem;
+            color: #888;
+        }
+
+        /* Blog content styles */
+        .blog-content {
+            margin-left: 210px;
+            max-width: 1200px;
+            padding-right: 33px;
+            color: #ccc;
+        }
+
+        .event-day-group {
+            margin-bottom: 40px;
+            padding-top: 10px;
+        }
+
+        .event-day-group h2.timeline-date {
+            font-size: 1.5rem;
+            color: #cacacada;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #444;
+            text-align: left;
+        }
+
+        .event-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6495ED;
+            margin-bottom: 15px;
+        }
+
+        .event-details {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 10px 15px;
+            margin-bottom: 15px;
+        }
+
+        .event-label {
+            font-weight: bold;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-align: right;
+            padding-right: 5px;
+        }
+
+        .event-value {
+            color: #bbb;
+            font-size: 0.9rem;
+            word-break: break-word;
+        }
+
+        .event-notes-value {
+            text-align: justify;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        .historical-impact a,
+        .forecast a {
+            color: #e0e0e0;
+            text-decoration: none;
+            background-color: #357ae8;
+            padding: 3px 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 5px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 3px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .historical-impact a:hover,
+        .forecast a:hover {
+            background-color: #2a65c8;
+            color: #fff;
+        }
+
+        .source-footer {
+            background-color: #161616;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #bbb;
+            font-size: 0.8rem;
+        }
+
+        .source-footer a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .past-blogs {
+            margin-top: 40px;
+        }
+
+        .past-blogs h3 {
+            font-size: 1.2rem;
+            color: #cacacada;
+            margin-bottom: 15px;
+        }
+
+        .past-blogs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .past-blogs li {
+            margin-bottom: 10px;
+        }
+
+        .past-blogs a {
+            color: #6495ED;
+            text-decoration: none;
+        }
+
+        .past-blogs a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .blog-timeline {
+                display: none;
+            }
+
+            .blog-content {
+                margin-left: 0;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .event-details {
+                grid-template-columns: 90px 1fr;
+            }
+
+            .event-label {
+                text-align: left;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/" class="firm-name">Quantwater Tech Investments</a>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/solutions">Solutions</a>
+            <a href="/research">Research</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="blog-container">
+        <aside class="blog-timeline">
+            <div class="timeline-item">
+                <a href="#day-26oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">26 Oct</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-27oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">27 Oct</span>
+                        <span class="timeline-events">3 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-28oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">28 Oct</span>
+                        <span class="timeline-events">6 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-29oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">29 Oct</span>
+                        <span class="timeline-events">8 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-30oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">30 Oct</span>
+                        <span class="timeline-events">4 Events</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-31oct">
+                    <div class="timeline-info">
+                        <span class="timeline-date">31 Oct</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+            <div class="timeline-item">
+                <a href="#day-10dec">
+                    <div class="timeline-info">
+                        <span class="timeline-date">10 Dec</span>
+                        <span class="timeline-events">1 Event</span>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <main class="blog-content">
+            <div class="blog-title">Key Economic Events: Week Of 26th October 2026</div>
+            <div class="blog-subtitle">Release Date: 26th October 2026</div>
+
+            <section class="event-day-group" id="day-26oct">
+                <h2 class="timeline-date">26 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">NZ - New Zealand - Labour Day</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">26-Oct-26, Mon, All Day</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">NZD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Labour Day closes New Zealand financial markets for the national holiday, leaving NZD without onshore pricing for the day. With local liquidity reduced, the currency is driven mainly by offshore flows, dairy prices and broader risk appetite, and positioning builds into Wednesday's RBNZ rate decision.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="https://en.wikipedia.org/wiki/Labour_Day_(New_Zealand)" target="_blank" rel="noopener noreferrer">Wikipedia</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-27oct">
+                <h2 class="timeline-date">27 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">US - Durable Goods Orders (MoM) (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">27-Oct-26, Tue, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.60%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">1.80%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Durable goods orders are the week's first read on US business investment, with the volatile transport component driving the headline. A print at or above the 0.60% forecast can support USD through firmer growth expectations, while a flat or negative reading after August's 1.80% rise would signal cooling capital demand ahead of Wednesday's FOMC.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - CB Consumer Confidence (Oct)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">27-Oct-26, Tue, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">80.50</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">81.90</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Conference Board's consumer confidence index is the week's clearest read on US household sentiment, which underpins roughly two-thirds of GDP through spending. A print above the 80.50 forecast can support USD through improved growth expectations, while a drop below the previous 81.90 would point to deepening household caution into Thursday's PCE and Q3 GDP releases.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - New Home Sales (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">27-Oct-26, Tue, 19:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">649K</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">684K</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">New home sales capture demand in the US housing market, where affordability is still constrained by elevated mortgage rates. A print above the 649K forecast would signal resilient demand despite borrowing costs, while a fall from the previous 684K would reinforce housing softness heading into Wednesday's Fed decision.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-28oct">
+                <h2 class="timeline-date">28 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">NZ - RBNZ Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-Oct-26, Wed, 6:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">NZD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">3.00%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">2.75%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Reserve Bank of New Zealand rate decision opens the week's central-bank triple header, with markets pricing a move to 3.00% from 2.75%. A hike with hawkish guidance can support NZD through improved yield differentials, while a hold or dovish tone would weigh on the currency ahead of the BoC and Fed decisions later the same day.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">NZDUSD</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">NZDJPY</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">UK - Autumn Forecast Statement</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-Oct-26, Wed, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">GBP</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The UK Autumn Forecast Statement sets out the government's growth, borrowing and fiscal projections and can move GBP on any change to spending or tax plans. With no consensus forecast published, direction will come from the statement's budget-balance and growth assumptions, feeding into Bank of England rate expectations ahead of November's policy meeting.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">GBPJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">GBPUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">CA - BoC Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-Oct-26, Wed, 19:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">CAD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">2.50%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">2.25%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Bank of Canada rate decision lands hours before the FOMC, with consensus looking for a move to 2.50% from 2.25%. A hike paired with hawkish guidance can support CAD through firmer rate expectations, while a hold or dovish tone would weigh on the loonie - and any divergence from the Fed's own message will be amplified in USDCAD.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDCAD</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">CADJPY</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Crude Oil Inventories</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-Oct-26, Wed, 20:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">-0.300M</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-3.060M</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">U.S. crude inventories provide a timely read on the oil supply-demand balance, with a 0.300M draw forecast after the previous week's 3.060M draw. An unexpected build in stocks can weigh on crude and energy shares, while a deeper-than-expected draw supports oil prices, energy shares and inflation expectations into Thursday's PCE print.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Fed Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-Oct-26, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">4.00%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">4.00%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The 28 October 2026 Federal Reserve decision is the week's marquee event, with the funds rate expected to be left unchanged at 4.00%. With the level itself priced, the statement's language on inflation, the labour market and the pace of future moves will reset expectations for the rate path and drive USD, Treasury yields and global risk sentiment into Thursday's PCE and Q3 GDP data.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - FOMC Statement</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">28-Oct-26, Wed, 23:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The FOMC statement accompanies the rate decision and carries the Committee's assessment of growth, employment and inflation alongside any change to the policy bias. With no consensus forecast for the text itself, markets will focus on wording shifts, dissents and the removal or retention of guidance for clues about the December meeting.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-29oct">
+                <h2 class="timeline-date">29 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">US - FOMC Press Conference</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Oct-26, Thu, 0:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The FOMC press conference usually proves the more market-moving half of the decision, as the Chair's answers on the rate path shape expectations for December. A hawkish tone can lift USD and Treasury yields, while dovish remarks would reinforce easing bets - all before Thursday's PCE, GDP and jobless claims land later in the session.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Core PCE Price Index (MoM) (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Oct-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.30%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.20%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The monthly core PCE is the Fed's preferred inflation gauge and the first one to reflect September's price data. Consensus expects an acceleration to 0.30% from 0.20%; a hotter print can push rate-cut expectations back and support USD, while a reading at or below the prior month would keep easing bets intact.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Core PCE Price Index (YoY) (Sep)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Oct-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">3.10%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">3.00%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The annual core PCE shows the underlying inflation trend the Committee targets, with consensus pointing to a small rise to 3.10% from 3.00%. A firmer-than-expected print can lift USD and yields by pushing easing bets back, while a cooler reading would comfort the Fed after Wednesday's decision.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - GDP (QoQ) (Q3)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Oct-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">3.20%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">2.20%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Q3 GDP is the quarter's broadest read on US growth, with consensus pointing to an acceleration to 3.20% from 2.20%. A print at or above that pace can support USD through resilient growth expectations, while a sharp miss would raise soft-landing concerns alongside the day's PCE inflation data.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Initial Jobless Claims</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Oct-26, Thu, 18:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">198K</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">194K</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Initial jobless claims remain the highest-frequency labour-market signal and a fresh check on the Fed's employment mandate, with consensus at 198K after 194K. Claims at or below forecast can support USD through resilient growth expectations, while a material rise would renew labour-cooling concerns heading into Friday's BoJ decision and China's PMIs.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">EU - Deposit Facility Rate (Oct)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Oct-26, Thu, 18:45 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">2.50%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">2.50%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The deposit facility rate is the ECB's key policy rate and the main lever of euro-area easing, expected unchanged at 2.50%. Because the level is fully priced, any change to the forward guidance on future moves matters more for EUR than the headline number itself.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">EU - ECB Interest Rate Decision (Oct)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Oct-26, Thu, 18:45 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">2.65%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">2.65%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The ECB's October decision is expected to leave the main refinancing rate at 2.65%, one day after the FOMC. With the level widely anticipated, guidance on inflation and growth will drive EUR, ahead of Friday's German Q3 GDP and October CPI prints that frame the next meeting.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">EU - ECB Press Conference</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">29-Oct-26, Thu, 19:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Link</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">-</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The ECB press conference is where the decision gets explained, and the Q&A typically moves EUR more than the rate announcement. With no consensus forecast for the remarks themselves, markets will parse the tone on inflation and growth for signals about the next move, ahead of Friday's German data.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-30oct">
+                <h2 class="timeline-date">30 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">JP - BoJ Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Oct-26, Fri, 8:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">JPY</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">1.25%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">1.25%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Bank of Japan rate decision closes the week's central-bank cycle, with the policy rate expected unchanged at 1.25%. Any signal of further tightening can lift JPY through higher yield differentials and squeeze carry trades, while a dovish hold would keep the yen's weakness in place into November.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">DE - German GDP (QoQ) (Q3)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Oct-26, Fri, 14:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.10%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.30%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">Germany's quarterly GDP is the first read on euro-area growth in Q3 and carries the weight of the bloc's largest economy. Consensus points to a slowdown to 0.10% from 0.30%; a stronger print can support EUR through improved growth expectations, while a contraction would renew stagnation concerns after Thursday's ECB decision.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">DE - German CPI (MoM) (Oct)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Oct-26, Fri, 18:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">EUR</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">0.10%</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">0.60%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">German monthly CPI is the earliest read on euro-area inflation and a key input for ECB policy expectations, with October's flash estimate forecast to cool sharply to 0.10% from 0.60%. An upside surprise can support EUR through firmer rate expectations, while a softer print would reinforce the case for further easing.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <h3 class="event-title">US - Chicago PMI (Oct)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">30-Oct-26, Fri, 19:15 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">54.80</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">58.80</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The Chicago PMI is the last US regional factory gauge of the month and a useful proxy for the national ISM read. A print at or above the 54.80 forecast keeps expansion intact and can support USD, while a drop below the previous 58.80 would signal a loss of manufacturing momentum to close the week.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-31oct">
+                <h2 class="timeline-date">31 October 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">CN - Manufacturing PMI (Oct)</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">31-Oct-26, Sat, 7:00 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">CNY</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value">50.10</span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">50.10</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">China's official manufacturing PMI closes the week and is the first gauge of factory activity in October, with consensus at 50.10 - marginally above the 50 expansion threshold. A print above forecast can support commodity-linked currencies and risk sentiment, while a dip below 50 would renew concerns about global manufacturing into November.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDCNY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDCNH</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="event-day-group" id="day-10dec">
+                <h2 class="timeline-date">10 December 2026</h2>
+                <article class="event-card">
+                    <h3 class="event-title">USD - Fed Interest Rate Decision</h3>
+                    <div class="event-details">
+                        <span class="event-label">Date:</span>
+                        <span class="event-value">10-Dec-26, Thur, 0:30 IST</span>
+                        <span class="event-label">Currency:</span>
+                        <span class="event-value">USD</span>
+                        <span class="event-label">Importance:</span>
+                        <span class="event-value">3</span>
+                        <span class="event-label">Forecast:</span>
+                        <span class="event-value forecast"><a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener noreferrer">CME FedWatch Tool</a></span>
+                        <span class="event-label">Previous:</span>
+                        <span class="event-value">4.00%</span>
+                        <span class="event-label">Notes:</span>
+                        <span class="event-notes-value">The 10 December 2026 Federal Reserve decision is the next scheduled policy meeting after this week's 28 October FOMC. It remains the key medium-term USD catalyst and will reset expectations for the rate path, guidance and global risk sentiment.</span>
+                        <span class="event-label">Learn More:</span>
+                        <span class="event-value historical-impact"><a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">USDJPY</a> <a href="/blogs/blog-pdf/20261026.pdf" target="_blank" rel="noopener noreferrer">EURUSD</a></span>
+                    </div>
+                </article>
+            </section>
+
+            <div class="source-footer">
+                <span>Data sourced from </span><a href="https://www.bloomberg.com/markets/economic-calendar" target="_blank" rel="noopener noreferrer">Bloomberg Economic Calendar</a> and Firm Research.
+            </div>
+
+            <section class="past-blogs">
+                <h3>Past Blog Posts</h3>
+                <ul>
+                    <li><a href="/blogs/20261019.html">Key Economic Events: Week Of 19th October 2026</a></li>
+                    <li><a href="/blogs/20261012.html">Key Economic Events: Week Of 12th October 2026</a></li>
+                    <li><a href="/blogs/20261005.html">Key Economic Events: Week Of 5th October 2026</a></li>
+                    <li><a href="/blogs/20260928.html">Key Economic Events: Week Of 28th September 2026</a></li>
+                    <li><a href="/blogs/20260920.html">Key Economic Events: Week Of 20th September 2026</a></li>
+                    <li><a href="/blogs/20260914.html">Key Economic Events: Week Of 14th September 2026</a></li>
+                    <li><a href="/blogs/20260906.html">Key Economic Events: Week Of 6th September 2026</a></li>
+                    <li><a href="/blogs/20260831.html">Key Economic Events: Week Of 31st August 2026</a></li>
+                    <li><a href="/blogs/20260824.html">Key Economic Events: Week Of 24th August 2026</a></li>
+                    <li><a href="/blogs/20260815.html">Key Economic Events: Week Of 15th August 2026</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const sections = document.querySelectorAll('.event-day-group');
+
+        function updateActiveTimelineItem() {
+            let currentSection = null;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                    currentSection = section;
+                }
+            });
+
+            timelineItems.forEach(item => {
+                item.classList.remove('active');
+                if (currentSection) {
+                    const link = item.querySelector('a');
+                    if (link && link.getAttribute('href') === `#${currentSection.id}`) {
+                        item.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveTimelineItem);
+        window.addEventListener('load', updateActiveTimelineItem);
+    </script>
+</body>
+
+</html>
